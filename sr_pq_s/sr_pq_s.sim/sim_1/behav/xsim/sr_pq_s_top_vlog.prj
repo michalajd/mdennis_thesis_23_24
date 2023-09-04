@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../../pq_pkg.sv" \
+"../../../../../pq_if.sv" \
+"../../../../sr_pq_s.sv" \
+"../../../../sr_pq_s_stage.sv" \
+"../../../../sr_pq_s_tb.sv" \
+"../../../../sr_pq_s_top.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,836 @@
+/*
+
+Xilinx Vivado v2020.2 (64-bit) [Major: 2020, Minor: 2]
+SW Build: 3064766 on Wed Nov 18 09:12:45 MST 2020
+IP Build: 3064653 on Wed Nov 18 14:17:31 MST 2020
+
+Process ID (PID): 12084
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Wed Mar 08 13:52:32 EST 2023
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 2
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.2 64-bit
+Java home: 	C:/Xilinx/Vivado/2020.2/tps/win64/jre11.0.2
+Java executable location: 	C:/Xilinx/Vivado/2020.2/tps/win64/jre11.0.2/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	ehgartns
+User home directory: C:/Users/ehgartns
+User working directory: C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2020.2
+RDI_DATADIR: C:/Xilinx/Vivado/2020.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2020.2/bin
+
+Vivado preferences file location: C:/Users/ehgartns/AppData/Roaming/Xilinx/Vivado/2020.2/vivado.xml
+Vivado preferences directory: C:/Users/ehgartns/AppData/Roaming/Xilinx/Vivado/2020.2/
+Vivado layouts directory: C:/Users/ehgartns/AppData/Roaming/Xilinx/Vivado/2020.2/data/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2020.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/vivado.log
+Vivado journal file location: 	C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/vivado.jou
+Engine tmp dir: 	C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/.Xil/Vivado-12084-ECE410-J7VL3Y2
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2020.2/ids_lite/ISE
+XILINXD_LICENSE_FILE: 2100@aspen.ad.lafayette.edu
+XILINX_DSP: C:/Xilinx/Vivado/2020.2/ids_lite/ISE
+XILINX_HLS: C:/Xilinx/Vitis_HLS/2020.2
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2020.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2020.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2020.2
+
+
+GUI allocated memory:	128 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,093 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 100 MB (+102141kb) [00:00:07]
+// [Engine Memory]: 1,093 MB (+994609kb) [00:00:07]
+// bz (cr):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\ehgartns\Documents\PQrep\pq_Research\QuickQ\QuickQ_project.xpr. Version: Vivado v2020.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/QuickQ_project.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/QuickQ_project.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/ehgartns/Documents/pq_Research/QuickQ' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,093 MB. GUI used memory: 48 MB. Current time: 3/8/23, 1:52:33 PM EST
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 105 MB (+114kb) [00:00:14]
+// WARNING: HEventQueue.dispatchEvent() is taking  2251 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'. 
+// Project name: QuickQ_project; location: C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ; part: xc7a100tcsg324-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 1088.957 ; gain = 0.000 
+dismissDialog("Open Project"); // bz
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// [GUI Memory]: 112 MB (+1420kb) [00:00:18]
+// [GUI Memory]: 120 MB (+2688kb) [00:00:20]
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 131 MB (+5911kb) [00:00:26]
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12, true); // u - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_RTL_DESIGN
+// A (cr): Elaborate Design: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// bz (cr):  Open Elaborated Design : addNotify
+dismissDialog("Elaborate Design"); // A
+// Tcl Message: synth_design -rtl -rtl_skip_mlo -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -rtl_skip_mlo -name rtl_1 Starting synth_design Using part: xc7a100tcsg324-1 Top: quickNode 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,149 MB. GUI used memory: 74 MB. Current time: 3/8/23, 1:52:53 PM EST
+// TclEventType: ELABORATE_START
+// TclEventType: ELABORATE_FAIL
+// TclEventType: DESIGN_NEW_FAILED
+// Tcl Message: INFO: [Device 21-403] Loading part xc7a100tcsg324-1 
+// Tcl Message: ERROR: [Synth 8-1031] rd_addr is not declared [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:38] ERROR: [Synth 8-1031] wr_addr is not declared [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:38] 
+// Tcl Message: INFO: [Synth 8-2350] module quickNode ignored due to previous errors [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23] 
+// Tcl Message: Failed to read verilog 'C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv' 
+// Tcl Message: 2 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered. synth_design failed 
+// Tcl Message: ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details  
+// 'dV' command handler elapsed time: 11 seconds
+// U (cr): Critical Messages: addNotify
+// [Engine Memory]: 1,524 MB (+394556kb) [00:00:40]
+// Elapsed time: 10 seconds
+dismissDialog("Open Elaborated Design"); // bz
+// Elapsed time: 24 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Critical Messages"); // U
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aK
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [Synth 8-1031] rd_addr is not declared [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:38]. ]", 8, true); // ah - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\ehgartns\Documents\PQrep\pq_Research\QuickQ\RTL\quickNode.sv;-;;-;16;-;line;-;38;-;;-;16;-;"); // ah
+// Elapsed time: 79 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [Synth 8-1031] rd_addr is not declared [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:38]. ]", 8); // ah
+// Elapsed time: 26 seconds
+selectCodeEditor("quickNode.sv", 658, 317); // bP
+// Elapsed time: 21 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 44 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12, true); // u - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_RTL_DESIGN
+// A (cr): Elaborate Design: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// bz (cr):  Open Elaborated Design : addNotify
+dismissDialog("Elaborate Design"); // A
+// TclEventType: ELABORATE_START
+// Tcl Message: synth_design -rtl -rtl_skip_mlo -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -rtl_skip_mlo -name rtl_1 Starting synth_design Using part: xc7a100tcsg324-1 Top: quickNode 
+// TclEventType: ELABORATE_FAIL
+// TclEventType: DESIGN_NEW_FAILED
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1571.875 ; gain = 10.121 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'quickNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23] INFO: [Synth 8-6157] synthesizing module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/controlNode.sv:23] INFO: [Synth 8-6155] done synthesizing module 'controlNode' (1#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/controlNode.sv:23] 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'mem2p_sw_sr' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mem2p_sw_sr.sv:23] 
+// Tcl Message: 	Parameter W bound to: 8 - type: integer  	Parameter D bound to: 128 - type: integer  	Parameter DW bound to: 7 - type: integer  
+// Tcl Message: ERROR: [Synth 8-6156] failed synthesizing module 'mem2p_sw_sr' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mem2p_sw_sr.sv:23] ERROR: [Synth 8-6156] failed synthesizing module 'quickNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1607.359 ; gain = 45.605 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: RTL Elaboration failed 
+// Tcl Message: 4 Infos, 1 Warnings, 0 Critical Warnings and 16 Errors encountered. synth_design failed 
+// Tcl Message: ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details  
+// [Engine Memory]: 1,603 MB (+2732kb) [00:04:06]
+// 'dV' command handler elapsed time: 5 seconds
+// U (cr): Critical Messages: addNotify
+dismissDialog("Open Elaborated Design"); // bz
+// HMemoryUtils.trashcanNow. Engine heap size: 1,605 MB. GUI used memory: 76 MB. Current time: 3/8/23, 1:56:28 PM EST
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Critical Messages"); // U
+// Elapsed time: 39 seconds
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [Synth 8-1031] rd_addr is not declared [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:38]. ]", 8); // ah
+// Elapsed time: 33 seconds
+selectCheckBox(PAResourceItoN.MsgView_INFORMATION_MESSAGES, (String) null, false); // g: FALSE
+selectCheckBox(PAResourceItoN.MsgView_WARNING_MESSAGES, (String) null, false); // g: FALSE
+// Elapsed time: 13 seconds
+selectCodeEditor("quickNode.sv", 218, 248); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12, true); // u - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_RTL_DESIGN
+// A (cr): Elaborate Design: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// bz (cr):  Open Elaborated Design : addNotify
+dismissDialog("Elaborate Design"); // A
+// TclEventType: ELABORATE_START
+// Tcl Message: synth_design -rtl -rtl_skip_mlo -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -rtl_skip_mlo -name rtl_1 Starting synth_design Using part: xc7a100tcsg324-1 Top: quickNode 
+// TclEventType: ELABORATE_FAIL
+// TclEventType: DESIGN_NEW_FAILED
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1635.656 ; gain = 17.438 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'quickNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23] INFO: [Synth 8-6157] synthesizing module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/controlNode.sv:23] INFO: [Synth 8-6155] done synthesizing module 'controlNode' (1#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/controlNode.sv:23] 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'mem2p_sw_sr' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mem2p_sw_sr.sv:23] 
+// Tcl Message: 	Parameter W bound to: 8 - type: integer  	Parameter D bound to: 128 - type: integer  	Parameter DW bound to: 7 - type: integer  
+// Tcl Message: ERROR: [Synth 8-6156] failed synthesizing module 'mem2p_sw_sr' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mem2p_sw_sr.sv:23] ERROR: [Synth 8-6156] failed synthesizing module 'quickNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1635.656 ; gain = 17.438 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: RTL Elaboration failed 
+// Tcl Message: 4 Infos, 1 Warnings, 0 Critical Warnings and 16 Errors encountered. synth_design failed 
+// Tcl Message: ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details  
+// 'dV' command handler elapsed time: 5 seconds
+// U (cr): Critical Messages: addNotify
+dismissDialog("Open Elaborated Design"); // bz
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Critical Messages"); // U
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [Synth 8-448] named port connection 'clk' does not exist for instance 'CTL' of module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:38]. ]", 2); // ah
+selectCodeEditor("quickNode.sv", 250, 246); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, quickNode (quickNode.sv)]", 1); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, quickNode (quickNode.sv), CTL : controlNode (controlNode.sv)]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, quickNode (quickNode.sv), CTL : controlNode (controlNode.sv)]", 2, false, false, false, false, false, true); // D - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, quickNode (quickNode.sv), BRAM : mem2p_sw_sr (mem2p_sw_sr.sv)]", 3, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, quickNode (quickNode.sv), BRAM : mem2p_sw_sr (mem2p_sw_sr.sv)]", 3, false, false, false, false, false, true); // D - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, quickNode (quickNode.sv), CTL : controlNode (controlNode.sv)]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, quickNode (quickNode.sv), CTL : controlNode (controlNode.sv)]", 2, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("controlNode.sv", 162, 390); // bP
+// Elapsed time: 19 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, quickNode (quickNode.sv)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, quickNode (quickNode.sv)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+// Elapsed time: 42 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, quickNode (quickNode.sv)]", 1); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, quickNode (quickNode.sv), CTL : controlNode (controlNode.sv)]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, quickNode (quickNode.sv), CTL : controlNode (controlNode.sv)]", 2, false, false, false, false, false, true); // D - Double Click
+// Elapsed time: 102 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "quickNode.sv", 1); // m
+// HMemoryUtils.trashcanNow. Engine heap size: 1,626 MB. GUI used memory: 77 MB. Current time: 3/8/23, 2:01:33 PM EST
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "controlNode.sv", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "quickNode.sv", 1); // m
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "controlNode.sv", 2); // m
+selectCodeEditor("controlNode.sv", 295, 384); // bP
+selectCodeEditor("controlNode.sv", 362, 383); // bP
+// Elapsed time: 11 seconds
+selectCodeEditor("controlNode.sv", 224, 401); // bP
+// Elapsed time: 28 seconds
+selectCodeEditor("controlNode.sv", 374, 396); // bP
+selectCodeEditor("controlNode.sv", 436, 407); // bP
+selectCodeEditor("controlNode.sv", 566, 401); // bP
+selectCodeEditor("controlNode.sv", 572, 401); // bP
+selectCodeEditor("controlNode.sv", 501, 400); // bP
+selectCodeEditor("controlNode.sv", 560, 399); // bP
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "quickNode.sv", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "controlNode.sv", 2); // m
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "quickNode.sv", 1); // m
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12, true); // u - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_RTL_DESIGN
+// A (cr): Elaborate Design: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// bz (cr):  Open Elaborated Design : addNotify
+dismissDialog("Elaborate Design"); // A
+// TclEventType: ELABORATE_START
+// Tcl Message: synth_design -rtl -rtl_skip_mlo -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -rtl_skip_mlo -name rtl_1 Starting synth_design Using part: xc7a100tcsg324-1 Top: quickNode 
+// TclEventType: ELABORATE_FAIL
+// TclEventType: DESIGN_NEW_FAILED
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1650.105 ; gain = 13.770 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'quickNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23] INFO: [Synth 8-6157] synthesizing module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/controlNode.sv:23] INFO: [Synth 8-6155] done synthesizing module 'controlNode' (1#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/controlNode.sv:23] 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'mem2p_sw_sr' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mem2p_sw_sr.sv:23] 
+// Tcl Message: 	Parameter W bound to: 8 - type: integer  	Parameter D bound to: 128 - type: integer  	Parameter DW bound to: 7 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'mem2p_sw_sr' (2#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mem2p_sw_sr.sv:23] INFO: [Synth 8-6157] synthesizing module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mux2.sv:23] INFO: [Synth 8-6155] done synthesizing module 'mux2' (3#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mux2.sv:23] 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'dff' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/dff.sv:23] 
+// Tcl Message: ERROR: [Synth 8-6156] failed synthesizing module 'dff' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/dff.sv:23] ERROR: [Synth 8-6156] failed synthesizing module 'quickNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1650.105 ; gain = 13.770 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: RTL Elaboration failed 
+// Tcl Message: 8 Infos, 1 Warnings, 0 Critical Warnings and 15 Errors encountered. synth_design failed 
+// Tcl Message: ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details  
+// 'dV' command handler elapsed time: 5 seconds
+// U (cr): Critical Messages: addNotify
+dismissDialog("Open Elaborated Design"); // bz
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Critical Messages"); // U
+// Elapsed time: 27 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, quickNode (quickNode.sv), data_in : mux2 (mux2.sv)]", 6, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, quickNode (quickNode.sv), data_in : mux2 (mux2.sv)]", 6, false, false, false, false, false, true); // D - Double Click
+// Elapsed time: 67 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, quickNode (quickNode.sv), CTL : controlNode (controlNode.sv)]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, quickNode (quickNode.sv), CTL : controlNode (controlNode.sv)]", 2, false, false, false, false, false, true); // D - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, quickNode (quickNode.sv)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, quickNode (quickNode.sv)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, dffe (dffe.sv)]", 5, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, dffe (dffe.sv)]", 5, false, false, false, false, false, true); // D - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, counter_size (counter_size.sv)]", 4, false); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, quickNode (quickNode.sv)]", 1); // D
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mem2p_sw_sr.sv", 3); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "controlNode.sv", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "quickNode.sv", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mux2.sv", 4); // m
+// Elapsed time: 33 seconds
+selectCodeEditor("mux2.sv", 2, 381); // bP
+typeControlKey((HResource) null, "mux2.sv", 'v'); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12, true); // u - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_RTL_DESIGN
+// A (cr): Elaborate Design: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// bz (cr):  Open Elaborated Design : addNotify
+dismissDialog("Elaborate Design"); // A
+// TclEventType: ELABORATE_START
+// Tcl Message: synth_design -rtl -rtl_skip_mlo -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -rtl_skip_mlo -name rtl_1 Starting synth_design Using part: xc7a100tcsg324-1 Top: quickNode 
+// TclEventType: ELABORATE_FINISH
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 1,664 MB. GUI used memory: 79 MB. Current time: 3/8/23, 2:06:10 PM EST
+// [Engine Memory]: 1,692 MB (+9834kb) [00:13:50]
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// [GUI Memory]: 142 MB (+3925kb) [00:13:51]
+// [GUI Memory]: 151 MB (+1985kb) [00:13:51]
+// Schematic: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1584 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1650.781 ; gain = 0.676 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'quickNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23] INFO: [Synth 8-6157] synthesizing module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/controlNode.sv:23] INFO: [Synth 8-6155] done synthesizing module 'controlNode' (1#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/controlNode.sv:23] 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'mem2p_sw_sr' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mem2p_sw_sr.sv:23] 
+// Tcl Message: 	Parameter W bound to: 8 - type: integer  	Parameter D bound to: 128 - type: integer  	Parameter DW bound to: 7 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'mem2p_sw_sr' (2#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mem2p_sw_sr.sv:23] INFO: [Synth 8-6157] synthesizing module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mux2.sv:23] 
+// Tcl Message: 	Parameter W bound to: 32 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'mux2' (3#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mux2.sv:23] 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'dff' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/dff.sv:23] INFO: [Synth 8-6155] done synthesizing module 'dff' (4#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/dff.sv:23] INFO: [Synth 8-6155] done synthesizing module 'quickNode' (5#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1650.781 ; gain = 0.676 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1650.781 ; gain = 0.676 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1650.781 ; gain = 0.676 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1650.781 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Completed Processing XDC Constraints  
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1715.383 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Tcl Message: RTL Elaboration Complete:  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 1789.348 ; gain = 139.242 
+// Tcl Message: 12 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 1789.348 ; gain = 139.242 
+// 'dV' command handler elapsed time: 10 seconds
+// [Engine Memory]: 1,778 MB (+638kb) [00:13:52]
+dismissDialog("Open Elaborated Design"); // bz
+// Elapsed time: 143 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Add Sources]", 2, false); // u
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cr): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a
+// F (c): Create Source File: addNotify
+selectComboBox(PAResourceAtoD.CreateSrcFileDialog_FILE_TYPE, "SystemVerilog", 2); // cm
+selectComboBox(PAResourceAtoD.CreateSrcFileDialog_FILE_LOCATION, "Choose Location...", 1); // e
+setFolderChooser("C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL");
+// Elapsed time: 10 seconds
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "valueRouter"); // aa
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Create Source File"); // F
+selectButton("FINISH", "Finish"); // JButton
+// 'g' command handler elapsed time: 21 seconds
+dismissDialog("Add Sources"); // c
+// Tcl Message: close [ open C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/valueRouter.sv w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/valueRouter.sv 
+// [GUI Memory]: 166 MB (+8035kb) [00:16:38]
+// I (cr): Define Module: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton("OptionPane.button", "Yes"); // JButton
+dismissDialog("Define Module"); // I
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, quickNode (quickNode.sv)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, quickNode (quickNode.sv)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+selectCodeEditor("quickNode.sv", 417, 440); // bP
+// Elapsed time: 40 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mux2.sv", 5); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mem2p_sw_sr.sv", 4); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "controlNode.sv", 3); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "quickNode.sv", 2); // m
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, valueRouter (valueRouter.sv)]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, valueRouter (valueRouter.sv)]", 7, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("valueRouter.sv", 191, 384); // bP
+// Elapsed time: 85 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,800 MB. GUI used memory: 109 MB. Current time: 3/8/23, 2:11:38 PM EST
+// Elapsed time: 32 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "quickNode.sv", 2); // m
+// Elapsed time: 38 seconds
+selectCodeEditor("quickNode.sv", 295, 195); // bP
+selectCodeEditor("quickNode.sv", 729, 283); // bP
+// Elapsed time: 20 seconds
+selectCodeEditor("quickNode.sv", 315, 451); // bP
+selectCodeEditor("quickNode.sv", 392, 456); // bP
+selectCodeEditor("quickNode.sv", 313, 451); // bP
+// Elapsed time: 22 seconds
+selectCodeEditor("quickNode.sv", 250, 219); // bP
+// Elapsed time: 10 seconds
+selectCodeEditor("quickNode.sv", 608, 468); // bP
+// Elapsed time: 18 seconds
+selectCodeEditor("quickNode.sv", 249, 365); // bP
+// Elapsed time: 12 seconds
+selectCodeEditor("quickNode.sv", 370, 364); // bP
+// Elapsed time: 32 seconds
+selectCodeEditor("quickNode.sv", 265, 231); // bP
+// Elapsed time: 11 seconds
+selectCodeEditor("quickNode.sv", 726, 484); // bP
+// Elapsed time: 25 seconds
+selectCodeEditor("quickNode.sv", 358, 419); // bP
+// Elapsed time: 14 seconds
+selectCodeEditor("quickNode.sv", 505, 420); // bP
+// Elapsed time: 13 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 11 seconds
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h
+// bz (cr):  Reloading : addNotify
+// TclEventType: ELABORATE_START
+// Tcl Message: refresh_design 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,821 MB. GUI used memory: 109 MB. Current time: 3/8/23, 2:16:08 PM EST
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1865.098 ; gain = 29.348 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: ELABORATE_FINISH
+// TclEventType: DESIGN_REFRESH
+// [Engine Memory]: 1,880 MB (+13925kb) [00:23:51]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,885 MB. GUI used memory: 87 MB. Current time: 3/8/23, 2:16:13 PM EST
+// Engine heap size: 1,885 MB. GUI used memory: 88 MB. Current time: 3/8/23, 2:16:13 PM EST
+// WARNING: HEventQueue.dispatchEvent() is taking  1427 ms.
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'quickNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23] INFO: [Synth 8-6157] synthesizing module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/controlNode.sv:23] INFO: [Synth 8-6155] done synthesizing module 'controlNode' (1#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/controlNode.sv:23] INFO: [Synth 8-6157] synthesizing module 'mem2p_sw_sr' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mem2p_sw_sr.sv:23] 
+// Tcl Message: 	Parameter W bound to: 8 - type: integer  	Parameter D bound to: 128 - type: integer  	Parameter DW bound to: 7 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'mem2p_sw_sr' (2#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mem2p_sw_sr.sv:23] 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mux2.sv:23] 
+// Tcl Message: 	Parameter W bound to: 32 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'mux2' (3#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mux2.sv:23] 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'dff' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/dff.sv:23] INFO: [Synth 8-6155] done synthesizing module 'dff' (4#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/dff.sv:23] INFO: [Synth 8-6157] synthesizing module 'valueRouter' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/valueRouter.sv:23] INFO: [Synth 8-6155] done synthesizing module 'valueRouter' (5#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/valueRouter.sv:23] INFO: [Synth 8-6155] done synthesizing module 'quickNode' (6#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1893.320 ; gain = 57.570 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1917.223 ; gain = 81.473 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1917.223 ; gain = 81.473 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 1,885 MB. GUI used memory: 111 MB. Current time: 3/8/23, 2:16:14 PM EST
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Schematic: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  2345 ms.
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1919.566 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Completed Processing XDC Constraints  
+// Tcl Message: refresh_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 1919.566 ; gain = 83.816 
+dismissDialog("Reloading"); // bz
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // m
+// PAPropertyPanels.initPanels (<const0>) elapsed time: 0.6s
+// PAPropertyPanels.initPanels (<const0>) elapsed time: 0.4s
+// Elapsed time: 50 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "quickNode.sv", 2); // m
+selectCodeEditor("quickNode.sv", 200, 485); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h
+// bz (cr):  Reloading : addNotify
+// TclEventType: ELABORATE_START
+// Tcl Message: refresh_design 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,956 MB. GUI used memory: 112 MB. Current time: 3/8/23, 2:17:28 PM EST
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1989.160 ; gain = 22.961 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: ELABORATE_FINISH
+// TclEventType: DESIGN_REFRESH
+// [Engine Memory]: 1,980 MB (+6040kb) [00:25:09]
+// Engine heap size: 1,982 MB. GUI used memory: 90 MB. Current time: 3/8/23, 2:17:30 PM EST
+// WARNING: HEventQueue.dispatchEvent() is taking  1258 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,982 MB. GUI used memory: 91 MB. Current time: 3/8/23, 2:17:30 PM EST
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'quickNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23] INFO: [Synth 8-6157] synthesizing module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/controlNode.sv:23] INFO: [Synth 8-6155] done synthesizing module 'controlNode' (1#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/controlNode.sv:23] INFO: [Synth 8-6157] synthesizing module 'mem2p_sw_sr' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mem2p_sw_sr.sv:23] 
+// Tcl Message: 	Parameter W bound to: 8 - type: integer  	Parameter D bound to: 128 - type: integer  	Parameter DW bound to: 7 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'mem2p_sw_sr' (2#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mem2p_sw_sr.sv:23] 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mux2.sv:23] 
+// Tcl Message: 	Parameter W bound to: 32 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'mux2' (3#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mux2.sv:23] 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'dff' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/dff.sv:23] INFO: [Synth 8-6155] done synthesizing module 'dff' (4#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/dff.sv:23] INFO: [Synth 8-6157] synthesizing module 'valueRouter' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/valueRouter.sv:23] INFO: [Synth 8-6155] done synthesizing module 'valueRouter' (5#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/valueRouter.sv:23] INFO: [Synth 8-6155] done synthesizing module 'quickNode' (6#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1991.871 ; gain = 25.672 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2015.762 ; gain = 49.562 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2015.762 ; gain = 49.562 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 1,982 MB. GUI used memory: 91 MB. Current time: 3/8/23, 2:17:31 PM EST
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Schematic: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  2168 ms.
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2018.090 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Completed Processing XDC Constraints  
+// Tcl Message: refresh_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 2018.090 ; gain = 51.891 
+dismissDialog("Reloading"); // bz
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // m
+// Elapsed time: 61 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 24, false); // u
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cr): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a
+// bz (cr):  Resetting Runs : addNotify
+// cD (cr): Launch Runs: addNotify
+dismissDialog("No Implementation Results Available"); // A
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RUN_LAUNCH
+dismissDialog("Launch Runs"); // cD
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// bz (cr):  Generate Bitstream : addNotify
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Mar  8 14:18:46 2023] Launched synth_1... Run output will be captured here: C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/QuickQ_project.runs/synth_1/runme.log [Wed Mar  8 14:18:46 2023] Launched impl_1... Run output will be captured here: C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/QuickQ_project.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bz
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cr): Implementation Failed: addNotify
+// Elapsed time: 59 seconds
+dismissDialog("Implementation Failed"); // ag
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 18, false); // u
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bz (cr):  Resetting Runs : addNotify
+selectButton("OptionPane.button", "OK"); // JButton
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cr): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// bz (cr):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 2 
+// Tcl Message: [Wed Mar  8 14:19:54 2023] Launched synth_1... Run output will be captured here: C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/QuickQ_project.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cr): Synthesis Completed: addNotify
+// Elapsed time: 31 seconds
+dismissDialog("Synthesis Completed"); // ag
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "quickNode.sv", 2); // m
+// Elapsed time: 24 seconds
+selectCodeEditor("quickNode.sv", 272, 149); // bP
+// Elapsed time: 10 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 174 MB (+19kb) [00:28:55]
+// Elapsed time: 23 seconds
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h
+// bz (cr):  Reloading : addNotify
+// TclEventType: ELABORATE_START
+// Tcl Message: refresh_design 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2023.941 ; gain = 2.715 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: ELABORATE_FAIL
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'quickNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23] 
+// Tcl Message: ERROR: [Synth 8-470] no interface 'data_lt_o' found ERROR: [Synth 8-470] no interface 'data_lt_o' found ERROR: [Synth 8-470] no interface 'data_lt_o' found ERROR: [Synth 8-470] no interface 'data_lt_o' found ERROR: [Synth 8-6156] failed synthesizing module 'quickNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2023.969 ; gain = 2.742 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: RTL Elaboration failed ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.  
+// U (cr): Critical Messages: addNotify
+dismissDialog("Reloading"); // bz
+dismissDialog("Critical Messages"); // U
+// Elapsed time: 43 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h
+// bz (cr):  Reloading : addNotify
+// TclEventType: ELABORATE_START
+// Tcl Message: refresh_design 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2027.000 ; gain = 3.031 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: ELABORATE_FINISH
+// TclEventType: DESIGN_REFRESH
+// Engine heap size: 1,999 MB. GUI used memory: 94 MB. Current time: 3/8/23, 2:22:39 PM EST
+// WARNING: HEventQueue.dispatchEvent() is taking  1328 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,999 MB. GUI used memory: 94 MB. Current time: 3/8/23, 2:22:39 PM EST
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'quickNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23] INFO: [Synth 8-6157] synthesizing module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/controlNode.sv:23] INFO: [Synth 8-6155] done synthesizing module 'controlNode' (1#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/controlNode.sv:23] INFO: [Synth 8-6157] synthesizing module 'mem2p_sw_sr' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mem2p_sw_sr.sv:23] 
+// Tcl Message: 	Parameter W bound to: 8 - type: integer  	Parameter D bound to: 128 - type: integer  	Parameter DW bound to: 7 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'mem2p_sw_sr' (2#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mem2p_sw_sr.sv:23] 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mux2.sv:23] 
+// Tcl Message: 	Parameter W bound to: 32 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'mux2' (3#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mux2.sv:23] 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'dff' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/dff.sv:23] INFO: [Synth 8-6155] done synthesizing module 'dff' (4#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/dff.sv:23] INFO: [Synth 8-6157] synthesizing module 'valueRouter' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/valueRouter.sv:23] INFO: [Synth 8-6155] done synthesizing module 'valueRouter' (5#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/valueRouter.sv:23] INFO: [Synth 8-6155] done synthesizing module 'quickNode' (6#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2027.000 ; gain = 3.031 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2027.016 ; gain = 3.047 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2027.016 ; gain = 3.047 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 1,999 MB. GUI used memory: 93 MB. Current time: 3/8/23, 2:22:40 PM EST
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Schematic: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  2048 ms.
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2029.336 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Completed Processing XDC Constraints  
+// Tcl Message: refresh_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 2029.336 ; gain = 5.367 
+dismissDialog("Reloading"); // bz
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // m
+// Elapsed time: 18 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "quickNode.sv", 2); // m
+// Elapsed time: 45 seconds
+selectCodeEditor("quickNode.sv", 775, 397); // bP
+// Elapsed time: 16 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // m
+// Elapsed time: 84 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "controlNode.sv", 3); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "quickNode.sv", 2); // m
+// Elapsed time: 91 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // m
+// Elapsed time: 15 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "quickNode.sv", 2); // m
+selectCodeEditor("quickNode.sv", 726, 399); // bP
+selectCodeEditor("quickNode.sv", 645, 430); // bP
+selectCodeEditor("quickNode.sv", 436, 521); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 2,005 MB. GUI used memory: 119 MB. Current time: 3/8/23, 2:27:33 PM EST
+selectCodeEditor("quickNode.sv", 538, 518); // bP
+selectCodeEditor("quickNode.sv", 486, 517); // bP
+selectCodeEditor("quickNode.sv", 516, 517); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "quickNode.sv", 2); // m
+selectCodeEditor("quickNode.sv", 292, 229); // bP
+// Elapsed time: 10 seconds
+selectCodeEditor("quickNode.sv", 346, 238); // bP
+selectCodeEditor("quickNode.sv", 729, 299); // bP
+// Elapsed time: 10 seconds
+selectCodeEditor("quickNode.sv", 446, 111); // bP
+// Elapsed time: 18 seconds
+selectCodeEditor("quickNode.sv", 258, 127); // bP
+typeControlKey((HResource) null, "quickNode.sv", 'c'); // bP
+selectCodeEditor("quickNode.sv", 200, 357); // bP
+typeControlKey((HResource) null, "quickNode.sv", 'v'); // bP
+selectCodeEditor("quickNode.sv", 116, 130); // bP
+selectCodeEditor("quickNode.sv", 194, 397); // bP
+selectCodeEditor("quickNode.sv", 309, 398); // bP
+selectCodeEditor("quickNode.sv", 301, 384); // bP
+selectCodeEditor("quickNode.sv", 116, 400); // bP
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mux2.sv", 5); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mem2p_sw_sr.sv", 4); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "quickNode.sv", 2); // m
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h
+// bz (cr):  Reloading : addNotify
+// TclEventType: ELABORATE_START
+// Tcl Message: refresh_design 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2035.859 ; gain = 6.281 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: ELABORATE_FINISH
+// TclEventType: DESIGN_REFRESH
+// Engine heap size: 2,012 MB. GUI used memory: 95 MB. Current time: 3/8/23, 2:29:32 PM EST
+// WARNING: HEventQueue.dispatchEvent() is taking  1144 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,012 MB. GUI used memory: 95 MB. Current time: 3/8/23, 2:29:32 PM EST
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'quickNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23] INFO: [Synth 8-6157] synthesizing module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/controlNode.sv:23] INFO: [Synth 8-6155] done synthesizing module 'controlNode' (1#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/controlNode.sv:23] INFO: [Synth 8-6157] synthesizing module 'mem2p_sw_sr' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mem2p_sw_sr.sv:23] 
+// Tcl Message: 	Parameter W bound to: 8 - type: integer  	Parameter D bound to: 128 - type: integer  	Parameter DW bound to: 7 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'mem2p_sw_sr' (2#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mem2p_sw_sr.sv:23] 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mux2.sv:23] 
+// Tcl Message: 	Parameter W bound to: 32 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'mux2' (3#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mux2.sv:23] 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'dff' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/dff.sv:23] INFO: [Synth 8-6155] done synthesizing module 'dff' (4#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/dff.sv:23] INFO: [Synth 8-6157] synthesizing module 'valueRouter' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/valueRouter.sv:23] INFO: [Synth 8-6155] done synthesizing module 'valueRouter' (5#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/valueRouter.sv:23] INFO: [Synth 8-6155] done synthesizing module 'quickNode' (6#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2035.859 ; gain = 6.281 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2039.750 ; gain = 10.172 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2039.750 ; gain = 10.172 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 2,012 MB. GUI used memory: 96 MB. Current time: 3/8/23, 2:29:33 PM EST
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Schematic: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  2091 ms.
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2042.113 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Completed Processing XDC Constraints  
+// Tcl Message: refresh_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 2042.113 ; gain = 12.535 
+dismissDialog("Reloading"); // bz
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // m
+// Elapsed time: 130 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, count_increase (count_increase.sv)]", 2, false, false, false, false, true, false); // D - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ah
+selectMenuItem(PAResourceCommand.PACommandNames_SRC_DISABLE, "Disable File"); // ak
+// Run Command: PAResourceCommand.PACommandNames_SRC_DISABLE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: set_property is_enabled false [get_files  C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/count_increase.sv] 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, counter_addr (counter_addr.sv)]", 3, false, false, false, false, true, false); // D - Popup Trigger
+selectMenuItem(PAResourceCommand.PACommandNames_SRC_DISABLE, "Disable File"); // ak
+// Run Command: PAResourceCommand.PACommandNames_SRC_DISABLE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: set_property is_enabled false [get_files  C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/counter_addr.sv] 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, counter_size (counter_size.sv)]", 4, false, false, false, false, true, false); // D - Popup Trigger
+selectMenuItem(PAResourceCommand.PACommandNames_SRC_DISABLE, "Disable File"); // ak
+// Run Command: PAResourceCommand.PACommandNames_SRC_DISABLE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: set_property is_enabled false [get_files  C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/QuickQ_project.srcs/sources_1/new/counter_size.sv] 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, dffe (dffe.sv)]", 5, false, false, false, false, true, false); // D - Popup Trigger
+selectMenuItem(PAResourceCommand.PACommandNames_SRC_DISABLE, "Disable File"); // ak
+// Run Command: PAResourceCommand.PACommandNames_SRC_DISABLE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: set_property is_enabled false [get_files  C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/dffe.sv] 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, quickFSM (quickFSM.sv)]", 6, false, false, false, false, true, false); // D - Popup Trigger
+selectMenuItem(PAResourceCommand.PACommandNames_SRC_DISABLE, "Disable File"); // ak
+// Run Command: PAResourceCommand.PACommandNames_SRC_DISABLE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: set_property is_enabled false [get_files  C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickFSM.sv] 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, quickNode (quickNode.sv)]", 1); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, quickNode (quickNode.sv)]", 1); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, quickNode (quickNode.sv)]", 1); // D
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 18, false); // u
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bz (cr):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cr): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// bz (cr):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 2 
+// Tcl Message: [Wed Mar  8 14:32:06 2023] Launched synth_1... Run output will be captured here: C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/QuickQ_project.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cr): Synthesis Completed: addNotify
+// Elapsed time: 33 seconds
+dismissDialog("Synthesis Completed"); // ag
+// Elapsed time: 37 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // m
+// Elapsed time: 616 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // m
+// [GUI Memory]: 184 MB (+1024kb) [01:06:57]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,012 MB. GUI used memory: 114 MB. Current time: 3/8/23, 2:59:33 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,012 MB. GUI used memory: 111 MB. Current time: 3/8/23, 3:29:34 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,012 MB. GUI used memory: 112 MB. Current time: 3/8/23, 3:59:34 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,012 MB. GUI used memory: 111 MB. Current time: 3/8/23, 4:29:34 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,012 MB. GUI used memory: 111 MB. Current time: 3/8/23, 4:59:35 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,012 MB. GUI used memory: 111 MB. Current time: 3/8/23, 5:29:35 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,012 MB. GUI used memory: 112 MB. Current time: 3/8/23, 5:59:35 PM EST

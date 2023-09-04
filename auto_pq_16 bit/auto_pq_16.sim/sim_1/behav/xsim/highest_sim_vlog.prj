@@ -1,0 +1,27 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../../pq_pkg.sv" \
+"../../../../RTL/auto_top.sv" \
+"../../../../RTL/compcounter.sv" \
+"../../../../RTL/counter.sv" \
+"../../../../RTL/dec_3_8_n.sv" \
+"../../../../RTL/flip_flop.sv" \
+"../../../../RTL/fsm_pq.sv" \
+"../../../../heap_pq_test/heap_pq/heap_pq.sv" \
+"../../../../RTL/high_level.sv" \
+"../../../../RTL/highest_level.sv" \
+"../../../../RTL/lfsr.sv" \
+"../../../../heap_pq_test/heap_pq/mem_swsr.sv" \
+"../../../../RTL/mux8.sv" \
+"../../../../RTL/period_enb.sv" \
+"../../../../../pq_if.sv" \
+"../../../../RTL/rgb_pwm.sv" \
+"../../../../RTL/sevenseg_ctl.sv" \
+"../../../../RTL/sevenseg_ext_n.sv" \
+"../../../../RTL/highest_sim.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

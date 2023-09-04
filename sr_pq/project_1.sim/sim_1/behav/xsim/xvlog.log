@@ -1,0 +1,11 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/pq_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/pq_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sr_pq
+INFO: [VRFC 10-2458] undeclared symbol replace, assumed default net type wire [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq.sv:30]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_stage.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sr_pq_stage
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sr_pq_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sr_pq_top

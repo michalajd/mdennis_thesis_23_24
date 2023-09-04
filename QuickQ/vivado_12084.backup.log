@@ -1,0 +1,418 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Mar  8 13:52:10 2023
+# Process ID: 12084
+# Current directory: C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17696 C:\Users\ehgartns\Documents\PQrep\pq_Research\QuickQ\QuickQ_project.xpr
+# Log file: C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/vivado.log
+# Journal file: C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/QuickQ_project.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/ehgartns/Documents/pq_Research/QuickQ' since last save.
+WARNING: [filemgmt 56-2] Default IP Output Path : Could not find the directory 'C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/QuickQ_project.gen/sources_1', nor could it be found using path 'C:/Users/ehgartns/Documents/pq_Research/QuickQ/QuickQ_project.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 1088.957 ; gain = 0.000
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: quickNode
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+ERROR: [Synth 8-1031] rd_addr is not declared [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:38]
+ERROR: [Synth 8-1031] wr_addr is not declared [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:38]
+INFO: [Synth 8-2350] module quickNode ignored due to previous errors [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23]
+Failed to read verilog 'C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv'
+2 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: quickNode
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1571.875 ; gain = 10.121
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'quickNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/controlNode.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'controlNode' (1#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/controlNode.sv:23]
+ERROR: [Synth 8-448] named port connection 'clk' does not exist for instance 'CTL' of module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:38]
+ERROR: [Synth 8-448] named port connection 'read_i' does not exist for instance 'CTL' of module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:38]
+ERROR: [Synth 8-448] named port connection 'write_i' does not exist for instance 'CTL' of module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:38]
+ERROR: [Synth 8-448] named port connection 'reset_i' does not exist for instance 'CTL' of module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:38]
+ERROR: [Synth 8-448] named port connection 'sel_i' does not exist for instance 'CTL' of module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:38]
+ERROR: [Synth 8-448] named port connection 'sel_o' does not exist for instance 'CTL' of module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:38]
+ERROR: [Synth 8-448] named port connection 'sel_b' does not exist for instance 'CTL' of module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:38]
+ERROR: [Synth 8-448] named port connection 'rd_addr' does not exist for instance 'CTL' of module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:38]
+ERROR: [Synth 8-448] named port connection 'wr_addr' does not exist for instance 'CTL' of module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:38]
+ERROR: [Synth 8-448] named port connection 'enables' does not exist for instance 'CTL' of module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:38]
+ERROR: [Synth 8-448] named port connection 'read_o' does not exist for instance 'CTL' of module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:38]
+ERROR: [Synth 8-448] named port connection 'write_o' does not exist for instance 'CTL' of module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:38]
+ERROR: [Synth 8-448] named port connection 'reset_o' does not exist for instance 'CTL' of module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:38]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:40]
+INFO: [Synth 8-6157] synthesizing module 'mem2p_sw_sr' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mem2p_sw_sr.sv:23]
+	Parameter W bound to: 8 - type: integer 
+	Parameter D bound to: 128 - type: integer 
+	Parameter DW bound to: 7 - type: integer 
+ERROR: [Synth 8-6156] failed synthesizing module 'mem2p_sw_sr' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mem2p_sw_sr.sv:23]
+ERROR: [Synth 8-6156] failed synthesizing module 'quickNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1607.359 ; gain = 45.605
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+4 Infos, 1 Warnings, 0 Critical Warnings and 16 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: quickNode
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1635.656 ; gain = 17.438
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'quickNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/controlNode.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'controlNode' (1#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/controlNode.sv:23]
+ERROR: [Synth 8-448] named port connection 'clk' does not exist for instance 'CTL' of module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:38]
+ERROR: [Synth 8-448] named port connection 'read_i' does not exist for instance 'CTL' of module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:38]
+ERROR: [Synth 8-448] named port connection 'write_i' does not exist for instance 'CTL' of module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:38]
+ERROR: [Synth 8-448] named port connection 'reset_i' does not exist for instance 'CTL' of module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:38]
+ERROR: [Synth 8-448] named port connection 'sel_i' does not exist for instance 'CTL' of module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:38]
+ERROR: [Synth 8-448] named port connection 'sel_o' does not exist for instance 'CTL' of module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:38]
+ERROR: [Synth 8-448] named port connection 'sel_b' does not exist for instance 'CTL' of module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:38]
+ERROR: [Synth 8-448] named port connection 'rd_addr' does not exist for instance 'CTL' of module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:38]
+ERROR: [Synth 8-448] named port connection 'wr_addr' does not exist for instance 'CTL' of module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:38]
+ERROR: [Synth 8-448] named port connection 'enables' does not exist for instance 'CTL' of module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:38]
+ERROR: [Synth 8-448] named port connection 'read_o' does not exist for instance 'CTL' of module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:38]
+ERROR: [Synth 8-448] named port connection 'write_o' does not exist for instance 'CTL' of module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:38]
+ERROR: [Synth 8-448] named port connection 'reset_o' does not exist for instance 'CTL' of module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:38]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:40]
+INFO: [Synth 8-6157] synthesizing module 'mem2p_sw_sr' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mem2p_sw_sr.sv:23]
+	Parameter W bound to: 8 - type: integer 
+	Parameter D bound to: 128 - type: integer 
+	Parameter DW bound to: 7 - type: integer 
+ERROR: [Synth 8-6156] failed synthesizing module 'mem2p_sw_sr' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mem2p_sw_sr.sv:23]
+ERROR: [Synth 8-6156] failed synthesizing module 'quickNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1635.656 ; gain = 17.438
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+4 Infos, 1 Warnings, 0 Critical Warnings and 16 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: quickNode
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1650.105 ; gain = 13.770
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'quickNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/controlNode.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'controlNode' (1#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/controlNode.sv:23]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:40]
+INFO: [Synth 8-6157] synthesizing module 'mem2p_sw_sr' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mem2p_sw_sr.sv:23]
+	Parameter W bound to: 8 - type: integer 
+	Parameter D bound to: 128 - type: integer 
+	Parameter DW bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mem2p_sw_sr' (2#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mem2p_sw_sr.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mux2.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'mux2' (3#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mux2.sv:23]
+ERROR: [Synth 8-448] named port connection 'd0' does not exist for instance 'select_in' of module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:42]
+ERROR: [Synth 8-448] named port connection 'd1' does not exist for instance 'select_in' of module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:42]
+ERROR: [Synth 8-448] named port connection 'sel' does not exist for instance 'select_in' of module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:42]
+ERROR: [Synth 8-448] named port connection 'y' does not exist for instance 'select_in' of module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:42]
+ERROR: [Synth 8-448] named port connection 'd0' does not exist for instance 'data_out' of module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:44]
+ERROR: [Synth 8-448] named port connection 'd1' does not exist for instance 'data_out' of module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:44]
+ERROR: [Synth 8-448] named port connection 'sel' does not exist for instance 'data_out' of module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:44]
+ERROR: [Synth 8-448] named port connection 'y' does not exist for instance 'data_out' of module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:44]
+ERROR: [Synth 8-448] named port connection 'd0' does not exist for instance 'data_in' of module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:46]
+ERROR: [Synth 8-448] named port connection 'd1' does not exist for instance 'data_in' of module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:46]
+ERROR: [Synth 8-448] named port connection 'sel' does not exist for instance 'data_in' of module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:46]
+ERROR: [Synth 8-448] named port connection 'y' does not exist for instance 'data_in' of module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:46]
+INFO: [Synth 8-6157] synthesizing module 'dff' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/dff.sv:23]
+ERROR: [Synth 8-6156] failed synthesizing module 'dff' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/dff.sv:23]
+ERROR: [Synth 8-6156] failed synthesizing module 'quickNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1650.105 ; gain = 13.770
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+8 Infos, 1 Warnings, 0 Critical Warnings and 15 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: quickNode
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1650.781 ; gain = 0.676
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'quickNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/controlNode.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'controlNode' (1#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/controlNode.sv:23]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:40]
+INFO: [Synth 8-6157] synthesizing module 'mem2p_sw_sr' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mem2p_sw_sr.sv:23]
+	Parameter W bound to: 8 - type: integer 
+	Parameter D bound to: 128 - type: integer 
+	Parameter DW bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mem2p_sw_sr' (2#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mem2p_sw_sr.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mux2.sv:23]
+	Parameter W bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux2' (3#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mux2.sv:23]
+WARNING: [Synth 8-689] width (1) of port connection 'y' does not match port width (32) of module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:42]
+WARNING: [Synth 8-689] width (1) of port connection 'y' does not match port width (32) of module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:44]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:46]
+INFO: [Synth 8-6157] synthesizing module 'dff' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/dff.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'dff' (4#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/dff.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'quickNode' (5#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1650.781 ; gain = 0.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1650.781 ; gain = 0.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1650.781 ; gain = 0.676
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1650.781 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1715.383 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 1789.348 ; gain = 139.242
+12 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 1789.348 ; gain = 139.242
+close [ open C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/valueRouter.sv w ]
+add_files C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/valueRouter.sv
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1865.098 ; gain = 29.348
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'quickNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/controlNode.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'controlNode' (1#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/controlNode.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'mem2p_sw_sr' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mem2p_sw_sr.sv:23]
+	Parameter W bound to: 8 - type: integer 
+	Parameter D bound to: 128 - type: integer 
+	Parameter DW bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mem2p_sw_sr' (2#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mem2p_sw_sr.sv:23]
+WARNING: [Synth 8-689] width (1) of port connection 'dout2' does not match port width (8) of module 'mem2p_sw_sr' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:43]
+INFO: [Synth 8-6157] synthesizing module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mux2.sv:23]
+	Parameter W bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux2' (3#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mux2.sv:23]
+WARNING: [Synth 8-689] width (1) of port connection 'y' does not match port width (32) of module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:45]
+WARNING: [Synth 8-689] width (1) of port connection 'y' does not match port width (32) of module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:47]
+WARNING: [Synth 8-689] width (1) of port connection 'y' does not match port width (32) of module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:49]
+INFO: [Synth 8-6157] synthesizing module 'dff' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/dff.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'dff' (4#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/dff.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'valueRouter' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/valueRouter.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'valueRouter' (5#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/valueRouter.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'quickNode' (6#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1893.320 ; gain = 57.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1917.223 ; gain = 81.473
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1917.223 ; gain = 81.473
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1919.566 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+refresh_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 1919.566 ; gain = 83.816
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1989.160 ; gain = 22.961
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'quickNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/controlNode.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'controlNode' (1#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/controlNode.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'mem2p_sw_sr' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mem2p_sw_sr.sv:23]
+	Parameter W bound to: 8 - type: integer 
+	Parameter D bound to: 128 - type: integer 
+	Parameter DW bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mem2p_sw_sr' (2#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mem2p_sw_sr.sv:23]
+WARNING: [Synth 8-689] width (1) of port connection 'dout2' does not match port width (8) of module 'mem2p_sw_sr' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:43]
+INFO: [Synth 8-6157] synthesizing module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mux2.sv:23]
+	Parameter W bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux2' (3#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mux2.sv:23]
+WARNING: [Synth 8-689] width (1) of port connection 'y' does not match port width (32) of module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:45]
+WARNING: [Synth 8-689] width (1) of port connection 'y' does not match port width (32) of module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:47]
+WARNING: [Synth 8-689] width (1) of port connection 'y' does not match port width (32) of module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:49]
+INFO: [Synth 8-6157] synthesizing module 'dff' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/dff.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'dff' (4#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/dff.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'valueRouter' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/valueRouter.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'valueRouter' (5#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/valueRouter.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'quickNode' (6#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1991.871 ; gain = 25.672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2015.762 ; gain = 49.562
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2015.762 ; gain = 49.562
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2018.090 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+refresh_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 2018.090 ; gain = 51.891
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Wed Mar  8 14:18:46 2023] Launched synth_1...
+Run output will be captured here: C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/QuickQ_project.runs/synth_1/runme.log
+[Wed Mar  8 14:18:46 2023] Launched impl_1...
+Run output will be captured here: C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/QuickQ_project.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Wed Mar  8 14:19:54 2023] Launched synth_1...
+Run output will be captured here: C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/QuickQ_project.runs/synth_1/runme.log
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2023.941 ; gain = 2.715
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'quickNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23]
+ERROR: [Synth 8-470] no interface 'data_lt_o' found
+ERROR: [Synth 8-470] no interface 'data_lt_o' found
+ERROR: [Synth 8-470] no interface 'data_lt_o' found
+ERROR: [Synth 8-470] no interface 'data_lt_o' found
+ERROR: [Synth 8-6156] failed synthesizing module 'quickNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2023.969 ; gain = 2.742
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2027.000 ; gain = 3.031
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'quickNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/controlNode.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'controlNode' (1#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/controlNode.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'mem2p_sw_sr' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mem2p_sw_sr.sv:23]
+	Parameter W bound to: 8 - type: integer 
+	Parameter D bound to: 128 - type: integer 
+	Parameter DW bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mem2p_sw_sr' (2#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mem2p_sw_sr.sv:23]
+WARNING: [Synth 8-689] width (1) of port connection 'dout2' does not match port width (8) of module 'mem2p_sw_sr' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:43]
+INFO: [Synth 8-6157] synthesizing module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mux2.sv:23]
+	Parameter W bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux2' (3#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mux2.sv:23]
+WARNING: [Synth 8-689] width (1) of port connection 'y' does not match port width (32) of module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:45]
+WARNING: [Synth 8-689] width (1) of port connection 'y' does not match port width (32) of module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:47]
+WARNING: [Synth 8-689] width (1) of port connection 'y' does not match port width (32) of module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:49]
+INFO: [Synth 8-6157] synthesizing module 'dff' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/dff.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'dff' (4#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/dff.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'valueRouter' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/valueRouter.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'valueRouter' (5#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/valueRouter.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'quickNode' (6#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2027.000 ; gain = 3.031
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2027.016 ; gain = 3.047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2027.016 ; gain = 3.047
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2029.336 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+refresh_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 2029.336 ; gain = 5.367
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2035.859 ; gain = 6.281
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'quickNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'controlNode' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/controlNode.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'controlNode' (1#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/controlNode.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'mem2p_sw_sr' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mem2p_sw_sr.sv:23]
+	Parameter W bound to: 8 - type: integer 
+	Parameter D bound to: 128 - type: integer 
+	Parameter DW bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mem2p_sw_sr' (2#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mem2p_sw_sr.sv:23]
+WARNING: [Synth 8-689] width (1) of port connection 'dout2' does not match port width (8) of module 'mem2p_sw_sr' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:47]
+INFO: [Synth 8-6157] synthesizing module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mux2.sv:23]
+	Parameter W bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux2' (3#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/mux2.sv:23]
+WARNING: [Synth 8-689] width (1) of port connection 'y' does not match port width (32) of module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:49]
+WARNING: [Synth 8-689] width (1) of port connection 'y' does not match port width (32) of module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:51]
+WARNING: [Synth 8-689] width (1) of port connection 'y' does not match port width (32) of module 'mux2' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'dff' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/dff.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'dff' (4#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/dff.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'valueRouter' [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/valueRouter.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'valueRouter' (5#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/valueRouter.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'quickNode' (6#1) [C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickNode.sv:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2035.859 ; gain = 6.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2039.750 ; gain = 10.172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2039.750 ; gain = 10.172
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2042.113 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+refresh_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 2042.113 ; gain = 12.535
+set_property is_enabled false [get_files  C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/count_increase.sv]
+set_property is_enabled false [get_files  C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/counter_addr.sv]
+set_property is_enabled false [get_files  C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/QuickQ_project.srcs/sources_1/new/counter_size.sv]
+set_property is_enabled false [get_files  C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/dffe.sv]
+set_property is_enabled false [get_files  C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/RTL/quickFSM.sv]
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Wed Mar  8 14:32:06 2023] Launched synth_1...
+Run output will be captured here: C:/Users/ehgartns/Documents/PQrep/pq_Research/QuickQ/QuickQ_project.runs/synth_1/runme.log

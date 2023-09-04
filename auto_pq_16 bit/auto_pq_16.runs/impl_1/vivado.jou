@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Aug  3 13:45:26 2022
+# Process ID: 10544
+# Current directory: C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/auto_pq_16.runs/impl_1
+# Command line: vivado.exe -log highest_level.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source highest_level.tcl -notrace
+# Log file: C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/auto_pq_16.runs/impl_1/highest_level.vdi
+# Journal file: C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/auto_pq_16.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source highest_level.tcl -notrace

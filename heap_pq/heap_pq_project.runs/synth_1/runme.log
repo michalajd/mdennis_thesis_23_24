@@ -1,0 +1,325 @@
+
+*** Running vivado
+    with args -log heap_pq_hw.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source heap_pq_hw.tcl
+
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source heap_pq_hw.tcl -notrace
+Command: synth_design -top heap_pq_hw -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 16936
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1089.105 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'heap_pq_hw' [C:/Users/ehgartns/Documents/new_pq_repo/heap_pq/heap_pq_hw/heap_pq_hw.sv:14]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [C:/Users/ehgartns/Documents/new_pq_repo/heap_pq/heap_pq_hw/debounce.sv:13]
+	Parameter CLKPD_NS bound to: 10 - type: integer 
+	Parameter CLKFREQ bound to: 100000000 - type: integer 
+	Parameter DEBOUNCE_MS bound to: 10 - type: integer 
+	Parameter CTRBITS bound to: 20 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (1#1) [C:/Users/ehgartns/Documents/new_pq_repo/heap_pq/heap_pq_hw/debounce.sv:13]
+INFO: [Synth 8-6157] synthesizing module 'single_pulser' [C:/Users/ehgartns/Documents/new_pq_repo/heap_pq/heap_pq_hw/single_pulser.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'single_pulser' (2#1) [C:/Users/ehgartns/Documents/new_pq_repo/heap_pq/heap_pq_hw/single_pulser.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'pq_if' [C:/Users/ehgartns/Documents/new_pq_repo/pq_if.sv:14]
+INFO: [Synth 8-6155] done synthesizing module 'pq_if' (2#1) [C:/Users/ehgartns/Documents/new_pq_repo/pq_if.sv:14]
+INFO: [Synth 8-6157] synthesizing module 'heap_pq' [C:/Users/ehgartns/Documents/new_pq_repo/heap_pq/heap_pq.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'mem_swsr' [C:/Users/ehgartns/Documents/new_pq_repo/heap_pq/mem_swsr.sv:15]
+	Parameter W bound to: 16 - type: integer 
+	Parameter D bound to: 32768 - type: integer 
+	Parameter DW bound to: 15 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mem_swsr' (3#1) [C:/Users/ehgartns/Documents/new_pq_repo/heap_pq/mem_swsr.sv:15]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/ehgartns/Documents/new_pq_repo/heap_pq/heap_pq.sv:118]
+INFO: [Synth 8-6155] done synthesizing module 'heap_pq' (4#1) [C:/Users/ehgartns/Documents/new_pq_repo/heap_pq/heap_pq.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'sevenseg_ctl' [C:/Users/ehgartns/Documents/new_pq_repo/heap_pq/heap_pq_hw/sevenseg_ctl.sv:18]
+INFO: [Synth 8-6157] synthesizing module 'period_enb' [C:/Users/ehgartns/Documents/new_pq_repo/heap_pq/heap_pq_hw/period_enb.sv:20]
+	Parameter PERIOD_MS bound to: 1 - type: integer 
+	Parameter PERIOD_US bound to: 1000 - type: integer 
+	Parameter PERIOD_NS bound to: 1000000 - type: integer 
+	Parameter CLKFREQ_MHZ bound to: 100 - type: integer 
+	Parameter CLKPD_NS bound to: 10 - type: integer 
+	Parameter PERIOD_COUNT_LIMIT bound to: 100000 - type: integer 
+	Parameter PERIOD_COUNT_BITS bound to: 17 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'period_enb' (5#1) [C:/Users/ehgartns/Documents/new_pq_repo/heap_pq/heap_pq_hw/period_enb.sv:20]
+INFO: [Synth 8-6157] synthesizing module 'counter' [C:/Users/ehgartns/Documents/new_pq_repo/heap_pq/counter.sv:23]
+	Parameter W bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'counter' (6#1) [C:/Users/ehgartns/Documents/new_pq_repo/heap_pq/counter.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'dec_3_8_n' [C:/Users/ehgartns/Documents/new_pq_repo/heap_pq/dec_3_8_n.sv:23]
+INFO: [Synth 8-226] default block is never used [C:/Users/ehgartns/Documents/new_pq_repo/heap_pq/dec_3_8_n.sv:31]
+INFO: [Synth 8-6155] done synthesizing module 'dec_3_8_n' (7#1) [C:/Users/ehgartns/Documents/new_pq_repo/heap_pq/dec_3_8_n.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'mux8' [C:/Users/ehgartns/Documents/new_pq_repo/heap_pq/mux8.sv:23]
+	Parameter W bound to: 7 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/ehgartns/Documents/new_pq_repo/heap_pq/mux8.sv:28]
+INFO: [Synth 8-6155] done synthesizing module 'mux8' (8#1) [C:/Users/ehgartns/Documents/new_pq_repo/heap_pq/mux8.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'sevenseg_ext_n' [C:/Users/ehgartns/Documents/new_pq_repo/heap_pq/heap_pq_hw/sevenseg_ext_n.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'sevenseg_ext_n' (9#1) [C:/Users/ehgartns/Documents/new_pq_repo/heap_pq/heap_pq_hw/sevenseg_ext_n.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'sevenseg_ctl' (10#1) [C:/Users/ehgartns/Documents/new_pq_repo/heap_pq/heap_pq_hw/sevenseg_ctl.sv:18]
+INFO: [Synth 8-6155] done synthesizing module 'heap_pq_hw' (11#1) [C:/Users/ehgartns/Documents/new_pq_repo/heap_pq/heap_pq_hw/heap_pq_hw.sv:14]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1089.105 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1089.105 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1089.105 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'heap_pq'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                             0000 |                             0000
+              ENQ_DEQ_ST |                             0001 |                             1100
+                  ENQ_ST |                             0010 |                             0001
+                 ENQ_RDP |                             0011 |                             0010
+                 ENQ_SWP |                             0100 |                             0011
+                ENQ_SWP2 |                             0101 |                             0100
+                  DEQ_ST |                             0110 |                             0101
+                 DEQ_ST2 |                             0111 |                             0110
+                 HPFY_ST |                             1000 |                             0111
+                HPFY_RDL |                             1001 |                             1000
+                HPFY_RDR |                             1010 |                             1001
+                HPFY_SWP |                             1011 |                             1010
+               HPFY_SWP2 |                             1100 |                             1011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'heap_pq'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 1089.105 ; gain = 0.000
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   15 Bit       Adders := 2     
+	   2 Input    3 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	               15 Bit    Registers := 4     
+	                8 Bit    Registers := 8     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 15    
++---RAMs : 
+	             512K Bit	(32768 X 16 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   15 Bit        Muxes := 3     
+	  13 Input   15 Bit        Muxes := 4     
+	   2 Input    8 Bit        Muxes := 4     
+	  13 Input    8 Bit        Muxes := 6     
+	   8 Input    8 Bit        Muxes := 1     
+	  17 Input    7 Bit        Muxes := 1     
+	  13 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 9     
+	  13 Input    1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+RAM Pipeline Warning: Read Address Register Found For RAM U_HEAP_PQ/U_HEAPMEM/ram_array_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM U_HEAP_PQ/U_HEAPMEM/ram_array_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM U_HEAP_PQ/U_HEAPMEM/ram_array_reg. We will not be able to pipeline it. This may degrade performance. 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 1105.730 ; gain = 16.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping	Report (see note below)
++------------+-----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                        | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+-----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|heap_pq_hw  | U_HEAP_PQ/U_HEAPMEM/ram_array_reg | 32 K x 16(WRITE_FIRST) | W | R |                        |   |   | Port A           | 0      | 16     | 
++------------+-----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 1105.730 ; gain = 16.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping	Report
++------------+-----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                        | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+-----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|heap_pq_hw  | U_HEAP_PQ/U_HEAPMEM/ram_array_reg | 32 K x 16(WRITE_FIRST) | W | R |                        |   |   | Port A           | 0      | 16     | 
++------------+-----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance U_HEAP_PQ/U_HEAPMEM/ram_array_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_HEAP_PQ/U_HEAPMEM/ram_array_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_HEAP_PQ/U_HEAPMEM/ram_array_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_HEAP_PQ/U_HEAPMEM/ram_array_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_HEAP_PQ/U_HEAPMEM/ram_array_reg_0_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_HEAP_PQ/U_HEAPMEM/ram_array_reg_0_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_HEAP_PQ/U_HEAPMEM/ram_array_reg_0_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_HEAP_PQ/U_HEAPMEM/ram_array_reg_0_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_HEAP_PQ/U_HEAPMEM/ram_array_reg_0_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_HEAP_PQ/U_HEAPMEM/ram_array_reg_0_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_HEAP_PQ/U_HEAPMEM/ram_array_reg_0_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_HEAP_PQ/U_HEAPMEM/ram_array_reg_0_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_HEAP_PQ/U_HEAPMEM/ram_array_reg_0_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_HEAP_PQ/U_HEAPMEM/ram_array_reg_0_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_HEAP_PQ/U_HEAPMEM/ram_array_reg_0_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_HEAP_PQ/U_HEAPMEM/ram_array_reg_0_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1105.770 ; gain = 16.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1105.770 ; gain = 16.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1105.770 ; gain = 16.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1105.770 ; gain = 16.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1105.770 ; gain = 16.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1105.770 ; gain = 16.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1105.770 ; gain = 16.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |    39|
+|3     |LUT1     |    23|
+|4     |LUT2     |    15|
+|5     |LUT3     |    71|
+|6     |LUT4     |    64|
+|7     |LUT5     |    51|
+|8     |LUT6     |   112|
+|9     |RAMB36E1 |    16|
+|10    |FDRE     |   210|
+|11    |FDSE     |     1|
+|12    |IBUF     |    21|
+|13    |OBUF     |    19|
++------+---------+------+
+
+Report Instance Areas: 
++------+--------------+----------------+------+
+|      |Instance      |Module          |Cells |
++------+--------------+----------------+------+
+|1     |top           |                |   643|
+|2     |  SEVENSEG    |sevenseg_ctl    |    42|
+|3     |    U_CT      |counter         |    14|
+|4     |    U_ENB     |period_enb      |    28|
+|5     |  U_HEAP_PQ   |heap_pq         |   449|
+|6     |    U_HEAPMEM |mem_swsr        |   169|
+|7     |  deqDEBOUNCE |debounce        |    34|
+|8     |  deqPULSE    |single_pulser   |     2|
+|9     |  enqDEBOUNCE |debounce_0      |    34|
+|10    |  enqPULSE    |single_pulser_1 |     4|
+|11    |  repDEBOUNCE |debounce_2      |    34|
+|12    |  repPULSE    |single_pulser_3 |     3|
++------+--------------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1105.770 ; gain = 16.664
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1105.770 ; gain = 16.664
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1105.770 ; gain = 16.664
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1117.902 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 55 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1215.645 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+57 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 1215.645 ; gain = 126.539
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ehgartns/Documents/new_pq_repo/heap_pq/heap_pq_project.runs/synth_1/heap_pq_hw.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file heap_pq_hw_utilization_synth.rpt -pb heap_pq_hw_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Aug  4 14:34:27 2022...

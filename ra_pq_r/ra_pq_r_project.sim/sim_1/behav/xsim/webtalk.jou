@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Jun 21 14:03:35 2022
+# Process ID: 15924
+# Current directory: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_r/ra_pq_r_project.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_r/ra_pq_r_project.sim/sim_1/behav/xsim/xsim.dir/ra_pq_r_top_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_r/ra_pq_r_project.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_r/ra_pq_r_project.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_r/ra_pq_r_project.sim/sim_1/behav/xsim/xsim.dir/ra_pq_r_top_behav/webtalk/xsim_webtalk.tcl -notrace

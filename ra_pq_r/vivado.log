@@ -1,0 +1,89 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Jul  7 14:32:38 2022
+# Process ID: 4160
+# Current directory: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_r
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11136 C:\Users\ehgartns\Documents\summerReasearch2022\hw_pq\ra_pq_r\ra_pq_r_project.xpr
+# Log file: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_r/vivado.log
+# Journal file: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_r\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_r/ra_pq_r_project.xpr
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_r/ra_pq_r_project.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:10 . Memory (MB): peak = 1088.734 ; gain = 0.000
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+[Thu Jul  7 14:33:38 2022] Launched synth_1...
+Run output will be captured here: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_r/ra_pq_r_project.runs/synth_1/runme.log
+[Thu Jul  7 14:33:38 2022] Launched impl_1...
+Run output will be captured here: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_r/ra_pq_r_project.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+[Thu Jul  7 14:48:11 2022] Launched synth_1...
+Run output will be captured here: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_r/ra_pq_r_project.runs/synth_1/runme.log
+[Thu Jul  7 14:48:11 2022] Launched impl_1...
+Run output will be captured here: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_r/ra_pq_r_project.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+[Thu Jul  7 15:06:38 2022] Launched synth_1...
+Run output will be captured here: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_r/ra_pq_r_project.runs/synth_1/runme.log
+[Thu Jul  7 15:06:38 2022] Launched impl_1...
+Run output will be captured here: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_r/ra_pq_r_project.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+[Thu Jul  7 15:10:30 2022] Launched synth_1...
+Run output will be captured here: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_r/ra_pq_r_project.runs/synth_1/runme.log
+[Thu Jul  7 15:10:30 2022] Launched impl_1...
+Run output will be captured here: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_r/ra_pq_r_project.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+[Thu Jul  7 15:14:01 2022] Launched synth_1...
+Run output will be captured here: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_r/ra_pq_r_project.runs/synth_1/runme.log
+[Thu Jul  7 15:14:01 2022] Launched impl_1...
+Run output will be captured here: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_r/ra_pq_r_project.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+[Thu Jul  7 15:36:24 2022] Launched synth_1...
+Run output will be captured here: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_r/ra_pq_r_project.runs/synth_1/runme.log
+[Thu Jul  7 15:36:24 2022] Launched impl_1...
+Run output will be captured here: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_r/ra_pq_r_project.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+[Thu Jul  7 15:55:15 2022] Launched synth_1...
+Run output will be captured here: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_r/ra_pq_r_project.runs/synth_1/runme.log
+[Thu Jul  7 15:55:15 2022] Launched impl_1...
+Run output will be captured here: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_r/ra_pq_r_project.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+[Thu Jul  7 16:01:22 2022] Launched synth_1...
+Run output will be captured here: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_r/ra_pq_r_project.runs/synth_1/runme.log
+[Thu Jul  7 16:01:22 2022] Launched impl_1...
+Run output will be captured here: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_r/ra_pq_r_project.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+[Thu Jul  7 16:09:06 2022] Launched synth_1...
+Run output will be captured here: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_r/ra_pq_r_project.runs/synth_1/runme.log
+[Thu Jul  7 16:09:06 2022] Launched impl_1...
+Run output will be captured here: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_r/ra_pq_r_project.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+[Thu Jul  7 16:21:03 2022] Launched synth_1...
+Run output will be captured here: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_r/ra_pq_r_project.runs/synth_1/runme.log
+[Thu Jul  7 16:21:03 2022] Launched impl_1...
+Run output will be captured here: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_r/ra_pq_r_project.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+[Thu Jul  7 16:41:18 2022] Launched synth_1...
+Run output will be captured here: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_r/ra_pq_r_project.runs/synth_1/runme.log
+[Thu Jul  7 16:41:18 2022] Launched impl_1...
+Run output will be captured here: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_r/ra_pq_r_project.runs/impl_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Jul  7 17:17:07 2022...

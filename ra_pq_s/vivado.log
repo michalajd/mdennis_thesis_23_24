@@ -1,0 +1,459 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Aug  1 14:47:15 2022
+# Process ID: 7504
+# Current directory: C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9448 C:\Users\ehgartns\Documents\new_pq_repo\ra_pq_s\ra_pq_s_project.xpr
+# Log file: C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/vivado.log
+# Journal file: C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_project.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_s' since last save.
+WARNING: [filemgmt 56-2] Default IP Output Path : Could not find the directory 'C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_project.gen/sources_1', nor could it be found using path 'C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_s/ra_pq_s_project.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:24 ; elapsed = 00:00:14 . Memory (MB): peak = 1088.961 ; gain = 0.000
+update_compile_order -fileset sources_1
+set_property top ra_pq_s_top [current_fileset]
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_tb.sv
+set_property top ra_pq_s_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+set_property top_file C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_tb.sv [get_filesets sim_1]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'ra_pq_s_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj ra_pq_s_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/pq_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/pq_rd_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ra_pq_s_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_project.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_project.sim/sim_1/behav/xsim'
+"xelab -wto 407119709ca547208f9b55a8478e2d2a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot ra_pq_s_tb_behav xil_defaultlib.ra_pq_s_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 407119709ca547208f9b55a8478e2d2a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot ra_pq_s_tb_behav xil_defaultlib.ra_pq_s_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2864] module 'ra_pq_s_tb' having interface port(s) (ti) cannot be elaborated by itself [C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_tb.sv:14]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_project.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_project.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1088.961 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_sim.sv w ]
+add_files -fileset sim_1 C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_sim.sv
+update_compile_order -fileset sim_1
+set_property top ra_pq_s_wrapper [current_fileset]
+update_compile_order -fileset sources_1
+set_property top ra_pq_s_sim [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+export_ip_user_files -of_objects  [get_files C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_tb.sv] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_tb.sv
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'ra_pq_s_sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj ra_pq_s_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/counter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/debounce.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module debounce
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/dec_3_8_n.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dec_3_8_n
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/mux8.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux8
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/period_enb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module period_enb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/pq_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/pq_rd_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_mux3.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ra_pq_mux3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_reg.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ra_pq_reg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ra_pq_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_wrapper.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ra_pq_s_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_sort2.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ra_pq_sort2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/sevenseg_ctl.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sevenseg_ctl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/sevenseg_ext_n.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sevenseg_ext_n
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/single_pulser.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module single_pulser
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_sim.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ra_pq_s_sim
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_project.sim/sim_1/behav/xsim'
+"xelab -wto 407119709ca547208f9b55a8478e2d2a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot ra_pq_s_sim_behav xil_defaultlib.ra_pq_s_sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 407119709ca547208f9b55a8478e2d2a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot ra_pq_s_sim_behav xil_defaultlib.ra_pq_s_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.pq_pkg
+Compiling module xil_defaultlib.pq_rd_if
+Compiling module xil_defaultlib.debounce_default
+Compiling module xil_defaultlib.single_pulser
+Compiling module xil_defaultlib.ra_pq_mux3
+Compiling module xil_defaultlib.ra_pq_sort2
+Compiling module xil_defaultlib.ra_pq_reg
+Compiling module xil_defaultlib.ra_pq_s_default
+Compiling module xil_defaultlib.period_enb_default
+Compiling module xil_defaultlib.counter(W=3)
+Compiling module xil_defaultlib.dec_3_8_n
+Compiling module xil_defaultlib.mux8(W=7)
+Compiling module xil_defaultlib.sevenseg_ext_n
+Compiling module xil_defaultlib.sevenseg_ctl
+Compiling module xil_defaultlib.ra_pq_s_wrapper
+Compiling module xil_defaultlib.ra_pq_s_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot ra_pq_s_sim_behav
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_project.sim/sim_1/behav/xsim/xsim.dir/ra_pq_s_sim_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_project.sim/sim_1/behav/xsim/xsim.dir/ra_pq_s_sim_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Mon Aug  1 15:06:29 2022. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2020.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Mon Aug  1 15:06:29 2022...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1088.961 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ra_pq_s_sim_behav -key {Behavioral:sim_1:Functional:ra_pq_s_sim} -tclbatch {ra_pq_s_sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source ra_pq_s_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+xsim: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1112.234 ; gain = 23.273
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ra_pq_s_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 1112.234 ; gain = 23.273
+relaunch_sim
+suspend_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1112.234 ; gain = 0.000
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'ra_pq_s_sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj ra_pq_s_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_mux3.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ra_pq_mux3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_reg.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ra_pq_reg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ra_pq_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_wrapper.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ra_pq_s_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_sort2.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ra_pq_sort2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/sevenseg_ctl.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sevenseg_ctl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/sevenseg_ext_n.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sevenseg_ext_n
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/single_pulser.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module single_pulser
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_sim.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ra_pq_s_sim
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_project.sim/sim_1/behav/xsim'
+"xelab -wto 407119709ca547208f9b55a8478e2d2a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot ra_pq_s_sim_behav xil_defaultlib.ra_pq_s_sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 407119709ca547208f9b55a8478e2d2a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot ra_pq_s_sim_behav xil_defaultlib.ra_pq_s_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_wrapper.sv" Line 14. Module ra_pq_s_wrapper doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/single_pulser.sv" Line 12. Module single_pulser doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/single_pulser.sv" Line 12. Module single_pulser doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s.sv" Line 18. Module ra_pq_s_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_mux3.sv" Line 13. Module ra_pq_mux3 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_sort2.sv" Line 13. Module ra_pq_sort2 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_sort2.sv" Line 13. Module ra_pq_sort2 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_sort2.sv" Line 13. Module ra_pq_sort2 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_sort2.sv" Line 13. Module ra_pq_sort2 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_sort2.sv" Line 13. Module ra_pq_sort2 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_sort2.sv" Line 13. Module ra_pq_sort2 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_sort2.sv" Line 13. Module ra_pq_sort2 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_reg.sv" Line 12. Module ra_pq_reg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_reg.sv" Line 12. Module ra_pq_reg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_reg.sv" Line 12. Module ra_pq_reg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_reg.sv" Line 12. Module ra_pq_reg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_reg.sv" Line 12. Module ra_pq_reg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_reg.sv" Line 12. Module ra_pq_reg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_reg.sv" Line 12. Module ra_pq_reg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_reg.sv" Line 12. Module ra_pq_reg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/sevenseg_ctl.sv" Line 18. Module sevenseg_ctl doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/sevenseg_ext_n.sv" Line 12. Module sevenseg_ext_n doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_wrapper.sv" Line 14. Module ra_pq_s_wrapper doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/single_pulser.sv" Line 12. Module single_pulser doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/single_pulser.sv" Line 12. Module single_pulser doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s.sv" Line 18. Module ra_pq_s_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_mux3.sv" Line 13. Module ra_pq_mux3 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_sort2.sv" Line 13. Module ra_pq_sort2 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_sort2.sv" Line 13. Module ra_pq_sort2 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_sort2.sv" Line 13. Module ra_pq_sort2 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_sort2.sv" Line 13. Module ra_pq_sort2 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_sort2.sv" Line 13. Module ra_pq_sort2 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_sort2.sv" Line 13. Module ra_pq_sort2 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_sort2.sv" Line 13. Module ra_pq_sort2 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_reg.sv" Line 12. Module ra_pq_reg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_reg.sv" Line 12. Module ra_pq_reg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_reg.sv" Line 12. Module ra_pq_reg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_reg.sv" Line 12. Module ra_pq_reg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_reg.sv" Line 12. Module ra_pq_reg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_reg.sv" Line 12. Module ra_pq_reg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_reg.sv" Line 12. Module ra_pq_reg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_reg.sv" Line 12. Module ra_pq_reg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/sevenseg_ctl.sv" Line 18. Module sevenseg_ctl doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/sevenseg_ext_n.sv" Line 12. Module sevenseg_ext_n doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.pq_pkg
+Compiling module xil_defaultlib.pq_rd_if
+Compiling module xil_defaultlib.debounce_default
+Compiling module xil_defaultlib.single_pulser
+Compiling module xil_defaultlib.ra_pq_mux3
+Compiling module xil_defaultlib.ra_pq_sort2
+Compiling module xil_defaultlib.ra_pq_reg
+Compiling module xil_defaultlib.ra_pq_s_default
+Compiling module xil_defaultlib.period_enb_default
+Compiling module xil_defaultlib.counter(W=3)
+Compiling module xil_defaultlib.dec_3_8_n
+Compiling module xil_defaultlib.mux8(W=7)
+Compiling module xil_defaultlib.sevenseg_ext_n
+Compiling module xil_defaultlib.sevenseg_ctl
+Compiling module xil_defaultlib.ra_pq_s_wrapper
+Compiling module xil_defaultlib.ra_pq_s_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot ra_pq_s_sim_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1112.234 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1112.234 ; gain = 0.000
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:17 . Memory (MB): peak = 1112.234 ; gain = 0.000
+run all
+$stop called at time : 1351 ns : File "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_sim.sv" Line 69
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'ra_pq_s_sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj ra_pq_s_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/counter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/debounce.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module debounce
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/dec_3_8_n.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dec_3_8_n
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/mux8.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux8
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/period_enb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module period_enb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/pq_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/pq_rd_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_mux3.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ra_pq_mux3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_reg.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ra_pq_reg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ra_pq_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_wrapper.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ra_pq_s_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_sort2.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ra_pq_sort2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/sevenseg_ctl.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sevenseg_ctl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/sevenseg_ext_n.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sevenseg_ext_n
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/single_pulser.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module single_pulser
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_sim.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ra_pq_s_sim
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_project.sim/sim_1/behav/xsim'
+"xelab -wto 407119709ca547208f9b55a8478e2d2a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot ra_pq_s_sim_behav xil_defaultlib.ra_pq_s_sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 407119709ca547208f9b55a8478e2d2a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot ra_pq_s_sim_behav xil_defaultlib.ra_pq_s_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.pq_pkg
+Compiling module xil_defaultlib.pq_rd_if
+Compiling module xil_defaultlib.debounce_default
+Compiling module xil_defaultlib.single_pulser
+Compiling module xil_defaultlib.ra_pq_mux3
+Compiling module xil_defaultlib.ra_pq_sort2
+Compiling module xil_defaultlib.ra_pq_reg
+Compiling module xil_defaultlib.ra_pq_s_default
+Compiling module xil_defaultlib.period_enb_default
+Compiling module xil_defaultlib.counter(W=3)
+Compiling module xil_defaultlib.dec_3_8_n
+Compiling module xil_defaultlib.mux8(W=7)
+Compiling module xil_defaultlib.sevenseg_ext_n
+Compiling module xil_defaultlib.sevenseg_ctl
+Compiling module xil_defaultlib.ra_pq_s_wrapper
+Compiling module xil_defaultlib.ra_pq_s_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot ra_pq_s_sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 1112.234 ; gain = 0.000
+run all
+$stop called at time : 1351 ns : File "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_sim.sv" Line 69
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/ra_pq_s_sim/DUV/U_PQ_IF_S/kvo}} 
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'ra_pq_s_sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj ra_pq_s_sim_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_project.sim/sim_1/behav/xsim'
+"xelab -wto 407119709ca547208f9b55a8478e2d2a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot ra_pq_s_sim_behav xil_defaultlib.ra_pq_s_sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 407119709ca547208f9b55a8478e2d2a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot ra_pq_s_sim_behav xil_defaultlib.ra_pq_s_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1112.234 ; gain = 0.000
+run all
+$stop called at time : 1351 ns : File "C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_sim.sv" Line 69
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_project.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Mon Aug  1 15:12:41 2022] Launched synth_1...
+Run output will be captured here: C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_project.runs/synth_1/runme.log
+[Mon Aug  1 15:12:41 2022] Launched impl_1...
+Run output will be captured here: C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_project.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.2
+  **** Build date : Nov 18 2020 at 10:01:48
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2020.2
+  ****** Build date   : Nov 03 2020-16:02:56
+    **** Build number : 2020.2.1604437376
+      ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:19 . Memory (MB): peak = 1113.387 ; gain = 1.152
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292AE24FBA
+open_hw_target: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2674.281 ; gain = 1560.895
+set_property PROGRAM.FILE {C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_project.runs/impl_1/ra_pq_s_wrapper.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_project.runs/impl_1/ra_pq_s_wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Aug  1 15:17:35 2022...

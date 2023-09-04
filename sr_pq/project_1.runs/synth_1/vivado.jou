@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Jul  6 11:29:44 2022
+# Process ID: 12688
+# Current directory: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/project_1.runs/synth_1
+# Command line: vivado.exe -log sr_pq_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source sr_pq_wrapper.tcl
+# Log file: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/project_1.runs/synth_1/sr_pq_wrapper.vds
+# Journal file: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/project_1.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source sr_pq_wrapper.tcl -notrace

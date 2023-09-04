@@ -1,0 +1,32 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Aug  5 13:43:16 2022
+# Process ID: 15404
+# Current directory: C:/Users/ehgartns/Documents/new_pq_repo/QuickQ
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14520 C:\Users\ehgartns\Documents\new_pq_repo\QuickQ\QuickQ_project.xpr
+# Log file: C:/Users/ehgartns/Documents/new_pq_repo/QuickQ/vivado.log
+# Journal file: C:/Users/ehgartns/Documents/new_pq_repo/QuickQ\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ehgartns/Documents/new_pq_repo/QuickQ/QuickQ_project.xpr
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/ehgartns/Documents/new_pq_repo/QuickQ/QuickQ_project.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:37 ; elapsed = 00:00:31 . Memory (MB): peak = 1094.578 ; gain = 0.000
+update_compile_order -fileset sources_1
+close [ open C:/Users/ehgartns/Documents/new_pq_repo/QuickQ/RTL/quickFSM.sv w ]
+add_files C:/Users/ehgartns/Documents/new_pq_repo/QuickQ/RTL/quickFSM.sv
+update_compile_order -fileset sources_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ehgartns\Documents\new_pq_repo\QuickQ\RTL\quickFSM.sv:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ehgartns\Documents\new_pq_repo\QuickQ\RTL\quickFSM.sv:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ehgartns\Documents\new_pq_repo\QuickQ\RTL\quickFSM.sv:]
+ERROR: [Common 17-180] Spawn failed: No error
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Aug  5 13:55:16 2022...

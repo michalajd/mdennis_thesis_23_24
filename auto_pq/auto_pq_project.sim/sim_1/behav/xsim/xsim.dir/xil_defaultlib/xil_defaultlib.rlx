@@ -1,0 +1,17 @@
+0.7
+2020.2
+Nov 18 2020
+09:47:47
+C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/auto_top.sv,1665934624,systemVerilog,,C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/comparator.sv,,auto_top,,uvm,,,,,,
+C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/comparator.sv,1665934624,systemVerilog,,C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/compcounter.sv,,comparator,,uvm,,,,,,
+C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/compcounter.sv,1665934624,systemVerilog,,C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/fsm_pq.sv,,compcounter,,uvm,,,,,,
+C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/core_sim.sv,1665934624,systemVerilog,,,,core_sim,,uvm,,,,,,
+C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/fsm_pq.sv,1665934624,systemVerilog,,C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/lfsr.sv,,fsm_pq,,uvm,,,,,,
+C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/high_level.sv,1665934624,systemVerilog,,C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/lfsr.sv,,high_level,,uvm,,,,,,
+C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/lfsr.sv,1665934624,systemVerilog,,C:/Users/dennismj/Documents/pq_Research/pq_if.sv,,lfsr,,uvm,,,,,,
+C:/Users/dennismj/Documents/pq_Research/auto_pq/auto_pq_project.sim/sim_1/behav/xsim/glbl.v,1665934624,verilog,,,,glbl,,uvm,,,,,,
+C:/Users/dennismj/Documents/pq_Research/auto_pq/auto_pq_project.srcs/sim_1/new/autosim.sv,1665934624,systemVerilog,,,,autosim,,uvm,,,,,,
+C:/Users/dennismj/Documents/pq_Research/auto_pq/heap_pq_test/heap_pq/mem_swsr.sv,1665934624,systemVerilog,,C:/Users/dennismj/Documents/pq_Research/pq_if.sv,,mem_swsr,,uvm,,,,,,
+C:/Users/dennismj/Documents/pq_Research/heap_pq/heap_pq.sv,1665934625,systemVerilog,,C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/high_level.sv,,heap_pq,,uvm,,,,,,
+C:/Users/dennismj/Documents/pq_Research/pq_if.sv,1665934625,systemVerilog,,C:/Users/dennismj/Documents/pq_Research/auto_pq/auto_pq_project.srcs/sim_1/new/autosim.sv,,pq_if,,uvm,,,,,,
+C:/Users/dennismj/Documents/pq_Research/pq_pkg.sv,1666653531,systemVerilog,C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/auto_top.sv;C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/comparator.sv;C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/compcounter.sv;C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/core_sim.sv;C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/fsm_pq.sv;C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/high_level.sv;C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/lfsr.sv;C:/Users/dennismj/Documents/pq_Research/auto_pq/heap_pq_test/heap_pq/mem_swsr.sv;C:/Users/dennismj/Documents/pq_Research/heap_pq/heap_pq.sv;C:/Users/dennismj/Documents/pq_Research/pq_if.sv,C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/auto_top.sv,,$unit_pq_pkg_sv;pq_pkg,,uvm,,,,,,

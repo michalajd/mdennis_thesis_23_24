@@ -1,0 +1,47 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Jul  7 14:32:38 2022
+# Process ID: 4160
+# Current directory: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_r
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11136 C:\Users\ehgartns\Documents\summerReasearch2022\hw_pq\ra_pq_r\ra_pq_r_project.xpr
+# Log file: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_r/vivado.log
+# Journal file: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_r\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq_r/ra_pq_r_project.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1

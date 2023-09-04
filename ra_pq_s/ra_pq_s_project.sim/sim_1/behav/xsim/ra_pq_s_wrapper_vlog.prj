@@ -1,0 +1,23 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../counter.sv" \
+"../../../../debounce.sv" \
+"../../../../dec_3_8_n.sv" \
+"../../../../mux8.sv" \
+"../../../../period_enb.sv" \
+"../../../../../pq_pkg.sv" \
+"../../../../../pq_rd_if.sv" \
+"../../../../ra_pq_mux3.sv" \
+"../../../../ra_pq_reg.sv" \
+"../../../../ra_pq_s.sv" \
+"../../../../ra_pq_sort2.sv" \
+"../../../../sevenseg_ctl.sv" \
+"../../../../sevenseg_ext_n.sv" \
+"../../../../single_pulser.sv" \
+"../../../../ra_pq_s_wrapper.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

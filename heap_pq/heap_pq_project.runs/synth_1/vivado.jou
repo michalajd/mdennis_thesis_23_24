@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Aug  4 14:33:39 2022
+# Process ID: 2564
+# Current directory: C:/Users/ehgartns/Documents/new_pq_repo/heap_pq/heap_pq_project.runs/synth_1
+# Command line: vivado.exe -log heap_pq_hw.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source heap_pq_hw.tcl
+# Log file: C:/Users/ehgartns/Documents/new_pq_repo/heap_pq/heap_pq_project.runs/synth_1/heap_pq_hw.vds
+# Journal file: C:/Users/ehgartns/Documents/new_pq_repo/heap_pq/heap_pq_project.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source heap_pq_hw.tcl -notrace

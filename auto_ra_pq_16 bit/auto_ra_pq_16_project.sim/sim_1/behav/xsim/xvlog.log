@@ -1,0 +1,24 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/pq_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/auto_ra_pq_16 bit/RTL/auto_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module auto_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/auto_ra_pq_16 bit/RTL/compcounter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module compcounter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/auto_ra_pq_16 bit/RTL/flip_flop.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flip_flop
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/auto_ra_pq_16 bit/RTL/fsm_pq.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fsm_pq
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/auto_ra_pq_16 bit/RTL/high_level.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module high_level
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/auto_ra_pq_16 bit/RTL/lfsr.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lfsr
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/auto_ra_pq_16 bit/RTL/pq_rd_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/auto_ra_pq_16 bit/ra_pq test/ra_pq_mux3.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ra_pq_mux3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/auto_ra_pq_16 bit/ra_pq test/ra_pq_reg.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ra_pq_reg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/auto_ra_pq_16 bit/ra_pq_s test/ra_pq_s.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ra_pq_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/auto_ra_pq_16 bit/ra_pq test/ra_pq_sort2.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ra_pq_sort2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/new_pq_repo/auto_ra_pq_16 bit/RTL/core_sim.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module core_sim

@@ -1,0 +1,275 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date             : Wed Aug  3 13:49:47 2022
+| Host             : ECE419-92QW0Q2 running 64-bit major release  (build 9200)
+| Command          : report_power -file highest_level_power_routed.rpt -pb highest_level_power_summary_routed.pb -rpx highest_level_power_routed.rpx
+| Design           : highest_level
+| Device           : xc7a100tcsg324-1
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 0.299        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 0.202        |
+| Device Static (W)        | 0.098        |
+| Effective TJA (C/W)      | 4.6          |
+| Max Ambient (C)          | 83.6         |
+| Junction Temperature (C) | 26.4         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++----------------+-----------+----------+-----------+-----------------+
+| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
++----------------+-----------+----------+-----------+-----------------+
+| Clocks         |     0.017 |        3 |       --- |             --- |
+| Slice Logic    |     0.114 |    16638 |       --- |             --- |
+|   LUT as Logic |     0.110 |     6507 |     63400 |           10.26 |
+|   Register     |     0.003 |     4150 |    126800 |            3.27 |
+|   CARRY4       |    <0.001 |      261 |     15850 |            1.65 |
+|   Others       |     0.000 |      392 |       --- |             --- |
+| Signals        |     0.065 |    10617 |       --- |             --- |
+| I/O            |     0.006 |       29 |       210 |           13.81 |
+| Static Power   |     0.098 |          |           |                 |
+| Total          |     0.299 |          |           |                 |
++----------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Vccint    |       1.000 |     0.211 |       0.196 |      0.016 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.006 |       0.002 |      0.004 |       NA    | Unspecified | NA         |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                               | Action                                                                                                     |
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                      |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                |                                                                                                            |
+| I/O nodes activity          | Medium     | More than 5% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes        | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                          |                                                                                                            |
+|                             |            |                                                       |                                                                                                            |
+| Overall confidence level    | Medium     |                                                       |                                                                                                            |
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 4.6                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 4.6                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------------+--------+-----------------+
+| Clock       | Domain | Constraint (ns) |
++-------------+--------+-----------------+
+| sys_clk_pin | clk    |            14.0 |
++-------------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++--------------------------+-----------+
+| Name                     | Power (W) |
++--------------------------+-----------+
+| highest_level            |     0.202 |
+|   CORE                   |     0.196 |
+|     U_RA_PQ              |     0.195 |
+|       genblk4[101].U_REG |     0.001 |
+|       genblk4[103].U_REG |     0.001 |
+|       genblk4[105].U_REG |     0.001 |
+|       genblk4[107].U_REG |     0.001 |
+|       genblk4[109].U_REG |     0.001 |
+|       genblk4[111].U_REG |     0.001 |
+|       genblk4[113].U_REG |     0.001 |
+|       genblk4[115].U_REG |     0.001 |
+|       genblk4[117].U_REG |     0.001 |
+|       genblk4[119].U_REG |     0.001 |
+|       genblk4[11].U_REG  |     0.001 |
+|       genblk4[121].U_REG |     0.001 |
+|       genblk4[123].U_REG |     0.001 |
+|       genblk4[125].U_REG |     0.001 |
+|       genblk4[127].U_REG |     0.001 |
+|       genblk4[129].U_REG |     0.001 |
+|       genblk4[131].U_REG |     0.001 |
+|       genblk4[133].U_REG |     0.001 |
+|       genblk4[135].U_REG |     0.001 |
+|       genblk4[137].U_REG |     0.001 |
+|       genblk4[139].U_REG |     0.001 |
+|       genblk4[13].U_REG  |     0.001 |
+|       genblk4[141].U_REG |     0.001 |
+|       genblk4[143].U_REG |     0.001 |
+|       genblk4[145].U_REG |     0.001 |
+|       genblk4[147].U_REG |     0.001 |
+|       genblk4[149].U_REG |     0.001 |
+|       genblk4[151].U_REG |     0.001 |
+|       genblk4[153].U_REG |     0.001 |
+|       genblk4[155].U_REG |     0.001 |
+|       genblk4[157].U_REG |     0.001 |
+|       genblk4[159].U_REG |     0.001 |
+|       genblk4[15].U_REG  |     0.001 |
+|       genblk4[161].U_REG |     0.001 |
+|       genblk4[163].U_REG |     0.001 |
+|       genblk4[165].U_REG |     0.001 |
+|       genblk4[167].U_REG |     0.001 |
+|       genblk4[169].U_REG |     0.001 |
+|       genblk4[171].U_REG |     0.001 |
+|       genblk4[173].U_REG |     0.001 |
+|       genblk4[175].U_REG |     0.001 |
+|       genblk4[177].U_REG |     0.001 |
+|       genblk4[179].U_REG |     0.001 |
+|       genblk4[17].U_REG  |     0.001 |
+|       genblk4[181].U_REG |     0.001 |
+|       genblk4[183].U_REG |     0.001 |
+|       genblk4[185].U_REG |     0.001 |
+|       genblk4[187].U_REG |     0.001 |
+|       genblk4[189].U_REG |     0.001 |
+|       genblk4[191].U_REG |     0.001 |
+|       genblk4[193].U_REG |     0.001 |
+|       genblk4[195].U_REG |     0.001 |
+|       genblk4[197].U_REG |     0.001 |
+|       genblk4[199].U_REG |     0.001 |
+|       genblk4[19].U_REG  |     0.001 |
+|       genblk4[1].U_REG   |     0.002 |
+|       genblk4[201].U_REG |     0.001 |
+|       genblk4[203].U_REG |     0.001 |
+|       genblk4[205].U_REG |     0.001 |
+|       genblk4[207].U_REG |     0.001 |
+|       genblk4[209].U_REG |     0.001 |
+|       genblk4[211].U_REG |     0.001 |
+|       genblk4[213].U_REG |     0.001 |
+|       genblk4[215].U_REG |     0.001 |
+|       genblk4[217].U_REG |     0.001 |
+|       genblk4[219].U_REG |     0.001 |
+|       genblk4[21].U_REG  |     0.001 |
+|       genblk4[221].U_REG |     0.001 |
+|       genblk4[223].U_REG |     0.001 |
+|       genblk4[225].U_REG |     0.001 |
+|       genblk4[227].U_REG |     0.001 |
+|       genblk4[229].U_REG |     0.001 |
+|       genblk4[231].U_REG |     0.001 |
+|       genblk4[233].U_REG |     0.001 |
+|       genblk4[235].U_REG |     0.001 |
+|       genblk4[237].U_REG |     0.001 |
+|       genblk4[239].U_REG |     0.001 |
+|       genblk4[23].U_REG  |     0.001 |
+|       genblk4[241].U_REG |     0.001 |
+|       genblk4[243].U_REG |     0.001 |
+|       genblk4[245].U_REG |     0.001 |
+|       genblk4[247].U_REG |     0.001 |
+|       genblk4[249].U_REG |     0.001 |
+|       genblk4[251].U_REG |     0.001 |
+|       genblk4[253].U_REG |     0.001 |
+|       genblk4[256].U_REG |     0.001 |
+|       genblk4[25].U_REG  |     0.001 |
+|       genblk4[27].U_REG  |     0.001 |
+|       genblk4[29].U_REG  |     0.001 |
+|       genblk4[31].U_REG  |     0.001 |
+|       genblk4[33].U_REG  |     0.001 |
+|       genblk4[35].U_REG  |     0.001 |
+|       genblk4[37].U_REG  |     0.001 |
+|       genblk4[39].U_REG  |     0.001 |
+|       genblk4[41].U_REG  |     0.001 |
+|       genblk4[43].U_REG  |     0.001 |
+|       genblk4[45].U_REG  |     0.001 |
+|       genblk4[47].U_REG  |     0.001 |
+|       genblk4[49].U_REG  |     0.001 |
+|       genblk4[51].U_REG  |     0.001 |
+|       genblk4[53].U_REG  |     0.001 |
+|       genblk4[55].U_REG  |     0.001 |
+|       genblk4[57].U_REG  |     0.001 |
+|       genblk4[59].U_REG  |     0.001 |
+|       genblk4[5].U_REG   |     0.001 |
+|       genblk4[61].U_REG  |     0.001 |
+|       genblk4[63].U_REG  |     0.001 |
+|       genblk4[65].U_REG  |     0.001 |
+|       genblk4[67].U_REG  |     0.001 |
+|       genblk4[69].U_REG  |     0.001 |
+|       genblk4[71].U_REG  |     0.001 |
+|       genblk4[73].U_REG  |     0.001 |
+|       genblk4[75].U_REG  |     0.001 |
+|       genblk4[77].U_REG  |     0.001 |
+|       genblk4[79].U_REG  |     0.001 |
+|       genblk4[7].U_REG   |     0.001 |
+|       genblk4[81].U_REG  |     0.001 |
+|       genblk4[83].U_REG  |     0.001 |
+|       genblk4[85].U_REG  |     0.001 |
+|       genblk4[87].U_REG  |     0.001 |
+|       genblk4[89].U_REG  |     0.001 |
+|       genblk4[91].U_REG  |     0.001 |
+|       genblk4[93].U_REG  |     0.001 |
+|       genblk4[95].U_REG  |     0.001 |
+|       genblk4[97].U_REG  |     0.001 |
+|       genblk4[99].U_REG  |     0.001 |
+|       genblk4[9].U_REG   |     0.001 |
++--------------------------+-----------+
+
+

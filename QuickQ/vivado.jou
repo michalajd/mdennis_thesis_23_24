@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Sep  4 16:56:09 2023
+# Process ID: 5208
+# Current directory: C:/Users/dennismj/Documents/Thesis/mdennis_thesis_23_24/QuickQ
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18164 C:\Users\dennismj\Documents\Thesis\mdennis_thesis_23_24\QuickQ\QuickQ_project.xpr
+# Log file: C:/Users/dennismj/Documents/Thesis/mdennis_thesis_23_24/QuickQ/vivado.log
+# Journal file: C:/Users/dennismj/Documents/Thesis/mdennis_thesis_23_24/QuickQ\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/dennismj/Documents/Thesis/mdennis_thesis_23_24/QuickQ/QuickQ_project.xpr
+update_compile_order -fileset sources_1

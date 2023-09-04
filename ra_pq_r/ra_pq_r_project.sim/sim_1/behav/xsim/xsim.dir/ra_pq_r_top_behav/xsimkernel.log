@@ -1,0 +1,7 @@
+Running: xsim.dir/ra_pq_r_top_behav/xsimk.exe -simmode gui -wdb ra_pq_r_top_behav.wdb -simrunnum 0 -socket 61275
+Design successfully loaded
+Design Loading Memory Usage: 5612 KB (Peak: 5612 KB)
+Design Loading CPU Usage: 30 ms
+Simulation completed
+Simulation Memory Usage: 7516 KB (Peak: 7516 KB)
+Simulation CPU Usage: 30 ms

@@ -1,0 +1,122 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Jul 14 14:03:41 2022
+# Process ID: 476
+# Current directory: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5524 C:\Users\ehgartns\Documents\summerReasearch2022\hw_pq\sr_pq\project_1.xpr
+# Log file: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/vivado.log
+# Journal file: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/project_1.xpr
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/project_1.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:11 . Memory (MB): peak = 1088.598 ; gain = 0.000
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: sr_pq_wrapper
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1560.520 ; gain = 250.867
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sr_pq_wrapper' [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_wrapper.sv:14]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/debounce.sv:13]
+	Parameter CLKPD_NS bound to: 10 - type: integer 
+	Parameter CLKFREQ bound to: 100000000 - type: integer 
+	Parameter DEBOUNCE_MS bound to: 10 - type: integer 
+	Parameter CTRBITS bound to: 20 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (1#1) [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/debounce.sv:13]
+INFO: [Synth 8-6157] synthesizing module 'single_pulser' [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/single_pulser.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'single_pulser' (2#1) [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/single_pulser.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'pq_if' [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/pq_if.sv:14]
+INFO: [Synth 8-6155] done synthesizing module 'pq_if' (2#1) [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/pq_if.sv:14]
+INFO: [Synth 8-6157] synthesizing module 'sr_pq' [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq.sv:14]
+INFO: [Synth 8-6157] synthesizing module 'sr_pq_stage' [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_stage.sv:17]
+	Parameter STAGE bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sr_pq_stage' (3#1) [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_stage.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'sr_pq_stage__parameterized0' [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_stage.sv:17]
+	Parameter STAGE bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sr_pq_stage__parameterized0' (3#1) [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_stage.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'sr_pq_stage__parameterized1' [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_stage.sv:17]
+	Parameter STAGE bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sr_pq_stage__parameterized1' (3#1) [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_stage.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'sr_pq_stage__parameterized2' [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_stage.sv:17]
+	Parameter STAGE bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sr_pq_stage__parameterized2' (3#1) [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_stage.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'sr_pq_stage__parameterized3' [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_stage.sv:17]
+	Parameter STAGE bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sr_pq_stage__parameterized3' (3#1) [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_stage.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'sr_pq_stage__parameterized4' [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_stage.sv:17]
+	Parameter STAGE bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sr_pq_stage__parameterized4' (3#1) [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_stage.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'sr_pq_stage__parameterized5' [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_stage.sv:17]
+	Parameter STAGE bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sr_pq_stage__parameterized5' (3#1) [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_stage.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'sr_pq_stage__parameterized6' [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_stage.sv:17]
+	Parameter STAGE bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sr_pq_stage__parameterized6' (3#1) [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_stage.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'sr_pq_stage__parameterized7' [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_stage.sv:17]
+	Parameter STAGE bound to: 9 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sr_pq_stage__parameterized7' (3#1) [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_stage.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'sr_pq_stage__parameterized8' [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_stage.sv:17]
+	Parameter STAGE bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sr_pq_stage__parameterized8' (3#1) [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_stage.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'sr_pq_stage__parameterized9' [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_stage.sv:17]
+	Parameter STAGE bound to: 11 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sr_pq_stage__parameterized9' (3#1) [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_stage.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'sr_pq_stage__parameterized10' [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_stage.sv:17]
+	Parameter STAGE bound to: 12 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sr_pq_stage__parameterized10' (3#1) [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_stage.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'sr_pq_stage__parameterized11' [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_stage.sv:17]
+	Parameter STAGE bound to: 13 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sr_pq_stage__parameterized11' (3#1) [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_stage.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'sr_pq_stage__parameterized12' [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_stage.sv:17]
+	Parameter STAGE bound to: 14 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sr_pq_stage__parameterized12' (3#1) [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_stage.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'sr_pq_stage__parameterized13' [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_stage.sv:17]
+	Parameter STAGE bound to: 15 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sr_pq_stage__parameterized13' (3#1) [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_stage.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'sr_pq' (4#1) [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq.sv:14]
+INFO: [Synth 8-6157] synthesizing module 'sevenseg_ctl' [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sevenseg_ctl.sv:18]
+INFO: [Synth 8-6157] synthesizing module 'period_enb' [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/period_enb.sv:20]
+	Parameter PERIOD_MS bound to: 1 - type: integer 
+	Parameter PERIOD_US bound to: 1000 - type: integer 
+	Parameter PERIOD_NS bound to: 1000000 - type: integer 
+	Parameter CLKFREQ_MHZ bound to: 100 - type: integer 
+	Parameter CLKPD_NS bound to: 10 - type: integer 
+	Parameter PERIOD_COUNT_LIMIT bound to: 100000 - type: integer 
+	Parameter PERIOD_COUNT_BITS bound to: 17 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'period_enb' (5#1) [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/period_enb.sv:20]
+INFO: [Synth 8-6157] synthesizing module 'counter' [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/counter.sv:23]
+	Parameter W bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'counter' (6#1) [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/counter.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'dec_3_8_n' [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/dec_3_8_n.sv:23]
+INFO: [Synth 8-226] default block is never used [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/dec_3_8_n.sv:31]
+INFO: [Synth 8-6155] done synthesizing module 'dec_3_8_n' (7#1) [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/dec_3_8_n.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'mux8' [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/mux8.sv:23]
+	Parameter W bound to: 7 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/mux8.sv:28]
+INFO: [Synth 8-6155] done synthesizing module 'mux8' (8#1) [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/mux8.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'sevenseg_ext_n' [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sevenseg_ext_n.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'sevenseg_ext_n' (9#1) [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sevenseg_ext_n.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'sevenseg_ctl' (10#1) [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sevenseg_ctl.sv:18]
+ERROR: [Synth 8-524] part-select [15:12] out of range of prefix 'kvo' [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_wrapper.sv:69]
+ERROR: [Synth 8-6156] failed synthesizing module 'sr_pq_wrapper' [C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_wrapper.sv:14]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1622.922 ; gain = 313.270
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+54 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Jul 14 14:11:18 2022...

@@ -1,0 +1,70 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Jul 21 11:25:06 2022
+# Process ID: 11992
+# Current directory: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5604 C:\Users\ehgartns\Documents\summerReasearch2022\hw_pq\auto_pq\auto_pq_project.xpr
+# Log file: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq/vivado.log
+# Journal file: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq/auto_pq_project.xpr
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top high_level [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq/core_sim_behav.wcfg
+source core_sim.tcl
+run all
+close_sim
+launch_simulation
+open_wave_config C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq/core_sim_behav.wcfg
+source core_sim.tcl
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/U_PQ_IF}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/AUTO/LFSR/q}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/AUTO/FSM/state}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/AUTO/COMP/kvo}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/AUTO/COMP/count}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/AUTO/COMP/count}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/AUTO/COMP/verdict}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/cteal_15}} 
+relaunch_sim
+run all
+relaunch_sim
+run all
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top highest_level [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq/auto_pq_project.runs/impl_1/highest_level.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq/auto_pq_project.runs/impl_1/highest_level.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw_manager
+relaunch_sim

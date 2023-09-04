@@ -1,0 +1,77 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 993c3c701a5d4f33a4f35aa7c66416a4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot core_sim_behav xil_defaultlib.core_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/core_sim.sv" Line 23. Module core_sim has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/high_level.sv" Line 24. Module high_level has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/pq_if.sv" Line 14. Module pq_if has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/auto_top.sv" Line 23. Module auto_top has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/fsm_pq.sv" Line 23. Module fsm_pq has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/lfsr.sv" Line 23. Module lfsr has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/compcounter.sv" Line 23. Module compcounter has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/flip_flop.sv" Line 23. Module flip_flop has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/flip_flop.sv" Line 23. Module flip_flop has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq test/ra_pq.sv" Line 16. Module ra_pq_default has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux3.sv" Line 13. Module ra_pq_mux3 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv" Line 12. Module ra_pq_mux2 has a timescale but at least one module in design doesn't have timescale.
+INFO: [Common 17-14] Message 'XSIM 43-4100' appears 50 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.pq_pkg
+Compiling module xil_defaultlib.pq_if
+Compiling module xil_defaultlib.fsm_pq
+Compiling module xil_defaultlib.lfsr
+Compiling module xil_defaultlib.flip_flop
+Compiling module xil_defaultlib.compcounter
+Compiling module xil_defaultlib.auto_top
+Compiling module xil_defaultlib.ra_pq_mux3
+Compiling module xil_defaultlib.ra_pq_mux2
+Compiling module xil_defaultlib.ra_pq_sort2
+Compiling module xil_defaultlib.ra_pq_reg
+Compiling module xil_defaultlib.ra_pq_default
+Compiling module xil_defaultlib.high_level
+Compiling module xil_defaultlib.core_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot core_sim_behav

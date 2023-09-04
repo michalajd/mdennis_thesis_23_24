@@ -1,0 +1,16 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/pq_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/pq_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq/ra_pq.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ra_pq
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq/ra_pq_mux2.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ra_pq_mux2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq/ra_pq_mux3.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ra_pq_mux3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq/ra_pq_reg.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ra_pq_reg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq/ra_pq_sort2.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ra_pq_sort2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq/ra_pq_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ra_pq_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/ra_pq/ra_pq_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sr_pq_top

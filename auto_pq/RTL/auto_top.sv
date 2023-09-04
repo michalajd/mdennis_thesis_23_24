@@ -1,0 +1,79 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 07/11/2022 02:34:58 PM
+// Design Name: 
+// Module Name: auto_top
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+import pq_pkg::*;
+
+module auto_top(pq_if.client ti,
+                input logic start,
+                output logic [2:0] color_r, color_g, color_b,
+                output logic [3:0] data1, data2,
+                output logic sigIDLE, sigSTART, sigADD, sigREMOVE, sigDISPLAY, sigFULL, sigEMPTY);
+                
+                logic [7:0] kvo_logic;
+                logic [3:0] kvi_logic;
+                
+                //INTERFACE DECLARATIONS
+                logic clk;
+                kv_t kvi, kvo;
+                
+                assign clk = ti.clk;
+                
+                
+                // WIRES
+                logic full, empty, busy, enq, deq;
+                logic lfsr_rst, lfsr_enb;
+                logic cteal_15;
+                logic count_rst, count_enb;
+                logic [3:0] counter2comp;
+                logic error_comp;
+                logic rst;
+                
+                assign data1 = kvo_logic[7:4];
+                assign data2 = kvo_logic[3:0];
+                
+                assign full = ti.full;
+                assign busy = ti.busy;
+                assign sigFULL = ti.full;
+                assign empty = ti.empty;
+                assign sigEMPTY = ti.empty;
+                assign rst = ti.rst;
+
+                assign ti.enq = enq && !full;
+                assign ti.deq = deq && !empty;
+                
+                
+                fsm_pq FSM (.clk, .rst, .start, .full, .busy, .empty, .error_comp, .cteal_15,
+                            .lfsr_rst, .lfsr_enb, .enq, .deq, .count_enb, .count_rst, .led_r(color_r), .led_g(color_g), .led_b(color_b),
+                            .sigIDLE, .sigSTART, .sigADD, .sigREMOVE, .sigDISPLAY);
+                            
+                lfsr LFSR (.rst(lfsr_rst), .clk, .enb(lfsr_enb), .q(kvi_logic)); 
+                
+
+                assign kvi = kv_t' {kvi_logic, kvi_logic};
+                assign ti.kvi = kvi;
+                assign kvo = ti.kvo;
+                assign kvo_logic = kvo;
+                
+                compcounter COMPCOUNT (.clk, .rst(count_rst), .enb(count_enb), .q(counter2comp), .cteal_15(cteal_15));
+                
+                comparator COMP (.kvo(kvo_logic[7:4]), .count(counter2comp), .verdict(error_comp));
+                
+                
+endmodule

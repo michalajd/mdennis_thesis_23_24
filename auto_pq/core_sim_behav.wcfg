@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="core_sim_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="core_sim" />
+            <top_module name="glbl" />
+            <top_module name="pq_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="324401fs"></ZoomEndTime>
+      <Cursor1Time time="45400fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="96"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="47" />
+   <wvobject fp_name="/core_sim/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/start" type="logic">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/DUV/U_PQ_IF/busy" type="logic">
+      <obj_property name="ElementShortName">busy</obj_property>
+      <obj_property name="ObjectShortName">busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/data1" type="array">
+      <obj_property name="ElementShortName">data1[1:0]</obj_property>
+      <obj_property name="ObjectShortName">data1[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/data2" type="array">
+      <obj_property name="ElementShortName">data2[1:0]</obj_property>
+      <obj_property name="ObjectShortName">data2[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/data3" type="array">
+      <obj_property name="ElementShortName">data3[1:0]</obj_property>
+      <obj_property name="ObjectShortName">data3[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/data4" type="array">
+      <obj_property name="ElementShortName">data4[1:0]</obj_property>
+      <obj_property name="ObjectShortName">data4[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/red" type="array">
+      <obj_property name="ElementShortName">red[2:0]</obj_property>
+      <obj_property name="ObjectShortName">red[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/green" type="array">
+      <obj_property name="ElementShortName">green[2:0]</obj_property>
+      <obj_property name="ObjectShortName">green[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/blue" type="array">
+      <obj_property name="ElementShortName">blue[2:0]</obj_property>
+      <obj_property name="ObjectShortName">blue[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/sigIDLE" type="logic">
+      <obj_property name="ElementShortName">sigIDLE</obj_property>
+      <obj_property name="ObjectShortName">sigIDLE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/sigSTART" type="logic">
+      <obj_property name="ElementShortName">sigSTART</obj_property>
+      <obj_property name="ObjectShortName">sigSTART</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/sigADD" type="logic">
+      <obj_property name="ElementShortName">sigADD</obj_property>
+      <obj_property name="ObjectShortName">sigADD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/sigREMOVE" type="logic">
+      <obj_property name="ElementShortName">sigREMOVE</obj_property>
+      <obj_property name="ObjectShortName">sigREMOVE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/sigDISPLAY" type="logic">
+      <obj_property name="ElementShortName">sigDISPLAY</obj_property>
+      <obj_property name="ObjectShortName">sigDISPLAY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/sigFULL" type="logic">
+      <obj_property name="ElementShortName">sigFULL</obj_property>
+      <obj_property name="ObjectShortName">sigFULL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/sigEMPTY" type="logic">
+      <obj_property name="ElementShortName">sigEMPTY</obj_property>
+      <obj_property name="ObjectShortName">sigEMPTY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/CLK_PD" type="array">
+      <obj_property name="ElementShortName">CLK_PD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CLK_PD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/DUV/AUTO/LFSR/q" type="array">
+      <obj_property name="ElementShortName">q[3:0]</obj_property>
+      <obj_property name="ObjectShortName">q[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/DUV/AUTO/kvi" type="array">
+      <obj_property name="ElementShortName">kvi</obj_property>
+      <obj_property name="ObjectShortName">kvi</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/DUV/AUTO/kvo" type="array">
+      <obj_property name="ElementShortName">kvo</obj_property>
+      <obj_property name="ObjectShortName">kvo</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/DUV/AUTO/full" type="logic">
+      <obj_property name="ElementShortName">full</obj_property>
+      <obj_property name="ObjectShortName">full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/DUV/AUTO/enq" type="logic">
+      <obj_property name="ElementShortName">enq</obj_property>
+      <obj_property name="ObjectShortName">enq</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/DUV/AUTO/FSM/state" type="array">
+      <obj_property name="ElementShortName">state[4:0]</obj_property>
+      <obj_property name="ObjectShortName">state[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/DUV/U_HEAP_PQ/full" type="logic">
+      <obj_property name="ElementShortName">full</obj_property>
+      <obj_property name="ObjectShortName">full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/DUV/U_HEAP_PQ/state" type="array">
+      <obj_property name="ElementShortName">state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/DUV/U_HEAP_PQ/empty" type="logic">
+      <obj_property name="ElementShortName">empty</obj_property>
+      <obj_property name="ObjectShortName">empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/DUV/U_HEAP_PQ/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/DUV/AUTO/FSM/full" type="logic">
+      <obj_property name="ElementShortName">full</obj_property>
+      <obj_property name="ObjectShortName">full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/DUV/AUTO/FSM/busy" type="logic">
+      <obj_property name="ElementShortName">busy</obj_property>
+      <obj_property name="ObjectShortName">busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/DUV/U_HEAP_PQ/heap_size" type="array">
+      <obj_property name="ElementShortName">heap_size[3:0]</obj_property>
+      <obj_property name="ObjectShortName">heap_size[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/DUV/AUTO/LFSR/enb" type="logic">
+      <obj_property name="ElementShortName">enb</obj_property>
+      <obj_property name="ObjectShortName">enb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/DUV/U_PQ_IF/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/DUV/U_PQ_IF/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/DUV/U_PQ_IF/kvi" type="array">
+      <obj_property name="ElementShortName">kvi</obj_property>
+      <obj_property name="ObjectShortName">kvi</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/DUV/U_PQ_IF/enq" type="logic">
+      <obj_property name="ElementShortName">enq</obj_property>
+      <obj_property name="ObjectShortName">enq</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/DUV/U_PQ_IF/full" type="logic">
+      <obj_property name="ElementShortName">full</obj_property>
+      <obj_property name="ObjectShortName">full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/DUV/U_PQ_IF/busy" type="logic">
+      <obj_property name="ElementShortName">busy</obj_property>
+      <obj_property name="ObjectShortName">busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/DUV/U_PQ_IF/empty" type="logic">
+      <obj_property name="ElementShortName">empty</obj_property>
+      <obj_property name="ObjectShortName">empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/DUV/U_PQ_IF/kvo" type="array">
+      <obj_property name="ElementShortName">kvo</obj_property>
+      <obj_property name="ObjectShortName">kvo</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/DUV/U_PQ_IF/deq" type="logic">
+      <obj_property name="ElementShortName">deq</obj_property>
+      <obj_property name="ObjectShortName">deq</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/DUV/AUTO/FSM/error_comp" type="logic">
+      <obj_property name="ElementShortName">error_comp</obj_property>
+      <obj_property name="ObjectShortName">error_comp</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/DUV/AUTO/FSM/cteal_15" type="logic">
+      <obj_property name="ElementShortName">cteal_15</obj_property>
+      <obj_property name="ObjectShortName">cteal_15</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/DUV/AUTO/COMP/kvo" type="array">
+      <obj_property name="ElementShortName">kvo[3:0]</obj_property>
+      <obj_property name="ObjectShortName">kvo[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/DUV/AUTO/COMP/count" type="array">
+      <obj_property name="ElementShortName">count[3:0]</obj_property>
+      <obj_property name="ObjectShortName">count[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/DUV/AUTO/COMP/verdict" type="logic">
+      <obj_property name="ElementShortName">verdict</obj_property>
+      <obj_property name="ObjectShortName">verdict</obj_property>
+   </wvobject>
+</wave_config>

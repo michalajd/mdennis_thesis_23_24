@@ -1,0 +1,75 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Aug  1 14:47:15 2022
+# Process ID: 7504
+# Current directory: C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9448 C:\Users\ehgartns\Documents\new_pq_repo\ra_pq_s\ra_pq_s_project.xpr
+# Log file: C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/vivado.log
+# Journal file: C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_project.xpr
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top ra_pq_s_top [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_tb.sv
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top ra_pq_s_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+set_property top_file C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_tb.sv [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+launch_simulation
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_sim.sv w ]
+add_files -fileset sim_1 C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_sim.sv
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top ra_pq_s_wrapper [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top ra_pq_s_sim [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+export_ip_user_files -of_objects  [get_files C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_tb.sv] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_tb.sv
+launch_simulation
+source ra_pq_s_sim.tcl
+relaunch_sim
+run all
+relaunch_sim
+run all
+current_wave_config {Untitled 1}
+add_wave {{/ra_pq_s_sim/DUV/U_PQ_IF_S/kvo}} 
+relaunch_sim
+run all
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_project.runs/impl_1/ra_pq_s_wrapper.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/ehgartns/Documents/new_pq_repo/ra_pq_s/ra_pq_s_project.runs/impl_1/ra_pq_s_wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_sim

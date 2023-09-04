@@ -1,0 +1,294 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Aug  3 13:41:20 2022
+# Process ID: 10496
+# Current directory: C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/auto_pq_16.runs/synth_1
+# Command line: vivado.exe -log highest_level.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source highest_level.tcl
+# Log file: C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/auto_pq_16.runs/synth_1/highest_level.vds
+# Journal file: C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/auto_pq_16.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source highest_level.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1088.559 ; gain = 0.000
+Command: synth_design -top highest_level -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 15244
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1140.891 ; gain = 52.332
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'highest_level' [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/highest_level.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'high_level' [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/high_level.sv:24]
+INFO: [Synth 8-6157] synthesizing module 'pq_if' [C:/Users/ehgartns/Documents/new_pq_repo/pq_if.sv:14]
+INFO: [Synth 8-6155] done synthesizing module 'pq_if' (0#1) [C:/Users/ehgartns/Documents/new_pq_repo/pq_if.sv:14]
+INFO: [Synth 8-6157] synthesizing module 'auto_top' [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/auto_top.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'fsm_pq' [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/fsm_pq.sv:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/fsm_pq.sv:65]
+INFO: [Synth 8-6155] done synthesizing module 'fsm_pq' (1#1) [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/fsm_pq.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'lfsr' [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/lfsr.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'lfsr' (2#1) [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/lfsr.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'compcounter' [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/compcounter.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'flip_flop' [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/flip_flop.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'flip_flop' (3#1) [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/flip_flop.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'compcounter' (4#1) [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/compcounter.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'auto_top' (5#1) [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/auto_top.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'ra_pq' [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq test/ra_pq.sv:16]
+INFO: [Synth 8-6157] synthesizing module 'ra_pq_mux2' [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'ra_pq_mux2' (6#1) [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux2.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'ra_pq_sort2' [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_sort2.sv:13]
+INFO: [Synth 8-6155] done synthesizing module 'ra_pq_sort2' (7#1) [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_sort2.sv:13]
+INFO: [Synth 8-6157] synthesizing module 'ra_pq_reg' [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_reg.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'ra_pq_reg' (8#1) [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_reg.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'ra_pq_mux3' [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux3.sv:13]
+INFO: [Synth 8-6155] done synthesizing module 'ra_pq_mux3' (9#1) [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq_r test/ra_pq_mux3.sv:13]
+INFO: [Synth 8-6155] done synthesizing module 'ra_pq' (10#1) [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/ra_pq test/ra_pq.sv:16]
+INFO: [Synth 8-6155] done synthesizing module 'high_level' (11#1) [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/high_level.sv:24]
+INFO: [Synth 8-6157] synthesizing module 'rgb_pwm' [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/rgb_pwm.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'rgb_pwm' (12#1) [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/rgb_pwm.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'sevenseg_ctl' [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/sevenseg_ctl.sv:18]
+INFO: [Synth 8-6157] synthesizing module 'period_enb' [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/period_enb.sv:20]
+	Parameter PERIOD_MS bound to: 1 - type: integer 
+	Parameter PERIOD_US bound to: 1000 - type: integer 
+	Parameter PERIOD_NS bound to: 1000000 - type: integer 
+	Parameter CLKFREQ_MHZ bound to: 100 - type: integer 
+	Parameter CLKPD_NS bound to: 10 - type: integer 
+	Parameter PERIOD_COUNT_LIMIT bound to: 100000 - type: integer 
+	Parameter PERIOD_COUNT_BITS bound to: 17 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'period_enb' (13#1) [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/period_enb.sv:20]
+INFO: [Synth 8-6157] synthesizing module 'counter' [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/counter.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'counter' (14#1) [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/counter.sv:23]
+WARNING: [Synth 8-689] width (3) of port connection 'q' does not match port width (4) of module 'counter' [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/sevenseg_ctl.sv:34]
+INFO: [Synth 8-6157] synthesizing module 'dec_3_8_n' [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/dec_3_8_n.sv:23]
+INFO: [Synth 8-226] default block is never used [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/dec_3_8_n.sv:31]
+INFO: [Synth 8-6155] done synthesizing module 'dec_3_8_n' (15#1) [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/dec_3_8_n.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'mux8' [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/mux8.sv:23]
+	Parameter W bound to: 7 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/mux8.sv:28]
+INFO: [Synth 8-6155] done synthesizing module 'mux8' (16#1) [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/mux8.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'sevenseg_ext_n' [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/sevenseg_ext_n.sv:12]
+INFO: [Synth 8-226] default block is never used [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/sevenseg_ext_n.sv:28]
+INFO: [Synth 8-6155] done synthesizing module 'sevenseg_ext_n' (17#1) [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/sevenseg_ext_n.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'sevenseg_ctl' (18#1) [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/sevenseg_ctl.sv:18]
+INFO: [Synth 8-6155] done synthesizing module 'highest_level' (19#1) [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/highest_level.sv:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1316.074 ; gain = 227.516
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1316.074 ; gain = 227.516
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1316.074 ; gain = 227.516
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.436 . Memory (MB): peak = 1316.074 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/constraints.xdc]
+Finished Parsing XDC File [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/highest_level_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/highest_level_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1436.426 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 1436.426 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 1436.426 ; gain = 347.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 1436.426 ; gain = 347.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 1436.426 ; gain = 347.867
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'fsm_pq'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                           000001 |                           000001
+                   START |                           000010 |                           000010
+                     ADD |                           000100 |                           000100
+                  REMOVE |                           001000 |                           001000
+                   CHECK |                           010000 |                           010000
+                 DISPLAY |                           100000 |                           100000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'state_reg' in module 'fsm_pq'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:34 . Memory (MB): peak = 1436.426 ; gain = 347.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    4 Bit       Adders := 2     
++---XORs : 
+	   4 Input      1 Bit         XORs := 1     
++---Registers : 
+	                8 Bit    Registers := 515   
+	                4 Bit    Registers := 2     
++---Muxes : 
+	   2 Input    8 Bit        Muxes := 1530  
+	   4 Input    8 Bit        Muxes := 2     
+	   8 Input    8 Bit        Muxes := 1     
+	  18 Input    7 Bit        Muxes := 1     
+	   7 Input    6 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 2     
+	   7 Input    2 Bit        Muxes := 2     
+	   7 Input    1 Bit        Muxes := 9     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:58 ; elapsed = 00:02:23 . Memory (MB): peak = 1469.145 ; gain = 380.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:07 ; elapsed = 00:02:32 . Memory (MB): peak = 1469.145 ; gain = 380.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:18 ; elapsed = 00:02:44 . Memory (MB): peak = 1495.184 ; gain = 406.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:28 ; elapsed = 00:02:55 . Memory (MB): peak = 1664.961 ; gain = 576.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:35 ; elapsed = 00:03:01 . Memory (MB): peak = 1678.789 ; gain = 590.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:35 ; elapsed = 00:03:01 . Memory (MB): peak = 1678.789 ; gain = 590.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:37 ; elapsed = 00:03:04 . Memory (MB): peak = 1678.789 ; gain = 590.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:37 ; elapsed = 00:03:04 . Memory (MB): peak = 1678.789 ; gain = 590.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:38 ; elapsed = 00:03:04 . Memory (MB): peak = 1678.789 ; gain = 590.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:38 ; elapsed = 00:03:05 . Memory (MB): peak = 1678.789 ; gain = 590.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |   261|
+|3     |LUT1   |     2|
+|4     |LUT2   |     5|
+|5     |LUT3   |  5077|
+|6     |LUT4   |  1543|
+|7     |LUT5   |  4640|
+|8     |LUT6   |   568|
+|9     |FDRE   |  2100|
+|10    |FDSE   |  2050|
+|11    |IBUF   |     3|
+|12    |OBUF   |    26|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:38 ; elapsed = 00:03:05 . Memory (MB): peak = 1678.789 ; gain = 590.230
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:18 ; elapsed = 00:02:57 . Memory (MB): peak = 1678.789 ; gain = 469.879
+Synthesis Optimization Complete : Time (s): cpu = 00:02:38 ; elapsed = 00:03:05 . Memory (MB): peak = 1678.789 ; gain = 590.230
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.594 . Memory (MB): peak = 1691.004 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 261 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1691.004 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+61 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:55 ; elapsed = 00:03:31 . Memory (MB): peak = 1691.004 ; gain = 602.445
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/auto_pq_16.runs/synth_1/highest_level.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file highest_level_utilization_synth.rpt -pb highest_level_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Aug  3 13:45:17 2022...

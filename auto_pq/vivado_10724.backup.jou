@@ -1,0 +1,298 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Jul 20 12:21:22 2022
+# Process ID: 10724
+# Current directory: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7432 C:\Users\ehgartns\Documents\summerReasearch2022\hw_pq\auto_pq\auto_pq_project.xpr
+# Log file: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq/vivado.log
+# Journal file: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq/auto_pq_project.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq/core_sim_behav.wcfg
+source highest_sim.tcl
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/highest_sim/DUV/CORE/U_PQ_IF}} 
+relaunch_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top high_level [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top core_sim [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+close_sim
+launch_simulation
+open_wave_config C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq/core_sim_behav.wcfg
+source core_sim.tcl
+relaunch_sim
+close_sim
+launch_simulation
+open_wave_config C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq/core_sim_behav.wcfg
+source core_sim.tcl
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/U_PQ_IF}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/AUTO/FSM/state}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/AUTO/LFSR/q}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/AUTO/COMP/count}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/AUTO/COMP/verdict}} 
+relaunch_sim
+run all
+relaunch_sim
+run all
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top highest_level [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+refresh_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq/auto_pq_project.runs/impl_1/highest_level.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq/auto_pq_project.runs/impl_1/highest_level.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw_manager
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top high_level [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+close_design
+close_sim
+launch_simulation
+open_wave_config C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq/core_sim_behav.wcfg
+source core_sim.tcl
+run all
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/U_PQ_IF}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/AUTO/rst}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/AUTO/LFSR/q}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/AUTO/FSM/state}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/AUTO/COMP/count}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/AUTO/COMP/verdict}} 
+relaunch_sim
+run all
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top highest_level [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+refresh_design
+refresh_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq/auto_pq_project.runs/impl_1/highest_level.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq/auto_pq_project.runs/impl_1/highest_level.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+refresh_design
+update_compile_order -fileset sources_1
+add_files -norecurse C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq/sr_pq_test/sr_pq.sv
+update_compile_order -fileset sources_1
+add_files -norecurse C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq/sr_pq_test/sr_pq_stage.sv
+update_compile_order -fileset sources_1
+refresh_design
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top high_level [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+close_design
+relaunch_sim
+close_sim
+launch_simulation
+open_wave_config C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq/core_sim_behav.wcfg
+source core_sim.tcl
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/U_PQ_IF}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/AUTO/FSM/state}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/AUTO/LFSR/q}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/AUTO/COMP/count}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/AUTO/COMP/verdict}} 
+relaunch_sim
+run all
+update_compile_order -fileset sources_1
+add_files -norecurse {C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq/sr_pq_s_test/sr_pq_s.sv C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq/sr_pq_s_test/sr_pq_s_stage.sv}
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+open_wave_config C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq/core_sim_behav.wcfg
+source core_sim.tcl
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/U_PQ_IF}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/AUTO/LFSR/q}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/AUTO/FSM/state}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/AUTO/COMP/count}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/AUTO/COMP/verdict}} 
+relaunch_sim
+run all
+update_compile_order -fileset sources_1
+add_files -norecurse C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq/ra_pq_s_test/ra_pq_s.sv
+update_compile_order -fileset sources_1
+add_files -norecurse {C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq/ra_pq_s_test/ra_pq_reg.sv C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq/ra_pq_s_test/ra_pq_sort2.sv C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq/ra_pq_s_test/ra_pq_mux3.sv}
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+close_project
+open_project C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq/auto_pq_project.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq/core_sim_behav.wcfg
+source core_sim.tcl
+run all
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+open_wave_config C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq/core_sim_behav.wcfg
+source core_sim.tcl
+run all
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/U_PQ_IF}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/AUTO/LFSR/q}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/AUTO/FSM/state}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/AUTO/COMP/count}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/AUTO/COMP/verdict}} 
+relaunch_sim
+run all
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/AUTO/color_r}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/AUTO/color_g}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/AUTO/color_b}} 
+relaunch_sim
+run all
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/U_SR_PQ/\genblk1[1].U_STAGE }} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/U_SR_PQ/\genblk1[2].U_STAGE /kvi}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/U_SR_PQ/\genblk1[2].U_STAGE /kv}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/U_SR_PQ/\genblk1[3].U_STAGE /kv}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/U_SR_PQ/\genblk1[4].U_STAGE /kv}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/U_SR_PQ/\genblk1[5].U_STAGE /kv}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/U_SR_PQ/\genblk1[6].U_STAGE /kv}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/U_SR_PQ/\genblk1[7].U_STAGE /kv}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/U_SR_PQ/\genblk1[8].U_STAGE /kv}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/U_SR_PQ/\genblk1[9].U_STAGE /kv}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/U_SR_PQ/\genblk1[10].U_STAGE /kv}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/U_SR_PQ/\genblk1[11].U_STAGE /kv}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/U_SR_PQ/\genblk1[12].U_STAGE /kv}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/U_SR_PQ/\genblk1[13].U_STAGE /kv}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/U_SR_PQ/\genblk1[14].U_STAGE /kv}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/U_SR_PQ/\genblk1[15].U_STAGE /kv}} 
+relaunch_sim
+run all
+restart
+relaunch_sim
+run all
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation -mode post-synthesis -type functional
+launch_simulation
+open_wave_config C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq/core_sim_behav.wcfg
+source core_sim.tcl
+run all
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/U_PQ_IF}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/AUTO/LFSR/q}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/AUTO/FSM/state}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/AUTO/COMP/count}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/DUV/AUTO/COMP/verdict}} 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top highest_level [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq/auto_pq_project.runs/impl_1/highest_level.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq/auto_pq_project.runs/impl_1/highest_level.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_sim

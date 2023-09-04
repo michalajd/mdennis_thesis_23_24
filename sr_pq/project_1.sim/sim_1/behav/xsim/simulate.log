@@ -1,0 +1,4 @@
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+testbench started
+$stop called at time : 165 ns : File "C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq/sr_pq_tb.sv" Line 65

@@ -1,0 +1,43 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Jun 20 10:54:54 2022
+# Process ID: 5576
+# Current directory: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq_s
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11644 C:\Users\ehgartns\Documents\summerReasearch2022\hw_pq\sr_pq_s\sr_pq_s.xpr
+# Log file: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq_s/vivado.log
+# Journal file: C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq_s\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/sr_pq_s/sr_pq_s.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top sr_pq_s_top [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+launch_simulation
+source sr_pq_s_top.tcl
+current_wave_config {Untitled 1}
+add_wave {{/sr_pq_s_top/DUV/rst}} 
+current_wave_config {Untitled 1}
+add_wave {{/sr_pq_s_top/DUV/kvi}} 
+current_wave_config {Untitled 1}
+add_wave {{/sr_pq_s_top/DUV/kvo}} 
+current_wave_config {Untitled 1}
+add_wave {{/sr_pq_s_top/DUV/full}} 
+current_wave_config {Untitled 1}
+add_wave {{/sr_pq_s_top/DUV/empty}} 
+current_wave_config {Untitled 1}
+add_wave {{/sr_pq_s_top/DUV/enq}} 
+current_wave_config {Untitled 1}
+add_wave {{/sr_pq_s_top/DUV/deq}} 
+current_wave_config {Untitled 1}
+add_wave {{/sr_pq_s_top/DUV/ki_lt_k_v}} 
+current_wave_config {Untitled 1}
+add_wave {{/sr_pq_s_top/DUV/kv_v}} 
+relaunch_sim
+close_sim

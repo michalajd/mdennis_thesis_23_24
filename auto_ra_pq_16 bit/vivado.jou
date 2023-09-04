@@ -1,0 +1,114 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Aug  3 11:34:20 2022
+# Process ID: 6332
+# Current directory: C:/Users/ehgartns/Documents/new_pq_repo/auto_ra_pq_16 bit
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5032 C:\Users\ehgartns\Documents\new_pq_repo\auto_ra_pq_16 bit\auto_ra_pq_16_project.xpr
+# Log file: C:/Users/ehgartns/Documents/new_pq_repo/auto_ra_pq_16 bit/vivado.log
+# Journal file: C:/Users/ehgartns/Documents/new_pq_repo/auto_ra_pq_16 bit\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/ehgartns/Documents/new_pq_repo/auto_ra_pq_16 bit/auto_ra_pq_16_project.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+source core_sim.tcl
+current_wave_config {Untitled 1}
+add_wave {{/core_sim/DUV/U_PQ_IF_RD}} 
+current_wave_config {Untitled 1}
+add_wave {{/core_sim/DUV/AUTO/LFSR/q}} 
+current_wave_config {Untitled 1}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/din}} 
+current_wave_config {Untitled 1}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/newVal}} 
+current_wave_config {Untitled 1}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/oldVal}} 
+current_wave_config {Untitled 1}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/verdict}} 
+current_wave_config {Untitled 1}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/cteal_15}} 
+relaunch_sim
+current_wave_config {Untitled 1}
+add_wave {{/core_sim/DUV/AUTO/FSM/state}} 
+relaunch_sim
+run all
+export_ip_user_files -of_objects  [get_files {{C:/Users/ehgartns/Documents/new_pq_repo/auto_ra_pq_16 bit/ra_pq_s test/ra_pq_s.sv}}] -no_script -reset -force -quiet
+remove_files  {{C:/Users/ehgartns/Documents/new_pq_repo/auto_ra_pq_16 bit/ra_pq_s test/ra_pq_s.sv}}
+update_compile_order -fileset sources_1
+add_files -norecurse {{C:/Users/ehgartns/Documents/new_pq_repo/auto_ra_pq_16 bit/ra_pq_s test/ra_pq_s.sv}}
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source core_sim.tcl
+current_wave_config {Untitled 2}
+add_wave {{/core_sim/DUV/U_PQ_IF_RD}} 
+current_wave_config {Untitled 2}
+add_wave {{/core_sim/DUV/AUTO/LFSR/q}} 
+current_wave_config {Untitled 2}
+add_wave {{/core_sim/DUV/AUTO/FSM/state}} 
+current_wave_config {Untitled 2}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/din}} 
+current_wave_config {Untitled 2}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/newVal}} 
+current_wave_config {Untitled 2}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/oldVal}} 
+current_wave_config {Untitled 2}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/verdict}} 
+current_wave_config {Untitled 2}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/cteal_15}} 
+relaunch_sim
+run all
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+add_files -norecurse {{C:/Users/ehgartns/Documents/new_pq_repo/auto_ra_pq_16 bit/ra_pq_s test/ra_pq_s.sv}}
+add_files -norecurse C:/Users/ehgartns/Documents/new_pq_repo/pq_if.sv
+update_compile_order -fileset sources_1
+launch_simulation
+update_compile_order -fileset sources_1
+launch_simulation
+source core_sim.tcl
+close_sim
+launch_simulation
+source core_sim.tcl
+current_wave_config {Untitled 4}
+add_wave {{/core_sim/DUV/U_PQ_IF_RD}} 
+relaunch_sim
+current_wave_config {Untitled 4}
+add_wave {{/core_sim/DUV/AUTO/LFSR/q}} 
+current_wave_config {Untitled 4}
+add_wave {{/core_sim/DUV/AUTO/FSM/state}} 
+current_wave_config {Untitled 4}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/din}} 
+current_wave_config {Untitled 4}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/newVal}} 
+current_wave_config {Untitled 4}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/oldVal}} 
+current_wave_config {Untitled 4}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/verdict}} 
+current_wave_config {Untitled 4}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/cteal_15}} 
+relaunch_sim
+close_sim
+launch_simulation
+source core_sim.tcl
+current_wave_config {Untitled 5}
+add_wave {{/core_sim/DUV/U_PQ_IF_RD}} 
+current_wave_config {Untitled 5}
+add_wave {{/core_sim/DUV/AUTO/LFSR/q}} 
+current_wave_config {Untitled 5}
+add_wave {{/core_sim/DUV/AUTO/FSM/state}} 
+current_wave_config {Untitled 5}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/din}} 
+current_wave_config {Untitled 5}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/newVal}} 
+current_wave_config {Untitled 5}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/oldVal}} 
+current_wave_config {Untitled 5}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/verdict}} 
+current_wave_config {Untitled 5}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/cteal_15}} 
+relaunch_sim
+run all
+close_sim

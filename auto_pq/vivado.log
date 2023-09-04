@@ -1,0 +1,216 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Oct 16 11:38:07 2022
+# Process ID: 13112
+# Current directory: C:/Users/dennismj/Documents/pq_Research/auto_pq
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10976 C:\Users\dennismj\Documents\pq_Research\auto_pq\auto_pq_project.xpr
+# Log file: C:/Users/dennismj/Documents/pq_Research/auto_pq/vivado.log
+# Journal file: C:/Users/dennismj/Documents/pq_Research/auto_pq\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/dennismj/Documents/pq_Research/auto_pq/auto_pq_project.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq' since last save.
+WARNING: [filemgmt 56-2] Default IP Output Path : Could not find the directory 'C:/Users/dennismj/Documents/pq_Research/auto_pq/auto_pq_project.gen/sources_1', nor could it be found using path 'C:/Users/ehgartns/Documents/summerReasearch2022/hw_pq/auto_pq/auto_pq_project.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: highest_level
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1677.258 ; gain = 243.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'highest_level' [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/highest_level.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [C:/Users/dennismj/Documents/pq_Research/heap_pq/heap_pq_hw/debounce.sv:13]
+	Parameter CLKPD_NS bound to: 10 - type: integer 
+	Parameter CLKFREQ bound to: 100000000 - type: integer 
+	Parameter DEBOUNCE_MS bound to: 10 - type: integer 
+	Parameter CTRBITS bound to: 20 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (1#1) [C:/Users/dennismj/Documents/pq_Research/heap_pq/heap_pq_hw/debounce.sv:13]
+INFO: [Synth 8-6157] synthesizing module 'single_pulser' [C:/Users/dennismj/Documents/pq_Research/heap_pq/heap_pq_hw/single_pulser.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'single_pulser' (2#1) [C:/Users/dennismj/Documents/pq_Research/heap_pq/heap_pq_hw/single_pulser.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'high_level' [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/high_level.sv:24]
+INFO: [Synth 8-6157] synthesizing module 'pq_if' [C:/Users/dennismj/Documents/pq_Research/pq_if.sv:14]
+INFO: [Synth 8-6155] done synthesizing module 'pq_if' (2#1) [C:/Users/dennismj/Documents/pq_Research/pq_if.sv:14]
+INFO: [Synth 8-6157] synthesizing module 'auto_top' [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/auto_top.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'fsm_pq' [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/fsm_pq.sv:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/fsm_pq.sv:62]
+INFO: [Synth 8-6155] done synthesizing module 'fsm_pq' (3#1) [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/fsm_pq.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'lfsr' [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/lfsr.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'lfsr' (4#1) [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/lfsr.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'compcounter' [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/compcounter.sv:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'compcounter' (5#1) [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/compcounter.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'comparator' [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/comparator.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'comparator' (6#1) [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/comparator.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'auto_top' (7#1) [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/auto_top.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'heap_pq' [C:/Users/dennismj/Documents/pq_Research/heap_pq/heap_pq.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'mem_swsr' [C:/Users/dennismj/Documents/pq_Research/auto_pq/heap_pq_test/heap_pq/mem_swsr.sv:15]
+	Parameter W bound to: 16 - type: integer 
+	Parameter D bound to: 32768 - type: integer 
+	Parameter DW bound to: 15 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mem_swsr' (8#1) [C:/Users/dennismj/Documents/pq_Research/auto_pq/heap_pq_test/heap_pq/mem_swsr.sv:15]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/dennismj/Documents/pq_Research/heap_pq/heap_pq.sv:118]
+INFO: [Synth 8-6155] done synthesizing module 'heap_pq' (9#1) [C:/Users/dennismj/Documents/pq_Research/heap_pq/heap_pq.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'high_level' (10#1) [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/high_level.sv:24]
+INFO: [Synth 8-6157] synthesizing module 'rgb_pwm' [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/rgb_pwm.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'rgb_pwm' (11#1) [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/rgb_pwm.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'sevenseg_ctl' [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/sevenseg_ctl.sv:18]
+INFO: [Synth 8-6157] synthesizing module 'period_enb' [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/period_enb.sv:20]
+	Parameter PERIOD_MS bound to: 1 - type: integer 
+	Parameter PERIOD_US bound to: 1000 - type: integer 
+	Parameter PERIOD_NS bound to: 1000000 - type: integer 
+	Parameter CLKFREQ_MHZ bound to: 100 - type: integer 
+	Parameter CLKPD_NS bound to: 10 - type: integer 
+	Parameter PERIOD_COUNT_LIMIT bound to: 100000 - type: integer 
+	Parameter PERIOD_COUNT_BITS bound to: 17 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'period_enb' (12#1) [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/period_enb.sv:20]
+INFO: [Synth 8-6157] synthesizing module 'counter' [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/counter.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'counter' (13#1) [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/counter.sv:23]
+WARNING: [Synth 8-689] width (3) of port connection 'q' does not match port width (4) of module 'counter' [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/sevenseg_ctl.sv:34]
+INFO: [Synth 8-6157] synthesizing module 'dec_3_8_n' [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/dec_3_8_n.sv:23]
+INFO: [Synth 8-226] default block is never used [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/dec_3_8_n.sv:31]
+INFO: [Synth 8-6155] done synthesizing module 'dec_3_8_n' (14#1) [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/dec_3_8_n.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'mux8' [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/mux8.sv:23]
+	Parameter W bound to: 7 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/mux8.sv:28]
+INFO: [Synth 8-6155] done synthesizing module 'mux8' (15#1) [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/mux8.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'sevenseg_ext_n' [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/sevenseg_ext_n.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'sevenseg_ext_n' (16#1) [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/sevenseg_ext_n.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'sevenseg_ctl' (17#1) [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/sevenseg_ctl.sv:18]
+INFO: [Synth 8-6155] done synthesizing module 'highest_level' (18#1) [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/highest_level.sv:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1741.543 ; gain = 307.285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1757.031 ; gain = 322.773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1757.031 ; gain = 322.773
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1757.031 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/dennismj/Documents/pq_Research/auto_pq/constraints.xdc]
+Finished Parsing XDC File [C:/Users/dennismj/Documents/pq_Research/auto_pq/constraints.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1870.445 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 1981.988 ; gain = 547.730
+45 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:12 . Memory (MB): peak = 1981.988 ; gain = 863.215
+close_design
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: highest_level
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2022.449 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'highest_level' [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/highest_level.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [C:/Users/dennismj/Documents/pq_Research/heap_pq/heap_pq_hw/debounce.sv:13]
+	Parameter CLKPD_NS bound to: 10 - type: integer 
+	Parameter CLKFREQ bound to: 100000000 - type: integer 
+	Parameter DEBOUNCE_MS bound to: 10 - type: integer 
+	Parameter CTRBITS bound to: 20 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (1#1) [C:/Users/dennismj/Documents/pq_Research/heap_pq/heap_pq_hw/debounce.sv:13]
+INFO: [Synth 8-6157] synthesizing module 'single_pulser' [C:/Users/dennismj/Documents/pq_Research/heap_pq/heap_pq_hw/single_pulser.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'single_pulser' (2#1) [C:/Users/dennismj/Documents/pq_Research/heap_pq/heap_pq_hw/single_pulser.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'high_level' [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/high_level.sv:24]
+INFO: [Synth 8-6157] synthesizing module 'pq_if' [C:/Users/dennismj/Documents/pq_Research/pq_if.sv:14]
+INFO: [Synth 8-6155] done synthesizing module 'pq_if' (2#1) [C:/Users/dennismj/Documents/pq_Research/pq_if.sv:14]
+INFO: [Synth 8-6157] synthesizing module 'auto_top' [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/auto_top.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'fsm_pq' [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/fsm_pq.sv:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/fsm_pq.sv:62]
+INFO: [Synth 8-6155] done synthesizing module 'fsm_pq' (3#1) [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/fsm_pq.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'lfsr' [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/lfsr.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'lfsr' (4#1) [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/lfsr.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'compcounter' [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/compcounter.sv:23]
+	Parameter W bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'compcounter' (5#1) [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/compcounter.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'comparator' [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/comparator.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'comparator' (6#1) [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/comparator.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'auto_top' (7#1) [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/auto_top.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'heap_pq' [C:/Users/dennismj/Documents/pq_Research/heap_pq/heap_pq.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'mem_swsr' [C:/Users/dennismj/Documents/pq_Research/auto_pq/heap_pq_test/heap_pq/mem_swsr.sv:15]
+	Parameter W bound to: 16 - type: integer 
+	Parameter D bound to: 32768 - type: integer 
+	Parameter DW bound to: 15 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mem_swsr' (8#1) [C:/Users/dennismj/Documents/pq_Research/auto_pq/heap_pq_test/heap_pq/mem_swsr.sv:15]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/dennismj/Documents/pq_Research/heap_pq/heap_pq.sv:118]
+INFO: [Synth 8-6155] done synthesizing module 'heap_pq' (9#1) [C:/Users/dennismj/Documents/pq_Research/heap_pq/heap_pq.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'high_level' (10#1) [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/high_level.sv:24]
+INFO: [Synth 8-6157] synthesizing module 'rgb_pwm' [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/rgb_pwm.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'rgb_pwm' (11#1) [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/rgb_pwm.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'sevenseg_ctl' [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/sevenseg_ctl.sv:18]
+INFO: [Synth 8-6157] synthesizing module 'period_enb' [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/period_enb.sv:20]
+	Parameter PERIOD_MS bound to: 1 - type: integer 
+	Parameter PERIOD_US bound to: 1000 - type: integer 
+	Parameter PERIOD_NS bound to: 1000000 - type: integer 
+	Parameter CLKFREQ_MHZ bound to: 100 - type: integer 
+	Parameter CLKPD_NS bound to: 10 - type: integer 
+	Parameter PERIOD_COUNT_LIMIT bound to: 100000 - type: integer 
+	Parameter PERIOD_COUNT_BITS bound to: 17 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'period_enb' (12#1) [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/period_enb.sv:20]
+INFO: [Synth 8-6157] synthesizing module 'counter' [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/counter.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'counter' (13#1) [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/counter.sv:23]
+WARNING: [Synth 8-689] width (3) of port connection 'q' does not match port width (4) of module 'counter' [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/sevenseg_ctl.sv:34]
+INFO: [Synth 8-6157] synthesizing module 'dec_3_8_n' [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/dec_3_8_n.sv:23]
+INFO: [Synth 8-226] default block is never used [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/dec_3_8_n.sv:31]
+INFO: [Synth 8-6155] done synthesizing module 'dec_3_8_n' (14#1) [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/dec_3_8_n.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'mux8' [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/mux8.sv:23]
+	Parameter W bound to: 7 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/mux8.sv:28]
+INFO: [Synth 8-6155] done synthesizing module 'mux8' (15#1) [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/mux8.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'sevenseg_ext_n' [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/sevenseg_ext_n.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'sevenseg_ext_n' (16#1) [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/sevenseg_ext_n.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'sevenseg_ctl' (17#1) [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/sevenseg_ctl.sv:18]
+INFO: [Synth 8-6155] done synthesizing module 'highest_level' (18#1) [C:/Users/dennismj/Documents/pq_Research/auto_pq/RTL/highest_level.sv:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2022.449 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2022.449 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2022.449 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2022.449 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/dennismj/Documents/pq_Research/auto_pq/constraints.xdc]
+Finished Parsing XDC File [C:/Users/dennismj/Documents/pq_Research/auto_pq/constraints.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2022.449 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2022.449 ; gain = 0.000
+44 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 16 12:21:31 2022...

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Oct 24 19:20:31 2022
+# Process ID: 12848
+# Current directory: C:/Users/dennismj/Documents/pq_Research/auto_pq/auto_pq_project.runs/synth_1
+# Command line: vivado.exe -log highest_level.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source highest_level.tcl
+# Log file: C:/Users/dennismj/Documents/pq_Research/auto_pq/auto_pq_project.runs/synth_1/highest_level.vds
+# Journal file: C:/Users/dennismj/Documents/pq_Research/auto_pq/auto_pq_project.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source highest_level.tcl -notrace

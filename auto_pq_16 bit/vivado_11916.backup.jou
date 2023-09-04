@@ -1,0 +1,334 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Jul 28 12:24:04 2022
+# Process ID: 11916
+# Current directory: C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12860 C:\Users\ehgartns\Documents\new_pq_repo\auto_pq_16 bit\auto_pq_16.xpr
+# Log file: C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/vivado.log
+# Journal file: C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/auto_pq_16.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+source core_sim.tcl
+run all
+current_wave_config {Untitled 1}
+add_wave {{/core_sim/DUV/U_PQ_IF}} 
+current_wave_config {Untitled 1}
+add_wave {{/core_sim/DUV/AUTO/LFSR/q}} 
+current_wave_config {Untitled 1}
+add_wave {{/core_sim/DUV/AUTO/FSM/state}} 
+current_wave_config {Untitled 1}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/din}} 
+current_wave_config {Untitled 1}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/currentvalue}} 
+current_wave_config {Untitled 1}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/dump}} 
+current_wave_config {Untitled 1}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/verdict}} 
+current_wave_config {Untitled 1}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/cteal_15}} 
+relaunch_sim
+run all
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top highest_level [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/auto_pq_16.runs/impl_1/highest_level.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/auto_pq_16.runs/impl_1/highest_level.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+current_wave_config {Untitled 1}
+add_wave {{/core_sim/data1}} 
+current_wave_config {Untitled 1}
+add_wave {{/core_sim/data2}} 
+relaunch_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top high_level [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+relaunch_sim
+close_sim
+launch_simulation
+source core_sim.tcl
+current_wave_config {Untitled 6}
+add_wave {{/core_sim/DUV/U_PQ_IF}} 
+current_wave_config {Untitled 6}
+add_wave {{/core_sim/DUV/AUTO/LFSR/q}} 
+current_wave_config {Untitled 6}
+add_wave {{/core_sim/DUV/AUTO/FSM/state}} 
+current_wave_config {Untitled 6}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/din}} 
+current_wave_config {Untitled 6}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/currentvalue}} 
+current_wave_config {Untitled 6}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/dump}} 
+current_wave_config {Untitled 6}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/verdict}} 
+current_wave_config {Untitled 6}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/cteal_15}} 
+current_wave_config {Untitled 6}
+add_wave {{/core_sim/data1}} 
+current_wave_config {Untitled 6}
+add_wave {{/core_sim/data2}} 
+current_wave_config {Untitled 6}
+add_wave {{/core_sim/DUV/data1}} 
+current_wave_config {Untitled 6}
+add_wave {{/core_sim/DUV/data2}} 
+relaunch_sim
+run all
+relaunch_sim
+run all
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+relaunch_sim
+relaunch_sim
+run all
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top highest_level [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/auto_pq_16.runs/impl_1/highest_level.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+refresh_design
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top high_level [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+relaunch_sim
+run all
+relaunch_sim
+run all
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top highest_level [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/auto_pq_16.runs/impl_1/highest_level.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+refresh_design
+close_design
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse {{C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/highest_sim.sv}}
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top highest_sim [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+close_sim
+launch_simulation
+source highest_sim.tcl
+current_wave_config {Untitled 7}
+add_wave {{/highest_sim/DUV/CORE/U_PQ_IF}} 
+current_wave_config {Untitled 7}
+add_wave {{/highest_sim/DUV/CORE/data1}} 
+current_wave_config {Untitled 7}
+add_wave {{/highest_sim/DUV/CORE/data2}} 
+current_wave_config {Untitled 7}
+add_wave {{/highest_sim/DUV/CORE/clk}} 
+current_wave_config {Untitled 7}
+add_wave {{/highest_sim/DUV/CORE/AUTO/FSM/state}} 
+current_wave_config {Untitled 7}
+add_wave {{/highest_sim/DUV/SEVENSEG/d3}} {{/highest_sim/DUV/SEVENSEG/d2}} {{/highest_sim/DUV/SEVENSEG/d1}} {{/highest_sim/DUV/SEVENSEG/d0}} 
+current_wave_config {Untitled 7}
+add_wave {{/highest_sim/segs_n}} 
+current_wave_config {Untitled 7}
+add_wave {{/highest_sim/an_n}} 
+relaunch_sim
+run all
+relaunch_sim
+current_wave_config {Untitled 7}
+add_wave {{/highest_sim/DUV/CORE/U_PQ_IF}} 
+relaunch_sim
+run all
+current_wave_config {Untitled 7}
+add_wave {{/highest_sim/DUV/rst}} 
+current_wave_config {Untitled 7}
+add_wave {{/highest_sim/DUV/start}} 
+relaunch_sim
+run all
+current_wave_config {Untitled 7}
+add_wave {{/highest_sim/DUV/CORE/AUTO/FSM/start}} 
+relaunch_sim
+run all
+current_wave_config {Untitled 7}
+add_wave {{/highest_sim/DUV/CORE/start}} 
+update_compile_order -fileset sources_1
+relaunch_sim
+run all
+relaunch_sim
+run all
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/auto_pq_16.runs/impl_1/highest_level.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/auto_pq_16.runs/impl_1/highest_level.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+update_compile_order -fileset sources_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/auto_pq_16.runs/impl_1/highest_level.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/auto_pq_16.runs/impl_1/highest_level.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+add_files -norecurse {{C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/sr_pq_s test/sr_pq_s.sv} {C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/sr_pq_s test/sr_pq_s_stage.sv}}
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/auto_pq_16.runs/impl_1/highest_level.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+add_files -norecurse {{C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/pheap_pq test/pheap_pq.sv}}
+update_compile_order -fileset sources_1
+add_files -norecurse {{C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/pheap_pq test/leq1.sv} {C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/pheap_pq test/level.sv} {C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/pheap_pq test/level_shifter.sv} {C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/pheap_pq test/leq.sv}}
+update_compile_order -fileset sources_1
+add_files -norecurse {{C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/pheap_pq test/levelRam.sv}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+add_files -norecurse {{C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/pheap_pq test/pheapTypes.sv}}
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/auto_pq_16.runs/impl_1/highest_level.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw_manager
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top core_sim [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top high_level [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_simulation
+source core_sim.tcl
+current_wave_config {Untitled 8}
+add_wave {{/core_sim/DUV/U_PQ_IF}} 
+current_wave_config {Untitled 8}
+add_wave {{/core_sim/DUV/AUTO/LFSR/q}} 
+current_wave_config {Untitled 8}
+add_wave {{/core_sim/DUV/AUTO/FSM/state}} 
+current_wave_config {Untitled 8}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/din}} 
+current_wave_config {Untitled 8}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/currentvalue}} 
+current_wave_config {Untitled 8}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/dump}} 
+current_wave_config {Untitled 8}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/verdict}} 
+current_wave_config {Untitled 8}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/cteal_15}} 
+relaunch_sim
+run all
+relaunch_sim
+run all
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+add_files -norecurse {{C:/Users/ehgartns/Documents/new_pq_repo/auto_pq_16 bit/RTL/pq_rd_if.sv}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+update_compile_order -fileset sources_1
+launch_simulation
+source core_sim.tcl
+current_wave_config {Untitled 9}
+add_wave {{/core_sim/DUV/U_PQ_IF}} 
+current_wave_config {Untitled 9}
+add_wave {{/core_sim/DUV/AUTO/LFSR/q}} 
+current_wave_config {Untitled 9}
+add_wave {{/core_sim/DUV/AUTO/FSM/state}} 
+current_wave_config {Untitled 9}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/din}} 
+current_wave_config {Untitled 9}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/currentvalue}} 
+current_wave_config {Untitled 9}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/dump}} 
+current_wave_config {Untitled 9}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/verdict}} 
+current_wave_config {Untitled 9}
+add_wave {{/core_sim/DUV/AUTO/COMPCOUNT/cteal_15}} 
+relaunch_sim
+run all
+close_sim
