@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module ControlFSM(input logic clk, rst, enq, deq, dout, result,
+module ControlFSM(input logic clk, rst, enq, deq, done, result,
                   output logic we, regenb, regsel, countenb
                   );
 
@@ -50,7 +50,13 @@ module ControlFSM(input logic clk, rst, enq, deq, dout, result,
                                 
                                 if (!enq && !deq) next = IDLE;
                                 else if (enq && !deq) next = COMPARE;
-                                else next = IDLE;
+                                else next = IDLE;// REMOVE ME
+                                /* The structure here should be the following:
+                                    if (enq && !deq) next = COMPARE;
+                                    else if (!enq && deq) next = REMOVE;
+                                    else next = IDLE;
+                                    
+                                    This structure works the same way logically and handles the erroneous case that both inputs are true */
                             end
                         
                         COMPARE:
@@ -58,18 +64,14 @@ module ControlFSM(input logic clk, rst, enq, deq, dout, result,
                                 countenb = 0; // shut off count
                                 we = 0; // shut off write
                                 
+                                // 
                                 
-                                if (result == 1 && dout == 1) next = IDLE; //DUMMY VALUE until we set bitwidths, the dout should be FF eventually
-                                else if (result == 1) next = ADV_ADDR; // register value is larger than ram value -- increment ram address
-                                else if (result == 0) next = SWAP; // register value is smaller than ram value -- initiate swap
+                                if (done) next = IDLE; // Go back to "IDLE" state when the next value in the temp register is FFFF
+                                else if (!done && result) next = SWAP; // register value is smaller than ram value -- initiate swap
+                                else if (!done && !result) next = ADV_ADDR; // register value is larger than ram value -- increment ram address
                                 else next = IDLE;
                             end
                         
-                        ADV_ADDR:
-                            begin
-                                countenb = 1; // turn on count for one clock cycle
-                                next = COMPARE; 
-                            end
                             
                         SWAP:
                             begin
@@ -78,6 +80,12 @@ module ControlFSM(input logic clk, rst, enq, deq, dout, result,
                                 regenb = 1;
                                 countenb = 1;
                                 next = COMPARE;
+                            end
+                            
+                        ADV_ADDR:
+                            begin
+                                countenb = 1; // turn on count for one clock cycle
+                                next = COMPARE; 
                             end
                     endcase
                end

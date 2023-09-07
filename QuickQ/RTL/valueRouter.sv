@@ -23,9 +23,8 @@
 module valueRouter(input logic clk, 
                    input logic [31:0] reg_data, ram_data,
                    output logic [31:0] data_out, 
-                   output logic fb);
-                   
-                   logic result;
+                   output logic result,
+                   output logic done);
                    
                    always_comb
                     if (reg_data > ram_data) result = 1'b0; // register value is larger OR equal to the current BRAM value / result = 1
@@ -33,6 +32,6 @@ module valueRouter(input logic clk,
 
                     mux2 MUX (.d0(reg_data), .d1(ram_data), .sel(result), .y(data_out));
                     
-                    assign fb = result;
+                    assign done = (reg_data == 32'hFFFF) ? 1'b1 : 1'b0;
 
 endmodule

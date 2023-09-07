@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module controlNode(input logic clk, read_i, write_i, reset_i, result, enq, deq, dout,
+module controlNode(input logic clk, read_i, write_i, reset_i, result, enq, deq, done,
                    output logic sel_i, sel_o, sel_b, rd_addr, wr_addr, enables, read_o, write_o, reset_o, regenb, regsel
                    );
                    
@@ -28,7 +28,7 @@ module controlNode(input logic clk, read_i, write_i, reset_i, result, enq, deq, 
                    logic count_increase;
                    logic rst;
                    
-                   ControlFSM FSM (.clk, .rst, .enq(enq), .deq(deq), .dout, .result(result), .we(enables), .regenb(regenb), .regsel(sel_i), .countenb(count_increase));
+                   ControlFSM FSM (.clk, .rst, .enq(enq), .deq(deq), .done(done), .result(result), .we(enables), .regenb(regenb), .regsel(sel_i), .countenb(count_increase));
                    
                    counter COUNT (.clk, .rst, .enb(count_increase), .q(rd_addr));
 endmodule
