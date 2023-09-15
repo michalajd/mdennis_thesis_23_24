@@ -21,7 +21,7 @@
 
 
 module ControlFSM(input logic clk, rst, enq, deq, done, result,
-                  output logic we, regenb, regsel, countenb
+                  output logic we, regenb, regsel, countenb, read_addr, comp_enb
                   );
             
             /* Enumerated logic (states) */
@@ -52,8 +52,13 @@ module ControlFSM(input logic clk, rst, enq, deq, done, result,
                         IDLE:
                             /* Default state for when no action is specified in the queue */
                             begin
+                                /* Default values */
+                                read_addr = 0;
                                 /* State transition logic */
-                                if (enq) next = FILL_ENQ;
+                                if (enq) begin
+                                    read_addr = 1; // Signal BRAM to read the value at the address
+                                    next = FILL_ENQ;
+                                end
                                 else if (deq) next = IDLE; // FIX ME when dequeue states are added
                                 else next = IDLE;
                             end
@@ -61,6 +66,7 @@ module ControlFSM(input logic clk, rst, enq, deq, done, result,
                         FILL_ENQ:
                             /* Temp register (at head) filled with value from input */
                             begin
+                                comp_enb = 1; // Release the values in the registers for comparison
                                 /* State transition logic */
                                 next = COMPARE_ENQ;
                             end
