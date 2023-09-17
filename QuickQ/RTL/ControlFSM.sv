@@ -21,7 +21,8 @@
 
 
 module ControlFSM(input logic clk, rst, enq, deq, done, result,
-                  output logic we, regenb, regsel, countenb, read_addr, comp_enb
+                  output logic we, regenb, regsel, countenb, read_addr,
+                  output logic [1:0] mode
                   );
             
             /* Enumerated logic (states) */
@@ -66,7 +67,6 @@ module ControlFSM(input logic clk, rst, enq, deq, done, result,
                         FILL_ENQ:
                             /* Temp register (at head) filled with value from input */
                             begin
-                                comp_enb = 1; // Release the values in the registers for comparison
                                 /* State transition logic */
                                 next = COMPARE_ENQ;
                             end

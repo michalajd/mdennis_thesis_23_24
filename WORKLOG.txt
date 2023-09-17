@@ -1,0 +1,2 @@
+WORKLOG
+* 09/17: Re-worked the Value Router to account for modes where we add values to the queue. Wrote a testbench for this logic. NEXT GOAL: Implement QuickFSM to communicate with this router and test the logic with a testbench.
