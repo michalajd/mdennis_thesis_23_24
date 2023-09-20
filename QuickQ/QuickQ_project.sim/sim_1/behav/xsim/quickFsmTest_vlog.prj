@@ -1,7 +1,7 @@
 # compile verilog/system verilog design source files
 sv xil_defaultlib  \
-"../../../../RTL/valueRouter.sv" \
-"../../../../Simulation/valueRouterTest.sv" \
+"../../../../RTL/ControlFSM.sv" \
+"../../../../Simulation/quickFsmTest.sv" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

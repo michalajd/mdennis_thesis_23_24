@@ -1,4 +1,5 @@
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/valueRouter.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module valueRouter
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/Simulation/valueRouterTest.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module valueRouterTest
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/ControlFSM.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ControlFSM
+WARNING: [VRFC 10-8658] /* is inside a comment [/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/ControlFSM.sv:85]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/Simulation/quickFsmTest.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module quickFsmTest

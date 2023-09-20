@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module ControlFSM(input logic clk, rst, enq, deq, done, result,
+module ControlFSM(input logic clk, rst, enq, deq, done, result, full, swap_done,
                   output logic we, regenb, regsel, countenb, read_addr,
                   output logic [1:0] mode
                   );
@@ -37,10 +37,6 @@ module ControlFSM(input logic clk, rst, enq, deq, done, result,
             
             states_t state, next;
             
-            /* Internal logic */
-            logic swap_done;
-            logic full;
-            
             /* Clock */
             always_ff @ (posedge clk)
                 if (rst) state <= IDLE; // Reset statement
@@ -53,11 +49,13 @@ module ControlFSM(input logic clk, rst, enq, deq, done, result,
                         IDLE:
                             /* Default state for when no action is specified in the queue */
                             begin
+                                mode = 2'b11;
                                 /* Default values */
                                 read_addr = 0;
                                 /* State transition logic */
                                 if (enq) begin
                                     read_addr = 1; // Signal BRAM to read the value at the address
+                                    mode = 2'b00;
                                     next = FILL_ENQ;
                                 end
                                 else if (deq) next = IDLE; // FIX ME when dequeue states are added
@@ -75,17 +73,22 @@ module ControlFSM(input logic clk, rst, enq, deq, done, result,
                             /* Value in register compared with value that index register points to */
                             begin
                                 /* State transition logic */
-                                if (result && !done) next = SWAP_ENQ;
-                                else if (!result && !done) next = CNT_INC;
-                                else next = COMPARE_ENQ;
+                                if (result /*&& !done)*/) next = SWAP_ENQ;
+                                else /** if (!result && !done) */ next = CNT_INC;
+                                //else next = COMPARE_ENQ;
                             end
                         
                         SWAP_ENQ:
                             /* Value in register swapped with value in QuickQ index */
                             begin
+                                we = 1; /** Write new value to the BRAM
                                 /* State transition logic */
-                                if (swap_done) next = CNT_INC;
-                                else next = COMPARE_ENQ;
+                                if (swap_done) begin
+                                    we = 0;
+                                    mode = 2'b01;
+                                    next = CNT_INC;
+                                end
+                                else next = SWAP_ENQ;
                             end
                             
                         CNT_INC:

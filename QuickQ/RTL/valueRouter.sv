@@ -50,7 +50,7 @@ module valueRouter(input logic [31:0] bram_out, reg_out,
                     end
                     
              default: begin
-                        full = 1'b0;
+                        full = 0;
                         result = 0;
                       end
                       
