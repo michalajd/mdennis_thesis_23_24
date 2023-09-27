@@ -29,11 +29,11 @@ module valueRouterTest;
     /** Output logic */
     logic [31:0] bram_insert, to_register;
     logic [7:0] array_cnt_out;
-    logic result, full;
+    logic result, full, empty;
     
     /** Instantiate ValueRouter module */
     valueRouter DUV (.bram_out, .reg_out, .mode, .array_size, .array_cnt_in,
-                     .bram_insert, .to_register, .array_cnt_out, .result, .full);
+                     .bram_insert, .to_register, .array_cnt_out, .result, .full, .empty);
                      
     /** Running the Test */
     initial begin

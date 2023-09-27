@@ -23,14 +23,14 @@
 module quickFsmTest;
 
 /** Logic values for initialization */
-    logic clk, rst, enq, deq, done, result, full, swap_done; /** Inputs */
+    logic clk, rst, enq, deq, done, result, full, swap_done, empty; /** Inputs */
     logic we, regenb, regsel, countenb, read_addr; /** One-bit outputs */
-    logic [1:0] mode; /** Two-bit outputs */
+    logic [1:0] mode, mux1_sel; /** Two-bit outputs */
        
 /** Instantiate DUV */           
-ControlFSM DUV (.clk, .rst, .enq, .deq, .done, .result, .full, .swap_done,
+ControlFSM DUV (.clk, .rst, .enq, .deq, .done, .result, .full, .swap_done, .empty,
                 .we, .regenb, .regsel, .countenb, .read_addr,
-                .mode);
+                .mode, .mux1_sel);
                 
     /** Generate clock */
     always begin
@@ -64,6 +64,13 @@ ControlFSM DUV (.clk, .rst, .enq, .deq, .done, .result, .full, .swap_done,
         
         /** Check logic when counter is full */
         full = 1;
+        repeat (4) @(posedge clk) #1;
+        
+        /** Check empty logic */
+        full = 0;
+        empty = 1;
+        @(posedge clk) #1;
+        enq = 1;
         repeat (4) @(posedge clk) #1;
         
         $stop;

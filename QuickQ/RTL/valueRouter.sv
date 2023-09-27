@@ -23,7 +23,7 @@ module valueRouter(input logic [31:0] bram_out, reg_out,
                    input logic [7:0] array_size, array_cnt_in,
                    output logic [31:0] bram_insert, to_register,
                    output logic [7:0] array_cnt_out,
-                   output logic result, full);
+                   output logic result, full, empty);
                    
     always_comb
         case (mode)

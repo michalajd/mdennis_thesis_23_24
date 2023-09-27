@@ -20,11 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module dff (input logic clk, enb, 
+module dff (input logic clk, 
             input logic [31:0] d,
             output logic [31:0] q);
 
     always_ff @(posedge clk)
-        if (enb) q <= d;
+        q <= d;
 
 endmodule: dff
