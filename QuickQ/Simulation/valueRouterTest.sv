@@ -23,17 +23,17 @@
 module valueRouterTest;
     /** Input logic */
     logic [31:0] bram_out, reg_out;
-    logic [1:0] mode;
+    logic [2:0] mode;
     logic [7:0] array_size, array_cnt_in;
     
     /** Output logic */
-    logic [31:0] bram_insert, to_register;
+    logic [31:0] bram_insert, to_register, data_lt_o;
     logic [7:0] array_cnt_out;
     logic result, full, empty;
     
     /** Instantiate ValueRouter module */
     valueRouter DUV (.bram_out, .reg_out, .mode, .array_size, .array_cnt_in,
-                     .bram_insert, .to_register, .array_cnt_out, .result, .full, .empty);
+                     .bram_insert, .to_register, .data_lt_o, .array_cnt_out, .result, .full, .empty);
                      
     /** Running the Test */
     initial begin
@@ -44,21 +44,21 @@ module valueRouterTest;
         /** Add a value with an empty queue */
         bram_out = 32'hFFFFFFFF;
         reg_out = 32'd2;
-        mode = 2'b00;
+        mode = 3'b000;
         #10;
         
         /** Test queue size increase */
-        mode = 2'b01;
+        mode = 3'b001;
         #10;
         array_cnt_in = array_cnt_out;
         
         /** Add a value that would NOT be swapped */
         bram_out = 32'd2;
         reg_out = 32'd1;
-        mode = 2'b00;
+        mode = 3'b000;
         #10;
         
-        mode = 2'b01;
+        mode = 3'b001;
         #10;
         array_cnt_in = array_cnt_out;
         
@@ -66,12 +66,26 @@ module valueRouterTest;
         array_cnt_in = 8'd4;
         bram_out = 32'hf657c062;
         reg_out = 32'hf680d628;
-        mode = 2'b00;
+        mode = 3'b000;
         #10;
         
-        mode = 2'b01;
+        mode = 2'b001;
         #10;
         array_cnt_in = array_cnt_out;
+        
+        /** Removing a value */
+        array_cnt_in = 8'd2;
+        bram_out = 32'h39b034ac;
+        reg_out = 32'h39b034ab;
+        mode = 3'b010;
+        #10;
+        
+        mode = 3'b011;
+        #10;
+        array_cnt_in = array_cnt_out;
+        
+        /** Check empty conditional */
+        
         $stop;
     end
 

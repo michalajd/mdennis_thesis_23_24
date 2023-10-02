@@ -19,15 +19,17 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 module valueRouter(input logic [31:0] bram_out, reg_out,
-                   input logic [1:0] mode,
+                   input logic [2:0] mode,
                    input logic [7:0] array_size, array_cnt_in,
                    output logic [31:0] bram_insert, to_register,
+                   output logic [31:0] data_lt_o,
                    output logic [7:0] array_cnt_out,
                    output logic result, full, empty);
                    
     always_comb
         case (mode)
-            2'b00: begin /** CASE 1: Comparator / Route data */
+            2'b000: begin /** CASE 1: Comparator / Route data */
+                        empty = 1'b0;
                         /** Compare register and BRAM data */
                         if (reg_out > bram_out || bram_out == 32'hFFFFFFFF) result = 1'b1; // register value is larger OR equal to the current BRAM value
                         else result = 1'b0;                     // register value is smaller than the current BRAM value
@@ -44,14 +46,26 @@ module valueRouter(input logic [31:0] bram_out, reg_out,
                         end
                    end
                    
-             2'b01: begin /** CASE 2: Increase the counter for inside the array  */
+             3'b001: begin /** CASE 2: Increase the counter for inside the array  */
                         array_cnt_out = array_cnt_in + 1;
                         if (array_cnt_out == array_size) full = 1'b1;
                     end
                     
+             3'b010: begin /** CASE 3: Decrease position of all elements until final element is removed*/
+                        full = 1'b0;
+                        bram_insert = bram_out;
+                        if (!empty) to_register = reg_out;
+                        else data_lt_o = reg_out;
+                     end
+                    
+             3'b011: begin /** CASE 4: Decrease the counter for inside the array */
+                        array_cnt_out = array_cnt_in - 1;
+                        if (array_cnt_out == 0) empty = 1'b1;
+             end    
              default: begin
                         full = 0;
                         result = 0;
+                        empty = 1;
                       end
                       
         endcase

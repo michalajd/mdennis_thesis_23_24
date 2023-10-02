@@ -21,8 +21,10 @@
 
 
 module ControlFSM(input logic clk, rst, enq, deq, done, result, full, swap_done, empty,
-                  output logic we, regenb, regsel, countenb, read_addr,
-                  output logic [1:0] mode, mux1_sel
+                  output logic we, regenb, regsel, countenb, re,
+                  output logic [31:0] rd_addr, wr_addr,
+                  output logic [2:0] mode, 
+                  output logic [1:0] mux1_sel
                   );
             
             /* Enumerated logic (states) */
@@ -54,14 +56,14 @@ module ControlFSM(input logic clk, rst, enq, deq, done, result, full, swap_done,
                         IDLE:
                             /* Default state for when no action is specified in the queue */
                             begin
-                                mode = 2'b11;
+                                mode = 2'b011;
                                 /* Default values */
-                                read_addr = 0;
+                                re = 0;
                                 /* State transition logic */
                                 if (enq) begin
                                     mux1_sel = 2'b00; 
-                                    read_addr = 1; // Signal BRAM to read the value at the address
-                                    mode = 2'b00;
+                                    re = 1; // Signal BRAM to read the value at the address
+                                    mode = 2'b000;
                                     next = FILL_ENQ;
                                 end
                                 else if (deq) begin
@@ -82,7 +84,10 @@ module ControlFSM(input logic clk, rst, enq, deq, done, result, full, swap_done,
                             /* Value in register compared with value that index register points to */
                             begin
                                 /* State transition logic */
-                                if (result /*&& !done)*/) next = SWAP_ENQ;
+                                if (result /*&& !done)*/) begin 
+                                    next = SWAP_ENQ;
+                                    wr_addr = rd_addr;
+                                end
                                 else /** if (!result && !done) */ next = CNT_INC;
                                 //else next = COMPARE_ENQ;
                             end
@@ -90,11 +95,11 @@ module ControlFSM(input logic clk, rst, enq, deq, done, result, full, swap_done,
                         SWAP_ENQ:
                             /* Value in register swapped with value in QuickQ index */
                             begin
-                                we = 1; /** Write new value to the BRAM
+                                we = 1; /** Write new value to the BRAM */
                                 /* State transition logic */
                                 if (swap_done) begin
                                     we = 0;
-                                    mode = 2'b01;
+                                    mode = 2'b001;
                                     next = CNT_INC;
                                 end
                                 else next = SWAP_ENQ;
@@ -107,6 +112,7 @@ module ControlFSM(input logic clk, rst, enq, deq, done, result, full, swap_done,
                                 if (full) next = ADDR_INC;
                                 else begin 
                                     mux1_sel = 2'b01; // Input mux chooses value router data
+                                    rd_addr++;
                                     next = COMPARE_ENQ;
                                 end
                             end
