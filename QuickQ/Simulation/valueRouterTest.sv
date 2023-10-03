@@ -85,6 +85,18 @@ module valueRouterTest;
         array_cnt_in = array_cnt_out;
         
         /** Check empty conditional */
+        bram_out = 32'h16f0fbac;
+        mode = 3'b010;
+        #10;
+        
+        mode = 3'b011;
+        #10;
+        array_cnt_in = array_cnt_out;
+        
+        /** Check output to previous node */
+        bram_out = 32'h00000001;
+        mode = 3'b010;
+        #10;
         
         $stop;
     end
