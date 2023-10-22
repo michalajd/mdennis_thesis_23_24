@@ -66,6 +66,10 @@ module valueRouter(input logic [31:0] bram_out, reg_out,
                         full = 0;
                         result = 0;
                         empty = 1;
+                        array_cnt_out = 0;
+                        bram_insert = 32'b0;
+                        data_lt_o = 32'bZ;
+                        to_register = 32'bZ;
                       end
                       
         endcase

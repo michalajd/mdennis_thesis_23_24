@@ -98,6 +98,9 @@ module valueRouterTest;
         mode = 3'b010;
         #10;
         
+        mode = 3'b011;
+        #10;
+        array_cnt_in = array_cnt_out;
         $stop;
     end
 

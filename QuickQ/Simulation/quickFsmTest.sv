@@ -24,13 +24,15 @@ module quickFsmTest;
 
 /** Logic values for initialization */
     logic clk, rst, enq, deq, done, result, full, swap_done, empty; /** Inputs */
-    logic we, regenb, regsel, countenb, read_addr; /** One-bit outputs */
-    logic [1:0] mode, mux1_sel; /** Two-bit outputs */
-       
+    logic we, regenb, regsel, countenb, re, next_node, bram_sel; /** One-bit outputs */
+    logic [1:0] mux1_sel; /** Two-bit outputs */
+    logic [2:0] mode; /** Three-bit outputs */
+    logic [31:0] rd_addr, wr_addr; /** 32-bit outputs */
+                  
 /** Instantiate DUV */           
 ControlFSM DUV (.clk, .rst, .enq, .deq, .done, .result, .full, .swap_done, .empty,
-                .we, .regenb, .regsel, .countenb, .read_addr,
-                .mode, .mux1_sel);
+                .we, .regenb, .regsel, .countenb, .re, .next_node, .bram_sel,
+                .rd_addr, .wr_addr, .mode, .mux1_sel);
                 
     /** Generate clock */
     always begin
