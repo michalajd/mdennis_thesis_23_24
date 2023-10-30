@@ -57,7 +57,7 @@ module ControlFSM(input logic clk, rst, enq, deq, done, result, full, swap_done,
                         IDLE:
                             /* Default state for when no action is specified in the queue */
                             begin
-                                mode = 3'b100;
+                                mode = 3'b101;
                                 /* Default values */
                                 re = 0;
                                 /* State transition logic */
@@ -120,6 +120,7 @@ module ControlFSM(input logic clk, rst, enq, deq, done, result, full, swap_done,
                         ADDR_INC:
                             /* If the node is full, send a signal to look at next node */
                             begin
+                                rd_addr = rd_addr++;
                                 /* State transition logic */
                                 next = IDLE;
                             end
@@ -127,31 +128,28 @@ module ControlFSM(input logic clk, rst, enq, deq, done, result, full, swap_done,
                         DEQ_LOCATE:
                             /* Find ending position of the queue */
                             begin
-                                /** PSEUDO CODE IDEAS:
-                                    boolean value comes from VR pointing to address
-                                    if (hasElement) begin
-                                        next = DEQ_LOCATE;
-                                        vr_addr_inc;
-                                    else next = FILL_DEQ;
-                                */
+                                mode = 3'b010;
+                                /** State transition logic */
+                                next = FILL_DEQ;
                             end    
                             
                         FILL_DEQ:
                             /* Fill register with FFFFFFFF to empty the spot*/
                             begin
                                 mux1_sel = 2'b10; // Input mux sends in FFFF
-                                mode = 3'b010;
+                                mode = 3'b011;
                                 next = DEQ_SWAP;
                             end
                         
                         DEQ_SWAP:
                             /* Swap register value with that from BRAM */
                             begin
+                                wr_addr = last_addr;
                                 we = 1; /** Write new value to the BRAM */
                                 /* State transition logic */
                                 if (swap_done) begin
                                     we = 0;
-                                    mode = 3'b011;
+                                    mode = 3'b100;
                                     next = CNT_DEC;
                                 end
                                 else next = SWAP_ENQ;
@@ -172,6 +170,7 @@ module ControlFSM(input logic clk, rst, enq, deq, done, result, full, swap_done,
                         ADDR_DEC:
                             /* When empty, signal to look at the next node */
                             begin
+                                rd_addr--;
                                 next = IDLE;
                             end
                     endcase

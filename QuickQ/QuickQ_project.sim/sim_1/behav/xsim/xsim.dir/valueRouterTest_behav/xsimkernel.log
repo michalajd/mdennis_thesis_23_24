@@ -1,4 +1,7 @@
-Running: xsim.dir/valueRouterTest_behav/xsimk -simmode gui -wdb valueRouterTest_behav.wdb -simrunnum 0 -socket 34901
+Running: xsim.dir/valueRouterTest_behav/xsimk -simmode gui -wdb valueRouterTest_behav.wdb -simrunnum 0 -socket 53883
 Design successfully loaded
 Design Loading Memory Usage: 23144 KB (Peak: 23732 KB)
 Design Loading CPU Usage: 10 ms
+Simulation completed
+Simulation Memory Usage: 104880 KB (Peak: 162412 KB)
+Simulation CPU Usage: 10 ms

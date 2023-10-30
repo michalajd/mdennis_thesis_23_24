@@ -121,7 +121,7 @@ module valueRouterTest;
         /** Check empty conditional */
         /** Checking last index */
         array_cnt_in = 32'b1;
-        array_cnt_out = array_cnt_in;
+        last_addr = 32'b1;
         mode = 3'b010;
         #10;
         mode = 3'b011;

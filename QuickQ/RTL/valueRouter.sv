@@ -65,17 +65,17 @@ module valueRouter(input logic [31:0] bram_out, reg_out,
                         
                      end
                      
-             3'b011: begin /** CASE 3: Decrease position of all elements until final element is removed*/
+             3'b011: begin /** CASE 4: Decrease position of all elements until final element is removed*/
                         full = 1'b0;
                         bram_insert = bram_out;
                         if (!empty) to_register = reg_out;
                         else data_lt_o = reg_out;
                      end
                     
-             3'b100: begin /** CASE 4: Decrease the counter for inside the array */
+             3'b100: begin /** CASE 5: Decrease the counter for inside the array */
                         array_cnt_out = array_cnt_in - 1;
+                        last_addr = size_before_deq - 1;
                         if (array_cnt_out == 0) begin
-                            last_addr = size_before_deq - 1;
                             if (last_addr == 0) empty = 1'b1;
                             else empty = 1'b0;
                         end  
