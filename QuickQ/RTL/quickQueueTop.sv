@@ -21,7 +21,7 @@
 
 
 module quickQueueTop(input logic [31:0] data_lt_i, data_rt_i,
-                     input logic clk, read_i, write_i, reset_i,
+                     input logic clk, read_i, write_i, reset_i, done,
                      input logic [7:0] array_size,
                      output logic [31:0] data_lt_o, data_rt_o,
                      output logic read_o, write_o, reset_o
@@ -34,7 +34,7 @@ module quickQueueTop(input logic [31:0] data_lt_i, data_rt_i,
     logic [31:0] rd_addr, wr_addr;
     
     /** Value Router Logic */
-    logic [31:0] bram_out, reg_out, bram_insert, vr_to_reg;
+    logic [31:0] bram_out, reg_out, bram_insert, vr_to_reg, donereg_to_vr;
     logic [7:0] array_cnt_in, array_cnt_out;
     
     /** Internal wires */
@@ -54,9 +54,12 @@ module quickQueueTop(input logic [31:0] data_lt_i, data_rt_i,
     /** Temp register declaration */
     dff regDUV (.clk, .d(toRegister), .q(reg_out));
     
+    /** Register for last value declaration */
+    dffe lastDUV (.clk, .d(toRegister), .enb(done), .q(donereg_to_vr));
+    
     /** Value router declaration */
     valueRouter vrDUV(.bram_out, .reg_out, .mode, .array_size, .array_cnt_in, 
-                      .bram_insert, .to_register(vr_to_reg), .array_cnt_out, .result, .full, .empty);
+                      .bram_insert, .to_register(vr_to_reg), .array_cnt_out, .result, .full, .empty, .done);
                       
     /** BRAM declaration */
     mem2p_sw_sr BRAMDUV (.clk, .we1(we), .addr1(write_addr), .din1(bram_insert), .addr2(read_addr), .dout2(bram_out));

@@ -21,6 +21,7 @@
 
 
 module ControlFSM(input logic clk, rst, enq, deq, done, result, full, swap_done, empty,
+                  input logic [31:0] last_addr,
                   output logic we, regenb, regsel, countenb, re, next_node, bram_sel,
                   output logic [31:0] rd_addr, wr_addr,
                   output logic [2:0] mode, 

@@ -24,16 +24,16 @@ module valueRouterTest;
     /** Input logic */
     logic [31:0] bram_out, reg_out;
     logic [2:0] mode;
-    logic [7:0] array_size, array_cnt_in;
+    logic [31:0] array_size, array_cnt_in;
     
     /** Output logic */
     logic [31:0] bram_insert, to_register, data_lt_o;
-    logic [7:0] array_cnt_out;
-    logic result, full, empty;
+    logic [31:0] array_cnt_out, last_addr;
+    logic result, full, empty, done;
     
     /** Instantiate ValueRouter module */
     valueRouter DUV (.bram_out, .reg_out, .mode, .array_size, .array_cnt_in,
-                     .bram_insert, .to_register, .data_lt_o, .array_cnt_out, .result, .full, .empty);
+                     .bram_insert, .to_register, .last_addr, .data_lt_o, .array_cnt_out, .result, .full, .empty, .done);
                      
     /** Running the Test */
     initial begin
@@ -73,35 +73,76 @@ module valueRouterTest;
         #10;
         array_cnt_in = array_cnt_out;
         
+        /** Empty value once queue has some elements already */
+        bram_out = 32'hFFFFFFFF;
+        reg_out = 32'd2;
+        mode = 3'b000;
+        #10;
+        
+        /** Test queue size increase, should equal last_addr!*/
+        mode = 3'b001;
+        #10;
+        array_cnt_in = array_cnt_out;
+        
+        /** Checking last index */
+        mode = 3'b010;
+        array_cnt_in = last_addr;
+        #10;
+        
         /** Removing a value */
         array_cnt_in = 8'd2;
         bram_out = 32'h39b034ac;
         reg_out = 32'h39b034ab;
-        mode = 3'b010;
+        mode = 3'b011;
         #10;
         
-        mode = 3'b011;
+        mode = 3'b100;
         #10;
         array_cnt_in = array_cnt_out;
         
-        /** Check empty conditional */
+        /** Check end-of-line mode */
         bram_out = 32'h16f0fbac;
-        mode = 3'b010;
+        mode = 3'b011;
         #10;
         
-        mode = 3'b011;
+        mode = 3'b100;
         #10;
         array_cnt_in = array_cnt_out;
         
         /** Check output to previous node */
         bram_out = 32'h00000001;
-        mode = 3'b010;
-        #10;
-        
         mode = 3'b011;
         #10;
+        
+        mode = 3'b100;
+        #10;
         array_cnt_in = array_cnt_out;
+        
+        /** Check empty conditional */
+        /** Checking last index */
+        array_cnt_in = 32'b1;
+        array_cnt_out = array_cnt_in;
+        mode = 3'b010;
+        #10;
+        mode = 3'b011;
+        #10;
+        
+        mode = 3'b100;
+        #10;
+        array_cnt_in = array_cnt_out;
+        
+        /** Check output to previous node */
+        bram_out = 32'h00000001;
+        mode = 3'b011;
+        #10;
+        
+        mode = 3'b100;
+        #10;
+        array_cnt_in = array_cnt_out;
+        
         $stop;
+        
+        
     end
 
 endmodule
