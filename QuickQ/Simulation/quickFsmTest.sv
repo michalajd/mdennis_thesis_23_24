@@ -43,6 +43,7 @@ ControlFSM DUV (.clk, .rst, .enq, .deq, .done, .result, .full, .swap_done, .empt
     
     /** Testbench start */
     initial begin
+        rd_addr = 32'b0;
         rst = 1;
         enq = 0;
         deq = 0;
@@ -51,6 +52,13 @@ ControlFSM DUV (.clk, .rst, .enq, .deq, .done, .result, .full, .swap_done, .empt
         full = 0;
         @(posedge clk) #1;
         rst = 0;
+        
+        /** Check empty logic */
+        full = 0;
+        empty = 1;
+        @(posedge clk) #1;
+        enq = 1;
+        repeat (4) @(posedge clk) #1;
         
         /** Check enqueue state entry */
         repeat(4) @(posedge clk) #1;
@@ -67,13 +75,6 @@ ControlFSM DUV (.clk, .rst, .enq, .deq, .done, .result, .full, .swap_done, .empt
         
         /** Check logic when counter is full */
         full = 1;
-        repeat (4) @(posedge clk) #1;
-        
-        /** Check empty logic */
-        full = 0;
-        empty = 1;
-        @(posedge clk) #1;
-        enq = 1;
         repeat (4) @(posedge clk) #1;
         
         $stop;

@@ -60,6 +60,8 @@ module ControlFSM(input logic clk, rst, enq, deq, done, result, full, swap_done,
                                 mode = 3'b101;
                                 /* Default values */
                                 re = 0;
+                                we = 0;
+                                next_node = 0; // do i want this here?
                                 /* State transition logic */
                                 if (enq) begin
                                     re = 1; // Signal BRAM to read the value at the address
@@ -121,6 +123,7 @@ module ControlFSM(input logic clk, rst, enq, deq, done, result, full, swap_done,
                             /* If the node is full, send a signal to look at next node */
                             begin
                                 rd_addr = rd_addr++;
+                                next_node = 1;
                                 /* State transition logic */
                                 next = IDLE;
                             end
