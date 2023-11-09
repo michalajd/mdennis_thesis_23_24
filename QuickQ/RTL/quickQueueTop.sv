@@ -29,7 +29,7 @@ module quickQueueTop(input logic [31:0] data_lt_i, data_rt_i,
     );
     
     /** FSM Logic */
-    logic enq, deq, done, result, full, swap_done, empty, we, regenb, regsel, countenb, read_addr, bram_sel, re, next_node;
+    logic enq, deq, done, result, full, swap_done, empty, we, regenb, regsel, countenb, rd_addr, bram_sel, re, next_node;
     logic [1:0]  mode, mux1_sel;
     logic [31:0] rd_addr, wr_addr;
     
@@ -46,13 +46,13 @@ module quickQueueTop(input logic [31:0] data_lt_i, data_rt_i,
     
     /** Control logic initialization */
     ControlFSM controlDUV(.clk, .rst(reset_i), .enq, .deq, .done, .result, .full, .swap_done, .empty,
-                          .we, .regenb, .regsel, .countenb, .re, .next_node, .bram_sel, .rd_addr, .wr_addr, .mode, .mux1_sel);
+                          .we, .regenb, .regsel, .countenb, .next_node, .bram_sel, .rd_addr, .wr_addr, .mode, .mux1_sel);
     
     /** Input multiplexer for left-hand data */
     mux4 #(.W(32)) mux1DUV(.d0(data_lt_i), .d1(vr_to_reg), .d2(empty_val), .d3(error_val), .sel(mux1_sel), .y(toRegister));
     
     /** Temp register declaration */
-    dff regDUV (.clk, .d(toRegister), .enb(re), .q(reg_out));
+    dffe regDUV (.clk, .d(toRegister), .enb(regenb), .q(reg_out));
     
     /** Register for last value declaration */
     dffe lastDUV (.clk, .d(toRegister), .enb(done), .q(donereg_to_vr));
@@ -62,7 +62,7 @@ module quickQueueTop(input logic [31:0] data_lt_i, data_rt_i,
                       .bram_insert, .to_register(vr_to_reg), .array_cnt_out, .result, .full, .empty, .done);
                       
     /** BRAM declaration */
-    mem2p_sw_sr BRAMDUV (.clk, .we1(we), .addr1(write_addr), .din1(bram_insert), .addr2(read_addr), .dout2(bram_out));
+    mem2p_sw_sr BRAMDUV (.clk, .we1(we), .addr1(write_addr), .din1(bram_insert), .addr2(rd_addr), .dout2(bram_out));
     
     /** Output multiplexer for right-hand data */
     mux2 #(.W(32)) mux2DUV(.d0(reg_out), .d1(32'bZ), .sel(next_node), .y(data_rt_o));

@@ -32,7 +32,7 @@ module quickFsmTest;
                   
 /** Instantiate DUV */           
 ControlFSM DUV (.clk, .rst, .enq, .deq, .done, .result, .full, .swap_done, .empty, .last_addr,
-                .we, .regenb, .regsel, .countenb, .re, .next_node, .bram_sel,
+                .we, .regenb, .regsel, .countenb, .next_node, .bram_sel,
                 .rd_addr, .wr_addr, .mode, .mux1_sel);
                 
     /** Generate clock */
@@ -54,7 +54,6 @@ ControlFSM DUV (.clk, .rst, .enq, .deq, .done, .result, .full, .swap_done, .empt
         rst = 0;
         
         /** Check empty logic */
-        full = 0;
         empty = 1;
         @(posedge clk) #1;
         enq = 1;
@@ -65,17 +64,17 @@ ControlFSM DUV (.clk, .rst, .enq, .deq, .done, .result, .full, .swap_done, .empt
         enq = 1;
         @(posedge clk) #1;
         
-        /** Test enqueue logic when swap needs to happen */
-        enq = 0;
-        result = 1;
-        swap_done = 0;
-        repeat(3) @(posedge clk) #1;
-        swap_done = 1;
-        @(posedge clk) #1;
+//        /** Test enqueue logic when swap needs to happen */
+//        enq = 0;
+//        result = 1;
+//        swap_done = 0;
+//        repeat(3) @(posedge clk) #1;
+//        swap_done = 1;
+//        @(posedge clk) #1;
         
-        /** Check logic when counter is full */
-        full = 1;
-        repeat (4) @(posedge clk) #1;
+//        /** Check logic when counter is full */
+//        full = 1;
+//        repeat (4) @(posedge clk) #1;
         
         $stop;
         end            

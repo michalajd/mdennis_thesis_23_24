@@ -22,7 +22,7 @@
 
 module ControlFSM(input logic clk, rst, enq, deq, done, result, full, swap_done, empty,
                   input logic [31:0] last_addr,
-                  output logic we, regenb, regsel, countenb, re, next_node, bram_sel,
+                  output logic we, regenb, regsel, countenb, next_node, bram_sel,
                   output logic [31:0] rd_addr, wr_addr,
                   output logic [2:0] mode, 
                   output logic [1:0] mux1_sel
@@ -59,12 +59,12 @@ module ControlFSM(input logic clk, rst, enq, deq, done, result, full, swap_done,
                             begin
                                 mode = 3'b101;
                                 /* Default values */
-                                re = 0;
+                                regenb = 0;
                                 we = 0;
                                 next_node = 0; // do i want this here?
                                 /* State transition logic */
                                 if (enq) begin
-                                    re = 1; // Signal BRAM to read the value at the address
+                                    regenb = 1; // Signal BRAM to read the value at the address
                                     next = FILL_ENQ;
                                 end
                                 else if (deq) begin
