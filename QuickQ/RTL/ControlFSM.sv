@@ -20,9 +20,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module ControlFSM(input logic clk, rst, enq, deq, done, result, full, swap_done, empty,
+module ControlFSM(input logic clk, rst, enq, deq, result, full, swap_done, empty,
                   input logic [31:0] last_addr,
-                  output logic we, regenb, regsel, countenb, next_node, bram_sel,
+                  output logic we, regenb, next_node, bram_sel,
                   output logic [31:0] rd_addr, wr_addr,
                   output logic [2:0] mode, 
                   output logic [1:0] mux1_sel
