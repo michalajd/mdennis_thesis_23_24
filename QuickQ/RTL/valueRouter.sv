@@ -29,19 +29,19 @@ module valueRouter(input logic [31:0] bram_out, reg_out,
    logic [31:0] size_before_deq; /** Size before dequeue logic is finished */
                 
     always_comb
-        case (mode)
+        casez (mode)
             2'b000: begin /** CASE 1: Comparator / Route data */
                         empty = 1'b0;
                         done = 1'b0;
                         /** Compare register and BRAM data */
-                        if (reg_out > bram_out || bram_out == 32'hFFFFFFFF) result = 1'b1; // register value is larger OR equal to the current BRAM value
+                        if (reg_out > bram_out || bram_out == 32'hXXXXXXXX) result = 1'b1; // register value is larger OR equal to the current BRAM value
                         else result = 1'b0;                     // register value is smaller than the current BRAM value
                         
                         /** Route data to get into the queue / BRAM */
                         /** If result == 1, the register value is greater than the BRAM, so a swap occurs! */
                         if (result == 1) begin 
                          /** Handle done case first */
-                            if (bram_out == 32'hFFFFFFFF) begin
+                            if (bram_out == 32'hXXXXXXXX) begin
                                 done = 1'b1;   
                                 last_addr = array_cnt_in + 1;
                             end
@@ -55,11 +55,13 @@ module valueRouter(input logic [31:0] bram_out, reg_out,
                    end
                    
              3'b001: begin /** CASE 2: Increase the counter for inside the array  */
+                        done = 0;
                         array_cnt_out = array_cnt_in + 1;
                         if (array_cnt_out == array_size) full = 1'b1;
                     end
                     
              3'b010: begin /** CASE 3: Find last element of queue */
+                        done = 0;
                         array_cnt_out = last_addr;
                         size_before_deq = last_addr;
                         
@@ -69,11 +71,14 @@ module valueRouter(input logic [31:0] bram_out, reg_out,
                         full = 1'b0;
                         bram_insert = bram_out;
                         if (!empty) to_register = reg_out;
-                        else data_lt_o = reg_out;
+                        else begin
+                        data_lt_o = reg_out;
+                        done = 1;
+                        end
                      end
                     
              3'b100: begin /** CASE 5: Decrease the counter for inside the array */
-                        array_cnt_out = array_cnt_in - 1;
+                        if (array_cnt_in != 0) array_cnt_out = array_cnt_in - 1;
                         last_addr = size_before_deq - 1;
                         if (array_cnt_out == 0) begin
                             if (last_addr == 0) empty = 1'b1;
@@ -88,6 +93,7 @@ module valueRouter(input logic [31:0] bram_out, reg_out,
                         bram_insert = 32'b0;
                         data_lt_o = 32'bZ;
                         to_register = 32'bZ;
+                        done = 0;
                       end
                       
         endcase

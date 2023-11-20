@@ -86,10 +86,11 @@ module ControlFSM(input logic clk, rst, enq, deq, result, full, swap_done, empty
                             /* Value in register compared with value that index register points to */
                             begin
                                 /* State transition logic */
-                                if (result /*&& !done)*/) begin 
+                                if (result) begin 
                                     next = SWAP_ENQ;
                                     wr_addr = rd_addr;
                                 end
+                                else if (swap_done) next = IDLE;
                                 else /** if (!result && !done) */ next = CNT_INC;
                                 //else next = COMPARE_ENQ;
                             end

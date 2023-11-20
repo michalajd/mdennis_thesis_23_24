@@ -37,7 +37,24 @@ module coreTest;
     
     /** Testbench start */
     initial begin
-    /** find a way to set queue capacity to 3 */
+    /** Setup: reset */
+    reg_out = 32'b0;
+    rst = 1;
+    @(posedge clk) #1;
+    rst = 0;
+    
+    /** Test 1: Dequeue while empty */
+    deq = 1;
+    @(posedge clk) #1;
+    deq = 0;
+    repeat(5) @(posedge clk) #1;
+    
+    /** Test 2: Enqueue while empty */
+    enq = 1;
+    reg_out = 32'd5;
+    @(posedge clk) #1;
+    enq = 0;
+    repeat(5) @(posedge clk) #1;
     
     $stop;
     end

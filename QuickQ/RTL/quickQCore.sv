@@ -32,8 +32,8 @@ module quickQCore(
     /** Internal wires */
     // MEMORY
     logic we;
-    logic [6:0] rd_addr, write_addr, array_size;
-    logic [7:0] bram_out, bram_insert; 
+    logic [31:0] rd_addr, write_addr, array_size;
+    logic [31:0] bram_out, bram_insert; 
     
     // VALUE ROUTER
     logic result, full, empty, done;
@@ -45,7 +45,7 @@ module quickQCore(
 
     // Instantiations
     // BRAM
-    mem2p_sw_sr BRAMDUV (.clk, .we1(we), .addr1(rd_addr), .din1(bram_insert), .addr2(write_addr), .dout2(bram_out), .array_size);
+    mem2p_sw_sr #(.W(32), .D(3)) BRAMDUV (.clk, .we1(we), .addr1(rd_addr), .din1(bram_insert), .addr2(write_addr), .dout2(bram_out), .array_size);
     
     // VALUE ROUTER
     valueRouter VRDUV (.bram_out, .reg_out, .mode, .array_size, .array_cnt_in, .bram_insert, .to_register, .last_addr,
