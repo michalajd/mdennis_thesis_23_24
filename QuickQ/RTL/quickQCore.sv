@@ -24,20 +24,40 @@
 module quickQCore(
     input logic clk, rst, enq, deq,
     input logic [31:0] reg_out,
-    output logic [31:0] data_lt_o,
+    output logic [31:0] data_lt_o, to_register,
     output logic [1:0] mux1_sel,
-    output logic regenb, next_node, bram_sel
+    output logic regenb, next_node
     );
-    
-    /** NOTE: "size_const" is a constant that is a power of 2 that is used for the size of the BRAM array. */
-    const int size_const = 32;
     
     /** Internal wires */
     // MEMORY
     logic we;
-    logic [31:0] read_addr, write_addr, bram_insert, bram_out, array_size;
+    logic [6:0] rd_addr, write_addr, array_size;
+    logic [7:0] bram_out, bram_insert; 
     
+    // VALUE ROUTER
+    logic result, full, empty, done;
+    logic [2:0] mode;
+    logic [31:0] array_cnt_in, last_addr, data_lt_o, array_cnt_out;
+    
+    // FSM LOGIC
+    logic [1:0] mux1_sel;
+
     // Instantiations
-    mem2p_sw_sr #(.D(size_const)) BRAMDUV (.clk, .we1(we), .addr1(rd_addr), .din1(bram_insert), .addr2(write_addr), .dout2(bram_out), .array_size);
+    // BRAM
+    mem2p_sw_sr BRAMDUV (.clk, .we1(we), .addr1(rd_addr), .din1(bram_insert), .addr2(write_addr), .dout2(bram_out), .array_size);
+    
+    // VALUE ROUTER
+    valueRouter VRDUV (.bram_out, .reg_out, .mode, .array_size, .array_cnt_in, .bram_insert, .to_register, .last_addr,
+                       .data_lt_o, .array_cnt_out, .result, .full, .empty, .done);
+    
+    // FSM LOGIC
+    ControlFSM FSMDUV (.clk(clk), .rst(rst), .enq(enq), .deq(deq), .result(result), .full(full), .swap_done(done), .empty(empty),
+                       .last_addr(last_addr), .we(we), .regenb(regenb), .next_node(next_node), .rd_addr(rd_addr), 
+                       .wr_addr(write_addr), .mode(mode), .mux1_sel(mux1_sel));
+    
+    always_ff @ (posedge clk) begin
+        array_cnt_in = array_cnt_out;
+    end
     
 endmodule
