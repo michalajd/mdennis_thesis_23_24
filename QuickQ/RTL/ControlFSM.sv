@@ -28,6 +28,7 @@ module ControlFSM(input logic clk, rst, enq, deq, result, full, swap_done, empty
                   output logic [1:0] mux1_sel
                   );
             
+            logic [31:0] old_rd_addr;
             /* Enumerated logic (states) */
             typedef enum logic [3:0] {
                 IDLE = 4'b0001,
@@ -63,6 +64,7 @@ module ControlFSM(input logic clk, rst, enq, deq, result, full, swap_done, empty
                                 end
                                 mode = 3'b101;
                                 /* Default values */
+                                old_rd_addr = rd_addr;
                                 regenb = 0;
                                 we = 0;
                                 next_node = 0; // do i want this here?
@@ -82,13 +84,14 @@ module ControlFSM(input logic clk, rst, enq, deq, result, full, swap_done, empty
                             begin
                                 /* State transition logic */
                                 mux1_sel = 2'b00; 
-                                mode = 3'b000;
+                                //mode = 3'b000;
                                 next = COMPARE_ENQ;
                             end
                             
                         COMPARE_ENQ:
                             /* Value in register compared with value that index register points to */
                             begin
+                                mode = 3'b000;
                                 /* State transition logic */
                                 if ((rd_addr == last_addr) && last_addr != 0) next = IDLE;
                                 else if (result) begin 
@@ -117,7 +120,8 @@ module ControlFSM(input logic clk, rst, enq, deq, result, full, swap_done, empty
                                 if (full) next = ADDR_INC;
                                 else begin 
                                     mux1_sel = 3'b001; // Input mux chooses value router data
-                                    rd_addr = rd_addr + 1;
+                                    rd_addr = old_rd_addr + 1;
+                                    //old_rd_addr = rd_addr;
                                     next = COMPARE_ENQ;
                                 end
                             end
@@ -150,7 +154,7 @@ module ControlFSM(input logic clk, rst, enq, deq, result, full, swap_done, empty
                         DEQ_SWAP:
                             /* Swap register value with that from BRAM */
                             begin
-                                wr_addr = last_addr;
+                                if (last_addr != 0) wr_addr = last_addr;
                                 we = 1; /** Write new value to the BRAM */
                                 /* State transition logic */
                                 if (swap_done) begin
@@ -168,7 +172,7 @@ module ControlFSM(input logic clk, rst, enq, deq, result, full, swap_done, empty
                                 if (empty) next = ADDR_DEC;
                                 else begin 
                                     mux1_sel = 2'b01; // Input mux chooses value router data
-                                    rd_addr--;
+                                    if (rd_addr != 0) rd_addr--;
                                 next = DEQ_SWAP;
                             end
                         end

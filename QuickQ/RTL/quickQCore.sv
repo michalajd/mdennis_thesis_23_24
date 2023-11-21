@@ -45,7 +45,7 @@ module quickQCore(
     mem2p_sw_sr #(.W(32), .D(3)) BRAMDUV (.clk, .we1(we), .addr1(rd_addr), .din1(bram_insert), .addr2(write_addr), .dout2(bram_out), .array_size);
     
     // VALUE ROUTER
-    valueRouter VRDUV (.bram_out, .reg_out, .mode, .array_size, .array_cnt_in, .bram_insert, .to_register, .last_addr,
+    valueRouter VRDUV (.bram_out, .reg_out, .mode, .enq, .deq, .array_size, .array_cnt_in, .bram_insert, .to_register, .last_addr,
                        .data_lt_o, .array_cnt_out, .result, .full, .empty, .done);
     
     // FSM LOGIC

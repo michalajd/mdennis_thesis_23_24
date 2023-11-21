@@ -20,6 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 module valueRouter(input logic [31:0] bram_out, reg_out,
                    input logic [2:0] mode,
+                   input logic enq, deq,
                    input logic [31:0] array_size, array_cnt_in,
                    output logic [31:0] bram_insert, to_register, last_addr,
                    output logic [31:0] data_lt_o, array_cnt_out,
@@ -62,7 +63,7 @@ module valueRouter(input logic [31:0] bram_out, reg_out,
                         result = 0;
                         done = 0;
                         array_cnt_out = array_cnt_in + 1;
-                        last_addr = array_cnt_out;
+                        //last_addr = array_cnt_out;
                         if (array_cnt_out == array_size) full = 1'b1;
                     end
                     
@@ -85,7 +86,7 @@ module valueRouter(input logic [31:0] bram_out, reg_out,
                     
              3'b100: begin /** CASE 5: Decrease the counter for inside the array */
                         if (array_cnt_in != 0) array_cnt_out = array_cnt_in - 1;
-                        last_addr = size_before_deq - 1;
+                        if (last_addr != 0) last_addr = size_before_deq - 1;
                         if (array_cnt_out == 0) begin
                             if (last_addr == 0) empty = 1'b1;
                             else empty = 1'b0;
@@ -96,6 +97,7 @@ module valueRouter(input logic [31:0] bram_out, reg_out,
                         result = 0;
                         empty = 1;
                         array_cnt_out = 0;
+                        last_addr = 0;
                         bram_insert = 32'b0;
                         data_lt_o = 32'bZ;
                         to_register = 32'bZ;
