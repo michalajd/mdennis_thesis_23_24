@@ -57,6 +57,10 @@ module ControlFSM(input logic clk, rst, enq, deq, result, full, swap_done, empty
                         IDLE:
                             /* Default state for when no action is specified in the queue */
                             begin
+                                if (empty) begin
+                                    wr_addr = 0;
+                                    rd_addr = 0;
+                                end
                                 mode = 3'b101;
                                 /* Default values */
                                 regenb = 0;
@@ -86,11 +90,12 @@ module ControlFSM(input logic clk, rst, enq, deq, result, full, swap_done, empty
                             /* Value in register compared with value that index register points to */
                             begin
                                 /* State transition logic */
-                                if (result) begin 
+                                if ((rd_addr == last_addr) && last_addr != 0) next = IDLE;
+                                else if (result) begin 
                                     next = SWAP_ENQ;
                                     wr_addr = rd_addr;
+                                    //we = 1;
                                 end
-                                else if (swap_done) next = IDLE;
                                 else /** if (!result && !done) */ next = CNT_INC;
                                 //else next = COMPARE_ENQ;
                             end
@@ -100,22 +105,19 @@ module ControlFSM(input logic clk, rst, enq, deq, result, full, swap_done, empty
                             begin
                                 we = 1; /** Write new value to the BRAM */
                                 /* State transition logic */
-                                if (swap_done) begin
-                                    we = 0;
-                                    mode = 2'b001;
-                                    next = CNT_INC;
-                                end
-                                else next = SWAP_ENQ;
+                                next = CNT_INC;
                             end
                             
                         CNT_INC:
                             /* Counter signals register to look at next index */
                             begin
+                                we = 0;
+                                mode = 3'b001;
                                 /* State transition logic */
                                 if (full) next = ADDR_INC;
                                 else begin 
-                                    mux1_sel = 2'b01; // Input mux chooses value router data
-                                    rd_addr++;
+                                    mux1_sel = 3'b001; // Input mux chooses value router data
+                                    rd_addr = rd_addr + 1;
                                     next = COMPARE_ENQ;
                                 end
                             end
@@ -123,7 +125,7 @@ module ControlFSM(input logic clk, rst, enq, deq, result, full, swap_done, empty
                         ADDR_INC:
                             /* If the node is full, send a signal to look at next node */
                             begin
-                                rd_addr = rd_addr++;
+                                rd_addr++;
                                 next_node = 1;
                                 /* State transition logic */
                                 next = IDLE;

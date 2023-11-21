@@ -54,7 +54,7 @@ module coreTest;
     reg_out = 32'd5;
     @(posedge clk) #1;
     enq = 0;
-    repeat(5) @(posedge clk) #1;
+    repeat(10) @(posedge clk) #1;
     
     $stop;
     end

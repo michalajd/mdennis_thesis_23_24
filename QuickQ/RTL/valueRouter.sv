@@ -31,22 +31,26 @@ module valueRouter(input logic [31:0] bram_out, reg_out,
     always_comb
         casez (mode)
             2'b000: begin /** CASE 1: Comparator / Route data */
-                        empty = 1'b0;
+                        if (array_cnt_in == 0) begin
+                            last_addr = 0;
+                            empty = 1'b0;
+                        end
                         done = 1'b0;
                         /** Compare register and BRAM data */
-                        if (reg_out > bram_out || bram_out == 32'hXXXXXXXX) result = 1'b1; // register value is larger OR equal to the current BRAM value
+                        if (reg_out > bram_out || last_addr == 0) result = 1'b1; // register value is larger OR equal to the current BRAM value
                         else result = 1'b0;                     // register value is smaller than the current BRAM value
                         
                         /** Route data to get into the queue / BRAM */
                         /** If result == 1, the register value is greater than the BRAM, so a swap occurs! */
                         if (result == 1) begin 
                          /** Handle done case first */
-                            if (bram_out == 32'hXXXXXXXX) begin
+                           /* if (bram_out == 32'hXXXXXXXX) begin
                                 done = 1'b1;   
                                 last_addr = array_cnt_in + 1;
-                            end
+                            end */
                             bram_insert = reg_out;
                             to_register = bram_out;
+                            if (empty == 1) empty = 0;
                         end
                         else begin 
                             bram_insert = bram_out;
@@ -55,8 +59,10 @@ module valueRouter(input logic [31:0] bram_out, reg_out,
                    end
                    
              3'b001: begin /** CASE 2: Increase the counter for inside the array  */
+                        result = 0;
                         done = 0;
                         array_cnt_out = array_cnt_in + 1;
+                        last_addr = array_cnt_out;
                         if (array_cnt_out == array_size) full = 1'b1;
                     end
                     

@@ -1,0 +1,10 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/ControlFSM.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ControlFSM
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/mem2p_sw_sr.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem2p_sw_sr
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/quickQCore.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module quickQCore
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/valueRouter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module valueRouter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/Simulation/coreTest.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module coreTest

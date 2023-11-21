@@ -38,11 +38,8 @@ module quickQCore(
     // VALUE ROUTER
     logic result, full, empty, done;
     logic [2:0] mode;
-    logic [31:0] array_cnt_in, last_addr, data_lt_o, array_cnt_out;
+    logic [31:0] array_cnt_in, last_addr, array_cnt_out;
     
-    // FSM LOGIC
-    logic [1:0] mux1_sel;
-
     // Instantiations
     // BRAM
     mem2p_sw_sr #(.W(32), .D(3)) BRAMDUV (.clk, .we1(we), .addr1(rd_addr), .din1(bram_insert), .addr2(write_addr), .dout2(bram_out), .array_size);
