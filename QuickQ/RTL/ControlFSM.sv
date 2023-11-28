@@ -70,7 +70,7 @@ module ControlFSM(input logic clk, rst, enq, deq, result, full, swap_done, empty
                                 next_node = 0; // do i want this here?
                                 /* State transition logic */
                                 if (enq) begin
-                                    regenb = 1; // Signal BRAM to read the value at the address
+                                    //regenb = 1; // Signal BRAM to read the value at the address
                                     next = FILL_ENQ;
                                 end
                                 else if (deq) begin
@@ -84,6 +84,7 @@ module ControlFSM(input logic clk, rst, enq, deq, result, full, swap_done, empty
                             begin
                                 /* State transition logic */
                                 mux1_sel = 2'b00; 
+                                regenb = 1;
                                 //mode = 3'b000;
                                 next = COMPARE_ENQ;
                             end
