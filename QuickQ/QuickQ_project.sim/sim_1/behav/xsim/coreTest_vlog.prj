@@ -1,8 +1,13 @@
 # compile verilog/system verilog design source files
 sv xil_defaultlib  \
 "../../../../RTL/ControlFSM.sv" \
+"../../../../RTL/array_pointer.sv" \
+"../../../../RTL/dffe.sv" \
+"../../../../RTL/last_cnt.sv" \
 "../../../../RTL/mem2p_sw_sr.sv" \
-"../../../../RTL/quickQCore.sv" \
+"../../../../RTL/mux2.sv" \
+"../../../../RTL/mux4.sv" \
+"../../../../RTL/quickQueueTop.sv" \
 "../../../../RTL/valueRouter.sv" \
 "../../../../Simulation/coreTest.sv" \
 

@@ -5,6 +5,11 @@ Running: /home/user/Xylinx/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --de
 Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 2 for port 'addr1' [/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/quickQCore.sv:45]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'd2' [/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/quickQueueTop.sv:57]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'd' [/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/quickQueueTop.sv:60]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 7 for port 'addr1' [/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/quickQueueTop.sv:67]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 7 for port 'array_size' [/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/quickQueueTop.sv:68]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'reg_out' [/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/quickQueueTop.sv:71]
+WARNING: [VRFC 10-3823] variable 'data_lt_o' might have multiple concurrent drivers [/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/quickQueueTop.sv:80]
 Completed static elaboration
 INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
