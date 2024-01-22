@@ -2,6 +2,7 @@
 sv xil_defaultlib  \
 "../../../../RTL/ControlFSM.sv" \
 "../../../../RTL/array_pointer.sv" \
+"../../../../RTL/count2.sv" \
 "../../../../RTL/dffe.sv" \
 "../../../../RTL/last_cnt.sv" \
 "../../../../RTL/mem2p_sw_sr.sv" \

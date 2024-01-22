@@ -20,9 +20,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module ControlFSM(input logic clk, rst, enq, deq, swap, full, empty, done,
+module ControlFSM(input logic clk, rst, enq, deq, swap, full, empty, done, cnt_done,
                   input logic [31:0] last_addr,
-                  output logic we, regenb, next_node, prev_node, array_cnt_ld, array_cnt_clr, array_cnt_decr, array_cnt_inc, bram_sel,
+                  output logic we, regenb, next_node, prev_node, array_cnt_ld, array_cnt_clr, array_cnt_decr, array_cnt_inc, bram_sel, fill_cnt,
                   output logic [2:0] mode, 
                   output logic [1:0] mux1_sel
                   );
@@ -66,17 +66,22 @@ module ControlFSM(input logic clk, rst, enq, deq, swap, full, empty, done,
                         FILL_ENQ:
                             /* Temp register (at head) filled with value from input */
                             begin
+                               fill_cnt = 1;
                                mux1_sel = 2'b00;
                                regenb = 1;
                                array_cnt_clr = 1;
                                
-                               if (empty) next = EMPTY_ENQ;
-                               else next = COMPARE_ENQ;
+                               if (cnt_done) begin
+                                    if (empty) next = EMPTY_ENQ;
+                                    else next = COMPARE_ENQ;
+                               end
+                               else next = FILL_ENQ;
                             end
                             
                         EMPTY_ENQ:
                             /* Special case for when we add a value to an empty queue */
                             begin
+                                regenb = 1;
                                 mode = 3'b100;
                                 we = 1;
                                 bram_sel = 0;

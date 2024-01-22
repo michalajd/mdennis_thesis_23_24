@@ -46,11 +46,15 @@ module coreTest;
     /** Test 1: Dequeue while empty */
     deq = 1;
     repeat(5) @(posedge clk) #1;
+    deq = 0;
+    repeat(2) @(posedge clk) #1;
     
     /** Test 2: Enqueue while empty */
     deq = 0;
     enq = 1;
-    data_lt_i = 32'h49283049;
+    data_lt_i = 8'd4;
+    @(posedge clk) #1;
+    enq = 0;
     repeat(10) @(posedge clk) #1;
     
     $stop;

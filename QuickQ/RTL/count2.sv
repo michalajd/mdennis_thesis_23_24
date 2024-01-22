@@ -9,13 +9,18 @@
 // Description   : d flip-flop with enable
 //-----------------------------------------------------------------------------
 
-module dffe #(parameter W=8)
-    (input logic clk, 
-     input logic [W-1:0] d, 
-     input logic enb,
-     output logic [W-1:0] q);
+module count2
+    (input logic clk, rst,
+     input logic fill_cnt,
+     output logic cnt_done);
 
-    always_ff @(posedge clk)
-        if (enb) q <= d;
+    logic [1:0] q;
+    always_ff @(posedge clk) begin
+        if (rst) q <= 0;
+        else if (fill_cnt) begin
+            if (q != 2) q <= q + 1;
+            if (q == 2) cnt_done = 1;
+        end
+    end
 
-endmodule: dffe
+endmodule: count2

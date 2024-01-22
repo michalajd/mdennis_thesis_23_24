@@ -46,7 +46,7 @@ module valueRouter(input logic [31:0] bram_out, reg_out, new_last,
                    
              3'b001: begin /** CASE 2: Compare values (enq)  */
                         /** Compare register and BRAM data */
-                        if (bram_out == 32'bZ) done = 1;
+                        if (reg_out == 32'bZ) done = 1;
                         if (reg_out > bram_out || last_addr == 0) swap = 1'b1; // register value is larger OR equal to the current BRAM value
                         else swap = 1'b0;                     // register value is smaller than the current BRAM value
                         
@@ -84,6 +84,7 @@ module valueRouter(input logic [31:0] bram_out, reg_out, new_last,
                     end
             3'b100: begin  /** Empty case */
                         bram_insert = reg_out;
+                        done = 1;
                     end
             default: begin /** CASE 1: Default */
                         full = 0;
