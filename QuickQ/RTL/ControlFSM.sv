@@ -22,7 +22,7 @@
 
 module ControlFSM(input logic clk, rst, enq, deq, swap, full, empty, done, cnt_done,
                   input logic [31:0] last_addr,
-                  output logic we, regenb, next_node, prev_node, array_cnt_ld, array_cnt_clr, array_cnt_decr, array_cnt_inc, bram_sel, fill_cnt,
+                  output logic we, regenb, next_node, prev_node, array_cnt_ld, array_cnt_clr, array_cnt_decr, array_cnt_inc, bram_sel, fill_cnt, fill_rst, cnt_rst,
                   output logic [2:0] mode, 
                   output logic [1:0] mux1_sel
                   );
@@ -57,7 +57,10 @@ module ControlFSM(input logic clk, rst, enq, deq, swap, full, empty, done, cnt_d
                         IDLE:
                             /* Default state for when no action is specified in the queue */
                             begin
+                              fill_rst = 1;
+                              cnt_rst = 1;
                               mode = 3'b000;
+                              we = 0;
                               if (enq) next = FILL_ENQ;
                               else if (deq) next = DEQ_LOCATE;
                               else next = IDLE;
@@ -66,6 +69,7 @@ module ControlFSM(input logic clk, rst, enq, deq, swap, full, empty, done, cnt_d
                         FILL_ENQ:
                             /* Temp register (at head) filled with value from input */
                             begin
+                               fill_rst = 0;
                                fill_cnt = 1;
                                mux1_sel = 2'b00;
                                regenb = 1;
@@ -81,6 +85,7 @@ module ControlFSM(input logic clk, rst, enq, deq, swap, full, empty, done, cnt_d
                         EMPTY_ENQ:
                             /* Special case for when we add a value to an empty queue */
                             begin
+                                fill_cnt = 0;
                                 regenb = 1;
                                 mode = 3'b100;
                                 we = 1;
@@ -91,15 +96,20 @@ module ControlFSM(input logic clk, rst, enq, deq, swap, full, empty, done, cnt_d
                         COMPARE_ENQ:
                             /* Value in register compared with value that index register points to */
                             begin
-                                mode = 3'b001;
-                                
-                                if (swap && !done) next = SWAP_ENQ;
-                                else if (done) begin
-                                    mode = 3'b011;
-                                    next = IDLE;
+                                fill_cnt = 0;
+                                cnt_rst = 0;
+                                if (cnt_done) begin
+                                    mode = 3'b001;
+                                    
+                                    if (swap && !done) next = SWAP_ENQ;
+                                    else if (done) begin
+                                        mode = 3'b011;
+                                        next = IDLE;
+                                    end
+                                    else if (!swap) next = CNT_INC;
+                                    else next = COMPARE_ENQ; // should not happen
                                 end
-                                else if (!swap) next = CNT_INC;
-                                else next = COMPARE_ENQ; // should not happen
+                                else next = COMPARE_ENQ;
                             end
                         
                         SWAP_ENQ:
@@ -115,7 +125,10 @@ module ControlFSM(input logic clk, rst, enq, deq, swap, full, empty, done, cnt_d
                                 array_cnt_inc = 1;
                                 if (done) mode = 3'b011;
                                 if (full) next = ADDR_INC;
-                                else next = COMPARE_ENQ;
+                                else begin 
+                                    mux1_sel = 2'b01;
+                                    next = COMPARE_ENQ;
+                                end
                             end
                             
                         ADDR_INC:
@@ -129,6 +142,7 @@ module ControlFSM(input logic clk, rst, enq, deq, swap, full, empty, done, cnt_d
                         DEQ_LOCATE:
                             /* Find ending position of the queue */
                             begin
+                                cnt_rst = 0;
                                 array_cnt_ld = 1;
                                 next =  FILL_DEQ;
                             end    

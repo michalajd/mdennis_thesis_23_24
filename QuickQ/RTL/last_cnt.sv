@@ -22,18 +22,19 @@
 
 module last_cnt(input logic clk, rst,
                 input logic [31:0] last_addr,
-                input logic enq, deq, done,
+                input logic enq, deq, last_done,
                 output logic [31:0] new_last);
                 
     always_ff @ (posedge clk)
         begin
             if (rst) new_last <= 0;
             else begin
-                if (done) begin
-                    if (enq) new_last = last_addr + 1;
-                    else if (deq) new_last = last_addr - 1;
-                    else new_last = last_addr;
+                if (last_done) begin
+                    if (enq) new_last <= last_addr + 1;
+                    else if (deq) new_last <= last_addr - 1;
+                    else new_last <= last_addr;
                 end
+                //else new_last <= last_addr;
             end
         end
 endmodule

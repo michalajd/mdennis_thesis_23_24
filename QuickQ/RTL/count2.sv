@@ -10,15 +10,21 @@
 //-----------------------------------------------------------------------------
 
 module count2
-    (input logic clk, rst,
+    (input logic clk, rst, fill_rst,
      input logic fill_cnt,
      output logic cnt_done);
 
     logic [1:0] q;
     always_ff @(posedge clk) begin
-        if (rst) q <= 0;
+        if (rst || fill_rst) begin
+            q <= 0;
+            cnt_done = 0;
+        end
         else if (fill_cnt) begin
-            if (q != 2) q <= q + 1;
+            if (q != 2) begin 
+                q <= q + 1;
+                cnt_done = 0;
+            end
             if (q == 2) cnt_done = 1;
         end
     end
