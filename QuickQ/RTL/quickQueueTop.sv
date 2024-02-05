@@ -28,8 +28,8 @@ module quickQueueTop(input logic [31:0] data_lt_i, data_rt_i,
     );
     
     /** Assigning constants */
-    logic empty_val = 32'bZ;
-    logic error_val = 32'b0;
+    logic empty_val = 'x; // is this allowed?
+    logic error_val = '0;
     
     /** Internal logic */
     logic [31:0] toRegister, data_lt, last_index;
@@ -55,17 +55,17 @@ module quickQueueTop(input logic [31:0] data_lt_i, data_rt_i,
                        .array_cnt_ld, .array_cnt_clr, .array_cnt_decr, .array_cnt_inc, .bram_sel, .fill_cnt, .fill_rst, .cnt_rst, .mode, .mux1_sel);
                        
     /** Input multiplexer for left-hand data */
-    mux4 #(.W(8)) mux1DUV(.d0(data_lt_i), .d1(to_register), .d2(empty_val), .d3(error_val), .sel(mux1_sel), .y(toRegister));
+    mux4 #(.W(32)) mux1DUV(.d0(data_lt_i), .d1(to_register), .d2(empty_val), .d3(error_val), .sel(mux1_sel), .y(toRegister));
     
     /** Register to load input data */
-    dffe #(.W(8)) regDUV (.clk, .d(toRegister), .enb(regenb), .q(reg_out));
+    dffe #(.W(32)) regDUV (.clk, .d(toRegister), .enb(regenb), .q(reg_out));
     
     /** Counter for the pointer */
     array_pointer pointDUV (.clk, .rst, .cnt_rst, .array_cnt_ld, .array_cnt_clr, .array_cnt_decr, .array_cnt_inc, .array_cnt_out,
                             .last_index, .pointer_next);
                      
     /** BRAM declaration */
-    mem2p_sw_sr #(.W(8), .D(4)) bramDUV (.clk, .we1(we), .addr1(array_cnt_out), .din1(mux3_BRAM), .addr2(pointer_next), .dout2(bram_out),
+    mem2p_sw_sr #(.W(32), .D(4)) bramDUV (.clk, .we1(we), .addr1(array_cnt_out), .din1(mux3_BRAM), .addr2(pointer_next), .dout2(bram_out),
                  .array_size);
 
     /** Value Router instantiation */
@@ -77,9 +77,9 @@ module quickQueueTop(input logic [31:0] data_lt_i, data_rt_i,
     last_cnt lastDUV ( .clk, .rst, .last_addr, .enq, .deq, .last_done, .new_last);
     
     /** 2-port multiplexer instantiations */
-    mux2 #(.W(8)) mux2DUV(.d0(data_rt), .d1(32'bZ), .sel(next_node), .y(data_rt_o));
-    mux2 #(.W(8)) mux3DUV(.d0(bram_insert), .d1(data_rt_i), .sel(bram_sel), .y(mux3_BRAM));
-    mux2 #(.W(8)) mux4DUV(.d0(data_lt), .d1(32'bZ), .sel(prev_node), .y(data_lt_o));
+    mux2 #(.W(32)) mux2DUV(.d0(data_rt), .d1(32'bZ), .sel(next_node), .y(data_rt_o));
+    mux2 #(.W(32)) mux3DUV(.d0(bram_insert), .d1(data_rt_i), .sel(bram_sel), .y(mux3_BRAM));
+    mux2 #(.W(32)) mux4DUV(.d0(data_lt), .d1(32'bZ), .sel(prev_node), .y(data_lt_o));
     
     /** Counter for the "full" case */
     count2 fullDUV(.clk, .rst, .fill_rst, .fill_cnt, .cnt_done);

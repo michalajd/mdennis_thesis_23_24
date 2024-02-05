@@ -31,6 +31,7 @@ module array_pointer(input logic clk, rst, cnt_rst, array_cnt_ld, array_cnt_clr,
             else if (array_cnt_clr) pointer_next <= 0;
             else if (array_cnt_decr) pointer_next <= array_cnt_out - 1;
             else if (array_cnt_inc) pointer_next <= array_cnt_out + 1;
+            else pointer_next <= array_cnt_out;
         end
         
 endmodule

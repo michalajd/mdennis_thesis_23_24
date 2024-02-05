@@ -35,12 +35,13 @@ module ControlFSM(input logic clk, rst, enq, deq, swap, full, empty, done, cnt_d
                 COMPARE_ENQ = 4'b0100,
                 SWAP_ENQ = 4'b0101,
                 CNT_INC = 4'b0110,
-                ADDR_INC = 4'b0111,
-                DEQ_LOCATE = 4'b1000,
-                FILL_DEQ = 4'b1001,
-                DEQ_SWAP = 4'b1010,
-                CNT_DEC = 4'b1011,
-                ADDR_DEC = 4'b1100
+                ENQ_BUFFER = 4'b0111,
+                ADDR_INC = 4'b1000,
+                DEQ_LOCATE = 4'b1001,
+                FILL_DEQ = 4'b1010,
+                DEQ_SWAP = 4'b1011,
+                CNT_DEC = 4'b1100,
+                ADDR_DEC = 4'b1101
             } states_t;
             
             states_t state, next;
@@ -57,6 +58,10 @@ module ControlFSM(input logic clk, rst, enq, deq, swap, full, empty, done, cnt_d
                         IDLE:
                             /* Default state for when no action is specified in the queue */
                             begin
+                              array_cnt_ld = 0;
+                              array_cnt_clr = 0;
+                              array_cnt_decr = 0;
+                              array_cnt_inc = 0;
                               fill_rst = 1;
                               cnt_rst = 1;
                               mode = 3'b000;
@@ -96,12 +101,17 @@ module ControlFSM(input logic clk, rst, enq, deq, swap, full, empty, done, cnt_d
                         COMPARE_ENQ:
                             /* Value in register compared with value that index register points to */
                             begin
+                                array_cnt_clr = 0;
+                                array_cnt_inc = 0;
                                 fill_cnt = 0;
                                 cnt_rst = 0;
                                 if (cnt_done) begin
                                     mode = 3'b001;
                                     
-                                    if (swap && !done) next = SWAP_ENQ;
+                                    if (swap && !done) begin
+                                        mode = 3'b101;
+                                        next = SWAP_ENQ;
+                                    end
                                     else if (done) begin
                                         mode = 3'b011;
                                         next = IDLE;
@@ -122,15 +132,35 @@ module ControlFSM(input logic clk, rst, enq, deq, swap, full, empty, done, cnt_d
                         CNT_INC:
                             /* Counter signals register to look at next index */
                             begin
+                                we = 0;
                                 array_cnt_inc = 1;
-                                if (done) mode = 3'b011;
-                                if (full) next = ADDR_INC;
-                                else begin 
-                                    mux1_sel = 2'b01;
+                                if (done) begin
+                                    mode = 3'b011;
                                     next = COMPARE_ENQ;
                                 end
+                                
+                                else if (full) next = ADDR_INC;
+                                else begin 
+                                    mux1_sel = 2'b01;
+                                    fill_rst = 1;
+                                    mode = 3'b101;
+                                    next = ENQ_BUFFER;
+                                end
                             end
-                            
+                        
+                        ENQ_BUFFER:
+                            begin
+                                array_cnt_inc = 0;
+                                fill_rst = 0;
+                                fill_cnt = 1;
+                                
+                                 if (cnt_done) begin
+                                     if (done) mode = 3'b011;
+                                     else mode = 3'b001;
+                                     next = COMPARE_ENQ;
+                                 end
+                               else next = ENQ_BUFFER;
+                            end    
                         ADDR_INC:
                             /* If the node is full, send a signal to look at next node */
                             begin

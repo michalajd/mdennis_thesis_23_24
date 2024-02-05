@@ -60,9 +60,9 @@ module coreTest;
     /** Test 3: Enqueue with a swap */
     enq = 1;
     data_lt_i = 8'd2;
-    repeat(7) @(posedge clk) #1;
+    repeat(19) @(posedge clk) #1;
     enq = 0;
-    repeat(4) @(posedge clk) #1;
+    repeat(10) @(posedge clk) #1;
     $stop;
     end
     

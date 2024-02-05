@@ -5,14 +5,25 @@ Running: /home/user/Xylinx/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --de
 Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'd0' [/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/quickQueueTop.sv:58]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'd' [/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/quickQueueTop.sv:61]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'd2' [/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/quickQueueTop.sv:58]
 WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 2 for port 'addr1' [/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/quickQueueTop.sv:68]
 WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 2 for port 'array_size' [/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/quickQueueTop.sv:69]
 WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 32 for port 'array_size' [/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/quickQueueTop.sv:72]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'd0' [/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/quickQueueTop.sv:80]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'd0' [/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/quickQueueTop.sv:81]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'd0' [/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/quickQueueTop.sv:82]
 WARNING: [VRFC 10-3823] variable 'data_lt_o' might have multiple concurrent drivers [/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/quickQueueTop.sv:82]
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ControlFSM
+Compiling module xil_defaultlib.mux4
+Compiling module xil_defaultlib.dffe(W=32)
+Compiling module xil_defaultlib.array_pointer
+Compiling module xil_defaultlib.mem2p_sw_sr(W=32,D=4)
+Compiling module xil_defaultlib.valueRouter
+Compiling module xil_defaultlib.last_cnt
+Compiling module xil_defaultlib.mux2
+Compiling module xil_defaultlib.count2
+Compiling module xil_defaultlib.quickQueueTop
+Compiling module xil_defaultlib.coreTest
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot coreTest_behav
