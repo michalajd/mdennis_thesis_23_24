@@ -62,7 +62,14 @@ module coreTest;
     data_lt_i = 8'd2;
     repeat(19) @(posedge clk) #1;
     enq = 0;
-    repeat(10) @(posedge clk) #1;
+    repeat(5) @(posedge clk) #1;
+    
+    /** Test 4: Enqueue with no swap */
+    enq = 1;
+    data_lt_i = 8'd9;
+    repeat(25) @(posedge clk) #1;
+    enq = 0;
+    repeat(5) @(posedge clk) #1;
     $stop;
     end
     
