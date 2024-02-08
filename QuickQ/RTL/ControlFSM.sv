@@ -18,12 +18,14 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
+//
+// Added mode enumerated type JN 2/8/2024
 
-
-module ControlFSM(input logic clk, rst, enq, deq, swap, full, empty, done, cnt_done,
+module ControlFSM import quickQ_pkg::*;  (
+                  input logic clk, rst, enq, deq, swap, full, empty, done, cnt_done,
                   input logic [31:0] last_addr,
                   output logic we, regenb, next_node, prev_node, array_cnt_ld, array_cnt_clr, array_cnt_decr, array_cnt_inc, bram_sel, fill_cnt, fill_rst, cnt_rst,
-                  output logic [2:0] mode, 
+                  vrMode_t mode, 
                   output logic [1:0] mux1_sel
                   );
             
@@ -64,7 +66,7 @@ module ControlFSM(input logic clk, rst, enq, deq, swap, full, empty, done, cnt_d
                               array_cnt_inc = 0;
                               fill_rst = 1;
                               cnt_rst = 1;
-                              mode = 3'b000;
+                              mode = VR_DEF; // 3'b000;
                               we = 0;
                               if (enq) next = FILL_ENQ;
                               else if (deq) next = DEQ_LOCATE;
@@ -92,7 +94,7 @@ module ControlFSM(input logic clk, rst, enq, deq, swap, full, empty, done, cnt_d
                             begin
                                 fill_cnt = 0;
                                 regenb = 1;
-                                mode = 3'b100;
+                                mode = VR_EMPTY; //3'b100;
                                 we = 1;
                                 bram_sel = 0;
                                 next = CNT_INC;
@@ -106,14 +108,14 @@ module ControlFSM(input logic clk, rst, enq, deq, swap, full, empty, done, cnt_d
                                 fill_cnt = 0;
                                 cnt_rst = 0;
                                 if (cnt_done) begin
-                                    mode = 3'b001;
+                                    mode = VR_ENQ_COMPARE; //3'b001;
                                     
                                     if (swap && !done) begin
-                                        mode = 3'b101;
+                                        mode = VR_CNT; //3'b101;
                                         next = SWAP_ENQ;
                                     end
                                     else if (done) begin
-                                        mode = 3'b011;
+                                        mode = VR_LAST; //3'b011;
                                         next = IDLE;
                                     end
                                     else if (!swap) next = CNT_INC;
@@ -135,7 +137,7 @@ module ControlFSM(input logic clk, rst, enq, deq, swap, full, empty, done, cnt_d
                                 we = 0;
                                 array_cnt_inc = 1;
                                 if (done) begin
-                                    mode = 3'b011;
+                                    mode = VR_LAST; // 3'b011;
                                     next = COMPARE_ENQ;
                                 end
                                 
@@ -143,7 +145,7 @@ module ControlFSM(input logic clk, rst, enq, deq, swap, full, empty, done, cnt_d
                                 else begin 
                                     mux1_sel = 2'b01;
                                     fill_rst = 1;
-                                    mode = 3'b101;
+                                    mode = VR_CNT; //3'b101;
                                     next = ENQ_BUFFER;
                                 end
                             end
@@ -155,8 +157,8 @@ module ControlFSM(input logic clk, rst, enq, deq, swap, full, empty, done, cnt_d
                                 fill_cnt = 1;
                                 
                                  if (cnt_done) begin
-                                     if (done) mode = 3'b011;
-                                     else mode = 3'b001;
+                                     if (done) mode = VR_LAST; //3'b011;
+                                     else mode = VR_ENQ_COMPARE; //3'b001;
                                      next = COMPARE_ENQ;
                                  end
                                else next = ENQ_BUFFER;
@@ -188,7 +190,7 @@ module ControlFSM(input logic clk, rst, enq, deq, swap, full, empty, done, cnt_d
                         DEQ_SWAP:
                             /* Swap register value with that from BRAM */
                             begin
-                                mode = 2'b010;
+                                mode = VR_DEQ_SWAP; //2'b010;
                                 we = 1;
                                 prev_node = 0;
                                 next = CNT_DEC;
@@ -216,7 +218,7 @@ module ControlFSM(input logic clk, rst, enq, deq, swap, full, empty, done, cnt_d
                             
                         default:
                             begin
-                                mode = 3'b000;
+                                mode = VR_DEF; //3'b000;
                                 we = 0;
                                 bram_sel = 0;
                                 prev_node = 1;

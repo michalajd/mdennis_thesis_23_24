@@ -20,12 +20,15 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module quickQueueTop(input logic [31:0] data_lt_i, data_rt_i,
+module quickQueueTop (
+                     input logic [31:0] data_lt_i, data_rt_i,
                      input logic clk, rst, enq, deq,
                      input logic [7:0] array_size,
                      output logic [31:0] data_lt_o, data_rt_o
 
     );
+    
+    import quickQ_pkg::*;
     
     /** Assigning constants */
     logic empty_val = 'x; // is this allowed?
@@ -37,7 +40,7 @@ module quickQueueTop(input logic [31:0] data_lt_i, data_rt_i,
     /** FSM logic */
     logic we, regenb, next_node, prev_node, array_cnt_ld, array_cnt_clr, array_cnt_decr, array_cnt_inc, bram_sel, fill_rst;
     logic fill_cnt, cnt_done, cnt_rst;
-    logic [2:0] mode;
+    vrMode_t mode;
     logic [1:0] mux1_sel;
     
     /** Value Router logic */

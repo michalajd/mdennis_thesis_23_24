@@ -23,7 +23,8 @@
 module quickNode(input logic clk, data_lt_i, data_rt_i, read_i, write_i, reset_i, enq, deq,
                  output logic data_rt_o, data_lt_o, read_o, write_o, reset_o
                  );
-                 
+     
+     import quickQ::*;                     
                  
                  
                  // WIRES

@@ -18,8 +18,9 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-module valueRouter(input logic [31:0] bram_out, reg_out, new_last,
-                   input logic [2:0] mode,
+module valueRouter import quickQ_pkg::*; (
+                   input logic [31:0] bram_out, reg_out, new_last,
+                   input vrMode_t mode,
                    input logic enq, deq,
                    input logic [31:0] array_size, array_cnt_in,
                    output logic [31:0] bram_insert, to_register, last_addr,
@@ -28,12 +29,10 @@ module valueRouter(input logic [31:0] bram_out, reg_out, new_last,
        
     /** Internal logic */
    logic [31:0] size_before_deq; /** Size before dequeue logic is finished */
-   
-   /** Enumerated logic definition */
-   enum {DEF, ENQ_COMPARE, DEQ_SWAP, LAST, EMPTY, CNT} mode_name;             
+           
     always_comb
         case (mode)
-            DEF: begin /** CASE 1: Default */
+            VR_DEF: begin /** CASE 1: Default */
                         last_addr = new_last;
                         last_done = 0;
                         full = 0;
@@ -52,7 +51,7 @@ module valueRouter(input logic [31:0] bram_out, reg_out, new_last,
                         array_cnt_out = array_cnt_in;
                    end
                    
-             ENQ_COMPARE: begin /** CASE 2: Compare values (enq)  */
+             VR_ENQ_COMPARE: begin /** CASE 2: Compare values (enq)  */
                         /** Compare register and BRAM data */
                         array_cnt_out = array_cnt_in;
                         done = 0;
@@ -75,14 +74,14 @@ module valueRouter(input logic [31:0] bram_out, reg_out, new_last,
                         end  
                     end
                     
-             DEQ_SWAP: begin /** CASE 3: Swap out values in deq */
+             VR_DEQ_SWAP: begin /** CASE 3: Swap out values in deq */
                         full = 1'b0;
                         bram_insert = bram_out;
                         if (!empty) to_register = reg_out;
                         else data_lt_o = reg_out;
                      end
                      
-             LAST: begin /** CASE 4: Change the "last" index of the array */
+             VR_LAST: begin /** CASE 4: Change the "last" index of the array */
                         if (new_last == 0 && deq == 1) begin
                             empty = 1;
                             data_lt_o = reg_out;
@@ -95,12 +94,12 @@ module valueRouter(input logic [31:0] bram_out, reg_out, new_last,
                     last_addr = new_last;
                     //last_done = 0;
                     end
-            EMPTY: begin  /** Empty case */
+            VR_EMPTY: begin  /** Empty case */
                         bram_insert = reg_out;
                         done = 1;
                         //last_done = 1;
                     end
-            CNT: begin
+            VR_CNT: begin
                        array_cnt_out = array_cnt_in;
                        //bram_insert = bram_out;
                        //to_register = reg_out; 
