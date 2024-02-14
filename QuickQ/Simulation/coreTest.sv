@@ -23,7 +23,7 @@
 module coreTest;
     /** Declare internal logic */
     logic clk, rst, enq, deq;
-    logic [7:0] array_size;
+    logic [31:0] array_size;
     logic [31:0] data_lt_i, data_rt_i, data_lt_o, data_rt_o;
     
     /** Module instantiation */
@@ -38,7 +38,7 @@ module coreTest;
     /** Testbench start */
     initial begin
     /** Setup: reset */
-    array_size = 8'd3;
+    array_size = 31'd3;
     rst = 1;
     @(posedge clk) #1;
     rst = 0;
@@ -53,9 +53,9 @@ module coreTest;
     deq = 0;
     enq = 1;
     data_lt_i = 8'd4;
-    repeat(7) @(posedge clk) #1;
+    repeat(5) @(posedge clk) #1;
     enq = 0;
-    repeat(4) @(posedge clk) #1;
+    repeat(10) @(posedge clk) #1;
     
     /** Test 3: Enqueue with a swap */
     enq = 1;
@@ -67,9 +67,23 @@ module coreTest;
     /** Test 4: Enqueue with no swap */
     enq = 1;
     data_lt_i = 8'd9;
-    repeat(25) @(posedge clk) #1;
+    repeat(20) @(posedge clk) #1;
     enq = 0;
-    repeat(5) @(posedge clk) #1;
+    repeat(10) @(posedge clk) #1;
+    
+    /** Test 4: Enq with two swaps */
+    enq = 1;
+    data_lt_i = 8'd3;
+    repeat(10) @(posedge clk) #1;
+    enq = 0;
+    repeat(35) @(posedge clk) #1;
+    
+    /** Test 5: Enq but array is full */
+    enq = 1;
+    data_lt_i = 8'd12;
+    repeat(10) @(posedge clk) #1;
+    enq = 0;
+    repeat(50) @(posedge clk) #1;
     $stop;
     end
     

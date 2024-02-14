@@ -26,7 +26,8 @@ module ControlFSM import quickQ_pkg::*;  (
                   input logic [31:0] last_addr,
                   output logic we, regenb, next_node, prev_node, array_cnt_ld, array_cnt_clr, array_cnt_decr, array_cnt_inc, bram_sel, fill_cnt, fill_rst, cnt_rst,
                   vrMode_t mode, 
-                  output logic [1:0] mux1_sel
+                  output logic [1:0] mux1_sel,
+                  output logic op_enb
                   );
             
             /* Enumerated logic (states) */
@@ -64,6 +65,7 @@ module ControlFSM import quickQ_pkg::*;  (
                               array_cnt_clr = 0;
                               array_cnt_decr = 0;
                               array_cnt_inc = 0;
+                              op_enb = 0;
                               fill_rst = 1;
                               cnt_rst = 1;
                               mode = VR_DEF; // 3'b000;
@@ -76,6 +78,7 @@ module ControlFSM import quickQ_pkg::*;  (
                         FILL_ENQ:
                             /* Temp register (at head) filled with value from input */
                             begin
+                               op_enb = 1;
                                fill_rst = 0;
                                fill_cnt = 1;
                                mux1_sel = 2'b00;
@@ -92,6 +95,7 @@ module ControlFSM import quickQ_pkg::*;  (
                         EMPTY_ENQ:
                             /* Special case for when we add a value to an empty queue */
                             begin
+                                op_enb = 0;
                                 fill_cnt = 0;
                                 regenb = 1;
                                 mode = VR_EMPTY; //3'b100;
@@ -103,23 +107,26 @@ module ControlFSM import quickQ_pkg::*;  (
                         COMPARE_ENQ:
                             /* Value in register compared with value that index register points to */
                             begin
+                                op_enb = 0;
                                 array_cnt_clr = 0;
                                 array_cnt_inc = 0;
                                 fill_cnt = 0;
                                 cnt_rst = 0;
                                 if (cnt_done) begin
+                                    if (done) begin 
+                                        mode = VR_CNT;
+                                        next = IDLE;
+                                    end
+                                    else begin
                                     mode = VR_ENQ_COMPARE; //3'b001;
                                     
-                                    if (swap && !done) begin
+                                    if (swap) begin
                                         mode = VR_CNT; //3'b101;
                                         next = SWAP_ENQ;
                                     end
-                                    else if (done) begin
-                                        mode = VR_LAST; //3'b011;
-                                        next = IDLE;
-                                    end
                                     else if (!swap) next = CNT_INC;
                                     else next = COMPARE_ENQ; // should not happen
+                                    end
                                 end
                                 else next = COMPARE_ENQ;
                             end
@@ -136,12 +143,12 @@ module ControlFSM import quickQ_pkg::*;  (
                             begin
                                 we = 0;
                                 array_cnt_inc = 1;
-                                if (done) begin
+                                /*if (done) begin
                                     mode = VR_LAST; // 3'b011;
                                     next = COMPARE_ENQ;
-                                end
+                                end 
                                 
-                                else if (full) next = ADDR_INC;
+                                else */ if (full) next = ADDR_INC;
                                 else begin 
                                     mux1_sel = 2'b01;
                                     fill_rst = 1;
@@ -157,7 +164,10 @@ module ControlFSM import quickQ_pkg::*;  (
                                 fill_cnt = 1;
                                 
                                  if (cnt_done) begin
-                                     if (done) mode = VR_LAST; //3'b011;
+                                     if (done) begin
+                                        mode = VR_LAST; //3'b011;
+                                        op_enb = 0;
+                                     end
                                      else mode = VR_ENQ_COMPARE; //3'b001;
                                      next = COMPARE_ENQ;
                                  end
@@ -182,6 +192,7 @@ module ControlFSM import quickQ_pkg::*;  (
                         FILL_DEQ:
                             /* Fill register with FFFFFFFF to empty the spot*/
                             begin
+                                op_enb = 1;
                                 mux1_sel = 2'b10;
                                 regenb = 1;
                                 next = DEQ_SWAP;

@@ -6,6 +6,7 @@ sv xil_defaultlib  \
 "../../../../RTL/count2.sv" \
 "../../../../RTL/dffe.sv" \
 "../../../../RTL/last_cnt.sv" \
+"../../../../RTL/lastop_enc.sv" \
 "../../../../RTL/mem2p_sw_sr.sv" \
 "../../../../RTL/mux2.sv" \
 "../../../../RTL/mux4.sv" \

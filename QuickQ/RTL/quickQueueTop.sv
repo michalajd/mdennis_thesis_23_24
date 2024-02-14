@@ -39,7 +39,7 @@ module quickQueueTop (
     
     /** FSM logic */
     logic we, regenb, next_node, prev_node, array_cnt_ld, array_cnt_clr, array_cnt_decr, array_cnt_inc, bram_sel, fill_rst;
-    logic fill_cnt, cnt_done, cnt_rst;
+    logic fill_cnt, cnt_done, cnt_rst, op_enb;
     vrMode_t mode;
     logic [1:0] mux1_sel;
     
@@ -53,9 +53,13 @@ module quickQueueTop (
     /** BRAM logic */
     logic [31:0] bram_out, mux3_BRAM;
     
+    /** Last Operation Encoder logic */
+    logic [1:0] lastop;
+    
     /** FSM declaration */
     ControlFSM fsmDUV (.clk, .rst, .enq, .deq, .swap, .full, .empty, .done, .cnt_done, .last_addr, .we, .regenb, .next_node, .prev_node, 
-                       .array_cnt_ld, .array_cnt_clr, .array_cnt_decr, .array_cnt_inc, .bram_sel, .fill_cnt, .fill_rst, .cnt_rst, .mode, .mux1_sel);
+                       .array_cnt_ld, .array_cnt_clr, .array_cnt_decr, .array_cnt_inc, .bram_sel, .fill_cnt, .fill_rst, .cnt_rst, 
+                       .mode, .mux1_sel, .op_enb);
                        
     /** Input multiplexer for left-hand data */
     mux4 #(.W(32)) mux1DUV(.d0(data_lt_i), .d1(to_register), .d2(empty_val), .d3(error_val), .sel(mux1_sel), .y(toRegister));
@@ -71,12 +75,12 @@ module quickQueueTop (
     mem2p_sw_sr #(.W(32), .D(4)) bramDUV (.clk, .we1(we), .addr1(array_cnt_out), .din1(mux3_BRAM), .addr2(pointer_next), .dout2(bram_out));
 
     /** Value Router instantiation */
-    valueRouter vrDUV (.bram_out(bram_out), .reg_out, .new_last, .mode, .enq, .deq, .array_size, .array_cnt_in(pointer_next), 
+    valueRouter vrDUV (.bram_out(bram_out), .reg_out, .new_last, .mode, .enq, .deq, .array_size, .array_cnt_in(pointer_next), .lastop,
                        .bram_insert, .to_register, .last_addr, .data_lt_o, .array_cnt_out, .data_rt_o(data_rt), 
                        .swap, .full, .empty, .done, .last_done);
               
     /** Last value register instantiation */                   
-    last_cnt lastDUV ( .clk, .rst, .last_addr, .enq, .deq, .last_done, .new_last);
+    last_cnt lastDUV ( .clk, .rst, .last_addr, .lastop, .last_done, .new_last);
     
     /** 2-port multiplexer instantiations */
     mux2 #(.W(32)) mux2DUV(.d0(data_rt), .d1(32'bZ), .sel(next_node), .y(data_rt_o));
@@ -85,6 +89,9 @@ module quickQueueTop (
     
     /** Counter for the "full" case */
     count2 fullDUV(.clk, .rst, .fill_rst, .fill_cnt, .cnt_done);
+    
+    /** Last Operation Encoder instantiation */
+    lastop_enc lastopDUV (.clk, .rst, .enb(op_enb), .enq, .deq, .lastop);
     
 //    /** FSM Logic */
 //    logic enq, deq, done, result, full, swap_done, empty, we, regenb, regsel, countenb, rd_addr, bram_sel, re, next_node;

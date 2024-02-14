@@ -23,6 +23,7 @@ module valueRouter import quickQ_pkg::*; (
                    input vrMode_t mode,
                    input logic enq, deq,
                    input logic [31:0] array_size, array_cnt_in,
+                   input logic [1:0] lastop,
                    output logic [31:0] bram_insert, to_register, last_addr,
                    output logic [31:0] data_lt_o, array_cnt_out, data_rt_o,
                    output logic swap, full, empty, done, last_done);
@@ -41,7 +42,11 @@ module valueRouter import quickQ_pkg::*; (
                             empty = 1;
                             last_addr = 0;
                         end
-                        else empty = 0;
+                        else if (new_last == array_size + 1) full = 1;
+                        else begin
+                            empty = 0;
+                            full = 0;
+                        end
                         array_cnt_out = 0;
                         bram_insert = '0;
                         data_lt_o = '0;
@@ -53,6 +58,7 @@ module valueRouter import quickQ_pkg::*; (
                    
              VR_ENQ_COMPARE: begin /** CASE 2: Compare values (enq)  */
                         /** Compare register and BRAM data */
+                        last_done = 0;
                         array_cnt_out = array_cnt_in;
                         done = 0;
                         last_done = 0;
@@ -82,15 +88,16 @@ module valueRouter import quickQ_pkg::*; (
                      end
                      
              VR_LAST: begin /** CASE 4: Change the "last" index of the array */
-                        if (new_last == 0 && deq == 1) begin
+                        if (new_last == 0 && lastop == LO_DEQ) begin
                             empty = 1;
                             data_lt_o = reg_out;
                         end
-                        else begin
+                        else if (lastop == LO_ENQ) begin
                             last_done = 1;
                             if (new_last == array_size) full = 1;
                             else full = 0;
                         end
+                        else last_done = 0;
                     last_addr = new_last;
                     //last_done = 0;
                     end

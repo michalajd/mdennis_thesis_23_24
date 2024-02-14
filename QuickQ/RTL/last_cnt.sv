@@ -20,9 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module last_cnt(input logic clk, rst,
+module last_cnt import quickQ_pkg::*;
+               (input logic clk, rst,
                 input logic [31:0] last_addr,
-                input logic enq, deq, last_done,
+                input logic [1:0] lastop, 
+                input logic last_done,
                 output logic [31:0] new_last);
                 
     always_ff @ (posedge clk)
@@ -30,8 +32,8 @@ module last_cnt(input logic clk, rst,
             if (rst) new_last <= 0;
             else begin
                 if (last_done) begin
-                    if (enq) new_last <= last_addr + 1;
-                    else if (deq) new_last <= last_addr - 1;
+                    if (lastop == LO_ENQ) new_last <= last_addr + 1;
+                    else if (lastop == LO_DEQ) new_last <= last_addr - 1;
                     else new_last <= last_addr;
                 end
                 //else new_last <= last_addr;
