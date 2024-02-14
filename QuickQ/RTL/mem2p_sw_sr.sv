@@ -28,15 +28,11 @@ module mem2p_sw_sr
     input logic [DW-1:0] addr1, // WRITE
     input logic [W-1:0]  din1,
     input logic [DW-1:0] addr2, // READ
-    output logic [W-1:0] dout2,
-    output logic [DW-1:0] array_size
+    output logic [W-1:0] dout2
     );
 
     logic [W-1:0] ram_array [D-1:0];
     logic [DW-1:0] addr2_r;
-    
-    // return size of bram
-    assign array_size = DW;
 
     // port 1 write
     always_ff @(posedge clk) begin

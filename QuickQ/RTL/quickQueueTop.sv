@@ -23,7 +23,7 @@
 module quickQueueTop (
                      input logic [31:0] data_lt_i, data_rt_i,
                      input logic clk, rst, enq, deq,
-                     input logic [7:0] array_size,
+                     input logic [31:0] array_size,
                      output logic [31:0] data_lt_o, data_rt_o
 
     );
@@ -68,8 +68,7 @@ module quickQueueTop (
                             .last_index, .pointer_next);
                      
     /** BRAM declaration */
-    mem2p_sw_sr #(.W(32), .D(4)) bramDUV (.clk, .we1(we), .addr1(array_cnt_out), .din1(mux3_BRAM), .addr2(pointer_next), .dout2(bram_out),
-                 .array_size);
+    mem2p_sw_sr #(.W(32), .D(4)) bramDUV (.clk, .we1(we), .addr1(array_cnt_out), .din1(mux3_BRAM), .addr2(pointer_next), .dout2(bram_out));
 
     /** Value Router instantiation */
     valueRouter vrDUV (.bram_out(bram_out), .reg_out, .new_last, .mode, .enq, .deq, .array_size, .array_cnt_in(pointer_next), 

@@ -1,5 +1,6 @@
 # compile verilog/system verilog design source files
 sv xil_defaultlib  \
+"../../../../RTL/quickQ_pkg.sv" \
 "../../../../RTL/ControlFSM.sv" \
 "../../../../RTL/array_pointer.sv" \
 "../../../../RTL/count2.sv" \

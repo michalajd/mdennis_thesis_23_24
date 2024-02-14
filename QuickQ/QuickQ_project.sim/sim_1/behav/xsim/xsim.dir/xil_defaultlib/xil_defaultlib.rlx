@@ -3,7 +3,7 @@
 Jun 16 2023
 19:36:26
 /home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/QuickQ_project.sim/sim_1/behav/xsim/glbl.v,1683266558,verilog,,,,glbl,,uvm,,,,,,
-/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/ControlFSM.sv,1707341709,systemVerilog,,/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/array_pointer.sv,,ControlFSM,,uvm,,,,,,
+/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/ControlFSM.sv,1707875832,systemVerilog,,/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/array_pointer.sv,,ControlFSM,,uvm,,,,,,
 /home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/array_pointer.sv,1707171514,systemVerilog,,/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/count2.sv,,array_pointer,,uvm,,,,,,
 /home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/count2.sv,1707091187,systemVerilog,,/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/dffe.sv,,count2,,uvm,,,,,,
 /home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/dffe.sv,1705959350,systemVerilog,,/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/last_cnt.sv,,dffe,,uvm,,,,,,
@@ -12,6 +12,7 @@ Jun 16 2023
 /home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/mux2.sv,1694204540,systemVerilog,,/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/mux4.sv,,mux2,,uvm,,,,,,
 /home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/mux4.sv,1695827323,systemVerilog,,/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/quickQueueTop.sv,,mux4,,uvm,,,,,,
 /home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/quickQCore.sv,1700582053,systemVerilog,,/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/valueRouter.sv,,quickQCore,,uvm,,,,,,
+/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/quickQ_pkg.sv,1707875832,systemVerilog,/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/ControlFSM.sv;/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/quickQueueTop.sv;/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/valueRouter.sv,/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/ControlFSM.sv,,quickQ_pkg,,uvm,,,,,,
 /home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/quickQueueTop.sv,1707170251,systemVerilog,,/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/valueRouter.sv,,quickQueueTop,,uvm,,,,,,
 /home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/valueRouter.sv,1707176459,systemVerilog,,/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/Simulation/coreTest.sv,,valueRouter,,uvm,,,,,,
 /home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/Simulation/coreTest.sv,1707342274,systemVerilog,,,,coreTest,,uvm,,,,,,
