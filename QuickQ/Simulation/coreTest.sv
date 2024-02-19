@@ -80,10 +80,16 @@ module coreTest;
     
     /** Test 5: Enq but array is full */
     enq = 1;
-    data_lt_i = 8'd12;
+    data_lt_i = 8'd7;
     repeat(10) @(posedge clk) #1;
     enq = 0;
-    repeat(50) @(posedge clk) #1;
+    repeat(30) @(posedge clk) #1;
+    
+    /** Test 6: Deq while array is full */
+    deq = 1;
+    repeat(10) @(posedge clk) #1;
+    deq = 0;
+    repeat(30) @(posedge clk) #1;
     $stop;
     end
     

@@ -23,7 +23,7 @@
 
 module ControlFSM import quickQ_pkg::*;  (
                   input logic clk, rst, enq, deq, swap, full, empty, done, cnt_done,
-                  input logic [31:0] last_addr,
+                  input logic [31:0] last_addr, array_cnt_out,
                   output logic we, regenb, next_node, prev_node, array_cnt_ld, array_cnt_clr, array_cnt_decr, array_cnt_inc, bram_sel, fill_cnt, fill_rst, cnt_rst,
                   vrMode_t mode, 
                   output logic [1:0] mux1_sel,
@@ -148,7 +148,7 @@ module ControlFSM import quickQ_pkg::*;  (
                                     next = COMPARE_ENQ;
                                 end 
                                 
-                                else */ if (full) next = ADDR_INC;
+                                else */ if (full && (last_addr == array_cnt_out)) next = ADDR_INC;
                                 else begin 
                                     mux1_sel = 2'b01;
                                     fill_rst = 1;
@@ -176,6 +176,7 @@ module ControlFSM import quickQ_pkg::*;  (
                         ADDR_INC:
                             /* If the node is full, send a signal to look at next node */
                             begin
+                                mode = VR_LAST;
                                 next_node = 0;
                                 array_cnt_clr = 1;
                                 next = IDLE;
@@ -193,9 +194,13 @@ module ControlFSM import quickQ_pkg::*;  (
                             /* Fill register with FFFFFFFF to empty the spot*/
                             begin
                                 op_enb = 1;
+                                fill_rst = 0;
+                                fill_cnt = 1;
                                 mux1_sel = 2'b10;
                                 regenb = 1;
-                                next = DEQ_SWAP;
+                                
+                                if (cnt_done) next = DEQ_SWAP;
+                                else next = FILL_DEQ; 
                             end
                         
                         DEQ_SWAP:

@@ -35,7 +35,7 @@ module quickQueueTop (
     logic error_val = '0;
     
     /** Internal logic */
-    logic [31:0] toRegister, data_lt, last_index;
+    logic [31:0] toRegister, data_lt;
     
     /** FSM logic */
     logic we, regenb, next_node, prev_node, array_cnt_ld, array_cnt_clr, array_cnt_decr, array_cnt_inc, bram_sel, fill_rst;
@@ -57,7 +57,7 @@ module quickQueueTop (
     logic [1:0] lastop;
     
     /** FSM declaration */
-    ControlFSM fsmDUV (.clk, .rst, .enq, .deq, .swap, .full, .empty, .done, .cnt_done, .last_addr, .we, .regenb, .next_node, .prev_node, 
+    ControlFSM fsmDUV (.clk, .rst, .enq, .deq, .swap, .full, .empty, .done, .cnt_done, .last_addr, .array_cnt_out, .we, .regenb, .next_node, .prev_node, 
                        .array_cnt_ld, .array_cnt_clr, .array_cnt_decr, .array_cnt_inc, .bram_sel, .fill_cnt, .fill_rst, .cnt_rst, 
                        .mode, .mux1_sel, .op_enb);
                        
@@ -69,7 +69,7 @@ module quickQueueTop (
     
     /** Counter for the pointer */
     array_pointer pointDUV (.clk, .rst, .cnt_rst, .array_cnt_ld, .array_cnt_clr, .array_cnt_decr, .array_cnt_inc, .array_cnt_out,
-                            .last_index, .pointer_next);
+                            .last_index(last_addr), .pointer_next);
                      
     /** BRAM declaration */
     mem2p_sw_sr #(.W(32), .D(4)) bramDUV (.clk, .we1(we), .addr1(array_cnt_out), .din1(mux3_BRAM), .addr2(pointer_next), .dout2(bram_out));

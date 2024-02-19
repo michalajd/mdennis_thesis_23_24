@@ -49,8 +49,6 @@ module valueRouter import quickQ_pkg::*; (
                         end
                         array_cnt_out = 0;
                         bram_insert = '0;
-                        data_lt_o = '0;
-                        data_rt_o = '0;
                         to_register = '0;
                         done = 0;
                         array_cnt_out = array_cnt_in;
@@ -91,6 +89,9 @@ module valueRouter import quickQ_pkg::*; (
                         if (new_last == 0 && lastop == LO_DEQ) begin
                             empty = 1;
                             data_lt_o = reg_out;
+                        end
+                        else if (new_last > array_size) begin
+                            data_rt_o = reg_out;
                         end
                         else if (lastop == LO_ENQ) begin
                             last_done = 1;
