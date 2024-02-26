@@ -31,7 +31,7 @@ module quickQueueTop (
     import quickQ_pkg::*;
     
     /** Assigning constants */
-    logic empty_val = 'x; // is this allowed?
+    logic empty_val = '1; // is this allowed?
     logic error_val = '0;
     
     /** Internal logic */
