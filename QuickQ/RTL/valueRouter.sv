@@ -30,6 +30,7 @@ module valueRouter import quickQ_pkg::*; (
        
     /** Internal logic */
    logic [31:0] size_before_deq; /** Size before dequeue logic is finished */
+   logic [31:0] next_bram; /** SHOULD BE A REG SIGNAL: Value in the "i+1" of the BRAM */
            
     always_comb
         case (mode)
@@ -79,10 +80,10 @@ module valueRouter import quickQ_pkg::*; (
                     end
                     
              VR_DEQ_SWAP: begin /** CASE 3: Swap out values in deq */
+                        array_cnt_out = array_cnt_in;
                         full = 1'b0;
-                        bram_insert = bram_out;
-                        if (!empty) to_register = reg_out;
-                        else data_lt_o = reg_out;
+                        if (array_cnt_in == '0) data_lt_o = bram_out;
+                        bram_insert = next_bram;
                      end
                      
              VR_LAST: begin /** CASE 4: Change the "last" index of the array */
@@ -102,16 +103,25 @@ module valueRouter import quickQ_pkg::*; (
                     last_addr = new_last;
                     //last_done = 0;
                     end
+                    
             VR_EMPTY: begin  /** Empty case */
                         bram_insert = reg_out;
                         done = 1;
                         //last_done = 1;
                     end
+                    
             VR_CNT: begin
                        array_cnt_out = array_cnt_in;
                        //bram_insert = bram_out;
                        //to_register = reg_out; 
                  end
+                 
+            VR_DEQ_RD: begin
+                        array_cnt_out = array_cnt_in;
+                        next_bram = bram_out; // SHOULD BE A REG SIGNAL
+            
+                         end
+                         
             default: begin /** CASE 1: Default */
                         full = 0;
                         swap = 0;

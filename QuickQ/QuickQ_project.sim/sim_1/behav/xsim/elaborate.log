@@ -9,4 +9,51 @@ WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 fo
 WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 2 for port 'addr1' [/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/quickQueueTop.sv:75]
 WARNING: [VRFC 10-3823] variable 'data_lt_o' might have multiple concurrent drivers [/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/quickQueueTop.sv:88]
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/Simulation/coreTest.sv" Line 23. Module coreTest has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/quickQueueTop.sv" Line 23. Module quickQueueTop has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/ControlFSM.sv" Line 24. Module ControlFSM has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/mux4.sv" Line 12. Module mux4 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/dffe.sv" Line 12. Module dffe(W=32) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/array_pointer.sv" Line 23. Module array_pointer has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/mem2p_sw_sr.sv" Line 23. Module mem2p_sw_sr(W=32,D=4) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/valueRouter.sv" Line 21. Module valueRouter has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/last_cnt.sv" Line 23. Module last_cnt has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/mux2.sv" Line 23. Module mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/mux2.sv" Line 23. Module mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/mux2.sv" Line 23. Module mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/count2.sv" Line 12. Module count2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/lastop_enc.sv" Line 12. Module lastop_enc has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/Simulation/coreTest.sv" Line 23. Module coreTest has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/quickQueueTop.sv" Line 23. Module quickQueueTop has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/ControlFSM.sv" Line 24. Module ControlFSM has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/mux4.sv" Line 12. Module mux4 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/dffe.sv" Line 12. Module dffe(W=32) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/array_pointer.sv" Line 23. Module array_pointer has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/mem2p_sw_sr.sv" Line 23. Module mem2p_sw_sr(W=32,D=4) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/valueRouter.sv" Line 21. Module valueRouter has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/last_cnt.sv" Line 23. Module last_cnt has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/mux2.sv" Line 23. Module mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/mux2.sv" Line 23. Module mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/mux2.sv" Line 23. Module mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/count2.sv" Line 12. Module count2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/RTL/lastop_enc.sv" Line 12. Module lastop_enc has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/QuickQ_project.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/mckayla/Desktop/mdennis_thesis_23_24/QuickQ/QuickQ_project.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.quickQ_pkg
+Compiling module xil_defaultlib.ControlFSM
+Compiling module xil_defaultlib.mux4
+Compiling module xil_defaultlib.dffe(W=32)
+Compiling module xil_defaultlib.array_pointer
+Compiling module xil_defaultlib.mem2p_sw_sr(W=32,D=4)
+Compiling module xil_defaultlib.valueRouter
+Compiling module xil_defaultlib.last_cnt
+Compiling module xil_defaultlib.mux2
+Compiling module xil_defaultlib.count2
+Compiling module xil_defaultlib.lastop_enc
+Compiling module xil_defaultlib.quickQueueTop
+Compiling module xil_defaultlib.coreTest
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot coreTest_behav

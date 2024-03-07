@@ -38,7 +38,7 @@ module quickQueueTop (
     logic [31:0] toRegister, data_lt;
     
     /** FSM logic */
-    logic we, regenb, next_node, prev_node, array_cnt_ld, array_cnt_clr, array_cnt_decr, array_cnt_inc, bram_sel, fill_rst;
+    logic we, regenb, next_node, prev_node, array_cnt_ld, array_cnt_clr, array_cnt_decr, array_cnt_inc, array_cnt_two, bram_sel, fill_rst;
     logic fill_cnt, cnt_done, cnt_rst, op_enb;
     vrMode_t mode;
     logic [1:0] mux1_sel;
@@ -58,7 +58,7 @@ module quickQueueTop (
     
     /** FSM declaration */
     ControlFSM fsmDUV (.clk, .rst, .enq, .deq, .swap, .full, .empty, .done, .cnt_done, .last_addr, .array_cnt_out, .we, .regenb, .next_node, .prev_node, 
-                       .array_cnt_ld, .array_cnt_clr, .array_cnt_decr, .array_cnt_inc, .bram_sel, .fill_cnt, .fill_rst, .cnt_rst, 
+                       .array_cnt_ld, .array_cnt_clr, .array_cnt_decr, .array_cnt_inc, .array_cnt_two, .bram_sel, .fill_cnt, .fill_rst, .cnt_rst, 
                        .mode, .mux1_sel, .op_enb);
                        
     /** Input multiplexer for left-hand data */
@@ -68,7 +68,7 @@ module quickQueueTop (
     dffe #(.W(32)) regDUV (.clk, .d(toRegister), .enb(regenb), .q(reg_out));
     
     /** Counter for the pointer */
-    array_pointer pointDUV (.clk, .rst, .cnt_rst, .array_cnt_ld, .array_cnt_clr, .array_cnt_decr, .array_cnt_inc, .array_cnt_out,
+    array_pointer pointDUV (.clk, .rst, .cnt_rst, .array_cnt_ld, .array_cnt_clr, .array_cnt_decr, .array_cnt_inc, .array_cnt_out, .array_cnt_two,
                             .last_index(last_addr), .pointer_next);
                      
     /** BRAM declaration */

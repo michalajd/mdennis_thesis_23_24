@@ -24,7 +24,8 @@
 module ControlFSM import quickQ_pkg::*;  (
                   input logic clk, rst, enq, deq, swap, full, empty, done, cnt_done,
                   input logic [31:0] last_addr, array_cnt_out,
-                  output logic we, regenb, next_node, prev_node, array_cnt_ld, array_cnt_clr, array_cnt_decr, array_cnt_inc, bram_sel, fill_cnt, fill_rst, cnt_rst,
+                  output logic we, regenb, next_node, prev_node, array_cnt_ld, array_cnt_clr, array_cnt_decr, array_cnt_inc, array_cnt_two,
+                  output logic bram_sel, fill_cnt, fill_rst, cnt_rst,
                   vrMode_t mode, 
                   output logic [1:0] mux1_sel,
                   output logic op_enb
@@ -71,7 +72,11 @@ module ControlFSM import quickQ_pkg::*;  (
                               mode = VR_DEF; // 3'b000;
                               we = 0;
                               if (enq) next = FILL_ENQ;
-                              else if (deq) next = DEQ_LOCATE;
+                              else if (deq) begin
+                                cnt_rst = 0;
+                                array_cnt_ld = 1; 
+                                next = DEQ_LOCATE;
+                              end
                               else next = IDLE;
                             end
                             
@@ -173,6 +178,7 @@ module ControlFSM import quickQ_pkg::*;  (
                                  end
                                else next = ENQ_BUFFER;
                             end    
+                            
                         ADDR_INC:
                             /* If the node is full, send a signal to look at next node */
                             begin
@@ -181,31 +187,31 @@ module ControlFSM import quickQ_pkg::*;  (
                                 array_cnt_clr = 1;
                                 next = IDLE;
                             end
-                            
-                        DEQ_LOCATE:
-                            /* Find ending position of the queue */
+                        DEQ_LOCATE: 
                             begin
-                                cnt_rst = 0;
-                                array_cnt_ld = 1;
-                                next =  FILL_DEQ;
-                            end    
-                            
+                                op_enb = 1;
+                                array_cnt_ld = 0;
+                                //array_cnt_decr = 1;
+                                mode = VR_DEQ_RD;
+                                next = FILL_DEQ;
+                            end 
+                               
                         FILL_DEQ:
                             /* Fill register with FFFFFFFF to empty the spot*/
                             begin
-                                op_enb = 1;
-                                fill_rst = 0;
-                                fill_cnt = 1;
-                                mux1_sel = 2'b10;
-                                regenb = 1;
-                                
-                                if (cnt_done) next = DEQ_SWAP;
-                                else next = FILL_DEQ; 
+                                //op_enb = 1;
+                                //array_cnt_ld = 0;
+                                array_cnt_decr = 1;
+                                //mode = VR_DEQ_RD;
+                                next = DEQ_SWAP;
                             end
                         
                         DEQ_SWAP:
                             /* Swap register value with that from BRAM */
                             begin
+                                op_enb = 0;
+                                array_cnt_decr = 0;
+                                array_cnt_two = 1;
                                 mode = VR_DEQ_SWAP; //2'b010;
                                 we = 1;
                                 prev_node = 0;
@@ -215,9 +221,11 @@ module ControlFSM import quickQ_pkg::*;  (
                         CNT_DEC:
                             /* Decrease count size to look at preceding node */
                             begin
+                                mode = VR_DEQ_RD;
+                                array_cnt_two = 0;
                                 array_cnt_decr = 1;
-                                mux1_sel = 2'b01;
-                                regenb = 1;
+                                //mux1_sel = 2'b01;
+                                //regenb = 1;
                                 
                                 if (!empty && !done) next = DEQ_SWAP;
                                 else if (empty) next = ADDR_DEC;
