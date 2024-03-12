@@ -74,7 +74,6 @@ module ControlFSM import quickQ_pkg::*;  (
                               if (enq) next = FILL_ENQ;
                               else if (deq) begin
                                 cnt_rst = 0;
-                                array_cnt_ld = 1; 
                                 next = DEQ_LOCATE;
                               end
                               else next = IDLE;
@@ -187,16 +186,17 @@ module ControlFSM import quickQ_pkg::*;  (
                                 array_cnt_clr = 1;
                                 next = IDLE;
                             end
+                            
                         DEQ_LOCATE: 
                             begin
                                 op_enb = 1;
-                                array_cnt_ld = 0;
+                                array_cnt_ld = 1;
                                 //array_cnt_decr = 1;
-                                mode = VR_DEQ_RD;
-                                next = FILL_DEQ;
+                                //mode = VR_DEQ_RD;
+                                next = DEQ_SWAP;
                             end 
                                
-                        FILL_DEQ:
+                        FILL_DEQ: // DELETE ME???
                             /* Fill register with FFFFFFFF to empty the spot*/
                             begin
                                 //op_enb = 1;
@@ -210,15 +210,17 @@ module ControlFSM import quickQ_pkg::*;  (
                             /* Swap register value with that from BRAM */
                             begin
                                 op_enb = 0;
-                                array_cnt_decr = 0;
-                                array_cnt_two = 1;
+                                array_cnt_ld = 0;
+                                array_cnt_inc = 1;
                                 mode = VR_DEQ_SWAP; //2'b010;
                                 we = 1;
                                 prev_node = 0;
-                                next = CNT_DEC;
+                                // transition logic
+                                if (array_cnt_out >= last_addr) next = ADDR_DEC;
+                                else next = DEQ_SWAP;
                             end
                             
-                        CNT_DEC:
+                        CNT_DEC: // delete???
                             /* Decrease count size to look at preceding node */
                             begin
                                 mode = VR_DEQ_RD;
@@ -236,6 +238,7 @@ module ControlFSM import quickQ_pkg::*;  (
                         ADDR_DEC:
                             /* When empty, signal to look at the next node */
                             begin
+                                array_cnt_inc = 0;
                                 array_cnt_clr = 1;
                                 next = IDLE;
                             end

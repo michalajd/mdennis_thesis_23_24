@@ -45,9 +45,9 @@ module coreTest;
     
     /** Test 1: Dequeue while empty */
     deq = 1;
-    repeat(5) @(posedge clk) #1;
-    deq = 0;
     repeat(2) @(posedge clk) #1;
+    deq = 0;
+    repeat(5) @(posedge clk) #1;
     
     /** Test 2: Enqueue while empty */
     deq = 0;

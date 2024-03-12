@@ -80,10 +80,10 @@ module valueRouter import quickQ_pkg::*; (
                     end
                     
              VR_DEQ_SWAP: begin /** CASE 3: Swap out values in deq */
-                        array_cnt_out = array_cnt_in;
+                        array_cnt_out = array_cnt_in - 1;
                         full = 1'b0;
                         if (array_cnt_in == '0) data_lt_o = bram_out;
-                        bram_insert = next_bram;
+                        bram_insert = bram_out;
                      end
                      
              VR_LAST: begin /** CASE 4: Change the "last" index of the array */

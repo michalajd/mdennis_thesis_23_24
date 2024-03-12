@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="coreTest_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="coreTest" />
+            <top_module name="glbl" />
+            <top_module name="quickQ_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="1,426.320 ns"></ZoomStartTime>
+      <ZoomEndTime time="2,036.321 ns"></ZoomEndTime>
+      <Cursor1Time time="1,983.306 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="276"></NameColumnWidth>
+      <ValueColumnWidth column_width="98"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="12" />
+   <wvobject type="logic" fp_name="/coreTest/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/coreTest/rst">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/coreTest/enq">
+      <obj_property name="ElementShortName">enq</obj_property>
+      <obj_property name="ObjectShortName">enq</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/coreTest/deq">
+      <obj_property name="ElementShortName">deq</obj_property>
+      <obj_property name="ObjectShortName">deq</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/coreTest/array_size">
+      <obj_property name="ElementShortName">array_size[31:0]</obj_property>
+      <obj_property name="ObjectShortName">array_size[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/coreTest/DUV/fsmDUV/state">
+      <obj_property name="ElementShortName">state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/coreTest/DUV/fsmDUV/next">
+      <obj_property name="ElementShortName">next[3:0]</obj_property>
+      <obj_property name="ObjectShortName">next[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/coreTest/DUV/pointDUV/array_cnt_out">
+      <obj_property name="ElementShortName">array_cnt_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">array_cnt_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/coreTest/DUV/pointDUV/pointer_next">
+      <obj_property name="ElementShortName">pointer_next[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pointer_next[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/coreTest/DUV/vrDUV/bram_out">
+      <obj_property name="ElementShortName">bram_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">bram_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/coreTest/DUV/vrDUV/bram_insert">
+      <obj_property name="ElementShortName">bram_insert[31:0]</obj_property>
+      <obj_property name="ObjectShortName">bram_insert[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/coreTest/DUV/bramDUV/ram_array">
+      <obj_property name="ElementShortName">ram_array[3:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">ram_array[3:0][31:0]</obj_property>
+   </wvobject>
+</wave_config>
