@@ -36,7 +36,7 @@ module valueRouter import quickQ_pkg::*;
     always_comb
         begin
             bram_insert = '0;
-            tod_register = '0
+            tod_register = '0;
             data_lt_o = '0;
             data_rt_o = '0;
             swap = 0;
