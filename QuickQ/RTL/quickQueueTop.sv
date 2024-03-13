@@ -31,34 +31,38 @@ module quickQueueTop (
     import quickQ_pkg::*;
     
     /** Assigning constants */
-    logic empty_val = '1; // is this allowed?
+    logic empty_val = '1;
     logic error_val = '0;
+    parameter W = 32;
+    parameter D = 4;
+    parameter DW = $clog2(D);
     
     /** Internal logic */
-    logic [31:0] toRegister, data_lt;
+    logic [W-1:0] toRegister, data_lt;
     
     /** FSM logic */
-    logic we, regenb, next_node, prev_node, array_cnt_ld, array_cnt_clr, array_cnt_decr, array_cnt_inc, array_cnt_two, bram_sel, fill_rst;
+    logic we, regenb, next_node, prev_node, array_cnt_ld, array_cnt_clr, array_cnt_deq, array_cnt_inc, bram_sel, fill_rst;
     logic fill_cnt, cnt_done, cnt_rst, op_enb;
     vrMode_t mode;
     logic [1:0] mux1_sel;
     
     /** Value Router logic */
-    logic [31:0] to_register, last_addr, bram_insert, array_cnt_out, data_rt;
+    logic [W-1:0] to_register, last_addr, bram_insert, array_cnt_out, data_rt;
+    logic [DW-1:0] pointer_prev;
     logic swap, full, empty, done, last_done;
     
     /** Register logic */
-    logic [31:0] new_last, array_cnt_in, pointer_next, reg_out;
+    logic [DW-1:0] new_last, array_cnt_in, pointer_next, reg_out;
     
     /** BRAM logic */
-    logic [31:0] bram_out, mux3_BRAM;
+    logic [W-1:0] bram_out, mux3_BRAM;
     
     /** Last Operation Encoder logic */
     logic [1:0] lastop;
     
     /** FSM declaration */
-    ControlFSM fsmDUV (.clk, .rst, .enq, .deq, .swap, .full, .empty, .done, .cnt_done, .last_addr, .array_cnt_out, .we, .regenb, .next_node, .prev_node, 
-                       .array_cnt_ld, .array_cnt_clr, .array_cnt_decr, .array_cnt_inc, .array_cnt_two, .bram_sel, .fill_cnt, .fill_rst, .cnt_rst, 
+    ControlFSM #(.W(32), .D(4)) fsmDUV (.clk, .rst, .enq, .deq, .swap, .full, .empty, .done, .cnt_done, .last_addr, .array_cnt_out, .we, .regenb, .next_node, .prev_node, 
+                       .array_cnt_ld, .array_cnt_clr, .array_cnt_deq, .array_cnt_inc, .bram_sel, .fill_cnt, .fill_rst, .cnt_rst, 
                        .mode, .mux1_sel, .op_enb);
                        
     /** Input multiplexer for left-hand data */
@@ -68,19 +72,19 @@ module quickQueueTop (
     dffe #(.W(32)) regDUV (.clk, .d(toRegister), .enb(regenb), .q(reg_out));
     
     /** Counter for the pointer */
-    array_pointer pointDUV (.clk, .rst, .cnt_rst, .array_cnt_ld, .array_cnt_clr, .array_cnt_decr, .array_cnt_inc, .array_cnt_out, .array_cnt_two,
-                            .last_index(last_addr), .pointer_next);
+    array_pointer #(.D(4)) pointDUV (.clk, .rst, .cnt_rst, .array_cnt_ld, .array_cnt_clr, .array_cnt_deq, .array_cnt_inc, .array_cnt_out,
+                            .last_index(last_addr), .pointer_next, .pointer_prev);
                      
     /** BRAM declaration */
     mem2p_sw_sr #(.W(32), .D(4)) bramDUV (.clk, .we1(we), .addr1(array_cnt_out), .din1(mux3_BRAM), .addr2(pointer_next), .dout2(bram_out));
 
     /** Value Router instantiation */
-    valueRouter vrDUV (.bram_out(bram_out), .reg_out, .new_last, .mode, .enq, .deq, .array_size, .array_cnt_in(pointer_next), .lastop,
-                       .bram_insert, .to_register, .last_addr, .data_lt_o, .array_cnt_out, .data_rt_o(data_rt), 
+    valueRouter #(.W(32), .D(4)) vrDUV (.bram_out(bram_out), .reg_out, .new_last, .mode, .enq, .deq, .array_size, .array_cnt_in(pointer_next),
+                       .pointer_prev, .lastop, .bram_insert, .to_register, .data_lt_o, .data_rt_o(data_rt), .last_addr, .array_cnt_out,
                        .swap, .full, .empty, .done, .last_done);
               
     /** Last value register instantiation */                   
-    last_cnt lastDUV ( .clk, .rst, .last_addr, .lastop, .last_done, .new_last);
+    last_cnt #(.W(32), .D(4)) lastDUV ( .clk, .rst, .last_addr, .lastop, .last_done, .new_last);
     
     /** 2-port multiplexer instantiations */
     mux2 #(.W(32)) mux2DUV(.d0(data_rt), .d1(32'bZ), .sel(next_node), .y(data_rt_o));
@@ -92,47 +96,5 @@ module quickQueueTop (
     
     /** Last Operation Encoder instantiation */
     lastop_enc lastopDUV (.clk, .rst, .enb(op_enb), .enq, .deq, .lastop);
-    
-//    /** FSM Logic */
-//    logic enq, deq, done, result, full, swap_done, empty, we, regenb, regsel, countenb, rd_addr, bram_sel, re, next_node;
-//    logic [1:0]  mode, mux1_sel;
-//    logic [31:0] rd_addr, wr_addr;
-    
-//    /** Value Router Logic */
-//    logic [31:0] bram_out, reg_out, bram_insert, vr_to_reg, donereg_to_vr;
-//    logic [7:0] array_cnt_in, array_cnt_out;
-    
-//    /** Internal wires */
-//    logic [31:0] toRegister;
-    
-//    /** Assigning constants for input multiplexer */
-//    logic [31:0] empty_val = 32'hFFFFFFFF;
-//    logic [31:0] error_val = 32'b0;
-    
-//    /** Control logic initialization */
-//    ControlFSM controlDUV(.clk, .rst(reset_i), .enq, .deq, .done, .result, .full, .swap_done, .empty,
-//                          .we, .regenb, .regsel, .countenb, .next_node, .bram_sel, .rd_addr, .wr_addr, .mode, .mux1_sel);
-    
-//    /** Input multiplexer for left-hand data */
-//    mux4 #(.W(32)) mux1DUV(.d0(data_lt_i), .d1(vr_to_reg), .d2(empty_val), .d3(error_val), .sel(mux1_sel), .y(toRegister));
-    
-//    /** Temp register declaration */
-//    dffe regDUV (.clk, .d(toRegister), .enb(regenb), .q(reg_out));
-    
-//    /** Register for last value declaration */
-//    dffe lastDUV (.clk, .d(toRegister), .enb(done), .q(donereg_to_vr));
-    
-//    /** Value router declaration */
-//    valueRouter vrDUV(.bram_out, .reg_out, .mode, .array_size, .array_cnt_in, 
-//                      .bram_insert, .to_register(vr_to_reg), .array_cnt_out, .result, .full, .empty, .done);
-                      
-//    /** BRAM declaration */
-//    mem2p_sw_sr BRAMDUV (.clk, .we1(we), .addr1(write_addr), .din1(bram_insert), .addr2(rd_addr), .dout2(bram_out));
-    
-//    /** Output multiplexer for right-hand data */
-//    mux2 #(.W(32)) mux2DUV(.d0(reg_out), .d1(32'bZ), .sel(next_node), .y(data_rt_o));
-    
-//    /** Multiplexer for controlling BRAM inputs */
-//    mux2 #(.W(32)) mux3DUV(.d0(bram_insert), .d1(data_rt_i), .sel(bram_sel), .y(bram_insert));
     
 endmodule

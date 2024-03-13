@@ -21,10 +21,10 @@
 //
 // Added mode enumerated type JN 2/8/2024
 
-module ControlFSM import quickQ_pkg::*;  (
+module ControlFSM import quickQ_pkg::*;  #(parameter W=8, D=128, localparam DW=$clog2(D)) (
                   input logic clk, rst, enq, deq, swap, full, empty, done, cnt_done,
-                  input logic [31:0] last_addr, array_cnt_out,
-                  output logic we, regenb, next_node, prev_node, array_cnt_ld, array_cnt_clr, array_cnt_decr, array_cnt_inc, array_cnt_two,
+                  input logic [DW-1:0] last_addr, array_cnt_out,
+                  output logic we, regenb, next_node, prev_node, array_cnt_ld, array_cnt_clr, array_cnt_deq, array_cnt_inc,
                   output logic bram_sel, fill_cnt, fill_rst, cnt_rst,
                   vrMode_t mode, 
                   output logic [1:0] mux1_sel,
@@ -64,7 +64,7 @@ module ControlFSM import quickQ_pkg::*;  (
                             begin
                               array_cnt_ld = 0;
                               array_cnt_clr = 0;
-                              array_cnt_decr = 0;
+                              array_cnt_deq = 0;
                               array_cnt_inc = 0;
                               op_enb = 0;
                               fill_rst = 1;
@@ -201,7 +201,7 @@ module ControlFSM import quickQ_pkg::*;  (
                             begin
                                 //op_enb = 1;
                                 //array_cnt_ld = 0;
-                                array_cnt_decr = 1;
+                                array_cnt_deq = 1;
                                 //mode = VR_DEQ_RD;
                                 next = DEQ_SWAP;
                             end
@@ -216,7 +216,8 @@ module ControlFSM import quickQ_pkg::*;  (
                                 we = 1;
                                 prev_node = 0;
                                 // transition logic
-                                if (array_cnt_out >= last_addr) next = ADDR_DEC;
+                                if (array_cnt_out >= last_addr) next = IDLE;
+                                else if (empty) next = ADDR_DEC;
                                 else next = DEQ_SWAP;
                             end
                             
@@ -224,8 +225,7 @@ module ControlFSM import quickQ_pkg::*;  (
                             /* Decrease count size to look at preceding node */
                             begin
                                 mode = VR_DEQ_RD;
-                                array_cnt_two = 0;
-                                array_cnt_decr = 1;
+                                array_cnt_deq = 1;
                                 //mux1_sel = 2'b01;
                                 //regenb = 1;
                                 

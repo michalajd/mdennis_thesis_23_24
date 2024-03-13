@@ -20,12 +20,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module last_cnt import quickQ_pkg::*;
+module last_cnt import quickQ_pkg::*; #(parameter W=8, D=128, localparam DW=$clog2(D))
                (input logic clk, rst,
-                input logic [31:0] last_addr,
+                input logic [DW-1:0] last_addr,
                 input logic [1:0] lastop, 
                 input logic last_done,
-                output logic [31:0] new_last);
+                output logic [DW-1:0] new_last);
                 
     always_ff @ (posedge clk)
         begin

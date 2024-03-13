@@ -18,14 +18,15 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-module valueRouter import quickQ_pkg::*; (
-                   input logic [31:0] bram_out, reg_out, new_last,
+module valueRouter import quickQ_pkg::*; 
+       #(parameter W=8, D=128, localparam DW=$clog2(D)) (
+                   input logic [W-1:0] bram_out, reg_out, new_last,
                    input vrMode_t mode,
                    input logic enq, deq,
-                   input logic [31:0] array_size, array_cnt_in,
+                   input logic [DW-1:0] array_size, array_cnt_in, pointer_prev,
                    input logic [1:0] lastop,
-                   output logic [31:0] bram_insert, to_register, last_addr,
-                   output logic [31:0] data_lt_o, array_cnt_out, data_rt_o,
+                   output logic [W-1:0] bram_insert, to_register, data_lt_o, data_rt_o,
+                   output logic [DW-1:0]last_addr, array_cnt_out,
                    output logic swap, full, empty, done, last_done);
        
     /** Internal logic */
@@ -80,7 +81,7 @@ module valueRouter import quickQ_pkg::*; (
                     end
                     
              VR_DEQ_SWAP: begin /** CASE 3: Swap out values in deq */
-                        array_cnt_out = array_cnt_in - 1;
+                        array_cnt_out = pointer_prev;
                         full = 1'b0;
                         if (array_cnt_in == '0) data_lt_o = bram_out;
                         bram_insert = bram_out;

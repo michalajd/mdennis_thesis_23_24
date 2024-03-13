@@ -40,7 +40,7 @@ module coreTest;
     /** Setup: reset */
     array_size = 31'd3;
     rst = 1;
-    @(posedge clk) #1;
+    repeat(2) @(posedge clk) #1;
     rst = 0;
     
     /** Test 1: Dequeue while empty */

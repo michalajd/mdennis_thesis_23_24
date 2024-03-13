@@ -12,15 +12,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1,426.320 ns"></ZoomStartTime>
-      <ZoomEndTime time="2,036.321 ns"></ZoomEndTime>
-      <Cursor1Time time="1,983.306 ns"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="240.001 ns"></ZoomEndTime>
+      <Cursor1Time time="56.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="276"></NameColumnWidth>
-      <ValueColumnWidth column_width="98"></ValueColumnWidth>
+      <ValueColumnWidth column_width="94"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="12" />
+   <WVObjectSize size="20" />
    <wvobject type="logic" fp_name="/coreTest/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -50,12 +50,12 @@
       <obj_property name="ObjectShortName">next[3:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/coreTest/DUV/pointDUV/array_cnt_out">
-      <obj_property name="ElementShortName">array_cnt_out[31:0]</obj_property>
-      <obj_property name="ObjectShortName">array_cnt_out[31:0]</obj_property>
+      <obj_property name="ElementShortName">array_cnt_out[1:0]</obj_property>
+      <obj_property name="ObjectShortName">array_cnt_out[1:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/coreTest/DUV/pointDUV/pointer_next">
-      <obj_property name="ElementShortName">pointer_next[31:0]</obj_property>
-      <obj_property name="ObjectShortName">pointer_next[31:0]</obj_property>
+      <obj_property name="ElementShortName">pointer_next[1:0]</obj_property>
+      <obj_property name="ObjectShortName">pointer_next[1:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/coreTest/DUV/vrDUV/bram_out">
       <obj_property name="ElementShortName">bram_out[31:0]</obj_property>
@@ -68,5 +68,37 @@
    <wvobject type="array" fp_name="/coreTest/DUV/bramDUV/ram_array">
       <obj_property name="ElementShortName">ram_array[3:0][31:0]</obj_property>
       <obj_property name="ObjectShortName">ram_array[3:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/coreTest/DUV/empty">
+      <obj_property name="ElementShortName">empty</obj_property>
+      <obj_property name="ObjectShortName">empty</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/coreTest/data_rt_o">
+      <obj_property name="ElementShortName">data_rt_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_rt_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/coreTest/DUV/fsmDUV/full">
+      <obj_property name="ElementShortName">full</obj_property>
+      <obj_property name="ObjectShortName">full</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/coreTest/DUV/vrDUV/last_addr">
+      <obj_property name="ElementShortName">last_addr[1:0]</obj_property>
+      <obj_property name="ObjectShortName">last_addr[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/coreTest/DUV/vrDUV/done">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/coreTest/DUV/vrDUV/mode">
+      <obj_property name="ElementShortName">mode[2:0]</obj_property>
+      <obj_property name="ObjectShortName">mode[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/coreTest/DUV/lastDUV/new_last">
+      <obj_property name="ElementShortName">new_last[1:0]</obj_property>
+      <obj_property name="ObjectShortName">new_last[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/coreTest/data_lt_i">
+      <obj_property name="ElementShortName">data_lt_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_lt_i[31:0]</obj_property>
    </wvobject>
 </wave_config>
