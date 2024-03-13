@@ -27,13 +27,25 @@ module valueRouter import quickQ_pkg::*;
                    input logic [1:0] lastop,
                    output logic [W-1:0] bram_insert, to_register, data_lt_o, data_rt_o,
                    output logic [DW-1:0]last_addr, array_cnt_out,
-                   output logic swap, full, empty, done, last_done);
+                   output logic swap, set_full, clr_full, set_empty, clr_empty, done, last_done);
        
     /** Internal logic */
    logic [31:0] size_before_deq; /** Size before dequeue logic is finished */
    logic [31:0] next_bram; /** SHOULD BE A REG SIGNAL: Value in the "i+1" of the BRAM */
            
     always_comb
+        begin
+            bram_insert = '0;
+            tod_register = '0
+            data_lt_o = '0;
+            data_rt_o = '0;
+            swap = 0;
+            set_full = 0;
+            clr_full = 0;
+            set_empty = 0;
+            clr_empty = 0;
+            done = 0;
+            last_done = 0;
         case (mode)
             VR_DEF: begin /** CASE 1: Default */
                         last_addr = new_last;
@@ -138,7 +150,7 @@ module valueRouter import quickQ_pkg::*;
                    end
                       
         endcase
-
+        end
 endmodule
 
 /**module valueRouter(input logic clk, 
