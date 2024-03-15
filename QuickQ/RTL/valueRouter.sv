@@ -22,12 +22,12 @@ module valueRouter import quickQ_pkg::*;
        #(parameter W=8, D=128, localparam DW=$clog2(D)) (
                    input logic [W-1:0] bram_out, reg_out, new_last,
                    input vrMode_t mode,
-                   input logic enq, deq,
+                   input logic enq, deq, swap,
                    input logic [DW-1:0] array_size, array_cnt_in, pointer_prev,
                    input logic [1:0] lastop,
                    output logic [W-1:0] bram_insert, to_register, data_lt_o, data_rt_o,
                    output logic [DW-1:0]last_addr, array_cnt_out,
-                   output logic swap, set_full, clr_full, set_empty, clr_empty, done, last_done);
+                   output logic set_swap, clr_swap, set_full, clr_full, set_empty, clr_empty, set_done, clr_done, last_done);
        
     /** Internal logic */
    logic [31:0] size_before_deq; /** Size before dequeue logic is finished */
@@ -36,35 +36,37 @@ module valueRouter import quickQ_pkg::*;
     always_comb
         begin
             bram_insert = '0;
-            tod_register = '0;
+            to_register = '0;
             data_lt_o = '0;
             data_rt_o = '0;
-            swap = 0;
+            set_swap = 0;
+            clr_swap = 0;
             set_full = 0;
             clr_full = 0;
             set_empty = 0;
             clr_empty = 0;
-            done = 0;
+            set_done = 0;
+            clr_done = 0;
             last_done = 0;
         case (mode)
             VR_DEF: begin /** CASE 1: Default */
                         last_addr = new_last;
                         last_done = 0;
-                        full = 0;
-                        swap = 0;
+                        clr_full = 1;
+                        clr_swap = 1;
                         if (new_last == 0) begin
-                            empty = 1;
+                            set_empty = 1;
                             last_addr = 0;
                         end
-                        else if (new_last == array_size + 1) full = 1;
+                        else if (new_last == array_size + 1) set_full = 1;
                         else begin
-                            empty = 0;
-                            full = 0;
+                            //clr_empty = 1;
+                            //clr_full = 1;
                         end
                         array_cnt_out = 0;
                         bram_insert = '0;
                         to_register = '0;
-                        done = 0;
+                        clr_done = 1;
                         array_cnt_out = array_cnt_in;
                    end
                    
@@ -72,36 +74,38 @@ module valueRouter import quickQ_pkg::*;
                         /** Compare register and BRAM data */
                         last_done = 0;
                         array_cnt_out = array_cnt_in;
-                        done = 0;
-                        last_done = 0;
-                        if (reg_out === 'x) done = 1;
-                        if (reg_out < bram_out || last_addr == 0 || bram_out === 'x) swap = 1'b1; // register value is smaller OR equal to the current BRAM value
-                        else swap = 1'b0;                     // register value is smaller than the current BRAM value
+                        clr_done = 1;
+                        if (reg_out === 'x) begin 
+                            set_done = 1;
+                            clr_done = 0;
+                        end
+                        if (reg_out < bram_out || last_addr == 0 || bram_out === 'x) set_swap = 1; // register value is smaller OR equal to the current BRAM value
+                        //else clr_swap = 1;                     // register value is smaller than the current BRAM value
                         
                         /** Route data to get into the queue / BRAM */
                         /** If result == 1, the register value is greater than the BRAM, so a swap occurs! */
-                        if (swap == 1) begin 
-                            bram_insert = reg_out;
-                            /*if (!done)*/ to_register = bram_out;
-                            /*else to_register = 'x;*/
-                            if (empty == 1) empty = 0;
-                        end
-                        else begin 
-                            bram_insert = bram_out;
-                            to_register = reg_out;
-                        end  
+//                        if (swap) begin 
+//                            bram_insert = reg_out;
+//                            /*if (!done)*/ to_register = bram_out;
+//                            /*else to_register = 'x;*/
+//                            //if (empty == 1) empty = 0;
+//                        end 
+//                        else begin 
+//                            bram_insert = bram_out;
+//                            to_register = reg_out;
+//                        end  
                     end
                     
              VR_DEQ_SWAP: begin /** CASE 3: Swap out values in deq */
                         array_cnt_out = pointer_prev;
-                        full = 1'b0;
+                        clr_full = 1;
                         if (array_cnt_in == '0) data_lt_o = bram_out;
                         bram_insert = bram_out;
                      end
                      
              VR_LAST: begin /** CASE 4: Change the "last" index of the array */
                         if (new_last == 0 && lastop == LO_DEQ) begin
-                            empty = 1;
+                            set_empty = 1;
                             data_lt_o = reg_out;
                         end
                         else if (new_last > array_size) begin
@@ -109,8 +113,8 @@ module valueRouter import quickQ_pkg::*;
                         end
                         else if (lastop == LO_ENQ) begin
                             last_done = 1;
-                            if (new_last == array_size) full = 1;
-                            else full = 0;
+                            if (new_last == array_size) set_full = 1;
+                            else clr_full = 1;
                         end
                         else last_done = 0;
                     last_addr = new_last;
@@ -119,11 +123,21 @@ module valueRouter import quickQ_pkg::*;
                     
             VR_EMPTY: begin  /** Empty case */
                         bram_insert = reg_out;
-                        done = 1;
+                        set_done = 1;
+                        clr_empty = 1;
                         //last_done = 1;
                     end
                     
             VR_CNT: begin
+                        clr_swap = 1;
+                        if (swap) begin 
+                            bram_insert = reg_out;
+                            to_register = bram_out;
+                        end 
+                        else begin 
+                            bram_insert = bram_out;
+                            to_register = reg_out;
+                        end  
                        array_cnt_out = array_cnt_in;
                        //bram_insert = bram_out;
                        //to_register = reg_out; 
@@ -131,21 +145,25 @@ module valueRouter import quickQ_pkg::*;
                  
             VR_DEQ_RD: begin
                         array_cnt_out = array_cnt_in;
-                        next_bram = bram_out; // SHOULD BE A REG SIGNAL
+                        //next_bram = bram_out; // SHOULD BE A REG SIGNAL
             
                          end
                          
             default: begin /** CASE 1: Default */
-                        full = 0;
-                        swap = 0;
-                        empty = 1;
+                        set_full = 0;
+                        clr_full = 0;
+                        set_swap = 0;
+                        clr_swap = 0;
+                        set_empty = 1;
+                        clr_empty = 0;
                         array_cnt_out = 0;
                         last_addr = 0;
                         bram_insert = '0;
                         data_lt_o = '0;
                         data_rt_o = '0;
                         to_register = '0;
-                        done = 0;
+                        set_done = 0;
+                        clr_done = 0;
                         last_done = 0;
                    end
                       

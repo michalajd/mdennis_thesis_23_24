@@ -82,6 +82,7 @@ module ControlFSM import quickQ_pkg::*;  #(parameter W=8, D=128, localparam DW=$
                         FILL_ENQ:
                             /* Temp register (at head) filled with value from input */
                             begin
+                               cnt_rst = 0;
                                op_enb = 1;
                                fill_rst = 0;
                                fill_cnt = 1;
@@ -91,7 +92,10 @@ module ControlFSM import quickQ_pkg::*;  #(parameter W=8, D=128, localparam DW=$
                                
                                if (cnt_done) begin
                                     if (empty) next = EMPTY_ENQ;
-                                    else next = COMPARE_ENQ;
+                                    else begin 
+                                        mode = VR_ENQ_COMPARE;
+                                        next = COMPARE_ENQ;
+                                    end
                                end
                                else next = FILL_ENQ;
                             end
@@ -99,6 +103,7 @@ module ControlFSM import quickQ_pkg::*;  #(parameter W=8, D=128, localparam DW=$
                         EMPTY_ENQ:
                             /* Special case for when we add a value to an empty queue */
                             begin
+                                array_cnt_clr = 0;
                                 op_enb = 0;
                                 fill_cnt = 0;
                                 regenb = 1;
@@ -116,28 +121,29 @@ module ControlFSM import quickQ_pkg::*;  #(parameter W=8, D=128, localparam DW=$
                                 array_cnt_inc = 0;
                                 fill_cnt = 0;
                                 cnt_rst = 0;
-                                if (cnt_done) begin
+                                //if (cnt_done) begin
                                     if (done) begin 
-                                        mode = VR_CNT;
+                                        mode = VR_DEQ_RD; // DO NOTHING
                                         next = IDLE;
                                     end
-                                    else begin
-                                    mode = VR_ENQ_COMPARE; //3'b001;
+                                    //else begin
+                                    //mode = VR_ENQ_COMPARE; //3'b001;
                                     
-                                    if (swap) begin
-                                        mode = VR_CNT; //3'b101;
+                                    else if (swap) begin
+                                        //mode = VR_CNT; //3'b101;
                                         next = SWAP_ENQ;
                                     end
                                     else if (!swap) next = CNT_INC;
                                     else next = COMPARE_ENQ; // should not happen
-                                    end
-                                end
-                                else next = COMPARE_ENQ;
+                                    //end
+                                //end
+                                //else next = COMPARE_ENQ;
                             end
                         
                         SWAP_ENQ:
                             /* Value in register swapped with value in QuickQ index */
                             begin
+                                mode = VR_CNT; //3'b101;
                                 we = 1;
                                 next = CNT_INC;
                             end
@@ -147,16 +153,11 @@ module ControlFSM import quickQ_pkg::*;  #(parameter W=8, D=128, localparam DW=$
                             begin
                                 we = 0;
                                 array_cnt_inc = 1;
-                                /*if (done) begin
-                                    mode = VR_LAST; // 3'b011;
-                                    next = COMPARE_ENQ;
-                                end 
-                                
-                                else */ if (full && (last_addr == array_cnt_out)) next = ADDR_INC;
+                                if (full && (last_addr == array_cnt_out)) next = ADDR_INC;
                                 else begin 
                                     mux1_sel = 2'b01;
                                     fill_rst = 1;
-                                    mode = VR_CNT; //3'b101;
+                                    //mode = VR_CNT; //3'b101;
                                     next = ENQ_BUFFER;
                                 end
                             end

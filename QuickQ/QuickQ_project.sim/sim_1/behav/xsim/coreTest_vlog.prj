@@ -11,6 +11,8 @@ sv xil_defaultlib  \
 "../../../../RTL/mux2.sv" \
 "../../../../RTL/mux4.sv" \
 "../../../../RTL/quickQueueTop.sv" \
+"../../../../RTL/reg_sr.sv" \
+"../../../../RTL/reg_sr_empty.sv" \
 "../../../../RTL/valueRouter.sv" \
 "../../../../Simulation/coreTest.sv" \
 

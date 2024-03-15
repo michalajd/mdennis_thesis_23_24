@@ -51,8 +51,11 @@ module quickQueueTop (
     logic [DW-1:0] pointer_prev;
     logic swap, full, empty, done, last_done;
     
+    /** SRFF logic */
+    logic set_full, clr_full, set_empty, clr_empty, set_done, clr_done, set_swap, clr_swap;
+    
     /** Register logic */
-    logic [DW-1:0] new_last, array_cnt_in, pointer_next, reg_out;
+    logic [W-1:0] new_last, array_cnt_in, pointer_next, reg_out;
     
     /** BRAM logic */
     logic [W-1:0] bram_out, mux3_BRAM;
@@ -79,9 +82,9 @@ module quickQueueTop (
     mem2p_sw_sr #(.W(32), .D(4)) bramDUV (.clk, .we1(we), .addr1(array_cnt_out), .din1(mux3_BRAM), .addr2(pointer_next), .dout2(bram_out));
 
     /** Value Router instantiation */
-    valueRouter #(.W(32), .D(4)) vrDUV (.bram_out(bram_out), .reg_out, .new_last, .mode, .enq, .deq, .array_size, .array_cnt_in(pointer_next),
+    valueRouter #(.W(32), .D(4)) vrDUV (.bram_out(bram_out), .reg_out, .new_last, .mode, .enq, .deq, .swap, .array_size, .array_cnt_in(pointer_next),
                        .pointer_prev, .lastop, .bram_insert, .to_register, .data_lt_o, .data_rt_o(data_rt), .last_addr, .array_cnt_out,
-                       .swap, .full, .empty, .done, .last_done);
+                       .set_swap, .clr_swap, .set_full, .clr_full, .set_empty, .clr_empty, .set_done, .clr_done, .last_done);
               
     /** Last value register instantiation */                   
     last_cnt #(.W(32), .D(4)) lastDUV ( .clk, .rst, .last_addr, .lastop, .last_done, .new_last);
@@ -96,5 +99,11 @@ module quickQueueTop (
     
     /** Last Operation Encoder instantiation */
     lastop_enc lastopDUV (.clk, .rst, .enb(op_enb), .enq, .deq, .lastop);
+    
+    /** SRFFs for remembering full/empty values instantiation */
+    reg_sr fullregDUV (.clk, .rst, .s(set_full), .r(clr_full), .q(full));
+    reg_sr_empty emptyregDUV (.clk, .rst, .s(set_empty), .r(clr_empty), .q(empty));
+    reg_sr doneregDUV (.clk, .rst, .s(set_done), .r(clr_done), .q(done));
+    reg_sr swapregDUV (.clk, .rst, .s(set_swap), .r(clr_swap), .q(swap));
     
 endmodule
