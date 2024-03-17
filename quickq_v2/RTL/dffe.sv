@@ -8,9 +8,13 @@
 //-----------------------------------------------------------------------------
 // Description   : d flip-flop with enable
 //-----------------------------------------------------------------------------
+// Modification history:
+// 17.03.2024 : added parameter MD
+//-----------------------------------------------------------------------------
 
-module dffe (input logic clk, d, enb,
-             output logic q);
+module dffe #(parameter W=32) (input logic clk, enb,
+             input logic [W-1:0] d,
+             output logic [W-1:0] q);
 
     always_ff @(posedge clk)
         if (enb) q <= d;
