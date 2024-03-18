@@ -1,0 +1,26 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/adr_cnt.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adr_cnt
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/adr_inc.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adr_inc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/cmp_mag.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cmp_mag
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/dffre.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dffre
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem2p_sw_sr
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mux2.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mux4.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_control.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module qq_control
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_fsm.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module qq_fsm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_node.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module qq_node
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/reg_sr.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_sr
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/reg_sr_empty.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_sr_empty
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/sim/quickq_vs_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module quickq_v2_tb

@@ -1,0 +1,26 @@
+Vivado Simulator v2023.1.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /home/user/Xylinx/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot quickq_v2_tb_behav xil_defaultlib.quickq_v2_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mux2
+Compiling module xil_defaultlib.dffre
+Compiling module xil_defaultlib.mem2p_sw_sr(W=32,D=4)
+Compiling module xil_defaultlib.cmp_mag(W=32)
+Compiling module xil_defaultlib.mux4
+Compiling module xil_defaultlib.qq_fsm_default
+Compiling module xil_defaultlib.adr_cnt_default
+Compiling module xil_defaultlib.adr_inc_default
+Compiling module xil_defaultlib.reg_sr_empty
+Compiling module xil_defaultlib.reg_sr
+Compiling module xil_defaultlib.qq_control(W=32)
+Compiling module xil_defaultlib.qq_node_default
+Compiling module xil_defaultlib.quickq_v2_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot quickq_v2_tb_behav

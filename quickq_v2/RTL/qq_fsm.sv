@@ -22,7 +22,9 @@ module qq_fsm #(
     enq_i,
     deq_i,
     t_gt_ram_out,
+    full,
     input logic [DW-1:0] wr_addr,
+    rd_addr,
     input logic [W-1:0] ram_out,
     output logic sel_t,
     ld_t,
@@ -150,7 +152,8 @@ module qq_fsm #(
                 if (ram_out == MAX_KEY) begin
                     clr_full   = 1;
                     clr_wraddr = 1;
-                    if (wr_addr == 0) set_empty = 1;  // should this go to DEQRT?
+                    if (wr_addr == 0 && rd_addr == 2 && !full) set_empty = 1;  // only cycle in this case, rd_addr always 2 initially
+                    if (rd_addr == D-2 && full) we = 0;
                     next = IDLE;
                 end else if (wr_addr == D - 2) next = DEQRT;
                 else next = DEQ1;
