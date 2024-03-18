@@ -31,6 +31,7 @@ module qq_fsm #(
     we,
     enq_o,
     deq_o,
+    rdy,
     set_full,
     clr_full,
     set_empty,
@@ -40,7 +41,7 @@ module qq_fsm #(
 );
 
     /** Parameter declaration */
-    parameter MAX_KEY = '1;
+    parameter logic [W-1:0] MAX_KEY = '1;
 
     /** Enumerated logic (states) */
     typedef enum logic [2:0] {
@@ -80,7 +81,7 @@ module qq_fsm #(
         case (state)
             INIT1: begin
                 clr_wraddr = 1;
-                empty = 1;
+                set_empty = 1;
                 // State transition logic
                 next = INIT2;
             end
@@ -92,7 +93,7 @@ module qq_fsm #(
                 we = 1;
                 // State transition logic
                 if (wr_addr == D - 1) begin
-                    clrl_wraddr = 1;
+                    clr_wraddr = 1;
                     next = IDLE;
                 end else next = INIT2;
             end
@@ -108,6 +109,7 @@ module qq_fsm #(
                     ld_t  = 1;
                     next  = ENQ1;
                 end else if (deq_i) begin
+                    incr_ctl = 2'b01;   // rd_addr = wr_addr + 1 == 1
                     next = DEQ1;
                 end else next = IDLE;
             end
@@ -119,13 +121,14 @@ module qq_fsm #(
                 clr_empty = 1;
                 if (!t_gt_ram_out) begin
                     sel_t = 1;  // temp <= ram_out;
+                    ld_t = 1;
                     sel_b = 2'b01;  // ram_in = temp;
                     we = 1;
                 end
                 // State transition logic
                 if (ram_out == MAX_KEY) begin
-                    clr_addr = 1;
-                    if (wr_addr == D - 1) set_full;
+                    clr_wraddr = 1;
+                    if (wr_addr == D - 1) set_full = 1;
                     next = IDLE;
                 end else if (wr_addr == D - 1) next = ENQRT;
                 else next = ENQ1;

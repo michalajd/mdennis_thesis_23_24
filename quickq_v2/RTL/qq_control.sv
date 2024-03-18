@@ -28,6 +28,7 @@ module qq_control #(
     we,
     enq_o,
     deq_o,
+    rdy,
     full,
     empty,
     output logic [1:0] sel_b,
@@ -36,8 +37,8 @@ module qq_control #(
 );
 
     // Internal logic
-    logic [DW-1:0] rd_addr, wr_addr;
-    logic clr_wraddr, inc_wraddr;
+    logic clr_wraddr, incr_wraddr;
+    logic clr_empty, set_empty, clr_full, set_full;
     logic [1:0] incr_ctl;
 
     qq_fsm #(
@@ -54,12 +55,13 @@ module qq_control #(
         .sel_t,
         .ld_t,
         .clr_wraddr,
-        .inc_wraddr,
+        .incr_wraddr,
         .we,
         .enq_o,
         .deq_o,
+        .rdy,
         .set_full,
-        .clear_full,
+        .clr_full,
         .set_empty,
         .clr_empty,
         .incr_ctl,
@@ -72,15 +74,13 @@ module qq_control #(
         .clk,
         .rst,
         .clr_wraddr,
-        .inc_wraddr,
+        .incr_wraddr,
         .wr_addr
     );
 
     adr_inc #(
         .D(D)
     ) ADRINC (
-        .clk,
-        .rst,
         .incr_ctl,
         .wr_addr,
         .rd_addr
@@ -89,15 +89,15 @@ module qq_control #(
     reg_sr_empty EMPTYFF (
         .clk,
         .rst,
-        .r(clear_empty),
+        .r(clr_empty),
         .s(set_empty),
         .q(empty)
     );
 
-    reg_sr_full FULLFF (
+    reg_sr FULLFF (
         .clk,
         .rst,
-        .r(clear_full),
+        .r(clr_full),
         .s(set_full),
         .q(full)
     );
