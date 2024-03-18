@@ -55,5 +55,9 @@ module qq_node #(parameter W=8, D=4, localparam DW=$clog2(D)) (
     // Controller
     qq_control #(.W(W), .D(D)) controlDUV (.clk, .rst, .enq_i, .deq_i, .t_gt_ram_out, .sel_t, .ld_t, .we,
                                            .enq_o, .deq_o, .sel_b, .rd_addr, .wr_addr);
+
+    reg_sr_empty(.clk, .rst, .r(clear_empty), .s(set_empty), .q(empty));
+
+    reg_sr_full(.clk, .rst, .r(clear_full), .s(set_full), .q(fulll))
     
 endmodule
