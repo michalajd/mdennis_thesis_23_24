@@ -85,7 +85,19 @@ module quickq_v2_tb;
     @(posedge clk) #1;
     deq_i = 0;
     repeat (5) @(posedge clk) #1;
-    $stop;    
+    deq_i = 1;
+    @(posedge clk) #1;
+    deq_i = 0;
+    repeat (5) @(posedge clk) #1;
+    deq_i = 1;
+    @(posedge clk) #1;
+    deq_i = 0;
+    repeat (5) @(posedge clk) #1;
+    deq_i = 1;
+    @(posedge clk) #1;
+    deq_i = 0;
+    repeat (5) @(posedge clk) #1;
+    $stop;   
     
     // /** Test 1: Dequeue while empty */
     // deq = 1;

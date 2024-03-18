@@ -26,7 +26,7 @@ module adr_inc #(
         case (incr_ctl)
             2'b00:   rd_addr = wr_addr;
             2'b01:   rd_addr = wr_addr + 1;
-            2'b10:   rd_addr = rd_addr + 2;
+            2'b10:   rd_addr = wr_addr + 2;
             default: rd_addr = 0;
         endcase
     end
