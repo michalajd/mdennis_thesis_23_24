@@ -5,6 +5,11 @@ Running: /home/user/Xylinx/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --de
 Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 4 for port 'rd_addr' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_node.sv:59]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 2 for port 'wr_addr' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_control.sv:53]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 2 for port 'wr_addr' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_control.sv:78]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 2 for port 'wr_addr' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_control.sv:85]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 2 for port 'rd_addr' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_control.sv:86]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis

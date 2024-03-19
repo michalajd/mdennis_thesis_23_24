@@ -96,7 +96,33 @@ module quickq_v2_tb;
     deq_i = 1;
     @(posedge clk) #1;
     deq_i = 0;
+    repeat (10) @(posedge clk) #1;
+    
+    // Mixed behavior tests
+    data_lt_i = 4;
+    enq_i = 1;
+    @(posedge clk) #1;
+    enq_i = 0;
     repeat (5) @(posedge clk) #1;
+    data_lt_i = 2;
+    enq_i = 1;
+    @(posedge clk) #1;
+    enq_i = 0;
+    repeat (5) @(posedge clk) #1;
+    deq_i = 1;
+    @(posedge clk) #1;
+    deq_i = 0;
+    repeat (5) @(posedge clk) #1;
+    data_lt_i = 13;
+    enq_i = 1;
+    @(posedge clk) #1;
+    enq_i = 0;
+    repeat (5) @(posedge clk) #1;
+    deq_i = 1;
+    @(posedge clk) #1;
+    deq_i = 0;
+    repeat (5) @(posedge clk) #1;
+    
     $stop;   
     
     // /** Test 1: Dequeue while empty */

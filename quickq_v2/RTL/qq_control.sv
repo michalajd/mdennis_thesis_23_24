@@ -32,7 +32,7 @@ module qq_control #(
     full,
     empty,
     output logic [1:0] sel_b,
-    output logic [D-1:0] rd_addr,
+    output logic [DW-1:0] rd_addr,
     wr_addr
 );
 
