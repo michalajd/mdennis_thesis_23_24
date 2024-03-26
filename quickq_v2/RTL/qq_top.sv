@@ -28,6 +28,9 @@ module qq_top #(parameter W=32, D=4, localparam DW=$clog2(D)) (
     output logic full_t, empty_t, rdy_t
     );
     
+    // Internal parameters
+    parameter logic [W-1:0] MAX_KEY = '1;
+    
     // Internal logic
     logic [W-1:0] rt_1_lt_2, lt_2_rt_1;
     logic enq_1_2, deq_1_2;
@@ -37,12 +40,12 @@ module qq_top #(parameter W=32, D=4, localparam DW=$clog2(D)) (
                                    .rdy(rdy1), .full(full1), .empty(empty1), .enq_o(enq_1_2), .deq_o(deq_1_2),
                                    .data_lt_o(lt_o), .data_rt_o(rt_1_lt_2));
                                    
-    qq_node #(.W(W), .D(D)) NODE2 (.clk, .rst, .enq_i(enq_1_2), .deq_i(deq_1_2), .data_lt_i(rt_1_lt_2), .data_rt_i(rt_i),
+    qq_node #(.W(W), .D(D)) NODE2 (.clk, .rst, .enq_i(enq_1_2), .deq_i(deq_1_2), .data_lt_i(rt_1_lt_2), .data_rt_i(MAX_KEY),
                                    .rdy(rdy2), .full(full2), .empty(empty2), .enq_o(), .deq_o(),
                                    .data_lt_o(lt_2_rt_1), .data_rt_o(rt_o));
     
-    assign full_t = (full1 && full2);
-    assign empty_t = (empty1 && empty2);
-    assign rdy_t = (rdy1 && rdy2);
+    assign full_t = (full1 && full2) ? 1 : 0;
+    assign empty_t = (empty1 && empty2) ? 1 : 0;
+    assign rdy_t = (rdy1 && rdy2) ? 1 : 0;
 
 endmodule

@@ -10,9 +10,10 @@ sv xil_defaultlib  \
 "../../../../RTL/qq_control.sv" \
 "../../../../RTL/qq_fsm.sv" \
 "../../../../RTL/qq_node.sv" \
+"../../../../RTL/qq_top.sv" \
 "../../../../RTL/reg_sr.sv" \
 "../../../../RTL/reg_sr_empty.sv" \
-"../../../../sim/quickq_vs_tb.sv" \
+"../../../../sim/qqtop_tb.sv" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 11/19/2023 06:59:58 PM
+// Create Date: 03/25/2024 10:38:06 PM
 // Design Name: 
-// Module Name: coreTest
+// Module Name: qqtop_tb
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,32 +20,15 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module quickq_v2_tb;
-    /** Declare internal logic */
-    logic clk, rst, enq_i, deq_i; 
-    logic rdy, full, empty, enq_o, deq_o;
-    logic [31:0] data_lt_i, data_rt_i, data_lt_o, data_rt_o;
-    
-    /** Module instantiation */
-    qq_node DUV (
-        .clk,
-        .rst,
-        .enq_i,
-        .deq_i,
-        .rdy,
-        .full,
-        .empty,
-        .enq_o,
-        .deq_o,
-        .data_lt_i, 
-        .data_rt_i,
-        .data_lt_o, 
-        .data_rt_o
-        );
+module qqtop_tb;
+// Declare internal logic 
+logic clk, rst, enq, deq;
+logic [31:0] lt_i, rt_i, lt_o, rt_o; 
+logic enq_o, deq_o, full_t, empty_t, rdy_t;
 
-        assign data_rt_i = '1;
-    
-    /** Generate clock */
+qq_top DUV (.clk, .rst, .enq, .deq, .lt_i, .rt_i, .lt_o, .rt_o, .enq_o, .deq_o, .full_t, .empty_t, .rdy_t);
+
+  /** Generate clock */
     always begin
         clk = 0; #5;
         clk = 1; #5;
@@ -54,76 +37,85 @@ module quickq_v2_tb;
     /** Testbench start */
     initial begin
     /** Setup: reset */
-    data_lt_i = 0;
-    enq_i = 0;
-    deq_i = 0;
+    lt_i = 0;
+    enq = 0;
+    deq = 0;
     rst = 1;
     @(posedge clk) #1;
     rst = 0;
     repeat (10) @(posedge clk);
-    data_lt_i = 5;
-    enq_i = 1;
+    lt_i = 5;
+    enq = 1;
     @(posedge clk) #1;
-    enq_i = 0;
+    enq = 0;
     repeat (5) @(posedge clk) #1;
-    data_lt_i = 10;
-    enq_i = 1;
+    lt_i = 10;
+    enq = 1;
     @(posedge clk) #1;
-    enq_i = 0;
+    enq = 0;
     repeat (5) @(posedge clk) #1;
-    data_lt_i = 3;
-    enq_i = 1;
+    lt_i = 3;
+    enq = 1;
     @(posedge clk) #1;
-    enq_i = 0;
+    enq = 0;
     repeat (5) @(posedge clk) #1;
-    data_lt_i = 20;
-    enq_i = 1;
+    lt_i = 20;
+    enq = 1;
     @(posedge clk) #1;
-    enq_i = 0;
+    enq = 0;
     repeat (5) @(posedge clk) #1;
-    deq_i = 1;
+    lt_i = 2;
+    enq = 1;
     @(posedge clk) #1;
-    deq_i = 0;
+    enq = 0;
     repeat (5) @(posedge clk) #1;
-    deq_i = 1;
+    lt_i = 12;
+    enq = 1;
     @(posedge clk) #1;
-    deq_i = 0;
+    enq = 0;
     repeat (5) @(posedge clk) #1;
-    deq_i = 1;
+    lt_i = 27;
+    enq = 1;
     @(posedge clk) #1;
-    deq_i = 0;
+    enq = 0;
     repeat (5) @(posedge clk) #1;
-    deq_i = 1;
+    lt_i = 8;
+    enq = 1;
     @(posedge clk) #1;
-    deq_i = 0;
+    enq = 0;
+    repeat (10) @(posedge clk) #1; // to see FULL go high we need more time (change: rdy = 1 to allow new operation?)
+    deq = 1;
+    @(posedge clk) #1;
+    deq = 0;
+    repeat (5) @(posedge clk) #1;
+    deq = 1;
+    @(posedge clk) #1;
+    deq = 0;
+    repeat (5) @(posedge clk) #1;
+    deq = 1;
+    @(posedge clk) #1;
+    deq = 0;
+    repeat (5) @(posedge clk) #1;
+    deq = 1;
+    @(posedge clk) #1;
+    deq = 0;
     repeat (10) @(posedge clk) #1;
-    
-    // Mixed behavior tests
-    data_lt_i = 4;
-    enq_i = 1;
+    deq = 1;
     @(posedge clk) #1;
-    enq_i = 0;
+    deq = 0;
     repeat (5) @(posedge clk) #1;
-    data_lt_i = 2;
-    enq_i = 1;
+    deq = 1;
     @(posedge clk) #1;
-    enq_i = 0;
+    deq = 0;
     repeat (5) @(posedge clk) #1;
-    deq_i = 1;
+    deq = 1;
     @(posedge clk) #1;
-    deq_i = 0;
+    deq = 0;
     repeat (5) @(posedge clk) #1;
-    data_lt_i = 13;
-    enq_i = 1;
+    deq = 1;
     @(posedge clk) #1;
-    enq_i = 0;
+    deq = 0;
     repeat (5) @(posedge clk) #1;
-    deq_i = 1;
-    @(posedge clk) #1;
-    deq_i = 0;
-    repeat (5) @(posedge clk) #1;
-    
-    $stop;   
+    $stop;
     end
-    
 endmodule

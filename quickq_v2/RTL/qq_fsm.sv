@@ -160,6 +160,7 @@ module qq_fsm #(
             DEQRT:  /** Read last entry from right neighbor */         
             begin
                 sel_b = 2'b10;  // ram_in = data_rt_i;
+                //clr_full = 1; // in case of multiple nodes?
                 we = 1;
                 deq_o = 1;
                 clr_wraddr = 1;
