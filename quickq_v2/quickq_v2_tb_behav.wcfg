@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="697.666 ns"></ZoomStartTime>
-      <ZoomEndTime time="820.915 ns"></ZoomEndTime>
-      <Cursor1Time time="926.000 ns"></Cursor1Time>
+      <ZoomStartTime time="673.666 ns"></ZoomStartTime>
+      <ZoomEndTime time="796.467 ns"></ZoomEndTime>
+      <Cursor1Time time="756.466 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="177"></NameColumnWidth>
-      <ValueColumnWidth column_width="242"></ValueColumnWidth>
+      <ValueColumnWidth column_width="234"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="21" />
+   <WVObjectSize size="24" />
    <wvobject type="logic" fp_name="/qqtop_tb/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -35,6 +35,10 @@
    <wvobject type="logic" fp_name="/qqtop_tb/deq">
       <obj_property name="ElementShortName">deq</obj_property>
       <obj_property name="ObjectShortName">deq</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/qqtop_tb/repl">
+      <obj_property name="ElementShortName">repl</obj_property>
+      <obj_property name="ObjectShortName">repl</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/qqtop_tb/lt_i">
       <obj_property name="ElementShortName">lt_i[31:0]</obj_property>
@@ -60,6 +64,10 @@
       <obj_property name="ElementShortName">deq_o</obj_property>
       <obj_property name="ObjectShortName">deq_o</obj_property>
    </wvobject>
+   <wvobject type="logic" fp_name="/qqtop_tb/repl_o">
+      <obj_property name="ElementShortName">repl_o</obj_property>
+      <obj_property name="ObjectShortName">repl_o</obj_property>
+   </wvobject>
    <wvobject type="logic" fp_name="/qqtop_tb/full_t">
       <obj_property name="ElementShortName">full_t</obj_property>
       <obj_property name="ObjectShortName">full_t</obj_property>
@@ -75,7 +83,7 @@
    <wvobject type="array" fp_name="/qqtop_tb/DUV/NODE1/BRAM/ram_array">
       <obj_property name="ElementShortName">ram_array[3:0][31:0]</obj_property>
       <obj_property name="ObjectShortName">ram_array[3:0][31:0]</obj_property>
-      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/qqtop_tb/DUV/NODE2/BRAM/ram_array">
@@ -85,35 +93,39 @@
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/qqtop_tb/DUV/NODE1/CTL/FSM/state">
-      <obj_property name="ElementShortName">state[2:0]</obj_property>
-      <obj_property name="ObjectShortName">state[2:0]</obj_property>
+      <obj_property name="ElementShortName">state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state[3:0]</obj_property>
       <obj_property name="CustomSignalColor">#FFFF00</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/qqtop_tb/DUV/NODE1/CTL/FSM/next">
-      <obj_property name="ElementShortName">next[2:0]</obj_property>
-      <obj_property name="ObjectShortName">next[2:0]</obj_property>
+      <obj_property name="ElementShortName">next[3:0]</obj_property>
+      <obj_property name="ObjectShortName">next[3:0]</obj_property>
       <obj_property name="CustomSignalColor">#FFFF00</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/qqtop_tb/DUV/NODE2/CTL/FSM/state">
-      <obj_property name="ElementShortName">state[2:0]</obj_property>
-      <obj_property name="ObjectShortName">state[2:0]</obj_property>
+      <obj_property name="ElementShortName">state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state[3:0]</obj_property>
       <obj_property name="CustomSignalColor">#00FFFF</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/qqtop_tb/DUV/NODE2/CTL/FSM/next">
-      <obj_property name="ElementShortName">next[2:0]</obj_property>
-      <obj_property name="ObjectShortName">next[2:0]</obj_property>
+      <obj_property name="ElementShortName">next[3:0]</obj_property>
+      <obj_property name="ObjectShortName">next[3:0]</obj_property>
       <obj_property name="CustomSignalColor">#00FFFF</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/qqtop_tb/DUV/NODE1/full">
-      <obj_property name="ElementShortName">full</obj_property>
-      <obj_property name="ObjectShortName">full</obj_property>
+   <wvobject type="array" fp_name="/qqtop_tb/DUV/NODE1/data_rt_o">
+      <obj_property name="ElementShortName">data_rt_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_rt_o[31:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/qqtop_tb/DUV/NODE2/full">
-      <obj_property name="ElementShortName">full</obj_property>
-      <obj_property name="ObjectShortName">full</obj_property>
+   <wvobject type="array" fp_name="/qqtop_tb/DUV/NODE1/data_rt_i">
+      <obj_property name="ElementShortName">data_rt_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_rt_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/qqtop_tb/DUV/NODE1/KCMP2/a_gt_b">
+      <obj_property name="ElementShortName">a_gt_b</obj_property>
+      <obj_property name="ObjectShortName">a_gt_b</obj_property>
    </wvobject>
 </wave_config>

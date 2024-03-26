@@ -3,6 +3,7 @@ sv xil_defaultlib  \
 "../../../../RTL/adr_cnt.sv" \
 "../../../../RTL/adr_inc.sv" \
 "../../../../RTL/cmp_mag.sv" \
+"../../../../RTL/cmp_mag_rep.sv" \
 "../../../../RTL/dffre.sv" \
 "../../../../RTL/mem2p_sw_sr.sv" \
 "../../../../RTL/mux2.sv" \

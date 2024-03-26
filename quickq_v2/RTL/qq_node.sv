@@ -21,9 +21,9 @@
 
 
 module qq_node #(parameter W=32, D=4, localparam DW=$clog2(D)) (
-    input logic clk, rst, enq_i, deq_i,
+    input logic clk, rst, enq_i, deq_i, repl_i,
     input logic [W-1:0] data_lt_i, data_rt_i,
-    output logic rdy, full, empty, enq_o, deq_o,
+    output logic rdy, full, empty, enq_o, deq_o, repl_o,
     output logic [W-1:0] data_lt_o, data_rt_o);
     
     // Internal parameters
@@ -33,7 +33,7 @@ module qq_node #(parameter W=32, D=4, localparam DW=$clog2(D)) (
     logic [W-1:0] mux2_reg, mux4_bram, ram_out;
     
     // Control node logic
-    logic sel_t, ld_t, we, t_gt_ram_out;
+    logic sel_t, ld_t, we, t_gt_ram_out, t_gt_data_rt_i;
     logic [1:0] sel_b;
     logic [DW-1:0] rd_addr, wr_addr;
 
@@ -51,11 +51,15 @@ module qq_node #(parameter W=32, D=4, localparam DW=$clog2(D)) (
     // Key Comparator
     cmp_mag #(.W(W)) KCMP (.a(data_rt_o), .b(ram_out), .a_gt_b(t_gt_ram_out));
     
+    // Comparator for replace
+    cmp_mag_rep #(.W(W)) KCMP2 (.a(data_rt_o), .b(data_rt_i), .a_gt_b(t_gt_data_rt_i));
+    
     // 4-input multiplexer
     mux4 #(.W(W)) RMUX (.d0(ram_out), .d1(data_rt_o), .d2(data_rt_i), .d3(MAX_KEY), .sel(sel_b), .y(mux4_bram));
     
     // Controller
-    qq_control #(.W(W), .D(D)) CTL (.clk, .rst, .enq_i, .deq_i, .t_gt_ram_out, .ram_out, .sel_t, .ld_t, .we,
-                                           .enq_o, .deq_o, .rdy, .full, .empty, .sel_b, .rd_addr, .wr_addr);
+    qq_control #(.W(W), .D(D)) CTL (.clk, .rst, .enq_i, .deq_i, .repl_i, .t_gt_ram_out, .t_gt_data_rt_i, .ram_out, 
+                                    .sel_t, .ld_t, .we, .enq_o, .deq_o, .repl_o, .rdy, .full, .empty, 
+                                    .sel_b, .rd_addr, .wr_addr);
 
 endmodule

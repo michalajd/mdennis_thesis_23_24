@@ -1,7 +1,7 @@
-Running: xsim.dir/quickq_v2_tb_behav/xsimk -simmode gui -wdb quickq_v2_tb_behav.wdb -simrunnum 0 -socket 58317
+Running: xsim.dir/quickq_v2_tb_behav/xsimk -simmode gui -wdb quickq_v2_tb_behav.wdb -simrunnum 0 -socket 41613
 Design successfully loaded
-Design Loading Memory Usage: 23180 KB (Peak: 23744 KB)
+Design Loading Memory Usage: 23188 KB (Peak: 23748 KB)
 Design Loading CPU Usage: 10 ms
 Simulation completed
-Simulation Memory Usage: 105176 KB (Peak: 162448 KB)
+Simulation Memory Usage: 105184 KB (Peak: 162456 KB)
 Simulation CPU Usage: 10 ms

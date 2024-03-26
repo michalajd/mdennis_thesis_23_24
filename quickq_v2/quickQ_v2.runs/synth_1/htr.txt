@@ -7,4 +7,4 @@
 # Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 #
 
-vivado -log qq_node.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source qq_node.tcl
+vivado -log qq_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source qq_top.tcl

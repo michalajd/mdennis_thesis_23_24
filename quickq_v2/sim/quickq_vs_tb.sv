@@ -22,8 +22,8 @@
 
 module quickq_v2_tb;
     /** Declare internal logic */
-    logic clk, rst, enq_i, deq_i; 
-    logic rdy, full, empty, enq_o, deq_o;
+    logic clk, rst, enq_i, deq_i, repl_i; 
+    logic rdy, full, empty, enq_o, deq_o, repl_o;
     logic [31:0] data_lt_i, data_rt_i, data_lt_o, data_rt_o;
     
     /** Module instantiation */
@@ -32,11 +32,13 @@ module quickq_v2_tb;
         .rst,
         .enq_i,
         .deq_i,
+        .repl_i,
         .rdy,
         .full,
         .empty,
         .enq_o,
         .deq_o,
+        .repl_o,
         .data_lt_i, 
         .data_rt_i,
         .data_lt_o, 
@@ -57,6 +59,7 @@ module quickq_v2_tb;
     data_lt_i = 0;
     enq_i = 0;
     deq_i = 0;
+    repl_i = 0;
     rst = 1;
     @(posedge clk) #1;
     rst = 0;
@@ -81,6 +84,32 @@ module quickq_v2_tb;
     @(posedge clk) #1;
     enq_i = 0;
     repeat (5) @(posedge clk) #1;
+    
+    // Replace tests 
+    data_lt_i = 8;
+    repl_i = 1;
+    @(posedge clk) #1;
+    repl_i = 0;
+    repeat (5) @(posedge clk) #1;
+    data_lt_i = 4;
+    repl_i = 1;
+    @(posedge clk) #1;
+    repl_i = 0;
+    repeat (5) @(posedge clk) #1;
+    data_lt_i = 26;
+    repl_i = 1;
+    @(posedge clk) #1;
+    repl_i = 0;
+    repeat (5) @(posedge clk) #1;
+    data_rt_i = 29;
+    data_lt_i = 28;
+    repl_i = 1;
+    @(posedge clk) #1;
+    repl_i = 0;
+    repeat (5) @(posedge clk) #1;
+    
+    // Dequeue tests
+    data_rt_i = '1;
     deq_i = 1;
     @(posedge clk) #1;
     deq_i = 0;

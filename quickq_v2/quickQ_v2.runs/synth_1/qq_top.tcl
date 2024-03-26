@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickQ_v2.runs/synth_1/qq_node.tcl"
+  variable script "/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickQ_v2.runs/synth_1/qq_top.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,9 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param checkpoint.writeSynthRtdsInDcp 1
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
@@ -99,9 +96,10 @@ read_verilog -library xil_defaultlib -sv {
   /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mux4.sv
   /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_control.sv
   /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_fsm.sv
+  /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_node.sv
   /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/reg_sr.sv
   /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/reg_sr_empty.sv
-  /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_node.sv
+  /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_top.sv
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -113,10 +111,12 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickQ_v2.srcs/utils_1/imports/synth_1/qq_node.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top qq_node -part xc7a100tcsg324-1
+synth_design -top qq_top -part xc7a100tcsg324-1
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
@@ -126,10 +126,10 @@ if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
 OPTRACE "write_checkpoint" START { CHECKPOINT }
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef qq_node.dcp
+write_checkpoint -force -noxdef qq_top.dcp
 OPTRACE "write_checkpoint" END { }
 OPTRACE "synth reports" START { REPORT }
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file qq_node_utilization_synth.rpt -pb qq_node_utilization_synth.pb"
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file qq_top_utilization_synth.rpt -pb qq_top_utilization_synth.pb"
 OPTRACE "synth reports" END { }
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]
