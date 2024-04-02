@@ -24,6 +24,6 @@ module cmp_mag_rep #(parameter W=8)
   (input logic [W-1:0] a, b,
    output logic a_gt_b);
 
-  assign a_gt_b = (a > b) || (b == '1);
+  assign a_gt_b = (a > b);
 
 endmodule: cmp_mag_rep

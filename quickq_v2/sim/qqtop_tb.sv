@@ -97,23 +97,33 @@ qq_top DUV (.clk, .rst, .enq, .deq, .repl, .lt_i, .rt_i, .lt_o, .rt_o, .enq_o, .
     @(posedge clk) #1;
     repl = 0;
     repeat (6) @(posedge clk) #1;
-    /*
-    deq = 1;
+    lt_i = 15;
+    repl = 1;
     @(posedge clk) #1;
-    deq = 0;
-    repeat (5) @(posedge clk) #1;
-    deq = 1;
+    repl = 0;
+    repeat (8) @(posedge clk) #1;
+    lt_i = 30;
+    repl = 1;
     @(posedge clk) #1;
-    deq = 0;
-    repeat (5) @(posedge clk) #1;
-    deq = 1;
-    @(posedge clk) #1;
-    deq = 0;
-    repeat (5) @(posedge clk) #1;
-    deq = 1;
-    @(posedge clk) #1;
-    deq = 0;
+    repl = 0;
     repeat (10) @(posedge clk) #1;
+    
+    deq = 1;
+    @(posedge clk) #1;
+    deq = 0;
+    repeat (9) @(posedge clk) #1;
+    deq = 1;
+    @(posedge clk) #1;
+    deq = 0;
+    repeat (8) @(posedge clk) #1;
+    deq = 1;
+    @(posedge clk) #1;
+    deq = 0;
+    repeat (7) @(posedge clk) #1;
+    deq = 1;
+    @(posedge clk) #1;
+    deq = 0;
+    repeat (6) @(posedge clk) #1;
     deq = 1;
     @(posedge clk) #1;
     deq = 0;
@@ -121,15 +131,15 @@ qq_top DUV (.clk, .rst, .enq, .deq, .repl, .lt_i, .rt_i, .lt_o, .rt_o, .enq_o, .
     deq = 1;
     @(posedge clk) #1;
     deq = 0;
-    repeat (5) @(posedge clk) #1;
+    repeat (4) @(posedge clk) #1;
     deq = 1;
     @(posedge clk) #1;
     deq = 0;
-    repeat (5) @(posedge clk) #1;
+    repeat (3) @(posedge clk) #1;
     deq = 1;
     @(posedge clk) #1;
     deq = 0;
-    repeat (5) @(posedge clk) #1; */
+    repeat (2) @(posedge clk) #1;
     $stop;
     end
 endmodule
