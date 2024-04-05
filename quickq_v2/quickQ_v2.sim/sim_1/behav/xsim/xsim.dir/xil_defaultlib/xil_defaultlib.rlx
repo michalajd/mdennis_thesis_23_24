@@ -17,5 +17,5 @@ Jun 16 2023
 /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/reg_sr.sv,1710793404,systemVerilog,,/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/reg_sr_empty.sv,,reg_sr,,uvm,,,,,,
 /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/reg_sr_empty.sv,1710793404,systemVerilog,,/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/sim/qqtop_tb.sv,,reg_sr_empty,,uvm,,,,,,
 /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickQ_v2.sim/sim_1/behav/xsim/glbl.v,1683266558,verilog,,,,glbl,,uvm,,,,,,
-/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/sim/qqtop_tb.sv,1712086166,systemVerilog,,,,qqtop_tb,,uvm,,,,,,
-/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/sim/quickq_vs_tb.sv,1711485046,systemVerilog,,,,quickq_v2_tb,,uvm,,,,,,
+/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/sim/qqtop_tb.sv,1712296098,systemVerilog,,,,qqtop_tb,,uvm,,,,,,
+/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/sim/quickq_vs_tb.sv,1712295448,systemVerilog,,,,quickq_v2_tb,,uvm,,,,,,

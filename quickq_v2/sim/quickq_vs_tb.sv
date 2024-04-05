@@ -24,10 +24,10 @@ module quickq_v2_tb;
     /** Declare internal logic */
     logic clk, rst, enq_i, deq_i, repl_i; 
     logic rdy, full, empty, enq_o, deq_o, repl_o;
-    logic [31:0] data_lt_i, data_rt_i, data_lt_o, data_rt_o;
+    logic [7:0] data_lt_i, data_rt_i, data_lt_o, data_rt_o;
     
     /** Module instantiation */
-    qq_node DUV (
+    qq_node #(.W(8)) DUV (
         .clk,
         .rst,
         .enq_i,
@@ -63,7 +63,7 @@ module quickq_v2_tb;
     rst = 1;
     @(posedge clk) #1;
     rst = 0;
-    repeat (10) @(posedge clk);
+    repeat (5) @(posedge clk);
     data_lt_i = 5;
     enq_i = 1;
     @(posedge clk) #1;
@@ -83,7 +83,7 @@ module quickq_v2_tb;
     enq_i = 1;
     @(posedge clk) #1;
     enq_i = 0;
-    repeat (5) @(posedge clk) #1;
+    repeat (10) @(posedge clk) #1;
     
     // Replace tests 
     data_lt_i = 8;
@@ -106,7 +106,7 @@ module quickq_v2_tb;
     repl_i = 1;
     @(posedge clk) #1;
     repl_i = 0;
-    repeat (5) @(posedge clk) #1;
+    repeat (10) @(posedge clk) #1;
     
     // Dequeue tests
     data_rt_i = '1;
@@ -126,7 +126,7 @@ module quickq_v2_tb;
     @(posedge clk) #1;
     deq_i = 0;
     repeat (10) @(posedge clk) #1;
-    
+ 
     // Mixed behavior tests
     data_lt_i = 4;
     enq_i = 1;

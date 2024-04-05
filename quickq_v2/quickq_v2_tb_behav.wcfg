@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="673.666 ns"></ZoomStartTime>
-      <ZoomEndTime time="796.467 ns"></ZoomEndTime>
-      <Cursor1Time time="756.466 ns"></Cursor1Time>
+      <ZoomStartTime time="1,369.976 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,498.171 ns"></ZoomEndTime>
+      <Cursor1Time time="1,496.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="177"></NameColumnWidth>
-      <ValueColumnWidth column_width="234"></ValueColumnWidth>
+      <ValueColumnWidth column_width="230"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="24" />
    <wvobject type="logic" fp_name="/qqtop_tb/clk">
@@ -43,6 +43,7 @@
    <wvobject type="array" fp_name="/qqtop_tb/lt_i">
       <obj_property name="ElementShortName">lt_i[31:0]</obj_property>
       <obj_property name="ObjectShortName">lt_i[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/qqtop_tb/rt_i">
       <obj_property name="ElementShortName">rt_i[31:0]</obj_property>
@@ -51,6 +52,7 @@
    <wvobject type="array" fp_name="/qqtop_tb/lt_o">
       <obj_property name="ElementShortName">lt_o[31:0]</obj_property>
       <obj_property name="ObjectShortName">lt_o[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/qqtop_tb/rt_o">
       <obj_property name="ElementShortName">rt_o[31:0]</obj_property>
@@ -85,12 +87,14 @@
       <obj_property name="ObjectShortName">ram_array[3:0][31:0]</obj_property>
       <obj_property name="CustomSignalColor">#FFFF00</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/qqtop_tb/DUV/NODE2/BRAM/ram_array">
       <obj_property name="ElementShortName">ram_array[3:0][31:0]</obj_property>
       <obj_property name="ObjectShortName">ram_array[3:0][31:0]</obj_property>
       <obj_property name="CustomSignalColor">#00FFFF</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/qqtop_tb/DUV/NODE1/CTL/FSM/state">
       <obj_property name="ElementShortName">state[3:0]</obj_property>
@@ -119,10 +123,12 @@
    <wvobject type="array" fp_name="/qqtop_tb/DUV/NODE1/data_rt_o">
       <obj_property name="ElementShortName">data_rt_o[31:0]</obj_property>
       <obj_property name="ObjectShortName">data_rt_o[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/qqtop_tb/DUV/NODE1/data_rt_i">
       <obj_property name="ElementShortName">data_rt_i[31:0]</obj_property>
       <obj_property name="ObjectShortName">data_rt_i[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/qqtop_tb/DUV/NODE1/KCMP2/a_gt_b">
       <obj_property name="ElementShortName">a_gt_b</obj_property>

@@ -23,10 +23,10 @@
 module qqtop_tb;
 // Declare internal logic 
 logic clk, rst, enq, deq, repl;
-logic [31:0] lt_i, rt_i, lt_o, rt_o; 
+logic [7:0] lt_i, rt_i, lt_o, rt_o; 
 logic enq_o, deq_o, repl_o, full_t, empty_t, rdy_t;
 
-qq_top DUV (.clk, .rst, .enq, .deq, .repl, .lt_i, .rt_i, .lt_o, .rt_o, .enq_o, .deq_o, .repl_o, .full_t, .empty_t, .rdy_t);
+qq_top #(.W(8)) DUV (.clk, .rst, .enq, .deq, .repl, .lt_i, .rt_i, .lt_o, .rt_o, .enq_o, .deq_o, .repl_o, .full_t, .empty_t, .rdy_t);
 
   /** Generate clock */
     always begin
@@ -69,12 +69,12 @@ qq_top DUV (.clk, .rst, .enq, .deq, .repl, .lt_i, .rt_i, .lt_o, .rt_o, .enq_o, .
     enq = 1;
     @(posedge clk) #1;
     enq = 0;
-    repeat (5) @(posedge clk) #1;
+    repeat (7) @(posedge clk) #1;
     lt_i = 12;
     enq = 1;
     @(posedge clk) #1;
     enq = 0;
-    repeat (5) @(posedge clk) #1;
+    repeat (10) @(posedge clk) #1;
     lt_i = 27;
     enq = 1;
     @(posedge clk) #1;
