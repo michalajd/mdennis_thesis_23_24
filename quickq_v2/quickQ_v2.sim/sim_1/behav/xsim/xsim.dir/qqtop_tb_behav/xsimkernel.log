@@ -2,3 +2,6 @@ Running: xsim.dir/qqtop_tb_behav/xsimk -simmode gui -wdb qqtop_tb_behav.wdb -sim
 Design successfully loaded
 Design Loading Memory Usage: 23220 KB (Peak: 23752 KB)
 Design Loading CPU Usage: 10 ms
+Simulation completed
+Simulation Memory Usage: 107012 KB (Peak: 162488 KB)
+Simulation CPU Usage: 20 ms
