@@ -10,7 +10,7 @@
 //-----------------------------------------------------------------------------
 // Modification history:
 //-----------------------------------------------------------------------------
-
+import pq_pkg::*;
 
 module qq_control #(
     parameter W = 8,
@@ -24,7 +24,7 @@ module qq_control #(
     repl_i,
     t_gt_ram_out,
     t_gt_data_rt_i,
-    input logic [W-1:0] ram_out,
+    input kv_t ram_out,
     output logic sel_t,
     ld_t,
     we,
@@ -35,7 +35,7 @@ module qq_control #(
     full,
     empty,
     output logic [1:0] sel_b,
-    output logic [DW-1:0] rd_addr,
+    output logic [$clog2(PQ_CAPACITY)-1:0] rd_addr,
     wr_addr
 );
 
