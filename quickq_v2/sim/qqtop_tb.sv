@@ -37,7 +37,8 @@ qq_top #(.W(8)) DUV (.clk, .rst, .enq, .deq, .repl, .lt_i, .rt_i, .lt_o, .rt_o, 
     /** Testbench start */
     initial begin
     /** Setup: reset */
-    lt_i = 0;
+    lt_i.key = 0;
+    lt_i.value = 0;
     enq = 0;
     deq = 0;
     repl = 0;
@@ -45,64 +46,76 @@ qq_top #(.W(8)) DUV (.clk, .rst, .enq, .deq, .repl, .lt_i, .rt_i, .lt_o, .rt_o, 
     @(posedge clk) #1;
     rst = 0;
     repeat (10) @(posedge clk);
-    lt_i = 5;
+    lt_i.key = 5;
+    lt_i.value = 3;
     enq = 1;
     @(posedge clk) #1;
     enq = 0;
     repeat (5) @(posedge clk) #1;
-    lt_i = 10;
+    lt_i.key = 10;
+    lt_i.value = 1;
     enq = 1;
     @(posedge clk) #1;
     enq = 0;
     repeat (5) @(posedge clk) #1;
-    lt_i = 3;
+    lt_i.key = 3;
+    lt_i.value = 4;
     enq = 1;
     @(posedge clk) #1;
     enq = 0;
     repeat (5) @(posedge clk) #1;
-    lt_i = 20;
+    lt_i.key = 20;
+    lt_i.value = 10;
     enq = 1;
     @(posedge clk) #1;
     enq = 0;
     repeat (5) @(posedge clk) #1;
-    lt_i = 2;
+    lt_i.key = 2;
+    lt_i.value = 6;
     enq = 1;
     @(posedge clk) #1;
     enq = 0;
     repeat (7) @(posedge clk) #1;
-    lt_i = 12;
+    lt_i.key = 12;
+    lt_i.value = 7;
     enq = 1;
     @(posedge clk) #1;
     enq = 0;
     repeat (10) @(posedge clk) #1;
-    lt_i = 27;
+    lt_i.key = 27;
+    lt_i.value = 24;
     enq = 1;
     @(posedge clk) #1;
     enq = 0;
     repeat (5) @(posedge clk) #1;
-    lt_i = 8;
+    lt_i.key = 8;
+    lt_i.value = 17;
     enq = 1;
     @(posedge clk) #1;
     enq = 0;
     repeat (10) @(posedge clk) #1; // to see FULL go high we need more time (change: rdy = 1 to allow new operation?)
     
     // Replace tests 
-    lt_i = 9;
+    lt_i.key = 9;
+    lt_i.value = 9;
     repl = 1;
     @(posedge clk) #1;
     repl = 0;
     repeat (6) @(posedge clk) #1;
-    lt_i = 4;
+    lt_i.key = 4;
+    lt_i.value = 1;
     repl = 1;
     @(posedge clk) #1;
     repl = 0;
     repeat (6) @(posedge clk) #1;
-    lt_i = 15;
+    lt_i.key = 15;
+    lt_i.value = 16;
     repl = 1;
     @(posedge clk) #1;
     repl = 0;
     repeat (8) @(posedge clk) #1;
-    lt_i = 30;
+    lt_i.key = 30;
+    lt_i.value = 0;
     repl = 1;
     @(posedge clk) #1;
     repl = 0;
@@ -140,6 +153,7 @@ qq_top #(.W(8)) DUV (.clk, .rst, .enq, .deq, .repl, .lt_i, .rt_i, .lt_o, .rt_o, 
     @(posedge clk) #1;
     deq = 0;
     repeat (2) @(posedge clk) #1;
+
     $stop;
     end
 endmodule

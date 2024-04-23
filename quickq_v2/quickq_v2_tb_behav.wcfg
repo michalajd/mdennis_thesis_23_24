@@ -3,94 +3,110 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="quickq_v2_tb_behav.wdb" id="1">
+      <db_ref path="qqtop_tb_behav.wdb" id="1">
          <top_modules>
             <top_module name="glbl" />
             <top_module name="pq_pkg" />
-            <top_module name="quickq_v2_tb" />
+            <top_module name="qqtop_tb" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1,107.310 ns"></ZoomStartTime>
-      <ZoomEndTime time="1,249.738 ns"></ZoomEndTime>
-      <Cursor1Time time="1,221.980 ns"></Cursor1Time>
+      <ZoomStartTime time="1,406.988 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,569.313 ns"></ZoomEndTime>
+      <Cursor1Time time="1,561.818 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="177"></NameColumnWidth>
-      <ValueColumnWidth column_width="222"></ValueColumnWidth>
+      <ValueColumnWidth column_width="214"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="18" />
-   <wvobject type="logic" fp_name="/quickq_v2_tb/clk">
+   <WVObjectSize size="19" />
+   <wvobject type="logic" fp_name="/qqtop_tb/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/quickq_v2_tb/rst">
+   <wvobject type="logic" fp_name="/qqtop_tb/rst">
       <obj_property name="ElementShortName">rst</obj_property>
       <obj_property name="ObjectShortName">rst</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/quickq_v2_tb/enq_i">
-      <obj_property name="ElementShortName">enq_i</obj_property>
-      <obj_property name="ObjectShortName">enq_i</obj_property>
+   <wvobject type="logic" fp_name="/qqtop_tb/enq">
+      <obj_property name="ElementShortName">enq</obj_property>
+      <obj_property name="ObjectShortName">enq</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/quickq_v2_tb/deq_i">
-      <obj_property name="ElementShortName">deq_i</obj_property>
-      <obj_property name="ObjectShortName">deq_i</obj_property>
+   <wvobject type="logic" fp_name="/qqtop_tb/deq">
+      <obj_property name="ElementShortName">deq</obj_property>
+      <obj_property name="ObjectShortName">deq</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/quickq_v2_tb/repl_i">
-      <obj_property name="ElementShortName">repl_i</obj_property>
-      <obj_property name="ObjectShortName">repl_i</obj_property>
+   <wvobject type="logic" fp_name="/qqtop_tb/repl">
+      <obj_property name="ElementShortName">repl</obj_property>
+      <obj_property name="ObjectShortName">repl</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/quickq_v2_tb/rdy">
-      <obj_property name="ElementShortName">rdy</obj_property>
-      <obj_property name="ObjectShortName">rdy</obj_property>
+   <wvobject type="array" fp_name="/qqtop_tb/lt_i">
+      <obj_property name="ElementShortName">lt_i</obj_property>
+      <obj_property name="ObjectShortName">lt_i</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/quickq_v2_tb/full">
-      <obj_property name="ElementShortName">full</obj_property>
-      <obj_property name="ObjectShortName">full</obj_property>
+   <wvobject type="array" fp_name="/qqtop_tb/rt_i">
+      <obj_property name="ElementShortName">rt_i</obj_property>
+      <obj_property name="ObjectShortName">rt_i</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/quickq_v2_tb/empty">
-      <obj_property name="ElementShortName">empty</obj_property>
-      <obj_property name="ObjectShortName">empty</obj_property>
+   <wvobject type="array" fp_name="/qqtop_tb/lt_o">
+      <obj_property name="ElementShortName">lt_o</obj_property>
+      <obj_property name="ObjectShortName">lt_o</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/quickq_v2_tb/enq_o">
-      <obj_property name="ElementShortName">enq_o</obj_property>
-      <obj_property name="ObjectShortName">enq_o</obj_property>
+   <wvobject type="array" fp_name="/qqtop_tb/rt_o">
+      <obj_property name="ElementShortName">rt_o</obj_property>
+      <obj_property name="ObjectShortName">rt_o</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/quickq_v2_tb/deq_o">
-      <obj_property name="ElementShortName">deq_o</obj_property>
-      <obj_property name="ObjectShortName">deq_o</obj_property>
+   <wvobject type="logic" fp_name="/qqtop_tb/full_t">
+      <obj_property name="ElementShortName">full_t</obj_property>
+      <obj_property name="ObjectShortName">full_t</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/quickq_v2_tb/repl_o">
-      <obj_property name="ElementShortName">repl_o</obj_property>
-      <obj_property name="ObjectShortName">repl_o</obj_property>
+   <wvobject type="logic" fp_name="/qqtop_tb/empty_t">
+      <obj_property name="ElementShortName">empty_t</obj_property>
+      <obj_property name="ObjectShortName">empty_t</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/quickq_v2_tb/DUV/BRAM/ram_array">
+   <wvobject type="logic" fp_name="/qqtop_tb/rdy_t">
+      <obj_property name="ElementShortName">rdy_t</obj_property>
+      <obj_property name="ObjectShortName">rdy_t</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/qqtop_tb/DUV/NODE1/BRAM/ram_array">
       <obj_property name="ElementShortName">ram_array[3:0][15:0]</obj_property>
       <obj_property name="ObjectShortName">ram_array[3:0][15:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/quickq_v2_tb/DUV/CTL/FSM/state">
+   <wvobject type="array" fp_name="/qqtop_tb/DUV/NODE2/BRAM/ram_array">
+      <obj_property name="ElementShortName">ram_array[3:0][15:0]</obj_property>
+      <obj_property name="ObjectShortName">ram_array[3:0][15:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/qqtop_tb/DUV/NODE1/CTL/FSM/state">
       <obj_property name="ElementShortName">state[3:0]</obj_property>
       <obj_property name="ObjectShortName">state[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/quickq_v2_tb/DUV/CTL/FSM/next">
+   <wvobject type="array" fp_name="/qqtop_tb/DUV/NODE1/CTL/FSM/next">
       <obj_property name="ElementShortName">next[3:0]</obj_property>
       <obj_property name="ObjectShortName">next[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/quickq_v2_tb/data_lt_i">
-      <obj_property name="ElementShortName">data_lt_i</obj_property>
-      <obj_property name="ObjectShortName">data_lt_i</obj_property>
+   <wvobject type="array" fp_name="/qqtop_tb/DUV/NODE2/CTL/FSM/state">
+      <obj_property name="ElementShortName">state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/quickq_v2_tb/DUV/KCMP2/a">
-      <obj_property name="ElementShortName">a</obj_property>
-      <obj_property name="ObjectShortName">a</obj_property>
+   <wvobject type="array" fp_name="/qqtop_tb/DUV/NODE2/CTL/FSM/next">
+      <obj_property name="ElementShortName">next[3:0]</obj_property>
+      <obj_property name="ObjectShortName">next[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/quickq_v2_tb/DUV/KCMP2/b">
-      <obj_property name="ElementShortName">b</obj_property>
-      <obj_property name="ObjectShortName">b</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/quickq_v2_tb/DUV/KCMP2/a_gt_b">
-      <obj_property name="ElementShortName">a_gt_b</obj_property>
-      <obj_property name="ObjectShortName">a_gt_b</obj_property>
+   <wvobject type="array" fp_name="/qqtop_tb/DUV/NODE1/CTL/FSM/ram_out">
+      <obj_property name="ElementShortName">ram_out</obj_property>
+      <obj_property name="ObjectShortName">ram_out</obj_property>
    </wvobject>
 </wave_config>

@@ -138,7 +138,7 @@ module qq_fsm #(
                     we = 1;
                 end
                 // State transition logic
-                if (ram_out == MAX_KEY) begin
+                if (ram_out.key == MAX_KEY) begin
                     clr_wraddr = 1;
                     if (wr_addr == D - 1) set_full = 1;
                     next = IDLE;
@@ -159,7 +159,7 @@ module qq_fsm #(
                 sel_b = 2'b00;  // ram_in = ram_out;
                 we = 1;
                 // State transition logic
-                if (ram_out == MAX_KEY) begin
+                if (ram_out.key == MAX_KEY) begin
                     clr_full   = 1;
                     clr_wraddr = 1;
                     if (wr_addr == 0) set_empty = 1;  // should this go to DEQRT?

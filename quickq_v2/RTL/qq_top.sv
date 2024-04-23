@@ -22,17 +22,17 @@ import pq_pkg::*;
 
 module qq_top #(parameter W=32, D=4, localparam DW=$clog2(D)) (
     input logic clk, rst, enq, deq, repl,
-    input logic [W-1:0] lt_i, rt_i,
-    output logic [W-1:0] lt_o, rt_o, // are these needed?
+    input kv_t lt_i, rt_i,
+    output kv_t lt_o, rt_o, // are these needed?
     output logic enq_o, deq_o, repl_o, // are these needed?
     output logic full_t, empty_t, rdy_t
     );
     
     // Internal parameters
-    parameter logic [W-1:0] MAX_KEY = '1;
+    parameter kv_t MAX_KEY = KV_EMPTY;
     
     // Internal logic
-    logic [W-1:0] rt_1_lt_2, lt_2_rt_1;
+    kv_t rt_1_lt_2, lt_2_rt_1;
     logic enq_1_2, deq_1_2, repl_1_2;
     logic full1, rdy1, empty1, full2, rdy2, empty2;
     
