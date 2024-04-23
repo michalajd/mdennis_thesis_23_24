@@ -18,12 +18,12 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-
+import pq_pkg::*;
 
 module qqtop_tb;
 // Declare internal logic 
 logic clk, rst, enq, deq, repl;
-logic [7:0] lt_i, rt_i, lt_o, rt_o; 
+kv_t lt_i, rt_i, lt_o, rt_o; 
 logic enq_o, deq_o, repl_o, full_t, empty_t, rdy_t;
 
 qq_top #(.W(8)) DUV (.clk, .rst, .enq, .deq, .repl, .lt_i, .rt_i, .lt_o, .rt_o, .enq_o, .deq_o, .repl_o, .full_t, .empty_t, .rdy_t);

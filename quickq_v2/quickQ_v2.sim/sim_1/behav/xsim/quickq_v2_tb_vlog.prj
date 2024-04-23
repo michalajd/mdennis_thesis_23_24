@@ -1,0 +1,22 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../RTL/adr_cnt.sv" \
+"../../../../RTL/adr_inc.sv" \
+"../../../../../pq_pkg.sv" \
+"../../../../RTL/kv_cmp_mag.sv" \
+"../../../../RTL/kv_dffre.sv" \
+"../../../../RTL/kv_mux4.sv" \
+"../../../../RTL/mem2p_sw_sr.sv" \
+"../../../../../pq_mux2.sv" \
+"../../../../RTL/qq_control.sv" \
+"../../../../RTL/qq_fsm.sv" \
+"../../../../RTL/qq_node.sv" \
+"../../../../RTL/reg_sr.sv" \
+"../../../../RTL/reg_sr_empty.sv" \
+"../../../../sim/quickq_vs_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

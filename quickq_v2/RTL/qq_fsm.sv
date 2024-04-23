@@ -10,7 +10,7 @@
 //-----------------------------------------------------------------------------
 // Modification history:
 //-----------------------------------------------------------------------------
-
+import pq_pkg::*;
 
 module qq_fsm #(
     parameter W = 32,
@@ -25,7 +25,7 @@ module qq_fsm #(
     t_gt_ram_out,
     t_gt_data_rt_i,
     input logic [DW-1:0] wr_addr,
-    input logic [W-1:0] ram_out,
+    input kv_t ram_out,
     output logic sel_t,
     ld_t,
     clr_wraddr,

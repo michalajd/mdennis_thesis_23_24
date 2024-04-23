@@ -18,7 +18,7 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-
+import pq_pkg::*;
 
 module qq_top #(parameter W=32, D=4, localparam DW=$clog2(D)) (
     input logic clk, rst, enq, deq, repl,

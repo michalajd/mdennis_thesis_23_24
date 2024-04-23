@@ -20,9 +20,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 import pq_pkg::*;
 
-module dffre (input logic clk, rst, enb,
+module kv_dffre (input logic clk, rst, enb,
              input kv_t d,
-             output logic q);
+             output kv_t q);
 
     always_ff @(posedge clk)
         if (rst) q <= KV_EMPTY;
