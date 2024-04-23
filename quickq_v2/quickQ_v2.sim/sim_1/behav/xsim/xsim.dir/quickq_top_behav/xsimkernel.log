@@ -1,0 +1,4 @@
+Running: xsim.dir/quickq_top_behav/xsimk -simmode gui -wdb quickq_top_behav.wdb -simrunnum 0 -socket 43291
+Design successfully loaded
+Design Loading Memory Usage: 23252 KB (Peak: 23764 KB)
+Design Loading CPU Usage: 10 ms

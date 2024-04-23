@@ -37,9 +37,9 @@ module quickq(
     logic [KEY_WIDTH+VAL_WIDTH-1:0] rt_o;
     logic enq_o, deq_o, repl_o;
     
-    qq_top #(.W(KEY_WIDTH + VAL_WIDTH), .D(PQ_CAPACITY/2)) U_QQTOP (
-        .clk, .rst, .enq, .deq, .repl(replace), .lt_i(kvi), .rt_i(KEYMAX), .lt_o(kvo), 
-        .rt_o, .enq_o, .deq_o, .rdy_o,
+    qq_top #(.W(8), .D(PQ_CAPACITY/2)) U_QQTOP (
+        .clk, .rst, .enq, .deq, .repl(replace), .lt_i(kvi), .rt_i(KEYINF), .lt_o(kvo), 
+        .rt_o, .enq_o, .deq_o, .repl_o,
         .full_t(full), .empty_t(empty), .rdy_t(rdy)
     );
     

@@ -29,6 +29,8 @@ module quickq_tb (pq_if.tb ti);
         ti.cb.deq <= 0;
         @ti.cb;
         ti.cb.enq <=0;
+        @ti.cb;
+        while (ti.cb.busy) @ti.cb;
     endtask
 
     task do_deq();
@@ -38,6 +40,8 @@ module quickq_tb (pq_if.tb ti);
         ti.cb.deq <= 1;
         @ti.cb;
         ti.cb.deq <= 0;
+        @ti.cb;
+        while (ti.cb.busy) @ti.cb;
     endtask
 
     task do_enq_and_deq(input logic [KEY_WIDTH-1:0] key, input logic [VAL_WIDTH-1:0] val);
@@ -47,6 +51,8 @@ module quickq_tb (pq_if.tb ti);
         @ti.cb;
         ti.cb.enq <= 0;
         ti.cb.deq <= 0;
+        @ti.cb;
+        while (ti.cb.busy) @ti.cb;
     endtask
 
   initial begin
@@ -57,20 +63,24 @@ module quickq_tb (pq_if.tb ti);
 
       @ti.cb;
       ti.cb.rst <= 0;
-      // @ti.cb;
-      do_enq(8,14);
       @ti.cb;
-      do_enq(14,14);
       @ti.cb;
-      do_enq(9,10);
-      do_enq(9,11);
-      do_enq(9,12);
-      do_enq(55,55);
-      do_enq(5,5);
-      do_enq(30,30);
+      @ti.cb;
+      @ti.cb;
+      @ti.cb;
+      do_enq(5,3);
+      do_enq(10,1);
+      do_enq(3,4);
+      do_enq(20,10);
+      do_enq(2,6);
+      do_enq(12,7);
+      do_enq(27,24);
+      do_enq(8,17);
       @ti.cb;  // something funny here!
-      do_enq_and_deq(1,1);
-      do_enq_and_deq(16,16);
+      do_enq_and_deq(9,9);
+      do_enq_and_deq(4,1);
+      do_enq_and_deq(15,16);
+      do_enq_and_deq(30,0);
       while (!ti.cb.empty) do_deq();
       repeat (4) @ti.cb;
 //      do_enq (12,12);

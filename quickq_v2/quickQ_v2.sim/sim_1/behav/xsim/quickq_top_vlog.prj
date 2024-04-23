@@ -7,14 +7,17 @@ sv xil_defaultlib  \
 "../../../../RTL/kv_dffre.sv" \
 "../../../../RTL/kv_mux4.sv" \
 "../../../../RTL/mem2p_sw_sr.sv" \
+"../../../../../pq_if.sv" \
 "../../../../../pq_mux2.sv" \
 "../../../../RTL/qq_control.sv" \
 "../../../../RTL/qq_fsm.sv" \
 "../../../../RTL/qq_node.sv" \
 "../../../../RTL/qq_top.sv" \
+"../../../../quickq.sv" \
+"../../../../../quickq_tb.sv" \
 "../../../../RTL/reg_sr.sv" \
 "../../../../RTL/reg_sr_empty.sv" \
-"../../../../sim/qqtop_tb.sv" \
+"../../../../../quickq_top.sv" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

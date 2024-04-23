@@ -115,14 +115,15 @@ module qq_fsm #(
                     sel_t = 0;  // t <= data_lt_i
                     ld_t  = 1;
                     next  = ENQ1;
-                end else if (deq_i) begin
-                    incr_ctl = 2'b01;   // rd_addr = wr_addr + 1 == 1
-                    next = DEQ1;
                 end else if (repl_i) begin
                     sel_t = 0; //t <= data_lt_i
                     ld_t = 1;
                     incr_ctl = 2'b01;   // rd_addr = wr_addr + 1 == 1?
                     next = REP1;
+                end else if (deq_i) begin
+                    incr_ctl = 2'b01;   // rd_addr = wr_addr + 1 == 1
+                    next = DEQ1;
+                
                 end else next = IDLE;
             end
 
