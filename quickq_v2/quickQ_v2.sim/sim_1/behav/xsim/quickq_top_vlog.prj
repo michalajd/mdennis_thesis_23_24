@@ -14,10 +14,10 @@ sv xil_defaultlib  \
 "../../../../RTL/qq_node.sv" \
 "../../../../RTL/qq_top.sv" \
 "../../../../quickq.sv" \
-"../../../../../quickq_tb.sv" \
+"../../../../quickq_tb.sv" \
 "../../../../RTL/reg_sr.sv" \
 "../../../../RTL/reg_sr_empty.sv" \
-"../../../../../quickq_top.sv" \
+"../../../../quickq_top.sv" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

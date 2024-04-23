@@ -12,27 +12,4 @@ WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 2 for
 WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 2 for port 'wr_addr' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_control.sv:91]
 WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 2 for port 'rd_addr' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_control.sv:92]
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package xil_defaultlib.pq_pkg
-Compiling module xil_defaultlib.cb
-Compiling module xil_defaultlib.pq_if
-Compiling module xil_defaultlib.pq_mux2
-Compiling module xil_defaultlib.kv_dffre
-Compiling module xil_defaultlib.mem2p_sw_sr(W=16,D=4)
-Compiling module xil_defaultlib.kv_cmp_mag
-Compiling module xil_defaultlib.kv_mux4
-Compiling module xil_defaultlib.qq_fsm(W=8)
-Compiling module xil_defaultlib.adr_cnt_default
-Compiling module xil_defaultlib.adr_inc_default
-Compiling module xil_defaultlib.reg_sr_empty
-Compiling module xil_defaultlib.reg_sr
-Compiling module xil_defaultlib.qq_control_default
-Compiling module xil_defaultlib.qq_node(W=8)
-Compiling module xil_defaultlib.qq_top(W=8)
-Compiling module xil_defaultlib.quickq
-Compiling module xil_defaultlib.quickq_tb
-Compiling module xil_defaultlib.quickq_top
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot quickq_top_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
