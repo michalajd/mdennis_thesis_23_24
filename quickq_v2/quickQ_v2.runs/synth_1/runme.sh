@@ -37,4 +37,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log quickq_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source quickq_wrapper.tcl
+EAStep vivado -log hwpq_test.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source hwpq_test.tcl

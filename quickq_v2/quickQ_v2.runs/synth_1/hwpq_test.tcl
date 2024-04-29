@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickQ_v2.runs/synth_1/quickq_wrapper.tcl"
+  variable script "/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickQ_v2.runs/synth_1/hwpq_test.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,6 +70,9 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param xicom.use_bs_reader 1
+set_param chipscope.maxJobs 2
+set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
@@ -80,8 +83,6 @@ set_property webtalk.parent_dir /home/mckayla/Desktop/mdennis_thesis_23_24/quick
 set_property parent.project_path /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickQ_v2.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property board_part_repo_paths {/home/mckayla/.Xilinx/Vivado/2023.1.1/xhub/board_store/xilinx_board_store} [current_project]
-set_property board_part digilentinc.com:nexys4:part0:1.1 [current_project]
 set_property ip_output_repo /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickQ_v2.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
@@ -89,11 +90,17 @@ OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
   /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/adr_cnt.sv
   /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/adr_inc.sv
+  /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickq_hw/counter.sv
+  /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickq_hw/dec_3_8.sv
+  /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/hwpq_test/hwpqtest_ctl.sv
   /home/mckayla/Desktop/mdennis_thesis_23_24/pq_pkg.sv
   /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/kv_cmp_mag.sv
   /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/kv_dffre.sv
   /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/kv_mux4.sv
+  /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/hwpq_test/lfsr8_e.sv
   /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv
+  /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickq_hw/mux8.sv
+  /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickq_hw/period_enb.sv
   /home/mckayla/Desktop/mdennis_thesis_23_24/pq_if.sv
   /home/mckayla/Desktop/mdennis_thesis_23_24/pq_mux2.sv
   /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_control.sv
@@ -101,9 +108,13 @@ read_verilog -library xil_defaultlib -sv {
   /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_node.sv
   /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_top.sv
   /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickq.sv
+  /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/hwpq_test/quickqHW_wrapper.sv
   /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/reg_sr.sv
   /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/reg_sr_empty.sv
-  /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quick1_wrapper.sv
+  /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickq_hw/sevenseg_ctl.sv
+  /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickq_hw/sevenseg_ext_n.sv
+  /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickq_hw/single_pulser.sv
+  /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/hwpq_test/hwpq_test.sv
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -114,8 +125,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickq_hw/quickq_hw.xdc
-set_property used_in_implementation false [get_files /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickq_hw/quickq_hw.xdc]
+read_xdc /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/hwpq_test/hwpq_test.xdc
+set_property used_in_implementation false [get_files /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/hwpq_test/hwpq_test.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
@@ -123,7 +134,7 @@ read_checkpoint -auto_incremental -incremental /home/mckayla/Desktop/mdennis_the
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top quickq_wrapper -part xc7a100tcsg324-1
+synth_design -top hwpq_test -part xc7a100tcsg324-1
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
@@ -133,10 +144,10 @@ if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
 OPTRACE "write_checkpoint" START { CHECKPOINT }
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef quickq_wrapper.dcp
+write_checkpoint -force -noxdef hwpq_test.dcp
 OPTRACE "write_checkpoint" END { }
 OPTRACE "synth reports" START { REPORT }
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file quickq_wrapper_utilization_synth.rpt -pb quickq_wrapper_utilization_synth.pb"
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file hwpq_test_utilization_synth.rpt -pb hwpq_test_utilization_synth.pb"
 OPTRACE "synth reports" END { }
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]

@@ -63,7 +63,7 @@ module quickq_hw(
 
     pq_if U_PQ_IF (.clk);
 
-    quickq U_HEAP_PQ(U_PQ_IF.dev);
+    quickq U_QUICKQ(U_PQ_IF.dev);
 
    // is it really this easy?
     assign U_PQ_IF.rst = rst;

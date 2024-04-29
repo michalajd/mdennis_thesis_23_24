@@ -48,7 +48,7 @@ module hwpq_test (
         .busy, .full, .empty, .enb_lfsr, .sel_in, .enq, .deq
     );
 
-    heap_pq_wrapper HWWRAP (
+    quickqHW_wrapper HWWRAP (
         .clk, .rst, .key_in, .value_in, .enq, .full, .busy, .empty, .key_out, .value_out, .deq
     );
 
