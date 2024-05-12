@@ -1,89 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1714375314">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1715552728">
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-RQS" Name="hwpq_test_postroute_physopted.rqs"/>
-  <File Type="ROUTE-RQS" Name="hwpq_test_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="quickq_wrapper_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS" Name="quickq_wrapper_routed.rqs"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="BG-BGN" Name="hwpq_test.bgn"/>
-  <File Type="BITSTR-SYSDEF" Name="hwpq_test.sysdef"/>
+  <File Type="BG-BGN" Name="quickq_wrapper.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="quickq_wrapper.sysdef"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="hwpq_test.ltx"/>
-  <File Type="RBD_FILE" Name="hwpq_test.rbd"/>
-  <File Type="NPI_FILE" Name="hwpq_test.npi"/>
-  <File Type="RNPI_FILE" Name="hwpq_test.rnpi"/>
-  <File Type="CFI_FILE" Name="hwpq_test.cfi"/>
-  <File Type="RCFI_FILE" Name="hwpq_test.rcfi"/>
-  <File Type="PL-PDI-FILE" Name="hwpq_test_pld.pdi"/>
-  <File Type="BOOT-PDI-FILE" Name="hwpq_test_soc.pdi"/>
-  <File Type="RDI-RDI" Name="hwpq_test.vdi"/>
-  <File Type="PDI-FILE" Name="hwpq_test.pdi"/>
-  <File Type="BITSTR-MMI" Name="hwpq_test.mmi"/>
-  <File Type="BITSTR-BMM" Name="hwpq_test_bd.bmm"/>
-  <File Type="BITSTR-NKY" Name="hwpq_test.nky"/>
-  <File Type="BITSTR-RBT" Name="hwpq_test.rbt"/>
-  <File Type="BITSTR-MSK" Name="hwpq_test.msk"/>
-  <File Type="BG-BIN" Name="hwpq_test.bin"/>
+  <File Type="BITSTR-LTX" Name="quickq_wrapper.ltx"/>
+  <File Type="RBD_FILE" Name="quickq_wrapper.rbd"/>
+  <File Type="NPI_FILE" Name="quickq_wrapper.npi"/>
+  <File Type="RNPI_FILE" Name="quickq_wrapper.rnpi"/>
+  <File Type="CFI_FILE" Name="quickq_wrapper.cfi"/>
+  <File Type="RCFI_FILE" Name="quickq_wrapper.rcfi"/>
+  <File Type="PL-PDI-FILE" Name="quickq_wrapper_pld.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="quickq_wrapper_soc.pdi"/>
+  <File Type="RDI-RDI" Name="quickq_wrapper.vdi"/>
+  <File Type="PDI-FILE" Name="quickq_wrapper.pdi"/>
+  <File Type="BITSTR-MMI" Name="quickq_wrapper.mmi"/>
+  <File Type="BITSTR-BMM" Name="quickq_wrapper_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="quickq_wrapper.nky"/>
+  <File Type="BITSTR-RBT" Name="quickq_wrapper.rbt"/>
+  <File Type="BITSTR-MSK" Name="quickq_wrapper.msk"/>
+  <File Type="BG-BIN" Name="quickq_wrapper.bin"/>
   <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
-  <File Type="BG-BIT" Name="hwpq_test.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="quickq_wrapper_bus_skew_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="quickq_wrapper_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="quickq_wrapper_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="quickq_wrapper_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="quickq_wrapper_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="quickq_wrapper_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="hwpq_test_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="hwpq_test_postroute_physopt.dcp"/>
-  <File Type="BG-DRC" Name="hwpq_test.drc"/>
-  <File Type="ROUTE-RQS-PB" Name="hwpq_test_rqs_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="hwpq_test_bus_skew_routed.rpx"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="hwpq_test_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW" Name="hwpq_test_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="hwpq_test_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-SIMILARITY" Name="hwpq_test_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-TIMING-RPX" Name="hwpq_test_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-TIMING-PB" Name="hwpq_test_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="hwpq_test_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="hwpq_test_route_status.pb"/>
-  <File Type="ROUTE-STATUS" Name="hwpq_test_route_status.rpt"/>
-  <File Type="ROUTE-PWR-RPX" Name="hwpq_test_power_routed.rpx"/>
-  <File Type="ROUTE-PWR-SUM" Name="hwpq_test_power_summary_routed.pb"/>
-  <File Type="ROUTE-PWR" Name="hwpq_test_power_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="hwpq_test_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="hwpq_test_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="hwpq_test_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-RPX" Name="hwpq_test_drc_routed.rpx"/>
-  <File Type="ROUTE-DRC-PB" Name="hwpq_test_drc_routed.pb"/>
-  <File Type="ROUTE-DRC" Name="hwpq_test_drc_routed.rpt"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="hwpq_test_routed_bb.dcp"/>
-  <File Type="ROUTE-DCP" Name="hwpq_test_routed.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="hwpq_test_routed_error.dcp"/>
-  <File Type="PHYSOPT-TIMING" Name="hwpq_test_timing_summary_physopted.rpt"/>
-  <File Type="PHYSOPT-DRC" Name="hwpq_test_drc_physopted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="hwpq_test_physopt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="hwpq_test_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="hwpq_test_postplace_pwropt.dcp"/>
-  <File Type="PLACE-RQA-PB" Name="hwpq_test_rqa_placed.pb"/>
-  <File Type="PLACE-TIMING" Name="hwpq_test_timing_summary_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="hwpq_test_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="hwpq_test_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-CTRL" Name="hwpq_test_control_sets_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="hwpq_test_utilization_placed.pb"/>
-  <File Type="PLACE-UTIL" Name="hwpq_test_utilization_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="hwpq_test_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-IO" Name="hwpq_test_io_placed.rpt"/>
-  <File Type="PLACE-DCP" Name="hwpq_test_placed.dcp"/>
-  <File Type="PWROPT-TIMING" Name="hwpq_test_timing_summary_pwropted.rpt"/>
-  <File Type="PWROPT-DRC" Name="hwpq_test_drc_pwropted.rpt"/>
-  <File Type="PWROPT-DCP" Name="hwpq_test_pwropt.dcp"/>
-  <File Type="OPT-RQA-PB" Name="hwpq_test_rqa_opted.pb"/>
-  <File Type="OPT-HWDEF" Name="hwpq_test.hwdef"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="hwpq_test_methodology_drc_opted.rpt"/>
-  <File Type="OPT-DRC" Name="hwpq_test_drc_opted.rpt"/>
-  <File Type="OPT-DCP" Name="hwpq_test_opt.dcp"/>
-  <File Type="OPT-TIMING" Name="hwpq_test_timing_summary_opted.rpt"/>
-  <File Type="REPORTS-TCL" Name="hwpq_test_reports.tcl"/>
-  <File Type="INIT-TIMING" Name="hwpq_test_timing_summary_init.rpt"/>
-  <File Type="PA-TCL" Name="hwpq_test.tcl"/>
+  <File Type="BG-BIT" Name="quickq_wrapper.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="quickq_top_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="quickq_top_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="quickq_top_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="quickq_top_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="quickq_top_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="quickq_top_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="quickq_wrapper_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="quickq_wrapper_postroute_physopt.dcp"/>
+  <File Type="BG-DRC" Name="quickq_wrapper.drc"/>
+  <File Type="ROUTE-RQS-PB" Name="quickq_wrapper_rqs_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="quickq_wrapper_bus_skew_routed.rpx"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="quickq_wrapper_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW" Name="quickq_wrapper_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="quickq_wrapper_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="quickq_wrapper_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="quickq_wrapper_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="quickq_wrapper_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="quickq_wrapper_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="quickq_wrapper_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="quickq_wrapper_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="quickq_wrapper_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="quickq_wrapper_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="quickq_wrapper_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="quickq_wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="quickq_wrapper_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="quickq_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="quickq_wrapper_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="quickq_wrapper_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="quickq_wrapper_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="quickq_wrapper_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="quickq_wrapper_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="quickq_wrapper_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="quickq_wrapper_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="quickq_wrapper_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="quickq_wrapper_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="quickq_wrapper_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="quickq_wrapper_postplace_pwropt.dcp"/>
+  <File Type="PLACE-RQA-PB" Name="quickq_wrapper_rqa_placed.pb"/>
+  <File Type="PLACE-TIMING" Name="quickq_wrapper_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="quickq_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="quickq_wrapper_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="quickq_wrapper_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="quickq_wrapper_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="quickq_wrapper_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="quickq_wrapper_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="quickq_wrapper_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="quickq_wrapper_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="quickq_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="quickq_wrapper_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="quickq_wrapper_pwropt.dcp"/>
+  <File Type="OPT-RQA-PB" Name="quickq_wrapper_rqa_opted.pb"/>
+  <File Type="OPT-HWDEF" Name="quickq_wrapper.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="quickq_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="quickq_wrapper_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="quickq_wrapper_opt.dcp"/>
+  <File Type="OPT-TIMING" Name="quickq_wrapper_timing_summary_opted.rpt"/>
+  <File Type="REPORTS-TCL" Name="quickq_wrapper_reports.tcl"/>
+  <File Type="INIT-TIMING" Name="quickq_wrapper_timing_summary_init.rpt"/>
+  <File Type="PA-TCL" Name="quickq_wrapper.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/RTL/adr_cnt.sv">
@@ -94,27 +94,6 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/RTL/adr_inc.sv">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/quickq_hw/counter.sv">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/quickq_hw/dec_3_8.sv">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/hwpq_test/hwpqtest_ctl.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -149,28 +128,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/hwpq_test/lfsr8_e.sv">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/RTL/mem2p_sw_sr.sv">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/quickq_hw/mux8.sv">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/quickq_hw/period_enb.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -226,13 +184,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/hwpq_test/quickqHW_wrapper.sv">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/RTL/reg_sr.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -247,51 +198,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/quickq_hw/sevenseg_ctl.sv">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/quickq_hw/sevenseg_ext_n.sv">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/quickq_hw/single_pulser.sv">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/hwpq_test/hwpq_test.sv">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/quickq_hw/debounce.sv">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/quickq_hw/quickq_hw.sv">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/quick1_wrapper.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/quickq_top.sv">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -307,7 +221,103 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/quickq_top.sv">
+    <File Path="$PPRDIR/quickq_hw/counter.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/quickq_hw/dec_3_8.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/hwpq_test/hwpqtest_ctl.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/hwpq_test/lfsr8_e.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/quickq_hw/mux8.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/quickq_hw/period_enb.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/hwpq_test/quickqHW_wrapper.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/quickq_hw/sevenseg_ctl.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/quickq_hw/sevenseg_ext_n.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/quickq_hw/single_pulser.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/hwpq_test/hwpq_test.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/quickq_hw/debounce.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/quickq_hw/quickq_hw.sv">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -413,20 +423,20 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="hwpq_test"/>
+      <Option Name="TopModule" Val="quickq_wrapper"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
     <Filter Type="Constrs"/>
     <File Path="$PPRDIR/quickq_hw/quickq_hw.xdc">
       <FileInfo>
-        <Attr Name="UserDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
     </File>
     <File Path="$PPRDIR/hwpq_test/hwpq_test.xdc">
       <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
@@ -451,9 +461,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>

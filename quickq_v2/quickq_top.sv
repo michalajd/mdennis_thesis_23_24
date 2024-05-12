@@ -34,6 +34,6 @@ module quickq_top;
     
     quickq DUV(PQ_IF.dev);
     
-    quickq_tb TB(PQ_IF.tb);
+    //quickq_tb TB(PQ_IF.tb);
     
 endmodule

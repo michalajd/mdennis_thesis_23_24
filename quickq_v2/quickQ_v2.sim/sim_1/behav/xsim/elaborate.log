@@ -1,15 +1,33 @@
 Vivado Simulator v2023.1.1
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /home/user/Xylinx/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot quickq_top_behav xil_defaultlib.quickq_top xil_defaultlib.glbl -log elaborate.log 
+Running: /home/user/Xylinx/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot qqtop_tb_behav xil_defaultlib.qqtop_tb xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 16 for port 'rt_i' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickq.sv:41]
 WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 2 for port 'addr1' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_node.sv:52]
 WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 2 for port 'wr_addr' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_control.sv:58]
 WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 2 for port 'wr_addr' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_control.sv:84]
 WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 2 for port 'wr_addr' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_control.sv:91]
 WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 2 for port 'rd_addr' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_control.sv:92]
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.pq_pkg
+Compiling module xil_defaultlib.pq_mux2
+Compiling module xil_defaultlib.kv_dffre
+Compiling module xil_defaultlib.mem2p_sw_sr(W=16,D=4)
+Compiling module xil_defaultlib.kv_cmp_mag
+Compiling module xil_defaultlib.kv_mux4
+Compiling module xil_defaultlib.qq_fsm(W=8)
+Compiling module xil_defaultlib.adr_cnt_default
+Compiling module xil_defaultlib.adr_inc_default
+Compiling module xil_defaultlib.reg_sr_empty
+Compiling module xil_defaultlib.reg_sr
+Compiling module xil_defaultlib.qq_control_default
+Compiling module xil_defaultlib.qq_node(W=8)
+Compiling module xil_defaultlib.qq_top(W=8)
+Compiling module xil_defaultlib.qqtop_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot qqtop_tb_behav

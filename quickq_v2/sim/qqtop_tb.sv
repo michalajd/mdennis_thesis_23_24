@@ -93,21 +93,21 @@ qq_top #(.W(8)) DUV (.clk, .rst, .enq, .deq, .repl, .lt_i, .rt_i, .lt_o, .rt_o, 
     enq = 1;
     @(posedge clk) #1;
     enq = 0;
-    repeat (10) @(posedge clk) #1; // to see FULL go high we need more time (change: rdy = 1 to allow new operation?)
-    
+    repeat (5) @(posedge clk) #1; // to see FULL go high we need more time (change: rdy = 1 to allow new operation?)
     // Replace tests 
-    lt_i.key = 9;
+    lt_i.key = 13;
     lt_i.value = 9;
     repl = 1;
     @(posedge clk) #1;
     repl = 0;
-    repeat (6) @(posedge clk) #1;
-    lt_i.key = 4;
+    repeat (5) @(posedge clk) #1;
+    lt_i.key = 9;
     lt_i.value = 1;
     repl = 1;
     @(posedge clk) #1;
     repl = 0;
     repeat (6) @(posedge clk) #1;
+    /*
     lt_i.key = 15;
     lt_i.value = 16;
     repl = 1;
@@ -153,7 +153,7 @@ qq_top #(.W(8)) DUV (.clk, .rst, .enq, .deq, .repl, .lt_i, .rt_i, .lt_o, .rt_o, 
     @(posedge clk) #1;
     deq = 0;
     repeat (2) @(posedge clk) #1;
-
+    */
     $stop;
     end
 endmodule

@@ -44,8 +44,8 @@ module qq_top #(parameter W=32, D=4, localparam DW=$clog2(D)) (
                                    .rdy(rdy2), .full(full2), .empty(empty2), .enq_o(), .deq_o(), .repl_o(),
                                    .data_lt_o(lt_2_rt_1), .data_rt_o(rt_o));
     
-    assign full_t = (full1 && full2) ? 1 : 0;
-    assign empty_t = (empty1 && empty2) ? 1 : 0;
-    assign rdy_t = (rdy1 && rdy2) ? 1 : 0;
+    assign full_t = full2;
+    assign empty_t = empty1;
+    assign rdy_t = rdy1;
 
 endmodule

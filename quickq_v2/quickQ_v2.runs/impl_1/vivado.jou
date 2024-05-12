@@ -3,12 +3,12 @@
 # SW Build 3900603 on Fri Jun 16 19:30:25 MDT 2023
 # IP Build 3900379 on Sat Jun 17 05:28:05 MDT 2023
 # SharedData Build 3899622 on Fri Jun 16 03:34:24 MDT 2023
-# Start of session at: Mon Apr 29 03:22:37 2024
-# Process ID: 659301
+# Start of session at: Sun May 12 18:26:13 2024
+# Process ID: 872520
 # Current directory: /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickQ_v2.runs/impl_1
-# Command line: vivado -log hwpq_test.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source hwpq_test.tcl -notrace
-# Log file: /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickQ_v2.runs/impl_1/hwpq_test.vdi
+# Command line: vivado -log quickq_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source quickq_wrapper.tcl -notrace
+# Log file: /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickQ_v2.runs/impl_1/quickq_wrapper.vdi
 # Journal file: /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickQ_v2.runs/impl_1/vivado.jou
-# Running On: ece428lab, OS: Linux, CPU Frequency: 4498.801 MHz, CPU Physical cores: 8, Host memory: 33426 MB
+# Running On: ece428lab, OS: Linux, CPU Frequency: 4501.549 MHz, CPU Physical cores: 8, Host memory: 33426 MB
 #-----------------------------------------------------------
-source hwpq_test.tcl -notrace
+source quickq_wrapper.tcl -notrace

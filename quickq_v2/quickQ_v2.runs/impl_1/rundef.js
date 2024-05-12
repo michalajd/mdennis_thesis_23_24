@@ -30,7 +30,7 @@ eval( EAInclude(ISEJScriptLib) );
 // pre-commands:
 ISETouchFile( "init_design", "begin" );
 ISEStep( "vivado",
-         "-log hwpq_test.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source hwpq_test.tcl -notrace" );
+         "-log quickq_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source quickq_wrapper.tcl -notrace" );
 
 
 
