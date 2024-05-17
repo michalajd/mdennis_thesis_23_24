@@ -19,7 +19,7 @@ package pq_pkg;
 
     parameter KEY_WIDTH=32;
     parameter VAL_WIDTH=32;
-    parameter PQ_CAPACITY=131072;
+    parameter PQ_CAPACITY=4;
     
     typedef enum logic {MIN_PQ, MAX_PQ} pq_type_t;
 

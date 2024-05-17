@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1715552728">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1715965974">
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="quickq_wrapper_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS" Name="quickq_wrapper_routed.rqs"/>
@@ -25,12 +25,12 @@
   <File Type="BG-BIN" Name="quickq_wrapper.bin"/>
   <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <File Type="BG-BIT" Name="quickq_wrapper.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="quickq_top_bus_skew_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="quickq_top_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="quickq_top_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="quickq_top_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="quickq_top_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="quickq_top_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="quickq_wrapper_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="quickq_wrapper_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="quickq_wrapper_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="quickq_wrapper_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="quickq_wrapper_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="quickq_wrapper_timing_summary_postroute_physopted.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="quickq_wrapper_postroute_physopt_bb.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="quickq_wrapper_postroute_physopt.dcp"/>
   <File Type="BG-DRC" Name="quickq_wrapper.drc"/>

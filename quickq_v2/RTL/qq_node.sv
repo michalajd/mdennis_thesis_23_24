@@ -48,7 +48,7 @@ module qq_node #(parameter W=32, D=4, localparam DW=$clog2(D)) (
     kv_dffre TEMP (.clk, .rst, .enb(ld_t), .d(mux2_reg), .q(data_rt_o));
     
     // BRAM
-    mem2p_sw_sr #(.W(KEY_WIDTH+VAL_WIDTH), .D(PQ_CAPACITY/2)) BRAM 
+    mem2p_sw_sr #(.W(KEY_WIDTH+VAL_WIDTH), .D(D)) BRAM 
         (.clk, .we1(we), .addr1(wr_addr), .din1(mux4_bram), .addr2(rd_addr), .dout2(ram_out));
     
     // Key Comparator

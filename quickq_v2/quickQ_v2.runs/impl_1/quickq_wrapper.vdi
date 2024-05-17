@@ -3,30 +3,31 @@
 # SW Build 3900603 on Fri Jun 16 19:30:25 MDT 2023
 # IP Build 3900379 on Sat Jun 17 05:28:05 MDT 2023
 # SharedData Build 3899622 on Fri Jun 16 03:34:24 MDT 2023
-# Start of session at: Sun May 12 18:26:13 2024
-# Process ID: 872520
+# Start of session at: Fri May 17 13:13:38 2024
+# Process ID: 884304
 # Current directory: /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickQ_v2.runs/impl_1
 # Command line: vivado -log quickq_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source quickq_wrapper.tcl -notrace
 # Log file: /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickQ_v2.runs/impl_1/quickq_wrapper.vdi
 # Journal file: /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickQ_v2.runs/impl_1/vivado.jou
-# Running On: ece428lab, OS: Linux, CPU Frequency: 4501.549 MHz, CPU Physical cores: 8, Host memory: 33426 MB
+# Running On: ece428lab, OS: Linux, CPU Frequency: 4601.957 MHz, CPU Physical cores: 8, Host memory: 33426 MB
 #-----------------------------------------------------------
 source quickq_wrapper.tcl -notrace
 Command: link_design -top quickq_wrapper -part xc7a100tcsg324-1
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1634.469 ; gain = 0.000 ; free physical = 17418 ; free virtual = 25828
-INFO: [Netlist 29-17] Analyzing 292 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1634.426 ; gain = 0.000 ; free physical = 18659 ; free virtual = 27040
+INFO: [Netlist 29-17] Analyzing 68 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2023.1.1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 Parsing XDC File [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickq_hw/quickq_hw.xdc]
 Finished Parsing XDC File [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickq_hw/quickq_hw.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1803.812 ; gain = 0.000 ; free physical = 17265 ; free virtual = 25697
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1797.801 ; gain = 0.000 ; free physical = 18549 ; free virtual = 26931
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 44 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 44 instances
 
 7 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
@@ -37,154 +38,81 @@ Running DRC as a precondition to command opt_design
 
 Starting DRC Task
 INFO: [DRC 23-27] Running DRC with 8 threads
-INFO: [Project 1-461] DRC finished with 0 Errors
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_0_5/DOA0 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_0_5/RAMA/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_0_5/RAMA/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_0_5/DOA1 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_0_5/RAMA_D1/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_0_5/RAMA_D1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_0_5/DOB0 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_0_5/RAMB/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_0_5/RAMB/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_0_5/DOB1 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_0_5/RAMB_D1/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_0_5/RAMB_D1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_0_5/DOC0 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_0_5/RAMC/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_0_5/RAMC/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_0_5/DOC1 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_0_5/RAMC_D1/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_0_5/RAMC_D1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_12_17/DOA0 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_12_17/RAMA/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_12_17/RAMA/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_12_17/DOA1 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_12_17/RAMA_D1/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_12_17/RAMA_D1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_12_17/DOB0 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_12_17/RAMB/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_12_17/RAMB/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_12_17/DOB1 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_12_17/RAMB_D1/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_12_17/RAMB_D1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_12_17/DOC0 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_12_17/RAMC/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_12_17/RAMC/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_12_17/DOC1 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_12_17/RAMC_D1/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_12_17/RAMC_D1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_18_23/DOA0 has multiple drivers: U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_18_23/RAMA/O, and U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_18_23/RAMA/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_18_23/DOA1 has multiple drivers: U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_18_23/RAMA_D1/O, and U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_18_23/RAMA_D1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_18_23/DOB0 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_18_23/RAMB/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_18_23/RAMB/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_18_23/DOB1 has multiple drivers: U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_18_23/RAMB_D1/O, and U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_18_23/RAMB_D1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_18_23/DOC0 has multiple drivers: U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_18_23/RAMC/O, and U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_18_23/RAMC/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_18_23/DOC1 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_18_23/RAMC_D1/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_18_23/RAMC_D1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_24_29/DOA0 has multiple drivers: U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_24_29/RAMA/O, and U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_24_29/RAMA/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_24_29/DOA1 has multiple drivers: U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_24_29/RAMA_D1/O, and U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_24_29/RAMA_D1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_24_29/DOB0 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_24_29/RAMB/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_24_29/RAMB/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_24_29/DOB1 has multiple drivers: U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_24_29/RAMB_D1/O, and U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_24_29/RAMB_D1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_24_29/DOC0 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_24_29/RAMC/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_24_29/RAMC/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_24_29/DOC1 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_24_29/RAMC_D1/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_24_29/RAMC_D1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_30_35/DOA0 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_30_35/RAMA/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_30_35/RAMA/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_30_35/DOA1 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_30_35/RAMA_D1/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_30_35/RAMA_D1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_30_35/DOB0 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_30_35/RAMB/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_30_35/RAMB/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_30_35/DOB1 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_30_35/RAMB_D1/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_30_35/RAMB_D1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_30_35/DOC0 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_30_35/RAMC/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_30_35/RAMC/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_30_35/DOC1 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_30_35/RAMC_D1/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_30_35/RAMC_D1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_36_41/DOA0 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_36_41/RAMA/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_36_41/RAMA/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_36_41/DOA1 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_36_41/RAMA_D1/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_36_41/RAMA_D1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_36_41/DOB0 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_36_41/RAMB/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_36_41/RAMB/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_36_41/DOB1 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_36_41/RAMB_D1/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_36_41/RAMB_D1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_36_41/DOC0 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_36_41/RAMC/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_36_41/RAMC/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_36_41/DOC1 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_36_41/RAMC_D1/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_36_41/RAMC_D1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_42_47/DOA0 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_42_47/RAMA/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_42_47/RAMA/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_42_47/DOA1 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_42_47/RAMA_D1/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_42_47/RAMA_D1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_42_47/DOB0 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_42_47/RAMB/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_42_47/RAMB/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_42_47/DOB1 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_42_47/RAMB_D1/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_42_47/RAMB_D1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_42_47/DOC0 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_42_47/RAMC/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_42_47/RAMC/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_42_47/DOC1 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_42_47/RAMC_D1/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_42_47/RAMC_D1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_48_53/DOA0 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_48_53/RAMA/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_48_53/RAMA/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_48_53/DOA1 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_48_53/RAMA_D1/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_48_53/RAMA_D1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_48_53/DOB0 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_48_53/RAMB/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_48_53/RAMB/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_48_53/DOB1 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_48_53/RAMB_D1/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_48_53/RAMB_D1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_48_53/DOC0 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_48_53/RAMC/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_48_53/RAMC/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_48_53/DOC1 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_48_53/RAMC_D1/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_48_53/RAMC_D1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_54_59/DOA0 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_54_59/RAMA/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_54_59/RAMA/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_54_59/DOA1 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_54_59/RAMA_D1/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_54_59/RAMA_D1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_54_59/DOB0 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_54_59/RAMB/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_54_59/RAMB/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_54_59/DOB1 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_54_59/RAMB_D1/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_54_59/RAMB_D1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_54_59/DOC0 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_54_59/RAMC/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_54_59/RAMC/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_54_59/DOC1 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_54_59/RAMC_D1/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_54_59/RAMC_D1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_60_63/DOA0 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_60_63/RAMA/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_60_63/RAMA/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_60_63/DOA1 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_60_63/RAMA_D1/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_60_63/RAMA_D1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_60_63/DOB0 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_60_63/RAMB/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_60_63/RAMB/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_60_63/DOB1 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_60_63/RAMB_D1/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_60_63/RAMB_D1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_6_11/DOA0 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_6_11/RAMA/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_6_11/RAMA/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_6_11/DOA1 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_6_11/RAMA_D1/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_6_11/RAMA_D1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_6_11/DOB0 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_6_11/RAMB/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_6_11/RAMB/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_6_11/DOB1 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_6_11/RAMB_D1/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_6_11/RAMB_D1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_6_11/DOC0 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_6_11/RAMC/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_6_11/RAMC/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_6_11/DOC1 has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_6_11/RAMC_D1/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_6_11/RAMC_D1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/CTL/EMPTYFF/empty_OBUF has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/CTL/EMPTYFF/q_reg/Q, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/CTL/EMPTYFF/q_reg/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE1/CTL/FSM/rdy has multiple drivers: U_QUICKQ/genblk1[2].U_QQTOP/NODE1/CTL/FSM/busy_OBUF_inst_i_2/O, and U_QUICKQ/genblk1[1].U_QQTOP/NODE1/CTL/FSM/busy_OBUF_inst_i_3/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_QUICKQ/genblk1[2].U_QQTOP/NODE2/CTL/FULLFF/full_OBUF has multiple drivers: U_QUICKQ/genblk1[1].U_QQTOP/NODE2/CTL/FULLFF/q_reg/Q, and U_QUICKQ/genblk1[2].U_QQTOP/NODE2/CTL/FULLFF/q_reg/Q.
+INFO: [Project 1-461] DRC finished with 67 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.
 
-Time (s): cpu = 00:00:00.75 ; elapsed = 00:00:00.5 . Memory (MB): peak = 1889.656 ; gain = 81.875 ; free physical = 17249 ; free virtual = 25675
-
-Starting Cache Timing Information Task
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 2520f01cc
-
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2396.516 ; gain = 506.859 ; free physical = 16837 ; free virtual = 25263
-
-Starting Logic Optimization Task
-
-Phase 1 Retarget
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 22e703ae4
-
-Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2684.344 ; gain = 0.000 ; free physical = 16547 ; free virtual = 24975
-INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
-
-Phase 2 Constant propagation
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 2 Constant propagation | Checksum: 1d4a62eab
-
-Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.09 . Memory (MB): peak = 2684.344 ; gain = 0.000 ; free physical = 16547 ; free virtual = 24975
-INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
-
-Phase 3 Sweep
-Phase 3 Sweep | Checksum: 227227406
-
-Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2684.344 ; gain = 0.000 ; free physical = 16547 ; free virtual = 24975
-INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 8 cells
-
-Phase 4 BUFG optimization
-Phase 4 BUFG optimization | Checksum: 227227406
-
-Time (s): cpu = 00:00:00.24 ; elapsed = 00:00:00.15 . Memory (MB): peak = 2716.359 ; gain = 32.016 ; free physical = 16547 ; free virtual = 24975
-INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
-
-Phase 5 Shift Register Optimization
-INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 5 Shift Register Optimization | Checksum: fbde2600
-
-Time (s): cpu = 00:00:00.34 ; elapsed = 00:00:00.18 . Memory (MB): peak = 2716.359 ; gain = 32.016 ; free physical = 16547 ; free virtual = 24975
-INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
-
-Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: fbde2600
-
-Time (s): cpu = 00:00:00.34 ; elapsed = 00:00:00.19 . Memory (MB): peak = 2716.359 ; gain = 32.016 ; free physical = 16547 ; free virtual = 24975
-INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
-Opt_design Change Summary
-=========================
-
-
--------------------------------------------------------------------------------------------------------------------------
-|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
--------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |               0  |               0  |                                              0  |
-|  Constant propagation         |               0  |               0  |                                              0  |
-|  Sweep                        |               0  |               8  |                                              0  |
-|  BUFG optimization            |               0  |               0  |                                              0  |
-|  Shift Register Optimization  |               0  |               0  |                                              0  |
-|  Post Processing Netlist      |               0  |               0  |                                              0  |
--------------------------------------------------------------------------------------------------------------------------
-
-
-
-Starting Connectivity Check Task
-
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2716.359 ; gain = 0.000 ; free physical = 16547 ; free virtual = 24975
-Ending Logic Optimization Task | Checksum: fbde2600
-
-Time (s): cpu = 00:00:00.34 ; elapsed = 00:00:00.19 . Memory (MB): peak = 2716.359 ; gain = 32.016 ; free physical = 16547 ; free virtual = 24975
-
-Starting Power Optimization Task
-INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-Running Vector-less Activity Propagation...
-
-Finished Running Vector-less Activity Propagation
-INFO: [Pwropt 34-9] Applying IDT optimizations ...
-INFO: [Pwropt 34-10] Applying ODC optimizations ...
-
-
-Starting PowerOpt Patch Enables Task
-INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 256 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
-INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
-Number of BRAM Ports augmented: 128 newly gated: 192 Total Ports: 512
-Ending PowerOpt Patch Enables Task | Checksum: 1809edcdc
-
-Time (s): cpu = 00:00:00.71 ; elapsed = 00:00:00.66 . Memory (MB): peak = 3091.211 ; gain = 0.000 ; free physical = 16190 ; free virtual = 24616
-Ending Power Optimization Task | Checksum: 1809edcdc
-
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 3091.211 ; gain = 374.852 ; free physical = 16190 ; free virtual = 24616
-
-Starting Final Cleanup Task
-
-Starting Logic Optimization Task
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Logic Optimization Task | Checksum: 1c5ccfc82
-
-Time (s): cpu = 00:00:00.4 ; elapsed = 00:00:00.2 . Memory (MB): peak = 3091.211 ; gain = 0.000 ; free physical = 16190 ; free virtual = 24616
-Ending Final Cleanup Task | Checksum: 1c5ccfc82
-
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3091.211 ; gain = 0.000 ; free physical = 16190 ; free virtual = 24616
-
-Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3091.211 ; gain = 0.000 ; free physical = 16190 ; free virtual = 24616
-Ending Netlist Obfuscation Task | Checksum: 1c5ccfc82
-
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3091.211 ; gain = 0.000 ; free physical = 16190 ; free virtual = 24616
+Time (s): cpu = 00:00:00.73 ; elapsed = 00:00:00.47 . Memory (MB): peak = 1876.707 ; gain = 78.906 ; free physical = 18520 ; free virtual = 26903
 INFO: [Common 17-83] Releasing license: Implementation
-30 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
-opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 3091.211 ; gain = 1283.430 ; free physical = 16190 ; free virtual = 24616
-INFO: [runtcl-4] Executing : report_drc -file quickq_wrapper_drc_opted.rpt -pb quickq_wrapper_drc_opted.pb -rpx quickq_wrapper_drc_opted.rpx
-Command: report_drc -file quickq_wrapper_drc_opted.rpt -pb quickq_wrapper_drc_opted.pb -rpx quickq_wrapper_drc_opted.rpx
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/user/Xylinx/Vivado/2023.1/data/ip'.
-INFO: [DRC 23-27] Running DRC with 8 threads
-INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickQ_v2.runs/impl_1/quickq_wrapper_drc_opted.rpt.
-report_drc completed successfully
-INFO: [Timing 38-480] Writing timing data to binary archive.
-Writing XDEF routing.
-Writing XDEF routing logical nets.
-Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3091.211 ; gain = 0.000 ; free physical = 16252 ; free virtual = 24678
-INFO: [Common 17-1381] The checkpoint '/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickQ_v2.runs/impl_1/quickq_wrapper_opt.dcp' has been generated.
-Command: place_design
-Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
-INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
-INFO: [DRC 23-27] Running DRC with 8 threads
-INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
-INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
-Running DRC as a precondition to command place_design
-INFO: [DRC 23-27] Running DRC with 8 threads
-ERROR: [DRC UTLZ-1] Resource utilization: RAMB18 and RAMB36/FIFO over-utilized in Top Level Design (This design requires more RAMB18 and RAMB36/FIFO cells than are available in the target device. This design requires 512 of such cell types but only 270 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
-ERROR: [DRC UTLZ-1] Resource utilization: RAMB36/FIFO over-utilized in Top Level Design (This design requires more RAMB36/FIFO cells than are available in the target device. This design requires 256 of such cell types but only 135 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
-ERROR: [DRC UTLZ-1] Resource utilization: RAMB36E1 over-utilized in Top Level Design (This design requires more RAMB36E1 cells than are available in the target device. This design requires 256 of such cell types but only 135 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
-INFO: [Vivado_Tcl 4-198] DRC finished with 3 Errors
-INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
-ERROR: [Vivado_Tcl 4-23] Error(s) found during DRC. Placer not run.
-INFO: [Common 17-83] Releasing license: Implementation
-46 Infos, 0 Warnings, 0 Critical Warnings and 4 Errors encountered.
-place_design failed
-ERROR: [Common 17-39] 'place_design' failed due to earlier errors.
+12 Infos, 0 Warnings, 0 Critical Warnings and 68 Errors encountered.
+opt_design failed
+ERROR: [Common 17-39] 'opt_design' failed due to earlier errors.
 
-INFO: [Common 17-206] Exiting Vivado at Sun May 12 18:26:48 2024...
+INFO: [Common 17-206] Exiting Vivado at Fri May 17 13:13:49 2024...

@@ -3,12 +3,12 @@
 # SW Build 3900603 on Fri Jun 16 19:30:25 MDT 2023
 # IP Build 3900379 on Sat Jun 17 05:28:05 MDT 2023
 # SharedData Build 3899622 on Fri Jun 16 03:34:24 MDT 2023
-# Start of session at: Sun May 12 18:25:29 2024
-# Process ID: 872250
+# Start of session at: Fri May 17 13:12:56 2024
+# Process ID: 884044
 # Current directory: /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickQ_v2.runs/synth_1
 # Command line: vivado -log quickq_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source quickq_wrapper.tcl
 # Log file: /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickQ_v2.runs/synth_1/quickq_wrapper.vds
 # Journal file: /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickQ_v2.runs/synth_1/vivado.jou
-# Running On: ece428lab, OS: Linux, CPU Frequency: 4600.699 MHz, CPU Physical cores: 8, Host memory: 33426 MB
+# Running On: ece428lab, OS: Linux, CPU Frequency: 4593.471 MHz, CPU Physical cores: 8, Host memory: 33426 MB
 #-----------------------------------------------------------
 source quickq_wrapper.tcl -notrace
