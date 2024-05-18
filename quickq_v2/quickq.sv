@@ -41,28 +41,10 @@ module quickq(
     parameter STAGE = (PQ_CAPACITY > 32) ? 16 : PQ_CAPACITY/2;
     parameter NODES = (STAGE == 16) ? (PQ_CAPACITY/STAGE) : 2;
     
-    //logic to route data between numerous nodes
-    kv_t [0:PQ_CAPACITY+1] kv_v; // vector of stored key-value pairs
-    assign kv_v[0] = {KEY0, VAL0};
-    assign kv_v[PQ_CAPACITY+1].key = KEYINF;
-    assign kv_v[PQ_CAPACITY+1].value = 0;
-    logic[0:NODES] enq_next;
-    assign enq_next[0] = enq;
-    logic[0:NODES] deq_next;
-    assign deq_next[0] = deq;
-    logic[0:NODES] rep_next;
-    assign rep_next[0] = replace;
-    
-    
-    genvar i;
-    generate for (i=1; i<=PQ_CAPACITY/2; i++) begin
-    
-    qq_top #(.W(8), .D(STAGE)) U_QQTOP (
-        .clk, .rst, .enq(enq_next[i-1]), .deq(deq_next[i-1]), .repl(rep_next[i-1]), .lt_i(kvi), .rt_i(kv_v[i-1]), .lt_o(kvo), 
-        .rt_o(kv_v[i]), .enq_o(enq_next[i]), .deq_o(deq_next[i]), .repl_o(rep_next[i]),
+    qq_top #(.W(8), .D(PQ_CAPACITY/4)) U_QQTOP (
+        .clk, .rst, .enq, .deq, .repl(replace), .lt_i(kvi), .rt_i(KEYINF), .lt_o(kvo), 
+        .rt_o, .enq_o, .deq_o, .repl_o,
         .full_t(full), .empty_t(empty), .rdy_t(rdy)
     );
-    end
-    endgenerate
-    
+
 endmodule

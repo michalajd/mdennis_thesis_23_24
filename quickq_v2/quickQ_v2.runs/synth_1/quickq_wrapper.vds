@@ -3,13 +3,13 @@
 # SW Build 3900603 on Fri Jun 16 19:30:25 MDT 2023
 # IP Build 3900379 on Sat Jun 17 05:28:05 MDT 2023
 # SharedData Build 3899622 on Fri Jun 16 03:34:24 MDT 2023
-# Start of session at: Fri May 17 13:12:56 2024
-# Process ID: 884044
+# Start of session at: Fri May 17 20:52:35 2024
+# Process ID: 1059277
 # Current directory: /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickQ_v2.runs/synth_1
 # Command line: vivado -log quickq_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source quickq_wrapper.tcl
 # Log file: /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickQ_v2.runs/synth_1/quickq_wrapper.vds
 # Journal file: /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickQ_v2.runs/synth_1/vivado.jou
-# Running On: ece428lab, OS: Linux, CPU Frequency: 4593.471 MHz, CPU Physical cores: 8, Host memory: 33426 MB
+# Running On: ece428lab, OS: Linux, CPU Frequency: 4592.426 MHz, CPU Physical cores: 8, Host memory: 33426 MB
 #-----------------------------------------------------------
 source quickq_wrapper.tcl -notrace
 Command: read_checkpoint -auto_incremental -incremental /home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickQ_v2.srcs/utils_1/imports/synth_1/qq_node.dcp
@@ -24,7 +24,7 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 884063
+INFO: [Synth 8-7075] Helper process launched with PID 1059299
 WARNING: [Synth 8-11067] parameter 'KEY_WIDTH' declared inside package 'pq_pkg' shall be treated as localparam [/home/mckayla/Desktop/mdennis_thesis_23_24/pq_pkg.sv:20]
 WARNING: [Synth 8-11067] parameter 'VAL_WIDTH' declared inside package 'pq_pkg' shall be treated as localparam [/home/mckayla/Desktop/mdennis_thesis_23_24/pq_pkg.sv:21]
 WARNING: [Synth 8-11067] parameter 'PQ_CAPACITY' declared inside package 'pq_pkg' shall be treated as localparam [/home/mckayla/Desktop/mdennis_thesis_23_24/pq_pkg.sv:22]
@@ -40,7 +40,7 @@ WARNING: [Synth 8-11065] parameter 'MAX_KEY' becomes localparam in 'qq_node' wit
 WARNING: [Synth 8-11065] parameter 'MAX_KEY' becomes localparam in 'qq_top' with formal parameter declaration list [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_top.sv:32]
 INFO: [Synth 8-11241] undeclared symbol 'replace', assumed default net type 'wire' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickq.sv:30]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2012.363 ; gain = 375.711 ; free physical = 17997 ; free virtual = 26378
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2012.164 ; gain = 375.711 ; free physical = 16967 ; free virtual = 25421
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'quickq_wrapper' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quick1_wrapper.sv:3]
 INFO: [Synth 8-6157] synthesizing module 'pq_if' [/home/mckayla/Desktop/mdennis_thesis_23_24/pq_if.sv:14]
@@ -48,20 +48,20 @@ INFO: [Synth 8-6155] done synthesizing module 'pq_if' (0#1) [/home/mckayla/Deskt
 INFO: [Synth 8-6157] synthesizing module 'quickq' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickq.sv:14]
 INFO: [Synth 8-6157] synthesizing module 'qq_top' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_top.sv:23]
 	Parameter W bound to: 8 - type: integer 
-	Parameter D bound to: 2 - type: integer 
+	Parameter D bound to: 32768 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'qq_node' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_node.sv:23]
 	Parameter W bound to: 8 - type: integer 
-	Parameter D bound to: 2 - type: integer 
+	Parameter D bound to: 32768 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'pq_mux2' [/home/mckayla/Desktop/mdennis_thesis_23_24/pq_mux2.sv:3]
 INFO: [Synth 8-6155] done synthesizing module 'pq_mux2' (0#1) [/home/mckayla/Desktop/mdennis_thesis_23_24/pq_mux2.sv:3]
 INFO: [Synth 8-6157] synthesizing module 'kv_dffre' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/kv_dffre.sv:23]
 INFO: [Synth 8-6155] done synthesizing module 'kv_dffre' (0#1) [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/kv_dffre.sv:23]
 INFO: [Synth 8-6157] synthesizing module 'mem2p_sw_sr' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:21]
 	Parameter W bound to: 64 - type: integer 
-	Parameter D bound to: 2 - type: integer 
+	Parameter D bound to: 32768 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'mem2p_sw_sr' (0#1) [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:21]
-WARNING: [Synth 8-689] width (2) of port connection 'addr1' does not match port width (1) of module 'mem2p_sw_sr' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_node.sv:52]
-WARNING: [Synth 8-689] width (2) of port connection 'addr2' does not match port width (1) of module 'mem2p_sw_sr' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_node.sv:52]
+WARNING: [Synth 8-689] width (17) of port connection 'addr1' does not match port width (15) of module 'mem2p_sw_sr' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_node.sv:52]
+WARNING: [Synth 8-689] width (17) of port connection 'addr2' does not match port width (15) of module 'mem2p_sw_sr' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_node.sv:52]
 INFO: [Synth 8-6157] synthesizing module 'kv_cmp_mag' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/kv_cmp_mag.sv:23]
 INFO: [Synth 8-6155] done synthesizing module 'kv_cmp_mag' (0#1) [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/kv_cmp_mag.sv:23]
 INFO: [Synth 8-6157] synthesizing module 'kv_mux4' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/kv_mux4.sv:4]
@@ -69,22 +69,22 @@ INFO: [Synth 8-226] default block is never used [/home/mckayla/Desktop/mdennis_t
 INFO: [Synth 8-6155] done synthesizing module 'kv_mux4' (0#1) [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/kv_mux4.sv:4]
 INFO: [Synth 8-6157] synthesizing module 'qq_control' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_control.sv:15]
 	Parameter W bound to: 8 - type: integer 
-	Parameter D bound to: 2 - type: integer 
+	Parameter D bound to: 32768 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'qq_fsm' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_fsm.sv:15]
 	Parameter W bound to: 8 - type: integer 
-	Parameter D bound to: 2 - type: integer 
+	Parameter D bound to: 32768 - type: integer 
 INFO: [Synth 8-155] case statement is not full and has no default [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_fsm.sv:88]
 INFO: [Synth 8-6155] done synthesizing module 'qq_fsm' (0#1) [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_fsm.sv:15]
-WARNING: [Synth 8-689] width (2) of port connection 'wr_addr' does not match port width (1) of module 'qq_fsm' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_control.sv:58]
+WARNING: [Synth 8-689] width (17) of port connection 'wr_addr' does not match port width (15) of module 'qq_fsm' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_control.sv:58]
 INFO: [Synth 8-6157] synthesizing module 'adr_cnt' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/adr_cnt.sv:15]
-	Parameter D bound to: 2 - type: integer 
+	Parameter D bound to: 32768 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'adr_cnt' (0#1) [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/adr_cnt.sv:15]
-WARNING: [Synth 8-689] width (2) of port connection 'wr_addr' does not match port width (1) of module 'adr_cnt' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_control.sv:84]
+WARNING: [Synth 8-689] width (17) of port connection 'wr_addr' does not match port width (15) of module 'adr_cnt' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_control.sv:84]
 INFO: [Synth 8-6157] synthesizing module 'adr_inc' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/adr_inc.sv:15]
-	Parameter D bound to: 2 - type: integer 
+	Parameter D bound to: 32768 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'adr_inc' (0#1) [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/adr_inc.sv:15]
-WARNING: [Synth 8-689] width (2) of port connection 'wr_addr' does not match port width (1) of module 'adr_inc' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_control.sv:91]
-WARNING: [Synth 8-689] width (2) of port connection 'rd_addr' does not match port width (1) of module 'adr_inc' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_control.sv:92]
+WARNING: [Synth 8-689] width (17) of port connection 'wr_addr' does not match port width (15) of module 'adr_inc' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_control.sv:91]
+WARNING: [Synth 8-689] width (17) of port connection 'rd_addr' does not match port width (15) of module 'adr_inc' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_control.sv:92]
 INFO: [Synth 8-6157] synthesizing module 'reg_sr_empty' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/reg_sr_empty.sv:23]
 INFO: [Synth 8-6155] done synthesizing module 'reg_sr_empty' (0#1) [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/reg_sr_empty.sv:23]
 INFO: [Synth 8-6157] synthesizing module 'reg_sr' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/reg_sr.sv:23]
@@ -97,6 +97,12 @@ INFO: [Synth 8-6155] done synthesizing module 'quickq_wrapper' (0#1) [/home/mcka
 WARNING: [Synth 8-3848] Net enq_o in module/entity qq_top does not have driver. [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_top.sv:27]
 WARNING: [Synth 8-3848] Net deq_o in module/entity qq_top does not have driver. [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_top.sv:27]
 WARNING: [Synth 8-3848] Net repl_o in module/entity qq_top does not have driver. [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_top.sv:27]
+WARNING: [Synth 8-3848] Net enq_3_4 in module/entity qq_top does not have driver. [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_top.sv:36]
+WARNING: [Synth 8-3848] Net deq_3_4 in module/entity qq_top does not have driver. [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_top.sv:36]
+WARNING: [Synth 8-3848] Net repl_3_4 in module/entity qq_top does not have driver. [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_top.sv:36]
+WARNING: [Synth 8-3848] Net enq_2_3 in module/entity qq_top does not have driver. [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_top.sv:36]
+WARNING: [Synth 8-3848] Net deq_2_3 in module/entity qq_top does not have driver. [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_top.sv:36]
+WARNING: [Synth 8-3848] Net repl_2_3 in module/entity qq_top does not have driver. [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/qq_top.sv:36]
 WARNING: [Synth 8-7129] Port ram_out[value][31] in module qq_fsm is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ram_out[value][30] in module qq_fsm is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ram_out[value][29] in module qq_fsm is either unconnected or has no load
@@ -199,18 +205,18 @@ WARNING: [Synth 8-7129] Port repl_o in module qq_top is either unconnected or ha
 WARNING: [Synth 8-7129] Port rt_i[key][31] in module qq_top is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2079.332 ; gain = 442.680 ; free physical = 17926 ; free virtual = 26307
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2092.102 ; gain = 455.648 ; free physical = 16884 ; free virtual = 25339
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2097.145 ; gain = 460.492 ; free physical = 17914 ; free virtual = 26295
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2101.008 ; gain = 464.555 ; free physical = 16876 ; free virtual = 25331
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2097.145 ; gain = 460.492 ; free physical = 17914 ; free virtual = 26295
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2101.008 ; gain = 464.555 ; free physical = 16876 ; free virtual = 25331
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2097.145 ; gain = 0.000 ; free physical = 17914 ; free virtual = 26295
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2101.008 ; gain = 0.000 ; free physical = 16876 ; free virtual = 25331
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -221,30 +227,31 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/quickq_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2242.926 ; gain = 0.000 ; free physical = 17830 ; free virtual = 26211
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2250.758 ; gain = 0.000 ; free physical = 16792 ; free virtual = 25246
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2242.926 ; gain = 0.000 ; free physical = 17830 ; free virtual = 26211
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2250.758 ; gain = 0.000 ; free physical = 16792 ; free virtual = 25246
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2242.926 ; gain = 606.273 ; free physical = 17828 ; free virtual = 26209
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2250.758 ; gain = 614.305 ; free physical = 16788 ; free virtual = 25242
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2242.926 ; gain = 606.273 ; free physical = 17828 ; free virtual = 26209
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2250.758 ; gain = 614.305 ; free physical = 16788 ; free virtual = 25242
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2242.926 ; gain = 606.273 ; free physical = 17828 ; free virtual = 26209
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2250.758 ; gain = 614.305 ; free physical = 16788 ; free virtual = 25242
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'qq_fsm'
+WARNING: [Synth 8-6430] The Block RAM "mem2p_sw_sr:/ram_array_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -260,29 +267,30 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'qq_fs
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'qq_fsm'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2242.926 ; gain = 606.273 ; free physical = 17826 ; free virtual = 26208
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2250.758 ; gain = 614.305 ; free physical = 16787 ; free virtual = 25242
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input    1 Bit       Adders := 8     
+	   2 Input   15 Bit       Adders := 8     
 +---Registers : 
 	               32 Bit    Registers := 8     
-	                1 Bit    Registers := 16    
+	               15 Bit    Registers := 4     
+	                1 Bit    Registers := 8     
 +---RAMs : 
-	              128 Bit	(2 X 64 bit)          RAMs := 4     
+	            2048K Bit	(32768 X 64 bit)          RAMs := 4     
 +---Muxes : 
 	   2 Input   32 Bit        Muxes := 8     
 	   4 Input   32 Bit        Muxes := 8     
+	   4 Input   15 Bit        Muxes := 4     
 	   9 Input    4 Bit        Muxes := 4     
 	   2 Input    4 Bit        Muxes := 40    
 	   2 Input    2 Bit        Muxes := 4     
 	   9 Input    2 Bit        Muxes := 8     
 	   2 Input    1 Bit        Muxes := 8     
 	   9 Input    1 Bit        Muxes := 52    
-	   4 Input    1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -299,24 +307,42 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+RAM Pipeline Warning: Read Address Register Found For RAM U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "quickq_wrapper/U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "quickq_wrapper/U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM U_QUICKQ/U_QQTOP/NODE3/BRAM/ram_array_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM U_QUICKQ/U_QQTOP/NODE3/BRAM/ram_array_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "quickq_wrapper/U_QUICKQ/U_QQTOP/NODE3/BRAM/ram_array_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM U_QUICKQ/U_QQTOP/NODE4/BRAM/ram_array_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM U_QUICKQ/U_QQTOP/NODE4/BRAM/ram_array_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "quickq_wrapper/U_QUICKQ/U_QQTOP/NODE4/BRAM/ram_array_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM U_QUICKQ/U_QQTOP/NODE3/BRAM/ram_array_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM U_QUICKQ/U_QQTOP/NODE4/BRAM/ram_array_reg. We will not be able to pipeline it. This may degrade performance. 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2242.926 ; gain = 606.273 ; free physical = 17824 ; free virtual = 26210
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2250.758 ; gain = 614.305 ; free physical = 16782 ; free virtual = 25243
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-5835] Resources of type BRAM have been overutilized. Used = 512, Available = 270. Will try to implement using LUT-RAM. 
+CRITICAL WARNING: [Synth 8-7048] Resources of type BRAM have been overutilized even after performing resource management. Used = 512, Available = 270. 
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
-Distributed RAM: Preliminary Mapping Report (see note below)
-+---------------+------------------------------------------------------+-----------+----------------------+--------------+
-|Module Name    | RTL Object                                           | Inference | Size (Depth x Width) | Primitives   | 
-+---------------+------------------------------------------------------+-----------+----------------------+--------------+
-|quickq_wrapper | U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg | Implied   | 2 x 64               | RAM32M x 11  | 
-|quickq_wrapper | U_QUICKQ/genblk1[1].U_QQTOP/NODE2/BRAM/ram_array_reg | Implied   | 2 x 64               | RAM32M x 11  | 
-|quickq_wrapper | U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg | Implied   | 2 x 64               | RAM32M x 11  | 
-|quickq_wrapper | U_QUICKQ/genblk1[2].U_QQTOP/NODE2/BRAM/ram_array_reg | Implied   | 2 x 64               | RAM32M x 11  | 
-+---------------+------------------------------------------------------+-----------+----------------------+--------------+
+Block RAM: Preliminary Mapping Report (see note below)
++---------------+-------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name    | RTL Object                                | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++---------------+-------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|quickq_wrapper | U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg | 32 K x 64(READ_FIRST)  | W |   | 32 K x 64(WRITE_FIRST) |   | R | Port A and B     | 0      | 64     | 
+|quickq_wrapper | U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg | 32 K x 64(READ_FIRST)  | W |   | 32 K x 64(WRITE_FIRST) |   | R | Port A and B     | 0      | 64     | 
+|quickq_wrapper | U_QUICKQ/U_QQTOP/NODE3/BRAM/ram_array_reg | 32 K x 64(READ_FIRST)  | W |   | 32 K x 64(WRITE_FIRST) |   | R | Port A and B     | 0      | 64     | 
+|quickq_wrapper | U_QUICKQ/U_QQTOP/NODE4/BRAM/ram_array_reg | 32 K x 64(READ_FIRST)  | W |   | 32 K x 64(WRITE_FIRST) |   | R | Port A and B     | 0      | 64     | 
++---------------+-------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
-Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
@@ -324,27 +350,27 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2242.926 ; gain = 606.273 ; free physical = 17822 ; free virtual = 26208
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2250.758 ; gain = 614.305 ; free physical = 16740 ; free virtual = 25220
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2242.926 ; gain = 606.273 ; free physical = 17822 ; free virtual = 26208
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2250.758 ; gain = 614.305 ; free physical = 16713 ; free virtual = 25210
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
-Distributed RAM: Final Mapping Report
-+---------------+------------------------------------------------------+-----------+----------------------+--------------+
-|Module Name    | RTL Object                                           | Inference | Size (Depth x Width) | Primitives   | 
-+---------------+------------------------------------------------------+-----------+----------------------+--------------+
-|quickq_wrapper | U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg | Implied   | 2 x 64               | RAM32M x 11  | 
-|quickq_wrapper | U_QUICKQ/genblk1[1].U_QQTOP/NODE2/BRAM/ram_array_reg | Implied   | 2 x 64               | RAM32M x 11  | 
-|quickq_wrapper | U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg | Implied   | 2 x 64               | RAM32M x 11  | 
-|quickq_wrapper | U_QUICKQ/genblk1[2].U_QQTOP/NODE2/BRAM/ram_array_reg | Implied   | 2 x 64               | RAM32M x 11  | 
-+---------------+------------------------------------------------------+-----------+----------------------+--------------+
+Block RAM: Final Mapping Report
++---------------+-------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name    | RTL Object                                | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++---------------+-------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|quickq_wrapper | U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg | 32 K x 64(READ_FIRST)  | W |   | 32 K x 64(WRITE_FIRST) |   | R | Port A and B     | 0      | 64     | 
+|quickq_wrapper | U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg | 32 K x 64(READ_FIRST)  | W |   | 32 K x 64(WRITE_FIRST) |   | R | Port A and B     | 0      | 64     | 
+|quickq_wrapper | U_QUICKQ/U_QQTOP/NODE3/BRAM/ram_array_reg | 32 K x 64(READ_FIRST)  | W |   | 32 K x 64(WRITE_FIRST) |   | R | Port A and B     | 0      | 64     | 
+|quickq_wrapper | U_QUICKQ/U_QQTOP/NODE4/BRAM/ram_array_reg | 32 K x 64(READ_FIRST)  | W |   | 32 K x 64(WRITE_FIRST) |   | R | Port A and B     | 0      | 64     | 
++---------------+-------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -352,8 +378,109 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_16 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_17 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_18 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_19 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_20 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_21 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_22 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_23 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_24 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_25 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_26 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_27 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_28 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_29 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_30 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_31 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_32 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_33 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_34 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_35 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_36 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_37 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_38 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_39 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_40 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_41 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_42 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_43 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_44 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_45 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_46 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_47 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_48 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_49 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_50 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_51 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_52 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_53 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_54 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_55 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_56 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_57 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_58 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_59 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_60 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_61 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_62 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE1/BRAM/ram_array_reg_0_63 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg_0_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg_0_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg_0_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg_0_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg_0_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg_0_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg_0_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg_0_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg_0_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg_0_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg_0_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg_0_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg_0_16 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg_0_17 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg_0_18 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg_0_19 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg_0_20 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg_0_21 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg_0_22 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg_0_23 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg_0_24 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg_0_25 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg_0_26 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg_0_27 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg_0_28 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg_0_29 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg_0_30 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg_0_31 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg_0_32 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg_0_33 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg_0_34 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_QUICKQ/U_QQTOP/NODE2/BRAM/ram_array_reg_0_35 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Common 17-14] Message 'Synth 8-7052' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2242.926 ; gain = 606.273 ; free physical = 17822 ; free virtual = 26208
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2250.758 ; gain = 614.305 ; free physical = 16712 ; free virtual = 25209
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -371,145 +498,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2242.926 ; gain = 606.273 ; free physical = 17822 ; free virtual = 26208
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2250.758 ; gain = 614.305 ; free physical = 16724 ; free virtual = 25205
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2242.926 ; gain = 606.273 ; free physical = 17822 ; free virtual = 26208
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2250.758 ; gain = 614.305 ; free physical = 16724 ; free virtual = 25205
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[1] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_0_5/DOA[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[1] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_0_5/DOA[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[0] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_0_5/DOA[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[0] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_0_5/DOA[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[3] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_0_5/DOB[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[3] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_0_5/DOB[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[2] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_0_5/DOB[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[2] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_0_5/DOB[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[5] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_0_5/DOC[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[5] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_0_5/DOC[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[4] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_0_5/DOC[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[4] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_0_5/DOC[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[7] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_6_11/DOA[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[7] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_6_11/DOA[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[6] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_6_11/DOA[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[6] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_6_11/DOA[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[9] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_6_11/DOB[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[9] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_6_11/DOB[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[8] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_6_11/DOB[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[8] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_6_11/DOB[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[11] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_6_11/DOC[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[11] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_6_11/DOC[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[10] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_6_11/DOC[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[10] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_6_11/DOC[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[13] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_12_17/DOA[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[13] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_12_17/DOA[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[12] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_12_17/DOA[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[12] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_12_17/DOA[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[15] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_12_17/DOB[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[15] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_12_17/DOB[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[14] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_12_17/DOB[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[14] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_12_17/DOB[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[17] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_12_17/DOC[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[17] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_12_17/DOC[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[16] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_12_17/DOC[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[16] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_12_17/DOC[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[19] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_18_23/DOA[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[19] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_18_23/DOA[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[18] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_18_23/DOA[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[18] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_18_23/DOA[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[21] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_18_23/DOB[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[21] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_18_23/DOB[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[20] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_18_23/DOB[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[20] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_18_23/DOB[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[23] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_18_23/DOC[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[23] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_18_23/DOC[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[22] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_18_23/DOC[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[22] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_18_23/DOC[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[25] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_24_29/DOA[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[25] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_24_29/DOA[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[24] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_24_29/DOA[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[24] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_24_29/DOA[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[27] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_24_29/DOB[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[27] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_24_29/DOB[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[26] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_24_29/DOB[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[26] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_24_29/DOB[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[29] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_24_29/DOC[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[29] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_24_29/DOC[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[28] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_24_29/DOC[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[28] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_24_29/DOC[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[31] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_30_35/DOA[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[31] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_30_35/DOA[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[30] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_30_35/DOA[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[value]_OBUF[30] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_30_35/DOA[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[key]_OBUF[1] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_30_35/DOB[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[key]_OBUF[1] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_30_35/DOB[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[key]_OBUF[0] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_30_35/DOB[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[key]_OBUF[0] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_30_35/DOB[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[key]_OBUF[3] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_30_35/DOC[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[key]_OBUF[3] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_30_35/DOC[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[key]_OBUF[2] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_30_35/DOC[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[key]_OBUF[2] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_30_35/DOC[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[key]_OBUF[5] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_36_41/DOA[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[key]_OBUF[5] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_36_41/DOA[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[key]_OBUF[4] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_36_41/DOA[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[key]_OBUF[4] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_36_41/DOA[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[key]_OBUF[7] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_36_41/DOB[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[key]_OBUF[7] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_36_41/DOB[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[key]_OBUF[6] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_36_41/DOB[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[key]_OBUF[6] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_36_41/DOB[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[key]_OBUF[9] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_36_41/DOC[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[key]_OBUF[9] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_36_41/DOC[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[key]_OBUF[8] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_36_41/DOC[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[key]_OBUF[8] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_36_41/DOC[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[key]_OBUF[11] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_42_47/DOA[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[key]_OBUF[11] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_42_47/DOA[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[key]_OBUF[10] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_42_47/DOA[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[key]_OBUF[10] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_42_47/DOA[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[key]_OBUF[13] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_42_47/DOB[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[key]_OBUF[13] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_42_47/DOB[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[key]_OBUF[12] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_42_47/DOB[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[key]_OBUF[12] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_42_47/DOB[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[key]_OBUF[15] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_42_47/DOC[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[key]_OBUF[15] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_42_47/DOC[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[key]_OBUF[14] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_42_47/DOC[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[key]_OBUF[14] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_42_47/DOC[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[key]_OBUF[17] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_48_53/DOA[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[key]_OBUF[17] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_48_53/DOA[1]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[key]_OBUF[16] with 1st driver pin 'U_QUICKQ/genblk1[1].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_48_53/DOA[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin kvo[key]_OBUF[16] with 2nd driver pin 'U_QUICKQ/genblk1[2].U_QQTOP/NODE1/BRAM/ram_array_reg_0_1_48_53/DOA[0]' [/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/RTL/mem2p_sw_sr.sv:37]
-INFO: [Common 17-14] Message 'Synth 8-6859' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|       67|Failed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2242.926 ; gain = 606.273 ; free physical = 17822 ; free virtual = 26208
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2250.758 ; gain = 614.305 ; free physical = 16725 ; free virtual = 25206
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2242.926 ; gain = 606.273 ; free physical = 17822 ; free virtual = 26208
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2250.758 ; gain = 614.305 ; free physical = 16725 ; free virtual = 25206
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2242.926 ; gain = 606.273 ; free physical = 17822 ; free virtual = 26208
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2250.758 ; gain = 614.305 ; free physical = 16725 ; free virtual = 25206
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2242.926 ; gain = 606.273 ; free physical = 17822 ; free virtual = 26208
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2250.758 ; gain = 614.305 ; free physical = 16725 ; free virtual = 25206
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -522,48 +541,47 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-------+------+
-|      |Cell   |Count |
-+------+-------+------+
-|1     |BUFG   |     1|
-|2     |CARRY4 |    24|
-|3     |LUT1   |     1|
-|4     |LUT2   |    12|
-|5     |LUT3   |   199|
-|6     |LUT4   |   350|
-|7     |LUT5   |   161|
-|8     |LUT6   |    58|
-|9     |RAM32M |    44|
-|10    |FDRE   |   156|
-|11    |FDSE   |   128|
-|12    |IBUF   |    68|
-|13    |OBUF   |    67|
-+------+-------+------+
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |    76|
+|3     |LUT1     |     8|
+|4     |LUT2     |    22|
+|5     |LUT3     |   148|
+|6     |LUT4     |   350|
+|7     |LUT5     |   629|
+|8     |LUT6     |   167|
+|9     |RAMB36E1 |   256|
+|10    |FDRE     |   386|
+|11    |FDSE     |   128|
+|12    |IBUF     |    68|
+|13    |OBUF     |    67|
++------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2242.926 ; gain = 606.273 ; free physical = 17822 ; free virtual = 26208
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2250.758 ; gain = 614.305 ; free physical = 16725 ; free virtual = 25206
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 134 critical warnings and 68 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2242.926 ; gain = 460.492 ; free physical = 17821 ; free virtual = 26208
-Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2242.926 ; gain = 606.273 ; free physical = 17821 ; free virtual = 26208
+Synthesis finished with 0 errors, 1 critical warnings and 74 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2250.758 ; gain = 464.555 ; free physical = 16725 ; free virtual = 25206
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2250.758 ; gain = 614.305 ; free physical = 16725 ; free virtual = 25206
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2242.926 ; gain = 0.000 ; free physical = 18115 ; free virtual = 26502
-INFO: [Netlist 29-17] Analyzing 68 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2250.758 ; gain = 0.000 ; free physical = 17035 ; free virtual = 25517
+INFO: [Netlist 29-17] Analyzing 332 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2242.926 ; gain = 0.000 ; free physical = 18115 ; free virtual = 26501
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2250.758 ; gain = 0.000 ; free physical = 17030 ; free virtual = 25512
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 44 instances were transformed.
-  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 44 instances
+No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 78a19cd2
+Synth Design complete | Checksum: b5c72079
 INFO: [Common 17-83] Releasing license: Synthesis
-60 Infos, 123 Warnings, 100 Critical Warnings and 0 Errors encountered.
+160 Infos, 135 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:24 . Memory (MB): peak = 2242.926 ; gain = 904.457 ; free physical = 18115 ; free virtual = 26501
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1844.085; main = 1512.863; forked = 378.271
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3180.441; main = 2242.926; forked = 969.531
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:29 . Memory (MB): peak = 2250.758 ; gain = 912.520 ; free physical = 17026 ; free virtual = 25507
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1857.050; main = 1522.473; forked = 381.770
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3188.273; main = 2250.758; forked = 969.531
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint '/home/mckayla/Desktop/mdennis_thesis_23_24/quickq_v2/quickQ_v2.runs/synth_1/quickq_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file quickq_wrapper_utilization_synth.rpt -pb quickq_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri May 17 13:13:27 2024...
+INFO: [Common 17-206] Exiting Vivado at Fri May 17 20:53:11 2024...

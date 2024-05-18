@@ -32,19 +32,28 @@ module qq_top #(parameter W=32, D=4, localparam DW=$clog2(D)) (
     parameter kv_t MAX_KEY = KV_EMPTY;
     
     // Internal logic
-    kv_t rt_1_lt_2, lt_2_rt_1;
-    logic enq_1_2, deq_1_2, repl_1_2;
-    logic full1, rdy1, empty1, full2, rdy2, empty2;
+    kv_t rt_1_lt_2, rt_2_lt_3, rt_3_lt_4, lt_2_rt_1, lt_3_rt_2, lt_4_rt_3;
+    logic enq_1_2, enq_2_3, enq_3_4, deq_1_2, deq_2_3, deq_3_4, repl_1_2, repl_2_3, repl_3_4;
+    logic full1, rdy1, empty1, full2, rdy2, empty2, full3, rdy3, empty3, full4, rdy4, empty4;
     
     qq_node #(.W(W), .D(D)) NODE1 (.clk, .rst, .enq_i(enq), .deq_i(deq), .repl_i(repl), .data_lt_i(lt_i), .data_rt_i(lt_2_rt_1),
                                    .rdy(rdy1), .full(full1), .empty(empty1), .enq_o(enq_1_2), .deq_o(deq_1_2), .repl_o(repl_1_2),
                                    .data_lt_o(lt_o), .data_rt_o(rt_1_lt_2));
                                    
-    qq_node #(.W(W), .D(D)) NODE2 (.clk, .rst, .enq_i(enq_1_2), .deq_i(deq_1_2), .repl_i(repl_1_2), .data_lt_i(rt_1_lt_2), .data_rt_i(MAX_KEY),
+    qq_node #(.W(W), .D(D)) NODE2 (.clk, .rst, .enq_i(enq_1_2), .deq_i(deq_1_2), .repl_i(repl_1_2), .data_lt_i(rt_1_lt_2), .data_rt_i(lt_3_rt_2),
                                    .rdy(rdy2), .full(full2), .empty(empty2), .enq_o(), .deq_o(), .repl_o(),
-                                   .data_lt_o(lt_2_rt_1), .data_rt_o(rt_o));
+                                   .data_lt_o(lt_2_rt_1), .data_rt_o(rt_2_lt_3));
+                                   
+                                   
+    qq_node #(.W(W), .D(D)) NODE3 (.clk, .rst, .enq_i(enq_2_3), .deq_i(deq_2_3), .repl_i(repl_2_3), .data_lt_i(rt_2_lt_3), .data_rt_i(lt_4_rt_3),
+                                   .rdy(rdy3), .full(full3), .empty(empty3), .enq_o(), .deq_o(), .repl_o(),
+                                   .data_lt_o(lt_3_rt_2), .data_rt_o(rt_3_lt_4));
+                                   
+    qq_node #(.W(W), .D(D)) NODE4 (.clk, .rst, .enq_i(enq_3_4), .deq_i(deq_3_4), .repl_i(repl_3_4), .data_lt_i(rt_3_lt_4), .data_rt_i(MAX_KEY),
+                                   .rdy(rdy4), .full(full4), .empty(empty4), .enq_o(), .deq_o(), .repl_o(),
+                                   .data_lt_o(lt_4_rt_3), .data_rt_o(rt_o));
     
-    assign full_t = full2;
+    assign full_t = full4;
     assign empty_t = empty1;
     assign rdy_t = rdy1;
 
